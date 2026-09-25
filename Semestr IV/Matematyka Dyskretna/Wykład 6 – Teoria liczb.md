@@ -121,7 +121,7 @@ $$3, 7, 11, 211, 2311, 30031, 510511, \dots$$
 
 Do dzisiaj nie wiadomo czy jest nieskończenie wiele liczb pierwszych Euklidesa oraz czy każda liczba Euklidesa jest bezkwadratowa.
 
-Liczbą bezkwadratową nazywamy liczbę $E=p_1^{\alpha_1}\cdot p_2^{\alpha_2}\cdot\dots\cdot p_k^{\alpha_k}$, gdzie $\alpha_i\in\{0, 1\}$.
+**Liczbą bezkwadratową** nazywamy dowolną liczbę $E=p_1^{\alpha_1}\cdot p_2^{\alpha_2}\cdot\dots\cdot p_k^{\alpha_k}$, gdzie $\alpha_i\in\{0, 1\}$.
 
 ## Liczby bliźniacze
 Liczbami bliźniaczymi nazywamy dwie kolejne liczby pierwsze $p_n,p_{n+1}\in\mathbb{P}$ takie, że:
@@ -152,7 +152,7 @@ Liczby całkowite $a,b$ nazywamy względnie pierwszymi, gdy $\mathrm{NWD}(a,b)=1
 
 $$\frac{a}{\mathrm{NWD}(a,b)}\perp \frac{b}{\mathrm{NWD}(a,b)}$$
 
-Dla każdej liczby $n\in\mathbb{N}+\setminus\{1\}$ określamy liczbę $\varphi(n)$ jako liczbę dodatnich liczb całkowitych mniejszych od $n$ i względnie pierwszych z $n$:
+Dla każdej liczby $n\in\mathbb{N}_{+}\setminus\{1\}$ określamy liczbę $\varphi(n)$ jako liczbę dodatnich liczb całkowitych mniejszych od $n$ i względnie pierwszych z $n$:
 
 $$\varphi(n)=|\{1\leq k<n : k \perp n\}|$$
 
@@ -256,7 +256,7 @@ a^2+b^2+c^2=g^2
 to geometrycznie szukamy takiej cegiełki Eulera, której przekątna $g$ również jest liczbą całkowitą. Cegiełkę taką nazywamy **doskonałą cegiełką Eulera**. Do dzisiaj nie udało się znaleźć żadnej trójki liczb $(a, b, c)$ tworzących doskonałą cegiełkę Eulera.
 
 ## Wielkie twierdzenie Fermata
-Wielkie twierdzenie Fermata zostało poraz pierwsze wspomniane przez Pierre'a de Fermata na marginesie książki Arithmetica Diofantosa. Pierre zamieścił na marginesie następujący komentarz:
+Wielkie twierdzenie Fermata zostało poraz pierwsze wspomniane przez Pierre'a de Fermata na marginesie książki *Arithmetica* Diofantosa. Pierre zamieścił na marginesie następujący komentarz:
 
 >[!danger] Wielkie twierdzenie Fermata
 > Jest niemożliwe rozłożyć sześcian na dwa sześciany, czwartą potęgę na dwie czwarte potęgi i ogólnie potęgę wyższą niż druga na dwie takie potęgi; znalazłem naprawdę zadziwiający dowód tego, jednak margines jest za mały, by go pomieścić.
