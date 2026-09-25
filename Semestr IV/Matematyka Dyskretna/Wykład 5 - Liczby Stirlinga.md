@@ -153,7 +153,7 @@ Największy mianownik rozwinięcia o najmniejszym największym mianowniku będzi
 
 Powyższy przykład pokazuje, że dla $p=3, 5$ (nie sprawdzamy $p=1$ bo jest to trywialnie $[0;1]$) największy element rozwinięcia jest równy $2$, możemy zapisać więc, że $a(8)=2$. Hipoteza Zaremby jest wciąż nieudowodniona, jednak wielu matematyków postuluje, że jest ona prawdziwa dla $a(n)\leq \mathcal{M}=5$.
 
-11 maja 2026 roku na stronie arXiv pojawiłas się publikacja chińskiego matematyka Xin Zhanga, która ostatecznie potwierdza prawdziwość hipotezy Zaremby. Zhang osadzając równanie w przestrzeni $\text{SL}_{2}(\mathbb{Z}_{q})$ udowodnił, że istnieje globalna stała $\mathcal{M}$ ograniczająca z góry ułamki łańcuchowe, jego metoda nie pozwala jednak na wyznaczenie dokładnej wartości więc pytanie czy $\mathcal{M}=5$ wciąż pozostaje otwarte.
+11 maja 2026 roku na stronie arXiv pojawiła się publikacja chińskiego matematyka Xin Zhanga, która ostatecznie potwierdza prawdziwość hipotezy Zaremby. Zhang osadzając równanie w przestrzeni $\text{SL}_{2}(\mathbb{Z}_{q})$ udowodnił, że istnieje globalna stała $\mathcal{M}$ ograniczająca z góry ułamki łańcuchowe, jego metoda nie pozwala jednak na wyznaczenie dokładnej wartości więc pytanie czy $\mathcal{M}=5$ wciąż pozostaje otwarte.
 ## Hipoteza Pawlika
 Dr Pawlik wraz z dr Pleszczyńskim przetestowali hipotezę Zaremby dla $n\leq10^7$, uzyskali oni wyniki:
 - $a(n)=5$ w 3 przypadkach $n\in\{6, 54, 150\}$
