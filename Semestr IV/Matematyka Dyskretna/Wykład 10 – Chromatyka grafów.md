@@ -14,7 +14,7 @@ Niech $G=(V,E)$ będzie grafem i niech istnieje zbiór $C$ taki, że $|C|=k$. Fu
 **kolorami**.
 
 Reprezentując $k$-kolorowanie grafu $G$ na rysunku, często wierzchołki oznacza się za pomocą odpowiadających kolorów ze zbioru $C$. Chcąc zachować oryginalne poetykietowanie wierzchołków każdemu elementowi z ze zbioru $C$ przypisuje się barwę, którą koloruje się wierzchołki na rysunku.
-![[Pasted image 20260919143852.png|305]]
+![[Pasted image 20260919143852.png|454]]
 
 ## Kolorowanie właściwe
 Niech $G$ będzie grafem, a $c$ $k$-kolorowaniem grafu $G$. Kolorowanie $c$ nazywamy **właściwym $k$-kolorowaniem** grafu $G$, jeżeli dla każdej pary sąsiednich wierzchołków przyjmuje ono różne wartości:
