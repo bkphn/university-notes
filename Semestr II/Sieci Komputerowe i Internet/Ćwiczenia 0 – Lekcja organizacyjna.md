@@ -23,12 +23,14 @@
 - Sprawozdania z ćwiczeń laboratoryjnych (6 ⋅ 5 = 30 pkt)
 - Sprawozdania z ćwiczeń wykonywanych w domu (max. 50 pkt)
 - Kolokwium zaliczeniowe (75 pkt)
+
 ## Sprawozdania
 - **Na zajęciach**
 	Dla każdego z modułów na platformie Moodle będzie do odesłania jedno sprawozdanie. Sprawozdanie będzie składało się z pliku PDF, pobranego z platformy, do którego będziemy wstawiali konkretne rozwiązania. Sprawozdanie będzie odsyłane na koniec zajęć laboratoryjnych, na których skończony będzie dany moduł. Nie ma konieczności odesłania każdego z sprawozdań.
 
 - **W domu**
 	Sprawozdanie ma mieć postać zrzutów ekranu całego ekranu z poszczególnych etapów wykonywania zadań. Sprawozdanie należy odesłać w formacie .pdf, .doc, .docx bądź .odt. Na odesłanie sprawozdań wykonywanych w domu wyznaczony będzie czas 2 tygodni od momentu zakończenia konkretnego modułu na zajęciach.
+
 ## Kolokwium końcowe
 Kolokwium odbędzie się na laboratorium, składać się będzie z 12 pytań jedno- lub wielokrotnego wyboru. Pytania losowane są z puli. Czas przeznaczony na realizację wynosi 20 minut. Nie są naliczane punkty ujemne. Wynik będzie widoczny od razu.
 

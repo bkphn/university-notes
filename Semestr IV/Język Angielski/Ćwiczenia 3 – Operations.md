@@ -4,6 +4,7 @@ There are four basic arithmetic operations:
 - **Subtraction**: Subtraction is the operation of taking one number away from another, denoted by the $−$ (*minus*) symbol. In the operation $a − b = c$, the number $a$ is called the *minuend*, the number $b$ is the *subtrahend*, and the number $c$ is the *difference*.
 - **Multiplication**: Multiplication constitutes the operation of repeatedly adding a number to itself $b$ times, denoted by the $\times$ or $\cdot$ (*times*) symbol. In the operation $a\times b=c$, the number $a$ is called the *multiplicand*, the number $b$ is the *multiplier*, and the number $c$ is the *product*.
 - **Divison**: Division is the operation of dividing one number into *b* parts, denoted by the $\div$ or $:$ (*divided by*) symbol. In the operation $a\div b=c$, the number $a$ is called the *dividend*, the number $b$ is the *divisor*, and the number $c$ is the *quotient*.
+
 ## Math symbols pronunciation
 In the tables below, you can find the names of the most common mathematical symbols:
 

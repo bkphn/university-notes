@@ -4,19 +4,30 @@ Zadanie aproksymacji polega na zastąpieniu funkcji $f$, którą znamy lub któr
 * **Aproksymacja integralna:** gdy zbiór, na którym mierzymy błędy, jest przedziałem.
 
 Będziemy szukać funkcji $F \in E$, aproksymującej $f$, gdzie $E$ to $m+1$ wymiarowa podprzestrzeń liniowa z bazą $\mathcal{B}_E = \{\varphi_0(x), \varphi_1(x), \dots, \varphi_m(x)\}$. Funkcję $F$ (wielomian uogólniony) wyrażamy jako:
-$$ F(x) = a_0\varphi_0(x) + a_1\varphi_1(x) + \dots + a_m\varphi_m(x) $$
+
+$$F(x) = a_0\varphi_0(x) + a_1\varphi_1(x) + \dots + a_m\varphi_m(x)$$
+
 Współczynniki wyznaczamy tak, aby minimalizować normę różnicy $||F(x) - f(x)||$.
+
 ## Iloczyn skalarny funkcji
 Iloczyn skalarny dla funkcji (z uwzględnieniem funkcji wagowej $w(x)$) definiujemy w następujący sposób:
 * **Dla funkcji dyskretnych:**
-  $$ (g, h) = \sum_{j=0}^n w(x_j) \cdot g(x_j)h(x_j) $$
+
+  $$(g, h) = \sum_{j=0}^n w(x_j) \cdot g(x_j)h(x_j)$$
+
 * **Dla funkcji integralnych:**
-  $$ (g, h) = \int_a^b w(x) \cdot g(x)h(x) dx $$
+
+  $$(g, h) = \int_a^b w(x) \cdot g(x)h(x) dx$$
+
 ## Aproksymacja średniokwadratowa dyskretna
 Dla funkcji określonej na dyskretnym zbiorze poszukujemy minimum sumy:
-$$ ||F(x) - f(x)||^2 = \sum_{i=0}^n w(x_i)(F(x_i) - f(x_i))^2 $$
+
+$$||F(x) - f(x)||^2 = \sum_{i=0}^n w(x_i)(F(x_i) - f(x_i))^2$$
+
 Współczynniki wyznaczamy za pomocą układu równań:
-$$ \sum_{i=0}^m a_i \cdot (\varphi_i, \varphi_k) = (f, \varphi_k), \quad k \in \{0, 1, \dots, m\} $$
+
+$$\sum_{i=0}^m a_i \cdot (\varphi_i, \varphi_k) = (f, \varphi_k), \quad k \in \{0, 1, \dots, m\}$$
+
 co w zapisie macierzowym daje układ $\mathbf{D}\mathbf{\overline{a}} = \mathbf{\overline{f}}$.
 
 > [!abstract] Algorytm aproksymacji średniokwadratowej dyskretnej
@@ -45,9 +56,12 @@ co w zapisie macierzowym daje układ $\mathbf{D}\mathbf{\overline{a}} = \mathbf{
 > 8. Po zsumowaniu iloczynów węzłów: $\mathbf{D} = \begin{bmatrix} 4 & 6 & 14 \\ 6 & 14 & 36 \\ 14 & 36 & 98 \end{bmatrix}$.
 > 9. Z układu wyliczono współczynniki: $a_0 = \frac{7}{9}$, $a_1 = -\frac{9}{5}$, $a_2 = 1$.
 > 10. **Wynik:** $F(x) = \frac{7}{9} - \frac{9}{5}x + x^2$.
+
 ## Aproksymacja średniokwadratowa integralna
 Dla funkcji $f$, określonej na przedziale $[a, b]$, poszukujemy minimum całki:
-$$ ||F(x) - f(x)||^2 = \int_a^b w(x)(F(x) - f(x))^2 dx $$
+
+$$||F(x) - f(x)||^2 = \int_a^b w(x)(F(x) - f(x))^2 dx$$
+
 Układ macierzowy ma taką samą postać $\mathbf{D}\mathbf{\overline{a}} = \mathbf{\overline{f}}$, ale elementy wyznaczane są za pomocą całek.
 
 > [!abstract] Algorytm aproksymacji średniokwadratowej integralnej

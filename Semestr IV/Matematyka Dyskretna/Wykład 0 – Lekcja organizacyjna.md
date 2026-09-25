@@ -13,6 +13,7 @@
 | ---------------------- | --------------------------------- |
 | *Matematyka Dyskretna* | C.R.B. Wright, K.A. Ross          |
 | *Matematyka Konkretna* | A. Graham, D. Knuth, O. Patashnik |
+
 ## Tematyka
 Plan wykładu:
 1.  Systemy liczbowe.
@@ -27,6 +28,7 @@ Plan wykładu:
 10. Grafy hamiltonowskie i eulerowskie.
 11. Kolorowanie grafów.
 12. Algebry Boole'a.
+
 ## Punktacja
 W trakcie trwania kursu można zdobyć 50 punktów: w tym 2 × 20 pkt za kolokwium i 10 pkt z aktywności. Ocena końcowa jest określana następująco:
 - 5,0 od 45 pkt,
@@ -34,3 +36,4 @@ W trakcie trwania kursu można zdobyć 50 punktów: w tym 2 × 20 pkt za kolokwi
 - 4,0 od 35 pkt do 39.5 pkt,
 - 3,5 od 28 pkt do 34.5 pkt,
 - 3,0 od 21 pkt do 27.5 pkt.
+

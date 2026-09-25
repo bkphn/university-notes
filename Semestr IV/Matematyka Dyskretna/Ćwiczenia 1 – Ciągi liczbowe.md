@@ -3,19 +3,26 @@ Pochodną liczby naturalnej $n\in\mathbb{N}$ nazywamy liczbę naturalną $n'\in\
 
 > [!example] 
 > Przykładowo pochodną liczby $44$ jest $26$, ponieważ:
+>
 > $$44' = 101100_{(2)}' = \big((1 \oplus 0)\ \ (0 \oplus 1)\ \ (1 \oplus 1)\ \ (1 \oplus 0)\ \ (0 \oplus 0)\big)_{(2)} = 11010_{(2)} = 26$$
+>
 
 Dla $n\ge2$ zachodzą własności:
+
 $$(2^n )^′=2^{n−1}$$
+
 $$(2^n−1)^′=0$$
 
 > [!example] Udowodnij własności pochodnej liczby naturalnej
 > 
 > **1. Pochodna z potęgi liczby 2:**
+>
 > $$(2^n)' = \left( 1 \underbrace{00\dots0}_{n \text{ razy}} \right)_{(2)}' = \underbrace{(1 \oplus 0)}_{= 1} \underbrace{(0 \oplus 0) \dots (0 \oplus 0)}_{n-1 \text{ razy}} = \left( 1 \underbrace{00\dots0}_{n-1 \text{ razy}} \right)_{(2)} = 2^{n-1}$$
-> 
+>
 > **2. Pochodna z liczby o postaci $2^n - 1$:**
+>
 > $$(2^n - 1)' = \left( 1 \underbrace{00\dots0}_{n \text{ razy}} - 1 \right)_{(2)}' = \left( \underbrace{11\dots1}_{n \text{ razy}} \right)_{(2)}' = \underbrace{(1 \oplus 1)}_{= 0} \dots \underbrace{(1 \oplus 1)}_{= 0} = 0$$
+>
 
 ## Uwięziony skoczek
 Rozważmy nieskończoną szachownicę, jedno z pól tej szachownicy oznaczmy liczbą $1$, następnie po spirali, w kolejnych polach, umieszczamy kolejne liczby naturalne. Wypełniona szachownica powinna wyglądać następująco:
@@ -29,23 +36,29 @@ Ciąg utworzony z kolejnych, odwiedzonych przez skoczka liczb nie jest nieskońc
 $1, 10, 3, 6, 9, 4, 7, 2, 5, 8, 11, …, 3101, 2880, 2467, 2084$
 
 Ciąg ten w OEIS (On-line Encyclopedia of Integer Sequences) jest opisany jako ciąg [A316667](https://oeis.org/A316667).
+
 ## Spirala Ulama
 Spirala Ulama nazywana również spiralą liczb pierwszych to graficzna metoda zaprezentowania rozkładu liczb pierwszych, zaproponowana przez polskiego matematyka Stanisława Ulama w 1963 roku. Zaczynamy od rozpisania spirali na tablicy w sposób identyczny do tej z uwięzionego skoczka.
 
 Następnie zamalowujemy wszystkie liczby pierwsze występujące w spirali. W efekcie na niektórych przekątnych otrzymujemy krzywe linie, wyznaczające pewną regularność występującą w rozkładzie liczb pierwszych. Do dnia dzisiejszego nie odpowiedziano na pytanie, dlaczego liczby pierwsze generują takie a nie inne linie.
 ![[Pasted image 20260904143717.png|237]]
+
 ## Ciąg toczącego Syzyfa
 Prowadzący dr Pawlik zadał zadanie zaprezentowania mu skończonego ciągu, który w pewnym momencie samoistnie się kończy. Po paru nocach udało mi się stworzyć autorski ciąg, który nazwałem ciągiem toczącego Syzyfa.
 
 Dana jest oś liczb naturalnych. Umieszczamy Syzyfa $\sigma$ na pozycji startowej $a_{1}=1$. Następnie w każdym kroku obliczamy kolejną pozycje Syzyfa. Jeżeli Syzyf znajduje się obecnie na liczbie $n$ z niedomiarem, bądź doskonałej – czyli takich, których suma dzielników właściwych $s(n)\leq n$, to Syzyf porusza się do góry o dwukrotność liczby jego dzielników $d(n)=|D_{n}|$. W przeciwnym przypadku, czyli gdy $s(n)>n$, kamień okazuje się zbyt ciężki i Syzyf spada o nadmiar liczby, na której stoi $|s(a_{n})-n|$. W ujęciu matematycznym ciąg ten opisujemy takim równaniem:
+
 $$a_{n+1} = \begin{cases}
 a_{n}+2\cdot d(n), \quad s(a_{n})\leq a_{n} \\
 2\cdot a_{n}-s(a_{n}), \quad s(a_{n})>n
 \end{cases}$$
+
 Ciąg kończy się gdy Syzyf spadnie do liczby, na której już stał.
 
 Sumę dzielników właściwych liczby $n$ nazywamy **sumą alikwotową** liczby $n$ i oznaczamy jako:
+
 $$s(n)=\sum_{i\in D_{n}\setminus\set{n}}i$$
+
 Ciąg ten w OEIS (On-line Encyclopedia of Integer Sequences) jest opisany jako [ciąg A394060](https://oeis.org/A394060).
 
 Otrzymany w ten sposób ciąg wpada w pętlę dopiero po 898 elementach. Ciąg prezentuje się następująco:

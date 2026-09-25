@@ -9,6 +9,7 @@
 | *Analiza Numeryczna*           | D. Kincaid, W. Cheney  |
 | *Wstęp do Analizy Numerycznej* | J. Stoer, R. Bulirsch  |
 | *Metody Numeryczne*            | Z. Fortuna, B. Macukow |
+
 ## Zaliczenie
 Na zajęciach będzie do zdobycia 100 punktów.
 - **Laboratoria**

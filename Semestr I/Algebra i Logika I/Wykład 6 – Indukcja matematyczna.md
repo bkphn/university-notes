@@ -8,6 +8,7 @@ Wtedy parę $(X,<)$ nazywamy zbiorem dobrze uporządkowanym.
 * $(\mathbb{Q},\le)$ nie jest dobrze uporządkowany.
 
 **Aksjomat dobrego uporządkowania**: Każdy zbiór można dobrze uporządkować.
+
 ## Aksjomatyka Peano
 W 1908 roku Giuseppe Peano przedstawił zestaw pięciu aksjomatów, za pomocą którego definiuje się liczby naturalne:
 
@@ -18,6 +19,7 @@ W 1908 roku Giuseppe Peano przedstawił zestaw pięciu aksjomatów, za pomocą k
 | **3.** | $\forall_{n \in \mathbb{N}} S(n) \ne \varphi$ | Element $\varphi$ nie jest następnikiem żadnej liczby naturalnej. |
 | **4.** | $\forall_{n,m \in \mathbb{N}} n \ne m \Rightarrow S(n) \ne S(m)$ | Różne liczby naturalne mają różne następniki. |
 | **5. Aksjomat indukcji** | $\forall_{A \subset \mathbb{N}} (\varphi \in A \wedge \forall_{n \in \mathbb{N}} n \in A \Rightarrow S(n) \in A) \Rightarrow A = \mathbb{N}$ | Niech $A$ będzie podzbiorem $\mathbb{N}$ zawierającym element $\varphi$. Jeżeli $A$ zawiera jakąś liczbę, to zawiera też jej następnik. Wówczas $A$ jest całym zbiorem $\mathbb{N}$. |
+
 ## Indukcja matematyczna
 Indukcja matematyczna jest metodą dowodzenia twierdzeń, powstałą na podstawie aksjomatu indukcji.
 
@@ -40,18 +42,22 @@ Dowody przeprowadzane tą metodą nazywamy dowodami indukcyjnymi.
 > [!example] Rozważmy własność: $\phi(n) \Leftrightarrow \left( \sum_{i=1}^{n} i = \frac{n(n+1)}{2} \right)$
 > 
 > **1. Krok bazowy:** Sprawdzamy prawdziwość dla $n=1$.
-> $$ \sum_{i=1}^{1} i = 1 \quad \text{oraz} \quad \frac{1(1+1)}{2} = \frac{2}{2} = 1 $$
-> 
+>
+> $$\sum_{i=1}^{1} i = 1 \quad \text{oraz} \quad \frac{1(1+1)}{2} = \frac{2}{2} = 1$$
+>
 > **2. Krok indukcji:**
 > **Założenie indukcyjne:** $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$
 > **Teza indukcyjna:** $\sum_{i=1}^{n+1} i = \frac{(n+1)((n+1)+1)}{2} = \frac{(n+1)(n+2)}{2}$
 > 
 > **Dowód:** Należy wykazać, że $\phi(n) \Rightarrow \phi(n+1)$.
 > Rozpisujemy lewą stronę ($L$) tezy, wyciągając ostatni wyraz i korzystając z założenia indukcyjnego:
-> $$ \begin{align*}
+>
+> $$\begin{align*}
 > L &= 1 + 2 + \dots + n + (n+1) \\
 > &= \frac{n(n+1)}{2} + (n+1) \\
 > &= \frac{n(n+1)}{2} + \frac{2(n+1)}{2} \\
 > &= \frac{n(n+1) + 2(n+1)}{2} \\
 > &= \frac{(n+1)(n+2)}{2} = P
 > \end{align*} $$
+>
+

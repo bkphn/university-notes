@@ -12,7 +12,6 @@
 	- [Porozumienie TRIPS w sprawie handlowych aspektów praw](https://sip.lex.pl/akty-prawne/dzienniki-UE/porozumienie-w-sprawie-handlowych-aspektow-praw-wlasnosci-intelektualnej-67489937)
 		Reguluje minimalne standardy ochrony własności intelektualnej, w tym praw własności przemysłowej, w ramach WTO.
 
-
 - **Prawo Unii Europejskiej**
 	- [Dyrektywa 98/71/WE](https://eur-lex.europa.eu/legal-content/PL/ALL/?uri=celex:31998L0071)
 		Dotyczy ochrony prawnej wzorów przemysłowych i określa warunki ich rejestracji i ochrony na terenie UE.

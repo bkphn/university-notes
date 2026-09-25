@@ -10,6 +10,7 @@ Dane działanie musi być ściśle określone (zamknięte) dla wszystkich elemen
 * Działanie $+$ jest działaniem binarnym w zbiorach $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R},\dots$
 * Dzielenie $:$ nie jest działaniem binarnym w zbiorze $\mathbb{R}$, ponieważ wyrażenie $\frac{r}{0} \notin \mathbb{R}$ (nie jest określone).
 * Dzielenie $:$ nie jest działaniem binarnym w zbiorze $\mathbb{Z} \setminus \{0\}$, ponieważ np. $\frac{1}{2} \notin \mathbb{Z}$ (wynik "wyskakuje" poza dziedzinę).
+
 ## Tabela Cayley'a
 Jeśli $A$ jest zbiorem skończonym $A = \{a_1, a_2, \dots, a_n\}$, a $\circ$ jest działaniem binarnym w tym zbiorze, możemy opisać to działanie przy pomocy tabeli:
 
@@ -22,6 +23,7 @@ Jeśli $A$ jest zbiorem skończonym $A = \{a_1, a_2, \dots, a_n\}$, a $\circ$ je
 Działanie binarne $\circ$ w zbiorze $A$ nazywamy:
 * **Łącznym:** $\forall_{a,b,c \in A} \ a \circ (b \circ c) = (a \circ b) \circ c$.
 * **Przemiennym:** $\forall_{a,b \in A} \ a \circ b = b \circ a$.
+
 ## Elementy zbiorów:
 **Element neutralny $e \in A$:**
 * Lewostronny: $\forall_{a \in A} \ e \circ a = a$.
@@ -30,7 +32,9 @@ Działanie binarne $\circ$ w zbiorze $A$ nazywamy:
 
 **Element odwrotny $a' \in A$:**
 Jeżeli w zbiorze istnieje element neutralny $e$, to $a'$ nazywamy elementem odwrotnym do $a$, jeśli:
-$$ \forall_{a \in A} \ a \circ a' = e $$
+
+$$\forall_{a \in A} \ a \circ a' = e$$
+
 * W działaniach addytywnych (np. $+$) element ten nazywamy **przeciwnym** (zapisywanym jako $-a$).
 * Jeśli $a$ posiada dokładnie jeden element odwrotny w zapisie multiplikatywnym (np. $\cdot$), to oznaczamy go jako $a^{-1}$.
 
@@ -38,6 +42,7 @@ $$ \forall_{a \in A} \ a \circ a' = e $$
 Działanie $\circ$ jest rozdzielne względem działania $\oplus$, jeżeli:
 * (Lewostronnie) $\forall_{a,b,c \in A} \ a \circ (b \oplus c) = (a \circ b) \oplus (a \circ c)$.
 * (Prawostronnie) $\forall_{a,b,c \in A} \ (a \oplus b) \circ c = (a \circ c) \oplus (b \circ c)$.
+
 ## Struktury algebraiczne
 
 > [!abstract] Definicja
@@ -74,7 +79,9 @@ Działanie $\circ$ jest rozdzielne względem działania $\oplus$, jeżeli:
 
 > [!note]- Algebra Liego
 > Strukturę $(\mathfrak{g}, [,])$ nazywamy algebrą Liego, jeżeli $\mathfrak{g}$ jest przestrzenią wektorową nad ciałem $F$, a *nawias Liego* $[,]$ jest biliniowy, alternujący ($[x,x] = 0$) oraz spełnia Tożsamość Jacobiego:
-> $$ [x, [y,z]] + [z, [x,y]] + [y, [z,x]] = 0 $$
+>
+> $$[x, [y,z]] + [z, [x,y]] + [y, [z,x]] = 0$$
+>
 
 ---
 
@@ -90,4 +97,6 @@ Działanie $\circ$ jest rozdzielne względem działania $\oplus$, jeżeli:
 > Niech $X = \{1, 2, 3\}$. Moc zbioru $|X| = 3$.
 > Liczba permutacji: $|\operatorname{Sym}(X)| = 3! = 6$.
 > Wypisane zbiory permutacji to:
-> $$ \operatorname{Sym}(X) = \{(1,2,3), (1,3,2), (2,1,3), (2,3,1), (3,2,1), (3,1,2)\} $$
+>
+> $$\operatorname{Sym}(X) = \{(1,2,3), (1,3,2), (2,1,3), (2,3,1), (3,2,1), (3,1,2)\}$$
+>

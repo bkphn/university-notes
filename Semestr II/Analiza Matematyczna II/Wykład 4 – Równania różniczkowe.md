@@ -1,20 +1,31 @@
 ## Równanie różniczkowe zwyczajne
-Równaniem różniczkowym zwyczajnym nazywamy równanie o niewiadomej funkcji $y(x)$: $$ F(y, y', y'', \dots, y^{(n)}, x) = 0 $$
+Równaniem różniczkowym zwyczajnym nazywamy równanie o niewiadomej funkcji $y(x)$:
+
+$$F(y, y', y'', \dots, y^{(n)}, x) = 0$$
+
 Rząd równania różniczkowego to najwyższy rząd pochodnej w równaniu (odpowiednik stopnia wielomianu). 
 * Rząd równania $y' \operatorname{ctg} x = \operatorname{tg} x$ jest równy 1.
 * Rząd równania $y'' = y$ jest równy 2.
 
 Aby obliczyć dane równanie różniczkowe, potrzebujemy znać samo równanie oraz wartość początkową (wartości funkcji i jej pochodnej w konkretnym punkcie). Ilość pierwiastków (rozwiązań) równania różniczkowego jest równa rzędowi tego równania:
-$$ F(y, y', y'', \dots, y^{(n)}, x) = 0 \implies p_1, p_2, \dots, p_n $$
+
+$$F(y, y', y'', \dots, y^{(n)}, x) = 0 \implies p_1, p_2, \dots, p_n$$
+
 Rozwiązaniem równania jest funkcja w postaci:
-$$ y^{(n)} = Ay_1(x) + By_2(x) + \dots + Ny_n(x) $$
+
+$$y^{(n)} = Ay_1(x) + By_2(x) + \dots + Ny_n(x)$$
+
 ## Równania różniczkowe I rzędu
 Równaniem różniczkowym I rzędu nazywamy równanie w postaci:
-$$ y' + f(x) \cdot y = h(x) $$
+
+$$y' + f(x) \cdot y = h(x)$$
+
 gdzie $y$ jest funkcją zmiennej $x$.
+
 ## Równanie różniczkowe o zmiennych rozdzielonych
 Równanie o zmiennych rozdzielonych to taki rodzaj równania I rzędu, w którym $x$ i $y$ można zapisać po dwóch stronach równania niezależnie od siebie. Ma ono postać:
-$$ y' = f(x) \cdot h(y) $$
+
+$$y' = f(x) \cdot h(y)$$
 
 > [!abstract] Schemat rozwiązania
 > 1. **Uporządkować elementy**, by otrzymać dwie funkcje – jedną zależną od $x$, a drugą od $y$: $y' = f(x) \cdot h(y)$.
@@ -38,6 +49,7 @@ $$ y' = f(x) \cdot h(y) $$
 > 7. $y\left(\frac{\pi}{4}\right) = \frac{\pi}{4} \implies \frac{\pi}{4} = \arcsin\left(\frac{c}{\cos\frac{\pi}{4}}\right)$
 > 8. $\sin\left(\frac{\pi}{4}\right) = \frac{c}{\cos\frac{\pi}{4}} \implies \frac{\sqrt{2}}{2} = \frac{2}{\sqrt{2}} \cdot C \implies C = \frac{1}{2}$
 > 9. $y(x) = \arcsin\left(\frac{1}{\cos x} \cdot \frac{1}{2}\right)$
+
 ## Równanie różniczkowe niejednorodne
 Równanie różniczkowe niejednorodne to równanie postaci $y' + f(x)y = h(x)$, którego nie da się uporządkować tak jak równania o zmiennych rozdzielonych.
 
@@ -48,7 +60,9 @@ Równanie różniczkowe niejednorodne to równanie postaci $y' + f(x)y = h(x)$, 
 > 4. **Uzmiennić stałą**, zamieniając $c$ na funkcję zależną od $x$ – $c(x)$: $y = F(x) \cdot c(x)$.
 > 5. **Obliczyć pochodną** $y'$ potrzebną do podstawienia pod równanie wyjściowe: $y' = F'(x) \cdot c(x) + F(x) \cdot c'(x)$.
 > 6. **Podstawić** wyznaczone $y$ oraz $y'$ pod równanie początkowe:
->    $$ \color{red}{y'} + \color{green}{f(x)} \cdot \color{blue}{y} \color{black}{ = h(x)} \implies \color{red}{(F'(x) \cdot c(x) + F(x) \cdot c'(x))} + \color{green}{f(x)} \cdot \color{blue}{(F(x) \cdot c(x))} \color{black}{= h(x)} $$
+>
+>    $$\color{red}{y'} + \color{green}{f(x)} \cdot \color{blue}{y} \color{black}{ = h(x)} \implies \color{red}{(F'(x) \cdot c(x) + F(x) \cdot c'(x))} + \color{green}{f(x)} \cdot \color{blue}{(F(x) \cdot c(x))} \color{black}{= h(x)}$$
+>
 > 7. **Uprościć równanie** (wyrażenia z $c(x)$ powinny się zredukować): $c'(x) \cdot F(x) = h(x)$.
 > 8. **Wyznaczyć funkcję pierwotną** $c(x)$: $c'(x) = \frac{h(x)}{F(x)} \implies c(x) = \int \frac{h(x)}{F(x)} \, dx \implies c(x) = H(x) + C$.
 > 9. **Podstawić funkcję** $c(x)$ pod równanie $y$ z punktu 4: $y = F(x) \cdot (H(x) + C)$.

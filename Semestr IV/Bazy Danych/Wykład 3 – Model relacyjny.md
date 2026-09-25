@@ -2,6 +2,7 @@
 Relacyjny model danych jest aktualnie najbardziej użytecznym modelem danych, bazuje on na pojęciu **relacji**, rozumianej jako dwuwymiarowa tabela do której wypisywane są dane.
 
 Ze względu na brak elastyczności modelu relacyjnego na etapie projektowania łatwiej jest zaprojektować bazę w oparciu o model związków encji, a następnie przejść do modelu relacyjnego.
+
 ## Budowa relacji
 Dane w modelu relacyjnym reprezentuje się za pomocą dwumiarowych tablic, zwanych **relacjami**:
 
@@ -22,17 +23,20 @@ W relacjach możemy wyróżnić następujące elementy:
 	- Wartości atrybutów $F_{K}$ należą do tej samej dziedziny co argumenty pełniące rolę klucza głównego w $R_{2}$
 	- Wartość klucza obcego w krotce $t_{1}$ w stanie $r(R_{1})$ musi być równa wartości klucza głównego pewnej innej krotki $t_{2}$ w stanie $r(R_{2})$.
 - **Klucz główny**: Atrybut klucza oznaczamy przez $P_{K}$, musi on być unikalny dla każdej krotki.
+
 ## Ograniczenia
 W relacyjnym modelu bazy danych musimy nakładać pewne ograniczenia na dane, jakie możemy przechowywać, jako atrybuty krotek:
 - **Ograniczenia dziedziny**: Wartość dowolnego atrybutu musi być atomowa
 - **Ograniczenie wartości pustych**: Na atrybuty można nałożyć dodatkowe ograniczenie, które określa czy w można stosować atrybut `NULL`.
 - **Ograniczenia klucza**: Często może zdarzyć się, że dwa różne obiekty będą miały identyczne atrybuty, zbiór atrybutów nazywamy wtedy nadkluczem relacji. Aby zapobiec sytuacji nierozróżnialności dwóch krotek musimy do każdej krotki dodać atrybut klucza. Atrybut klucza musi być niezmienny i niepusty by zapewnić poprawne działanie bazy danych
+
 ## Więzy integralności
 Więzy integralności informują o ograniczeniach wynikających z modelu relacyjnego:
 - **Więzy integralności encji**: Żadna wartość atrybutu klucza głównego nie może mieć wartości pustej.
 - **Więzy integralności odwołań**: Krotka należąca do jednej relacji i odwołująca się do innej, zawsze musi odwoływać się do istniejącego obiektu.
 
 Jeżeli warunki te są spełnione w modelu związków encji to na jej podstawie możemy utworzyć model relacyjny.
+
 ## Tworzenie modelu relacyjnego
 Opiszemy teraz kolejne kroki algorytmu odwzorowującego model E/R w relacyjny schemat bazy danych.
 
@@ -51,3 +55,4 @@ Opiszemy teraz kolejne kroki algorytmu odwzorowującego model E/R w relacyjny sc
 > Dla każdego atrybutu wielowartościowego należy stworzyć nową relację, która zawiera atrybuty odpowiadające wielowartościowemu atrybutowi zbiorów encji i atrybutom klucza głównego relacji reprezentującej zbiór encji posiadający atrybut wielowartościowy.
 >7. **Odwzorowanie związków wieloargumentowych**
 > Dla każdego wieloargumentowego związku należy stworzyć nową relację zawierającą klucze główne wszystkich relacji reprezentujących zbiory encji należących do tego związku oraz atrybuty proste związku.
+

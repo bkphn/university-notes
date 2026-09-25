@@ -10,6 +10,7 @@
 | *Język C++. Szkoła programowania* | Stephen Prata |
 | *Thinking in C++*                 | Bruce Eckel   |
 | *Wprowadzenie do C++*             | Cay Horstmann |
+
 ## Punktacja
 1. Dwa kolokwia praktyczne na laboratoriach po 25 pkt
 2. Egzamin na wykładzie 20 pkt

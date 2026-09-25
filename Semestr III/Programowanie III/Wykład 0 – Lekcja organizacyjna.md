@@ -16,11 +16,14 @@
 - Projekt 20 pkt, 10 pkt dokumentacja + 10 pkt prezentacja na wykładzie na wykładzie lub laboratorium.
 
 Egzamin wstępnie odbędzie się na ostatnich zajęciach.
+
 ## Starosta
 Zrobić ankietę czy chcemy zrobić jedną ankietę za 50 puntków czy 40 + 10.
 Po prezentacje podchodzić po wykładach i zgrywać je na pendrive.
+
 ## Egzamin
 Egzamin na kartkach. Na egzaminie pojawi się zadanie z obliczenia powierzchni bryły, z odpowiednią walidacją danych.
+
 ## Projekt
 Dokumentacja do projektu powinna zawierać:
 1. Temat projektu i autor

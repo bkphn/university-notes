@@ -2,6 +2,7 @@
 Sztuczna inteligencja jest dziedziną wiedzy obejmująca sieci neuronowe, logikę rozmytą, obliczenia ewolucyjne, sztuczne życie i robotykę.
 
 W sensie matematyczym rozumiemy AI jako tworzenie modeli symulujących inteligentne zachowania. W sensie informatycznym rozumiemy AI jako tworzenie programów komputerowych symulujących te zachowania.
+
 ## Podstawy biologiczne
 Systemy sztucznej inteligencji odwozrowują budowę ludzkiego mózgu.
 
@@ -15,6 +16,7 @@ Pojemności kanałów zymsłow:
 - słuch: $15 \text{ kb/s}$
 - węch: $1 \text{ kb/s}$
 - smak: $100 \text{ b/s}$
+
 ## Historia uczenia maszynowego
 W 1943 roku McCuloch i Pitts przedstawiają matematyczny model sztucznego neuronu z ludzkiego mózgu. W 1949 roku Hebb przedstawia regułę uczenia bez nadzoru, jako pierwszy zaproponował metodę uczenia sieci polegającą na zamianach wag połączeń między neuronami. W latach 50-tych zaczęto budować pierwsze sieci neuronowe. W 1958 Rosenblatta przedstawia pierwszą implementację perceptronu z SN w postaci elektroniczno-elektromechanicznego układu o architekturze warstwy wejściowej i warstwy wyjściowej.
 
@@ -27,6 +29,7 @@ W latach 80 pojawiają się pierwsze sieci ze sprzężeniem zwrotnym, w którym 
 
 W latach 90 pojawia się program TD-Gammom, potrafiący konkurować w grze Backgammom z mistrzami świata. Program uczył się swojej strategii grając jako przeciwnik w ponad milionie gier. 
 W 1997 roku Garri Kasparow, mistrz świata w szachach, został pokonany w tzw. miniaturze przez komputer Deep Blue firmy IBM. Kasparow zarzucił firmie IBM oszustwo, gdyż odmówiono mu dostępu do poprzednich gier Deep Blue. Koniec lat 90 to stosowanie algorytmów uczenia maszynowego w rozwoju internetowego i wyszukiwarek internetowych.
+
 ## Metody uczenia maszynowego
 Możemy wyróżnić różne metody uczenia maszynowego, między innymi:
 - **Sieci neuronowe**: Struktury matematyczne odwzorowujące przepływ informacji w mózgu człowieka do podejmowania decyzji na podstawie modelu matematycznego uczonego w kolejnych iteracjach z danych wejściowych.
@@ -37,7 +40,9 @@ Możemy wyróżnić różne metody uczenia maszynowego, między innymi:
 - **Uczenie bayesowskie**: Metody oparte na prawdopodobieństwie warunkowym Thomasa Bayesa. Wzór Bayesa jest podstawą różnych form wnioskowania probabilistycznego.
 - **Uczenie z przykładów**: W odróżnieniu od metod uczenia, które konstruują ogólny, tzw. jawny opis funkcji docelowej, uczenie tego typu po prostu zapamiętuje przykłady.
 - **Uczenie przez wzmacnianie**: Metoda wyznaczania optymalnej polityki sterowania przez agenta w nieznanym mu środowisku na podstawie interakcji z tym środowiskiem.
+
 ## Zastosowania AI
 Sztuczna inteligencja jest powszechnie wykorzystywana we wszystkich dziedzinach nauki. W technice stosuje się ją do rozpoznawania kontekstowego, klasyfikacji oraz analizy obrazów, przetwarzania sygnałów oraz przy robotyce, automatyce i teorii sterowania. Aby sklasyfikować i rozpoznawać wzorce, sieć uczy się podstawowych cech: odwzorowywania geometrycznego, pikselowego układu wzorca, rozkładu składników wzorca, składników transformacji Fouriera czy innych właściwości zależnych od typu wzorca.
 
 W medycynie stosuje się AI do diagnozy schorzeń, analizy zdjęć medycznych, systemów wspomagania życia czy analizy czynników środowiskowych. W ekonomii z kolei wykorzystuje się do przewidywania rozwiązań modeli ekonomicznych, prognozowania danych, takich jak bessy i hossy na giełdzie, klasyfikacji danych bilansowych czy branży.
+

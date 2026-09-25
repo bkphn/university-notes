@@ -1,7 +1,8 @@
 ## Wprowadzenie do kodu arytmetycznego
-Średnia efektywność kodowania arytmetycznego jest uważana za najwyższą. Dany jest uporządkowany alfabet $\mathcal{X} = (x_1, x_2, \dots, x_n)$ o rozkładzie prawdopodobieństwa $P = (p_1, \dots, p_n)$. Każdemu ciągowi dwójkowemu $t_1t_2\dots t_m \in \{0, 1\}^*$ możemy przyporządkować liczbę wymierną $0.t_1t_2t_3\dots t_m = \frac{t_1}{2^1} + \frac{t_2}{2^2} + \dots + \frac{t_m}{2^m} \in [0, 1) \cap \mathbb{Q}$.
+Średnia efektywność kodowania arytmetycznego jest uważana za najwyższą. Dany jest uporządkowany alfabet $\mathcal{X} = (x_1, x_2, \dots, x_n)$ o rozkładzie prawdopodobieństwa $P = (p_1, \dots, p_n)$. Każdemu ciągowi dwójkowemu $t_1t_2\dots t_m \in \{0, 1\}^{\ast}$ możemy przyporządkować liczbę wymierną $0.t_1t_2t_3\dots t_m = \frac{t_1}{2^1} + \frac{t_2}{2^2} + \dots + \frac{t_m}{2^m} \in [0, 1) \cap \mathbb{Q}$.
  
-Kodowaniem arytmetycznym nazywamy odwzorowanie $c: \vec{x} \to c(\vec{x})$, gdzie $\vec{x} \in \mathcal{A}^*, c(\vec{x}) \in \{0, 1\}^{*}$. Słowo kodowe $c(\vec{x}) \in [P(\vec{x}), P(\vec{x}) + p(\vec{x})]$ jest reprezentacją dwójkową liczby naturalnej $t$, spełniającej nierówności $t-1 \le P(\vec{x}) \cdot 2^m < t$.
+Kodowaniem arytmetycznym nazywamy odwzorowanie $c: \vec{x} \to c(\vec{x})$, gdzie $\vec{x} \in \mathcal{A}^{\ast}, c(\vec{x}) \in \{0, 1\}^{\ast}$. Słowo kodowe $c(\vec{x}) \in [P(\vec{x}), P(\vec{x}) + p(\vec{x})]$ jest reprezentacją dwójkową liczby naturalnej $t$, spełniającej nierówności $t-1 \le P(\vec{x}) \cdot 2^m < t$.
+
 ## Algorytm kodowania arytmetycznego
 Dane jest słowo $\vec{m} = m_1m_2\dots m_t$, gdzie $m_i \in \mathcal{X}, t \in \mathbb{N} \setminus \{0\}$. Przyjmujemy, że dane są prawdopodobieństwa kumulatywne $P_t = p_1 + \dots + p_{t-1}$ oraz przedział początkowy $[L_0, R_0) = [0, 1)$.
 
@@ -14,7 +15,9 @@ Dane jest słowo $\vec{m} = m_1m_2\dots m_t$, gdzie $m_i \in \mathcal{X}, t \in 
 > $m_i \leftrightarrow [L_i, R_i)$
 > 
 > Słowo kodowe $c(\vec{m})$ wybieramy tak, aby należało do przedziału $[L_t, R_t)$. Można to zrobić na nieskończenie wiele sposobów, jednak w postaci dziesiętnej konstruujemy słowo kodowe stosując wzór:
-> $$ c(\vec{m}) = \frac{L_t + R_t}{2} $$
+>
+> $$c(\vec{m}) = \frac{L_t + R_t}{2}$$
+>
 > Następnie przepisujemy $c(\vec{m})$ w postaci dwójkowej:
 > $c(\vec{m})_{(10)} = b_{(2)} = 0.b_1b_2\dots_{(2)}$
 > gdzie $b_j \in \{0, 1\}$, a $\vec{b}$ jest słowem kodowym kodującym komunikat $\vec{m}$.
@@ -54,7 +57,7 @@ Dane jest słowo $\vec{m} = m_1m_2\dots m_t$, gdzie $m_i \in \mathcal{X}, t \in 
 ---
 
 ## Algorytm dekodowania arytmetycznego
-Dane jest słowo kodowe $\vec{b} \in \{0, 1\}^*$ kodujące komunikat $\vec{m} = m_1m_2\dots \in \mathcal{X}^*$. W celu dekodowania słowa kodowego $\vec{b}$ konstruujemy tablicę kodową:
+Dane jest słowo kodowe $\vec{b} \in \{0, 1\}^{\ast}$ kodujące komunikat $\vec{m} = m_1m_2\dots \in \mathcal{X}^{\ast}$. W celu dekodowania słowa kodowego $\vec{b}$ konstruujemy tablicę kodową:
 
 | $i$ | $x_i \in \mathcal{X}$ | $p_i$ | $[P(x_{i-1}), P(x_k))$ |
 | :---: | :--- | :--- | :--- |
@@ -67,9 +70,13 @@ Następnie zapisujemy liczbę $\vec{b}_{(2)}$ w postaci dziesiętnej $T_1 = \vec
 
 > [!abstract] Kroki iteracyjne dekodowania
 > Dla każdego $i \in \{1, \dots, n\}$ szukamy litery $x_l = m_i$ i wyznaczamy $T_{i+1}$ korzystając ze wzoru:
-> $$ T_{i+1} = \frac{T_i - P(x_{l-1})}{P(x_l) - P(x_{l-1})} $$
+>
+> $$T_{i+1} = \frac{T_i - P(x_{l-1})}{P(x_l) - P(x_{l-1})}$$
+>
 > Następnie wyznaczamy $m_{i+1}$ w taki sposób, że:
-> $$ \exists_{r \in \{1, \dots, n\}} : T_{i+1} \in [p_1 + \dots + p_{r-1}, p_1 + \dots + p_r) \implies m_{i+1} = x_r $$
+>
+> $$\exists_{r \in \{1, \dots, n\}} : T_{i+1} \in [p_1 + \dots + p_{r-1}, p_1 + \dots + p_r) \implies m_{i+1} = x_r$$
+>
 
 > [!example] Przykład dekodowania: $\vec{b} = 11011011$
 > Zdekoduj komunikat $\vec{b} = 11011011$ który jest słowem kodowym dla komunikatu $\vec{m} = m_1m_2m_3m_4m_5$ nad alfabetem $\mathcal{X} = (A, M, R, U)$ o rozkładze prawdopodobieństw $P = (0.4, 0.1, 0.4, 0.1)$.

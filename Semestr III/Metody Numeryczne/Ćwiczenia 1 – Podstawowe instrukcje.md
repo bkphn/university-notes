@@ -1,6 +1,7 @@
 
 ## Wolfram Mathematica
 Mathematica jest jednym z najpopularniejszych programów do obliczeń symbolicznych i numerycznych, opracowanym w 1988 roku przez Stephena Wolframa. Program ten charakteryzuje się wysoką wydajnością, szerokimi możliwościami wizualizacji i prezentacji danych oraz przenośnością na platformy 32- i 64-bitowe. Mathematica posiada własny język programowania funkcyjnego (podobny do języka Lisp), który operuje na listach i oferuje bogate możliwości ich przetwarzania.
+
 ## Podstawowe operatory
 W programie Wolfram Mathematica możemy wykonywać wszystkie podstawowe operacje matematyczne. Wykorzystywane do tego są następujące symbole:
 
@@ -12,6 +13,7 @@ W programie Wolfram Mathematica możemy wykonywać wszystkie podstawowe operacje
 | $4\div2$ lub $\frac{4}{2}$ | `4 / 2`             |
 | $2^4$                      | `2 ^ 4`             |
 | $\sqrt{4}$                 | `4 ^ (1/2)`         |
+
 ## Output (Wyniki obliczeń)
 Mathematica automatycznie wyświetla rozwiązanie każdego wprowadzonego równania:
 	`In[1]:= 2 + 2`
@@ -26,6 +28,7 @@ Mathematica automatycznie wyświetla rozwiązanie każdego wprowadzonego równan
   * `%` odpowiada `Out[x-1]` (poprzedni wynik)
   * `%%` odpowiada `Out[x-2]`
   * `%%%` odpowiada `Out[x-3]`
+
 ## Przybliżanie
 Mathematica operuje na stałych matematycznych i fizycznych, zachowując ich dokładną postać (np. $\sqrt{2}$ to po prostu $\sqrt{2}$). Aby przybliżać wartości, korzystamy z funkcji $\mathtt{N}$ (przybliżenie numeryczne):
 
@@ -33,6 +36,7 @@ Mathematica operuje na stałych matematycznych i fizycznych, zachowując ich dok
 * **Podstawowe użycie:** $\mathtt{N}[\sqrt{2}]$ lub zapis ze znakiem specjalnym $\sqrt{2}$ // N` zwróci wynik `1.41421`.
 * **Ustalenie dokładności:** Wywołanie $\mathtt{N}[a, n]$, gdzie `n` jest dokładnością. Przykład: $\mathtt{N}[\sqrt{2}, 10]$ zwróci `1.4142135624`.
 * **Liczby zmiennoprzecinkowe:** Umieszczenie kropki po wartości całkowitej (np. $\sqrt{2.}$) sprawia, że operujemy na liczbach zmiennoprzecinkowych, które z definicji są numeryczne i zwracają wynik `1.41421`.
+
 ## Stałe
 Mathematica posiada całą gamę stałych, mają one jednak unikalne symbole (rozpoczynające się zawsze z wielkiej litery), których nie należy mylić z niewiadomymi.
 
@@ -43,6 +47,7 @@ Mathematica posiada całą gamę stałych, mają one jednak unikalne symbole (ro
 | Złoty podział     | $\varphi$          | $\mathtt{GoldenRatio}$               |                  |
 | Stała Eulera      | $\gamma$           | $\mathtt{EulerGamma}$                |                  |
 | Jednostka urojona | $i$                | $\mathtt{I}$ lub symbol $\mathbb{i}$ | `ESC ii ESC`     |
+
 ## Funkcje matematyczne
 Funkcje matematyczne są zawsze zapisywane z wielkiej litery, a argumenty przyjmują w nawiasach kwadratowych. Funkcje trygonometryczne standardowo operują na radianach; aby działać na kątach, należy po wartości liczbowej umieścić znak stopni `°`.
 
@@ -55,11 +60,13 @@ Funkcje matematyczne są zawsze zapisywane z wielkiej litery, a argumenty przyjm
 | $\ln x$                    | `Log[x]`                    |
 | $\log_{10} x$              | `Log10[x]` lub `Log[10, x]` |
 | $\log_b x$                 | `Log[b, x]`                 |
+
 ## Pomoc w Mathematice
 Mathematica ma wbudowaną funkcję pomocy. Aby z niej skorzystać, należy użyć symbolu `?` przed funkcją:
 * `?Log` – Pojedynczy znak zapytania zwraca opis działania i poprawny zapis funkcji.
 * `??Log` – Podwójny znak zapytania zwraca wyjaśnienie oraz szczegóły systemowe funkcji (np. atrybuty jak `Listable`, `Protected`).
 * `?Log*` – Znak zapytania przed funkcją i gwiazdka na końcu zwróci listę wszystkich dostępnych funkcji zaczynających się od podanego ciągu znaków (np. `Log`, `Log10`, `Log2`, `LogGamma`, itd.).
+
 ## Pochodne i całki
 W Mathematice można wykonywać obliczenia symboliczne z zakresu analizy matematycznej:
 
@@ -68,11 +75,13 @@ W Mathematice można wykonywać obliczenia symboliczne z zakresu analizy matemat
 | $\frac{df}{dx}$ lub $\frac{\partial f}{\partial x}$ | `D[f, x]`                    |
 | $\int f(x) dx$                                      | `Integrate[f[x], x]`         |
 | $\int_{a}^{b} f(x) dx$                              | `Integrate[f[x], {x, a, b}]` |
+
 ## Zmienne
 Zmienne pozwalają na przechowywanie wartości.
 * **Przypisanie:** `a = 2`.
 * **Operacje:** Zmiennych można używać w równaniach, np. `a + 3` zwróci `5`, a `a + b` zwróci `2 + b` (jeśli `b` nie ma przypisanej wartości).
 * **Czyszczenie przypisania:** Aby wyczyścić zmienną, należy przypisać jej wartość do kropki (np. `a = .`) lub skorzystać z funkcji $\mathtt{Clear}$, która pozwala usunąć wiele przypisań (np. `Clear[a]`, `Clear[a, b, c]`).
+
 ## Wektory
 Aby utworzyć wektor, należy do zmiennej przypisać zbiór (w nawiasach klamrowych): `v = {1, 2, 3}`.
 
@@ -92,6 +101,7 @@ Aby utworzyć wektor, należy do zmiennej przypisać zbiór (w nawiasach klamrow
 * Długość wektora uzyskuje się używając funkcji `Length[v]`.
 * Umieszczenie podwójnego nawiasu klamrowego `[[i]]` oznacza odwołanie się do $i$-tego elementu wektora (np. `v[[3]]` zwróci `6` dla `v = {2, 4, 6}`).
 * Zmiana konkretnego elementu wektora działa przez operator równości: `v[[2]] = 8` zmienia stary wektor z `{2, 4, 6}` na `{2, 8, 6}`.
+
 ## Macierze
 Macierze w programie tworzymy poprzez zagnieżdżanie zbiorów wewnątrz zbiorów.
 `M = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}`
@@ -115,6 +125,7 @@ Aby wyświetlić macierz w postaci klasycznej tablicy, należy wywołać funkcj�
 * $\text{diag}(d_1, d_2, d_3)$ (diagonalna): `DiagonalMatrix[{d1, d2, d3}]`
 
 Podobnie jak przy wektorach, odwołujemy się do konkretnych elementów: `M[[1, 2]]` (pierwszy wiersz, druga kolumna), `M[[2]]` (cały drugi wiersz), `M[[All, 2]]` (cała druga kolumna).
+
 ## Tabele
 Funkcja `Table` służy do generowania list (zbiorów, wektorów, macierzy) utworzonych według określonych zasad.
 
@@ -126,6 +137,7 @@ Funkcja `Table` służy do generowania list (zbiorów, wektorów, macierzy) utwo
   * `n` – krok zmiany zmiennej iteracyjnej.
 * **Przykład wywołania wektora:** `Table[i^3, {i, 0, 12, 2}]` zwróci `{0, 8, 64, 216, 512, 1000, 1728}`.
 * **Rozszerzenie dla macierzy:** `Table[f[i, j], {i, a, b}, {j, c, d}]`, gdzie stosuje się podwójną iterację dla wierszy (`i`) oraz kolumn (`j`). Np. `Table[i * j, {i, 1, 3}, {j, 1, 3}]` zwraca zagnieżdżoną listę odzwierciedlającą macierz $3\times3$.
+
 ## Rozwiązania równań
 Do rozwiązywania równań (lub układów równań) wykorzystuje się funkcję `Solve[e, x]`, gdzie $e$ to równanie lub lista równań, a $x$ to szukana niewiadoma (lub zbiór niewiadomych).
 
@@ -134,3 +146,4 @@ Do rozwiązywania równań (lub układów równań) wykorzystuje się funkcję `
   * `s[[1]]` zwraca zbiór z pierwszą odpowiedzią: `{x -> -3}`.
   * `s[[1, 1]]` zwraca całą regułę: `x -> -3`.
   * `s[[1, 1, 2]]` wyciąga wyłącznie konkretną wartość numeryczną: `-3`.
+

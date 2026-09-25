@@ -6,6 +6,7 @@ Klasa reprezentowana jest przez prostokąt zawierający nazwę klasy, natomiast 
 - `-` (składowa prywatna)
 - `#` (składowa chroniona)
 - `~` (składowa internal)
+
 ## Diagramy UML
 Klasę `NazwaKlasy` zdefiniowaną poniżej:
 ```csharp
@@ -24,6 +25,7 @@ możemy przedstawić za pomocą następującego diagramu:
 | ----------------------------------------------------------------------------- |
 | `-polePrywatne : bool`<br>`+Wlasnosc : int = 0`<br>`#WlasnoscChroniona : int` |
 | `+MetodaPubliczna() : bool`<br>`#MetodaChroniona()`                           |
+
 ## Związki między klasami
 Między klasami możemy wyróżnić następujące związki:
 - **Zależność**: Najsłabszy związek pomiędzy dwiema klasami. Zachodzi wówczas, gdy jedna klasa „przelotnie” korzysta z obiektu innej klasy. Najczęściej z zależnością mamy do czynienia, gdy operacje jednej klasy przyjmują jako argument obiekt drugiej klasy.![[Pasted image 20260919165412.png|263]]
@@ -33,6 +35,7 @@ Między klasami możemy wyróżnić następujące związki:
 - **Dziedziczenie**: Zachodzi gdy jedna klasa jest rodzaju innej klasy.![[Pasted image 20260919165443.png|283]]
 - **Implementacja interfejsu**: Zachodzi gdy dana klasa implementuje dany interfejs.![[Pasted image 20260919165448.png|274]]
 Przy rysowaniu zależności w diagramach UML należy pamiętać, że strzałka powinna być zwrócona w drugą stronę niż „każe intuicja”. Nie chodzi o to, że `czytelnik` jest klasą pochodną po `uzytkownik`, tylko o to, że `czytelnik` implementuje klasę `uzytkownik`.
+
 ## Krotność związków
 Krotność związków określa minimalną i maksymalną liczbę obiektów, które mogą zostać powiązane w ramach danego związku. W diagramach UML używa się oznaczeń:
 
@@ -41,19 +44,25 @@ Krotność związków określa minimalną i maksymalną liczbę obiektów, któr
 - `0..*` (zero lub więcej obiektów)
 - `1..*` (jeden lub więcej obiekt)
 - `*   ` (dowolna liczba obiektów)
+
 ## Zależności
 Zależność między klasami występuje wówczas, gdy jedna klasa musi posiadać informacje o drugiej klasie, aby móc skorzystać z obiektu tej klasy. Zmiana struktury jednej klasy może spowodować konieczność wprowadzenia zmian w drugiej klasie. Najczęściej z zależnością mamy do czynienia, gdy operacje jednej klasy przyjmują jako argument obiekt drugiej klasy.
+
 ## Asocjacje
 Asocjacja jest związkiem silniejszym od zależności. Z asocjacją mamy do czynienia wówczas, gdy jedna klasa jest powiązana z drugą klasą przez pewien określony czas. W przypadku tego związku czas życia jednego obiektu nie zależy od drugiego. Ponadto w przypadku asocjacji usunięcie jednego z obiektów nie powoduje usunięcia drugiego.
 
 W przypadku asocjacji jeden obiekt powiązany tą relacją z drugim obiektem posiada referencję do niego, może się do niego odwołać, ale nie tworzy go, nie zarządza nim.
+
 ## Agregacje częściowe
 Silniejsza od asocjacji jest agregacja częściowa. Jest to relacja określana mianem „całość-część” przy czym, w przypadku tej relacji część może czasem wchodzić w skład wielu różnych całości. W tej relacji mamy istotnie wyróżnionego właściciela – obiekt nadrzędny i obiekt podrzędny. W przypadku agregacji częściowej, właścicieli obiektu podrzędnego jest więcej i zazwyczaj właściciele nie tworzą tych obiektów i ich nie usuwają.
+
 ## Agregacje całkowite
 Silniejszą odmianą agregacji jest agregacja całkowita, nazywana również kompozycją. Jest to również relacja typu „całość-część”, ale tym razem całość jest jedynym właścicielem części, tworzy obiekt będący częścią i nim zarządza. Jest to niewątpliwie najsilniejszy rodzaj relacji łączącej klasy. Obiekt części jest tworzony i zarządzany w całości przez właściciela. Obiekt ten nie może istnieć bez właściciela. Zazwyczaj w przypadku tej relacji mówi się, że „obiekt jest częścią całości”.
+
 ## Uproszczony diagram UML
 W uproszczonym diagramie UML jedynym elementem reprezentującym klasę jest jej nazwa. Pomijamy tutaj pola, metody i właściwości.
 ![[Pasted image 20260919165614.png|395]]
+
 ## Kompozycja
 Naturalnym jest, że w wielu przypadkach tworzymy obiekty jako zbiór innych obiektów. W ten sposób wykorzystujemy istniejący już kod w tworzeniu nowych typów. O ile w przypadku dziedziczenia mieliśmy związaną z nim relację „jest”, to w przypadku kompozycji związek ten można nazwać „ma”. **Kompozycja** jest mechanizmem, który pozwala tworzyć rozbudowane systemy z mniejszych komponentów. Jeśliby zastanowić się głębiej, to właśnie w taki sposób ludzie rozwiązują problemy występujące w świecie rzeczywistym. O wiele łatwiej nam (ludziom) myśli się o czymś używając **abstrakcji**. Posługujemy się w naturalny sposób zdefiniowanymi abstrakcyjnymi „typami”, które nakreślają nam pewien zestaw konkretnych cech, składowych tego typu, dzięki czemu użycie samego słowa klucza (nazwy tego typu) jasno nam definiuje czego możemy się spodziewać. Takim eksploatowanym przez wielu autorów książek o programowaniu obiektowym przykładem jest termin *samochód*. Jedno słowo (*samochód*), kryje w sobie postać tego czego oczekujemy tzn. czterokołowego pojazdu, wyposażonego w silnik itd. Takie podejście ułatwia nam komunikację i jest naturalnym mechanizmem, na którym bazuje nasz sposób myślenia.
 
@@ -68,3 +77,4 @@ Herbert A. Simon (laureat nagrody Nobla) przedstawił przemyślenia na temat sta
 - Stabilne złożone systemy można prawie całkowicie rozłożyć oznacza to, że można wyodrębnić składowe systemu i odróżnić interakcje między tymi elementami od interakcji w ich wnętrzu. W stabilnym systemie jest ”mało” powiązań pomiędzy jego elementami.
 - Stabilne złożone systemy prawie zawsze składają się tylko z kilku różnych rodzajów podsystemów a te z kilku różnych rodzajów części.
 - Stabilne systemy prawie zawsze powstają w wyniku ewolucji mniejszych systemów, które działały – zamiast budować system od początku lepiej rozwijać już istniejący sprawdzony.
+

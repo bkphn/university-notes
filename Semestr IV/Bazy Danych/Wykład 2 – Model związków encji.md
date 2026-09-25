@@ -2,12 +2,15 @@
 Tworzenie bazy danych należy zacząć od zbierania informacji. Etap ten możemy podzielić na dwa elementy:
 - **Zgromadzenie i analiza wymagań**: Etap ten wymaga od projektanta bazy danych przeprowadzenia szczegółowych wywiadów z użytkownikami końcowymi projektowanego systemu, aby dokładnie zrozumieć i udokumentować ich wymagania. Wynikiem jest zwięźle udokumentowany zbiór wymagań użytkowników.
 - **Wymagania funkcjonalne**: Określane są równolegle z wymaganiami danych. Powinny składać się z określonych przez przyszłych użytkowników operacji ewentualnie transakcji, które będą wykonywane na bazie danych. Dotyczy zarówno operacji związanych z odczytywaniem danych jak i ich aktualizacją.
+
 ## Schemat koncepcyjny
 Schemat koncepcyjny jest zwięzłym opisem zgłoszonym przez docelowych użytkowników wymagań danych i zawiera szczegółowe opisy encji, związków między nimi i ograniczeń. Etap ten nie obejmuje szczegółów implementacji, dzięki czemu zrozumienie schematu koncepcyjnego jest łatwiejsze i może być wykorzystywane do komunikacji z użytkownikami nie posiadającymi przygotowania technicznego.
+
 ## Implementacja bazy danych
 Po wykonaniu projektu koncepcyjnego bazy danych można przejść do jej implementacji. Etap ten nazywany jest często **projektowaniem logicznym** bądź **odwzorowaniem modelu danych**. Istotne jest również poznanie algorytmu w jaki sposób można stworzyć schemat danych na podstawie projektu koncepcyjnego. Projekt koncepcyjny przygotujemy w oparciu o **diagram związków encji** w skrócie oznaczanym jako (E/R).
 
 Diagram związków encji (E/R) jest graficzną metodą pozwalającą w sformalizowany sposób przedstawić koncepcyjny schemat bazy danych. Diagramy te tworzy się za pomocą kształtów geometrycznych.
+
 ## Elementy bazy danych
 Podstawowymi bytami mini-świata są **encje**. Encja jest niezależnym od innych elementem bazy danych, którą charakteryzuje się za pomocą atrybutów. Encja może być odpowiednikiem fizycznie istniejącego obiektu, np. osoba, samochód, budynek; bądź obiektem koncepcyjnym, np. firma, zawód.
 
@@ -16,6 +19,7 @@ Podstawowymi bytami mini-świata są **encje**. Encja jest niezależnym od innyc
 **Związkiem** nazywamy połączenia między dwoma lub większą liczbą zbiorów encji.
 
 **Typem encji** nazywamy grupę encji o tych samych atrybutach. **Zbiorem encji** nazywamy wszystkie encje danego typu znajdujące się w bazie danych.
+
 ## Atrybuty
 Atrybuty można podzielić na proste i złożone, jednowartościowe i wielowartościowe:
 - **Atrybuty proste**: Nazywane również atrybutami atomowymi to niepodzielny atrybut. Przykładem atrybutu prostego może być `imie` lub `numer_mieszkania`.
@@ -28,6 +32,7 @@ Atrybuty można podzielić na proste i złożone, jednowartościowe i wielowarto
 Możemy również wyróżnić dwa unikalne rodzaje wartości przyznawanych atrybutom:
 - **Atrybut `NULL`**: Wartość `NULL` informuje, że mamy do czynienia z pustym atrybutem. Wartość `NULL` stosuje się albo jako placeholder, albo jako informacja, że dany atrybut nie występuje. Przykładem atrybutu `NULL` może być `numer_mieszkania` w przypadku domu jednorodzinnego.
 - **Atrybut klucza**: Kluczem nazywany unikalny atrybut identyfikacyjny danej encji. Pozwala on na jednoznaczną indetyfikację encji. Klucz może być wartością liczbową, w tym przypadku często stosuje się tzw. autoinkrementację, która automatycznie przypisuje kolejne liczby naturalne do każdej encji. Klucz może być również danymi tekstowymi, np. para `imie`, `nazwisko` w przypadku gdy mamy pewność, że dane te nie powtórzą się w naszej bazie. Typ encji pozbawiony klucza nazywamy słabym typem encji.
+
 ## Związki
 W przypadku, gdy atrybut jednego typu encji odwołuje się do innego typu encji między tą parą musi istnieć tzw. związek. Związki mogą dotyczyć dowolnej liczby encji, najczęściej spotykamy związki dwuargumentowe, nazywany binarnymi. Związki możemy podzielić ze względu na liczebność:
 - **Jeden do jeden** ($1:1$): Z każdą encją pierwszego typu jest związana dokładnie jedna encja drugiego typu.
@@ -40,8 +45,14 @@ Związki między typami encji możemy reprezentować albo w formie tabeli, np:
 | ----------------- | ----------------------- |
 | `Terminator`      | `Arnold Schwarzenegger` |
 | `Łowca Androidów` | `Harrison Ford`         |
-lub w postaci zbioru krotek: $${(\mathtt{Terminator}, \mathtt{Arnold\text{ }Schwarzenegger}),  (\mathtt{Łowca \text{ } Androidów}, \mathtt{Harrison \text{ }Ford})}$$
-W przypadku związków wieloargumentowych każdy związek będziemy reprezentować za pomocą krotki trzech elementów, np: $${(\mathtt{Łowca\text{ }Androidów}, \mathtt{Harrison\text{ }Ford}, \mathtt{Ridley\text{ }Scott})}$$
+lub w postaci zbioru krotek:
+
+$${(\mathtt{Terminator}, \mathtt{Arnold\text{ }Schwarzenegger}),  (\mathtt{Łowca \text{ } Androidów}, \mathtt{Harrison \text{ }Ford})}$$
+
+W przypadku związków wieloargumentowych każdy związek będziemy reprezentować za pomocą krotki trzech elementów, np:
+
+$${(\mathtt{Łowca\text{ }Androidów}, \mathtt{Harrison\text{ }Ford}, \mathtt{Ridley\text{ }Scott})}$$
+
 W diagramach (E/R) związki będziemy oznaczać za pomocą odcinka łączącego dwa typy encji z związkiem, natomiast strzałką będziemy oznaczać fakt, że dana encja może wystąpić tylko raz.
 
 Może się zdarzyć, że typ encji będzie w związku z samym sobą, np. w typie `PRACOWNICY` chcemy wprowdzić związek `Przelozony`. W tym przypadku przy strzałkach i odcinkach stosujemy etykiety tekstowe.
@@ -49,6 +60,7 @@ Może się zdarzyć, że typ encji będzie w związku z samym sobą, np. w typie
 Związki mogą mieć również swoje atrybuty, dzieje się tak w przypadku, gdy wartość atrybutu zależy od tego, z którą encją jednego typu jest encja drugiego typu.
 
 Chcąc przekazać za pomocą związku dane encji słabego typu musimy skorzystać z tzw. **związku słabego typu**. W tym związku oprócz ewentualnego klucza związek przekazuje dane na temat encji, które pozwolą na jej jednoznaczną indetyfikację.
+
 ## Diagramy związków encji
 Chcąc zaprojektować bazę danych tworzymy diagramy związków encji, czyli tak zwany model E/R. W modelu tym każdy rodzaj elementów bazy danych ma przypisany unikalny symbol, dzięki któremu można rozpoznać rodzaj elementu. Wszystkie symbole umieszczone zostały w poniższej tabeli:
 

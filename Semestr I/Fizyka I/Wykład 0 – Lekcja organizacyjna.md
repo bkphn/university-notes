@@ -13,3 +13,4 @@
 | Nazwa programu          | Link                                                                                                                                    |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Politechnika Wrocławska | [Fizyka I odc. 1 - Układ SI. Jednostki podstawowe](https://www.youtube.com/watch?v=KaoGuu9uRQg&list=PLRc6a9k_z6Mm96Elf-buW8P8OXNJFkwHQ) |
+

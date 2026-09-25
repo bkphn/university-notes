@@ -35,6 +35,7 @@ W języku C# zostało określone kilka różnych rodzajów delegatów:
 - `delegate Func<TParams, TResult>`: Delegat `Func` jest ogólnym delegatem, który reprezentuje metodę, która zwraca wartość. Może przyjmować do 16 parametrów wejściowych.
 - `delegate bool Predicate<TParam>`: Delegat `Predicate` reprezentuje metodę, która przyjmuje jeden argument i zwraca wartość logiczną. Zwykle używany jest do sprawdzania warunków.
 - `delegate void EventHandler(object? sender, EventArgs e)`: Delegat `EventHandler` jest stosowany do obsługi zdarzeń w modelu programowania zdarzeniowego. Reprezentuje metodę, która przyjmuje dwa argumenty: obiekt wywołujący zdarzenie sender i obiekt zawierający informacje o zdarzeniu `e`.
+
 ## Zdarzenia
 Zdarzeniem (ang. *event*) w języku C# nazywamy mechanizm, który umożliwia komunikację między obiektami w programie. Obiekt „nadawca” powiadamia o wystąpieniu określonego zdarzenia, aby inne obiekty „odbiorcy” mogły na nie zareagować. Mechanizm zdarzeń implementuje wzorzec obserwatora.
 
@@ -59,6 +60,7 @@ Alert?.Invoke(balance);
 // alternatywnie
 if(Alert != null) { Alert.Invoke(saldo); }
 ```
+
 ## Interfejsy
 **Interfejs** w C# to zbiór metod, właściowści i zdarzeń, które klasa musi zaimplementować, jeśli implementuje dany interfejs.
 
@@ -72,3 +74,4 @@ public interface ISortingAlgorithm
 }
 ```
 Interfejsy są narzędziem abstrakcji, ponieważ pozwalają definiować, co klasa powinna robić, ale nie określają, jak ma to robić. Dzięki abstrakcji możemy zmieniać implementacje bez ingerencji w kod klienta.
+

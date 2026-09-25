@@ -13,6 +13,7 @@
 | *Analiza matematyczna w zadanich część I i II*                  | W. Krysicki L. |
 | *Zbiór zadań z analizy matematycznej*                           | G. N. Berman   |
 | *Matematyka: zbiór zadań*                                       | R. Grzymkowski |
+
 ## Zaliczenie
 1. Na sprawdziany można przynosić ściągi z wzorami
 2. Nie można notować wzorów na pochodne

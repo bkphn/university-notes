@@ -4,13 +4,19 @@ Układ równań liniowych możemy zapisać w postaci macierzowej $\mathbf{Ax} = 
 Zakładamy, że macierz $\mathbf{A}$ jest nieosobliwa ($\det \mathbf{A} \ne 0$), co oznacza, że układ ma dokładnie jedno rozwiązanie $\mathbf{x}_d$.
 
 W metodach iteracyjnych poszukujemy przybliżeń $\mathbf{x}_m$ (gdzie $\mathbf{x}_0$ to przybliżenie początkowe), korzystając z jednokrokowego, stacjonarnego wzoru iteracyjnego:
-$$ \mathbf{x}_{i+1} = \mathbf{M}\mathbf{x}_i + \mathbf{w} $$
+
+$$\mathbf{x}_{i+1} = \mathbf{M}\mathbf{x}_i + \mathbf{w}$$
+
 Stacjonarność oznacza, że macierz $\mathbf{M}$ i wektor $\mathbf{w}$ nie zmieniają się w kolejnych krokach iteracji.
 Wprowadzając macierz $\mathbf{N} = (\mathbf{I} - \mathbf{M})\mathbf{A}^{-1}$, otrzymujemy $\mathbf{w} = \mathbf{Nb}$. Podstawiając to do wzoru iteracyjnego:
-$$ \mathbf{x}_{i+1} = \mathbf{M}\mathbf{x}_i + \mathbf{Nb} $$
+
+$$\mathbf{x}_{i+1} = \mathbf{M}\mathbf{x}_i + \mathbf{Nb}$$
+
 Rozwiązanie dokładne $\mathbf{x}_d$ musi być punktem stałym przekształcenia ($\mathbf{x}_d = \mathbf{M}\mathbf{x}_d + \mathbf{Nb}$).
 Aby wzór był poprawny, macierze $\mathbf{M}, \mathbf{N}$ muszą spełniać **test zgodności**:
-$$ \mathbf{M} + \mathbf{NA} = \mathbf{I} $$
+
+$$\mathbf{M} + \mathbf{NA} = \mathbf{I}$$
+
 ## Zbieżność
 **Promień spektralny macierzy**
 Liczbę $\rho(\mathbf{A}) = \max_{i \in \{1, \dots, n\}} |\lambda_i|$, gdzie $\lambda_i$ to wartości własne macierzy $\mathbf{A}$, nazywamy promieniem spektralnym. 
@@ -20,7 +26,9 @@ Liczbę $\rho(\mathbf{A}) = \max_{i \in \{1, \dots, n\}} |\lambda_i|$, gdzie $\l
 
 **Norma wektora**
 Normą wektora $\mathbf{v} = (v_1, v_2, \dots, v_n)$ w przestrzeni euklidesowskiej nazywamy pierwiastek z sumy kwadratów jego współrzędnych (długość wektora):
-$$ ||\mathbf{v}|| = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2} $$
+
+$$||\mathbf{v}|| = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}$$
+
 ## Metoda Jacobiego
 Macierz $\mathbf{A}$ rozkładamy na sumę trzech macierzy: $\mathbf{A} = \mathbf{L} + \mathbf{D} + \mathbf{U}$.
 * $\mathbf{L}$ – macierz poddiagonalna
@@ -28,7 +36,9 @@ Macierz $\mathbf{A}$ rozkładamy na sumę trzech macierzy: $\mathbf{A} = \mathbf
 * $\mathbf{U}$ – macierz naddiagonalna
 
 Po przekształceniu równania $(\mathbf{L} + \mathbf{D} + \mathbf{U})\mathbf{x} = \mathbf{b}$ otrzymujemy wzór iteracyjny:
-$$ \mathbf{x}_{i+1} = -\mathbf{D}^{-1}(\mathbf{L} + \mathbf{U})\mathbf{x}_i + \mathbf{D}^{-1}\mathbf{b} $$
+
+$$\mathbf{x}_{i+1} = -\mathbf{D}^{-1}(\mathbf{L} + \mathbf{U})\mathbf{x}_i + \mathbf{D}^{-1}\mathbf{b}$$
+
 Co daje nam postać macierzy ogólnych:
 * $\mathbf{M} = -\mathbf{D}^{-1}(\mathbf{L} + \mathbf{U})$
 * $\mathbf{N} = \mathbf{D}^{-1}$
@@ -54,13 +64,17 @@ Test zgodności potwierdza poprawność metody: $\mathbf{M} + \mathbf{NA} = -\ma
 >    - $\mathbf{x}_n = \mathbf{M}\mathbf{x}_s + \mathbf{w}$
 > 6. **Wynik**
 >    - Wynikiem jest wektor $\mathbf{x} = \mathbf{x}_n$
+
 ## Metoda Gaussa-Seidla
 W metodzie Jacobiego nie używa się nowo obliczonych, „ulepszonych” wartości składowych wektora przed obliczeniem całego nowego wektora $\mathbf{x}_{i+1}$. Metoda Gaussa-Seidla różni się tym, że poprawione wartości poszczególnych składowych są wykorzystywane zaraz po ich wyliczeniu, podczas tej samej iteracji.
 
 Po rozkładzie $\mathbf{A} = \mathbf{L} + \mathbf{D} + \mathbf{U}$, iteracja wygląda następująco:
-$$ \mathbf{x}_{i+1} = -\mathbf{D}^{-1}\mathbf{L}\mathbf{x}_{i+1} - \mathbf{D}^{-1}\mathbf{U}\mathbf{x}_i + \mathbf{D}^{-1}\mathbf{b} $$
+
+$$\mathbf{x}_{i+1} = -\mathbf{D}^{-1}\mathbf{L}\mathbf{x}_{i+1} - \mathbf{D}^{-1}\mathbf{U}\mathbf{x}_i + \mathbf{D}^{-1}\mathbf{b}$$
+
 W zapisie składowych:
-$$ x_{k(i+1)} = -\frac{1}{a_{kk}} \sum_{j=1}^{k-1} a_{kj} x_{j(i+1)} - \frac{1}{a_{kk}} \sum_{j=k+1}^n a_{kj} x_{j(i)} + \frac{1}{a_{kk}} b_k $$
+
+$$x_{k(i+1)} = -\frac{1}{a_{kk}} \sum_{j=1}^{k-1} a_{kj} x_{j(i+1)} - \frac{1}{a_{kk}} \sum_{j=k+1}^n a_{kj} x_{j(i)} + \frac{1}{a_{kk}} b_k$$
 
 W postaci schematu ogólnego:
 * $\mathbf{M} = -(\mathbf{D} + \mathbf{L})^{-1}\mathbf{U}$
@@ -85,3 +99,4 @@ Metoda jest zbieżna dla $\rho(\mathbf{M}) < 1$.
 >    - $\mathbf{x}_n = \mathbf{M}\mathbf{x}_s + \mathbf{w}$
 > 6. **Wynik**
 >    - Wynikiem jest wektor $\mathbf{x} = \mathbf{x}_n$
+

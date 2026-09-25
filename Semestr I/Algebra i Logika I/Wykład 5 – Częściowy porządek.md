@@ -58,5 +58,8 @@ Niech $(X, <)$ będzie zbiorem częściowo uporządkowanym, a $A$ jego podzbiore
 
 **Przykład własności:**
 Dla zbioru liczb naturalnych z relacją podzielności $(\mathbb{N}, |)$ oraz elementów $a, b \in \mathbb{N}$ zachodzi:
+
 $$\sup_{|} \{a,b\} = NWW(a,b)$$
+
 $$\inf_{|} \{a,b\} = NWD(a,b)$$
+

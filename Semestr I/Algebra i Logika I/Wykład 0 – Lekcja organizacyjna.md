@@ -7,3 +7,4 @@
 | Tytuł                  | Autor                        |
 | ---------------------- | ---------------------------- |
 | *Matematyka Dyskretna* | Kenneth Ross, Charles Wright |
+

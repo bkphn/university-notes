@@ -15,6 +15,7 @@
 | Nazwa programu | Link                                          |
 | -------------- | --------------------------------------------- |
 | Wikipedia      | [www.wikipedia.org](http://www.wikipedia.org) |
+
 ## Program
 1. Teoria informacji
 2. Systemy liczbowe

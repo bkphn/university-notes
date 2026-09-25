@@ -7,3 +7,4 @@
 | ----------------------------- | ---------------------------- |
 | *Rachunek Prawdopodobieństwa* | M. Bratiichuk, A. Chydziński |
 | *Statystyka Matematyczna*     | M. Bratiichuk, A. Chydziński |
+

@@ -2,6 +2,7 @@
 Istnieje dokładnie $2^{(2^n )}$  $n$-arnych operatorów logicznych, podstawiając $n=2$ możemy obliczyć, że istnieje 16 binarnych operatorów logicznych, takich jak: $\land,  \lor,  \implies,  \iff, \oplus,\dots$ .
 
 Każde zdanie logiczne może być zapisane w równoważnej postaci za pomocą spójników logicznych $\lor, \land, \neg$.  Spójniki te nazywamy **podstawowymi operatorami logicznymi**.
+
 ## Funkcje boolowskie
 Wielomianem boolowskim $W$ zmiennych $x_1,x_2,\dots,x_n$ nazywamy formułę zdaniową zbudowaną wyłącznie z $x_1,\dots,x_n$ oraz spójników $\lor,  \land,  \neg$.
 
@@ -26,9 +27,14 @@ Funkcja boolowska przyjmuje argumenty o wartościach $0$ lub $1$ i zwraca warto�
 > *   $f_4(x) = 1$
 > 
 > Zatem:
-> $$ \mathtt{Bool}(1) = \{0, x, \neg x, 1\} $$
+>
+> $$\mathtt{Bool}(1) = \{0, x, \neg x, 1\}$$
+>
 
-Dla każdej liczby naturalnej $n$ zachodzi: $$|\mathtt{Bool}(n)|=2^{(2^n)}$$
+Dla każdej liczby naturalnej $n$ zachodzi:
+
+$$|\mathtt{Bool}(n)|=2^{(2^n)}$$
+
 ## Algebry Boole'a
 Niech $B$ będzie zbiorem z działaniami binarnymi $\lor, \land$ i działaniem unarnym $\neg$ oraz $0, 1\in B$, gdzie $0\neq1$. Taką szóstkę $(B,  \land ,  \lor ,  \neg , 0, 1)$ nazywamy algebrą Boole'a wtedy i tylko wtedy, gdy dla dowolnych $x,y,z\in B$ zachodzi:
 - $x\land y=y\land x,\qquad   x\lor y=y\lor x$
@@ -48,15 +54,25 @@ Niech $(B,  \land ,  \lor ,  \neg , 0, 1)$ będzie algebrą Boole'a. Wówczas dl
 - $x\lor x=x,\qquad   x\land x=x$
 - $\neg (x\lor y)=\neg x\land \neg y,\qquad   \neg (x\land y)=\neg x\lor \neg y$
 
-W algebrze Boole'a $(B,  \land ,  \lor ,  \neg , 0, 1)$ relację $\leq$ definiujemy następująco: $$\forall_(x,y\in B)   x\leq y\iff x\lor y=y$$
+W algebrze Boole'a $(B,  \land ,  \lor ,  \neg , 0, 1)$ relację $\leq$ definiujemy następująco:
+
+$$\forall_(x,y\in B)   x\leq y\iff x\lor y=y$$
+
 ## Atomy
-Niech $(B,  \land ,  \lor ,  \neg , 0, 1)$ będzie nietrywialną algebrą Boole'a. Niezerowy element $a\in B$ nazywamy atomem $B$ wtedy i tylko wtedy, gdy dla każdych $b,c\in B$ zachodzi: $$a=b\lor c\implies a=b\lor a=c$$
-Niejedynkowy element $\alpha \in B$ nazywamy co-atomem $B$ wtedy i tylko wtedy, gdy dla każdych $\beta,\gamma\in B$ zachodzi: $$\alpha=\beta\land \gamma\implies \alpha=\beta\lor \alpha=\gamma$$
+Niech $(B,  \land ,  \lor ,  \neg , 0, 1)$ będzie nietrywialną algebrą Boole'a. Niezerowy element $a\in B$ nazywamy atomem $B$ wtedy i tylko wtedy, gdy dla każdych $b,c\in B$ zachodzi:
+
+$$a=b\lor c\implies a=b\lor a=c$$
+
+Niejedynkowy element $\alpha \in B$ nazywamy co-atomem $B$ wtedy i tylko wtedy, gdy dla każdych $\beta,\gamma\in B$ zachodzi:
+
+$$\alpha=\beta\land \gamma\implies \alpha=\beta\lor \alpha=\gamma$$
+
 Niezerowy element $a\in B$ jest atomem algebry $B$ wtedy i tylko wtedy, gdy nie istnieje $x\in B$ taki, że $0<x<a$, analogicznie niejedynkowy element $\alpha\in B$ jest co-atomem algebry $B$ wtedy i tylko wtedy, gdy nie istnieje $\xi \in B$ taki, że $\alpha<\xi<1$.
 
 Liczba różnych atomów i co-atomów algebrze $\mathbb{B}^n$ wynosi dokładnie $n$. Przykładowo atomami $\mathbb{B}^3$  są: $(0, 0, 1), (0, 1, 0), (0, 0, 1)$, natomiast co-atomami $\mathbb{B}^3$ są: $(0, 1, 1), (1, 0, 1), (1, 1, 0)$.
 
 Każdy niezerowy element skończonej algebry Boole'a jest alternatywą różnych atomów tej algebry, natomiast każdy niejedynkowy element skończonej algebry Boole'a jest koniunkcją różnych co-atomów tej algebry.
+
 ## Izomorfizm algebr
 Niech $B_1,B_2$ będą algebrami Boole'a. Funkcję $f:B_1\rightarrow B_2$ nazywamy **izomorfizmem** $B_1$ i $B_2$ wtedy i tylko wtedy, gdy dla każdych $x,y\in B_1$ zachodzi:
 - $f$ jest bijekcją,
@@ -69,6 +85,7 @@ Niech $B_1,B_2$ będą algebrami Boole'a. Funkcję $f:B_1\rightarrow B_2$ nazywa
 Zatem izomorfizmem jest bijekcja zachowująca wszystkie działania. Jeżeli istnieje $f$ będąca izomofizmem to mówimy, że **$B_1$ i $B_2$ są izomorficzne**, co oznaczamy jako: $B_1\cong B_2$.
 
 Dwie skończone algebry Boole'a są izomorficzne, gdy mają taką samą liczbę atomów. Każda skończona algebra Boole'a jest izomorficzna z $\mathbb{B}^n$ dla pewnej liczby naturalnej $n$.
+
 ## Indeksy atomu
 Dowolną funkcję boolowską $f$ możemy reprezentować za pomocą:
 - wielomianów boolowskich,
@@ -81,8 +98,8 @@ Indeksem atomu $a$ nazywamy ten argument, dla którego funkcja $f$ przyjmuje war
 Indeksem co-atomu $\alpha$ nazywamy ten argument, dla którego funkcja przyjmuje wartość $0$. Takie przedstawienie $f$ zaczynamy od symbolu $\prod$.
 
 > [!example] Przedstaw funkcję $f$ za pomocą indeksów atomów i co-atomów
-> $$ f(x, y, z) = (x \land \neg y) \lor z $$
-> 
+> $$f(x, y, z) = (x \land \neg y) \lor z$$
+>
 > **1. Obliczamy wartości dla wszystkich argumentów z $\mathbb{B}^3$**
 > 
 > | $x$ | $y$ | $z$ | $f(x, y, z\text{ })$ | $(x\text{ }y\text{ }z\text{ })_{(10)}$ |
@@ -97,10 +114,14 @@ Indeksem co-atomu $\alpha$ nazywamy ten argument, dla którego funkcja przyjmuje
 > | $1$ | $1$ | $1$ | $1$ | $7$ |
 > 
 > **2. Funkcję $f$ reprezentujemy jako indeksy atomów, tam gdzie $f(x, y, z) = 1$:**
-> $$ f = \sum(1, 3, 4, 5, 7) $$
-> 
+>
+> $$f = \sum(1, 3, 4, 5, 7)$$
+>
 > **3. Funkcję $f$ reprezentujemy jako indeksy co-atomów, tam gdzie $f(x, y, z) = 0$:**
-> $$ f = \prod(0, 2, 6) $$
+>
+> $$f = \prod(0, 2, 6)$$
+>
+
 ## Termy
 Literałem zmiennej $x$ nazywamy wartości $x$ lub $\neg x$. **Termem** nazywamy koniunkcję literałów różnych zmiennych $x_i$. **Co-termem** nazywamy alternatywę literałów różnych zmiennych.
 
@@ -108,11 +129,14 @@ Literałem zmiennej $x$ nazywamy wartości $x$ lub $\neg x$. **Termem** nazywamy
 
 Każdy atom $\mathtt{Bool}(n)$ jest generowany przez dokładnie jeden minterm, analogicznie każdy 
 co-atom $\mathtt{Bool}(n)$ jest generowany przez dokładnie jeden maxterm.
+
 ## Dysjunkcyjna postać normalna
 Każda funkcja boolowska jest generowana przez alternatywę mintermów. Reprezentacja wielomianu boolowskiego w postaci alternatywy mintermów jest nazywana dysjunkcyjną postacią normalną (DNF).
 
 > [!example] Wygeneruj funkcję $f \in \text{Bool}(3)$ daną wzorem
-> $$ f(x,y,z) = \neg(x \land (\neg y \Leftrightarrow z)) \Rightarrow y $$ za pomocą DNF.
+> $$f(x,y,z) = \neg(x \land (\neg y \Leftrightarrow z)) \Rightarrow y$$
+>
+> za pomocą DNF.
 > 
 > **1. Obliczamy wartości dla wszystkich argumentów z $\mathbb{B}^3$**
 > 
@@ -128,12 +152,17 @@ Każda funkcja boolowska jest generowana przez alternatywę mintermów. Reprezen
 > | $1$ | $1$ | $1$ | $1$ | $x \land y \land z$ |
 > 
 > **2. Rozpisujemy DNF jako alternatywę mintermów**
-> $$ \text{DNF}(f) = (\neg x \land y \land \neg z) \lor (\neg x \land y \land z) \lor (x \land \neg y \land z) \lor (x \land y \land \neg z) \lor (x \land y \land z) $$
+>
+> $$\text{DNF}(f) = (\neg x \land y \land \neg z) \lor (\neg x \land y \land z) \lor (x \land \neg y \land z) \lor (x \land y \land \neg z) \lor (x \land y \land z)$$
+>
+
 ## Koniunkcyjna postać normalna
 Każda funkcja boolowska jest generowana przez koniunkcję maxtermów. Reprezentacja wielomianu boolowskiego w postaci koniunkcji maxtermów jest nazywana koniunkcyjną postacią normalną (CNF).
 
 > [!example] Wygeneruj funkcję $f \in \text{Bool}(3)$ daną wzorem
-> $$ f(x,y,z) = \neg(x \land (\neg y \Leftrightarrow z)) \Rightarrow y $$ za pomocą CNF.
+> $$f(x,y,z) = \neg(x \land (\neg y \Leftrightarrow z)) \Rightarrow y$$
+>
+> za pomocą CNF.
 > 
 > **1. Obliczamy wartości dla wszystkich argumentów z $\mathbb{B}^3$**
 > 
@@ -149,7 +178,10 @@ Każda funkcja boolowska jest generowana przez koniunkcję maxtermów. Reprezent
 > | $1$ | $1$ | $1$ | $1$ | |
 > 
 > **2. Rozpisujemy CNF jako koniunkcję maxtermów**
-> $$ \text{CNF}(f) = (x \lor y \lor z) \land (x \lor y \lor \neg z) \land (\neg x \lor y \lor z) $$
+>
+> $$\text{CNF}(f) = (x \lor y \lor z) \land (x \lor y \lor \neg z) \land (\neg x \lor y \lor z)$$
+>
+
 ## Sieci logiczne
 Algebra Boole'a stanowi podstawę układów elektrycznych:
 - **Switch**: Switch to urządzenie dwustanowe. Może być ustawiony albo w pozycji otwartej albo zamkniętej.

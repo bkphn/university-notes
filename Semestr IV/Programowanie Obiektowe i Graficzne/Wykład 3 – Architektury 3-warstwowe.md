@@ -5,6 +5,7 @@ Możemy wyróżnić trzy warstwy takiej architektury:
 - **Presentation Layer**: Odpowiada za UI (np. WindowsForms, WPF, Web) oraz interakcja z użytkownikiem.
 - **Business Logic Layer**: Odpowiada za reguły biznesowe oraz obliczenia.
 - **Data Access Layer**: Odpowiada za bazę danych oraz repozytoria.
+
 ## Wzorzec MVC
 Wzorzec MVC (Model-View-Controller) powstał w latach 70., został on opracowany w projekcie Smalltalk w Xerox PARC, jego głównym twórcą był norweski informatyk Trygve Reenskaug. Celem MVC od początku było oddzielenie logiki od interfejsu użytkownika oraz umożliwienie wielu widoków tych samych danych. MVC był jednym z pierwszych wzorców wspierających GUI.
 
@@ -16,6 +17,7 @@ Wzorzec MVC dzieli się na:
 - **Model**: Model przechowuje dane aplikacji, zawiera logikę biznesową oraz jest niezależny od UI.
 - **View**: Widok odpowiada za prezentację danych, wyświetla podstawowe informacje użytkownikowi.
 - **Controller**: Kontroler obsługuje wejście użytkownika, interpretuje akcje oraz steruje aplikacją.
+
 ## Wzorzec MVP
 Jedną z pochodnych wzorca MVC jest wzorzec MVP (Model-View-Presenter), który jest lepiej przystosowany do aplikacji desktopowych. W MVP widok emituje zdarzenia, prezenter je odbiera, następnie przetwarza dane i aktualizuje widok.
 
@@ -31,6 +33,7 @@ zamiast tego:
 - widok powinien tylko przekazywać zdarzenia
 - prezenter nie powinien mieć dostępu do kontrolek,
 - logika powinna znajdować się tylko w prezenterze.
+
 ## Wzorzec MVVM
 Innym wzorcem pochodnym od wzorca MVC jest wzorzec MVVM (Model-View-ViewModel), jest to rozwinięcie MVP dostosowane do technologii z data-bindingiem. Najczęściej używany jest w WPF, UWP oraz Xamarin. Kluczową ideą MVVM jest eliminacja kodu w widoku oraz wykorzystanie mechanizmu wiązania danych. Warstwa ViewModel zastępuje Presenter i udostępnia dane dla View.
 

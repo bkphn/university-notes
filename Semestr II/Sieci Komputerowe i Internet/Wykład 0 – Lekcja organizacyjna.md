@@ -7,5 +7,6 @@
 | Nazwa programu          | Link                                                                             |
 | ----------------------- | -------------------------------------------------------------------------------- |
 | AdminAkademia - YouTube | [https://www.youtube.com/@AdminAkademia](https://www.youtube.com/@AdminAkademia) |
+
 ## Zaliczenie
 Egzaminu nie będzie. Ocena jest wystawiana tylko na podstawie ćwiczeń.

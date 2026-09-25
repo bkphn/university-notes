@@ -2,10 +2,12 @@
 Przeszukiawniem grafu nazywamy algorytm, który w konkretny sposób przechodzi po wszystkich wierzchołkach grafu. Wyróżniamy dwa główne metody przeszukiwań:
 - **Breath-first search (BFS)**: Odwiedzamy wszystkich sąsiadów aktualnego wierzchołka, zanim przejdziemy do następnego.
 - **Depth-first search (DFS)**: Po odwiedzeniu $v_{k+1}$ wierzchołka $v_k$, przechodzimy do nieodwiedzonego sąsiada $v_{k+2}$ wierzchołka $v_{k+1}$ albo – w przypadku braku nieowiedzonych sąsiadów – cofamy się do wierzchołka $v_k$ i powtarzamy.
+
 ## Grafy ważone
 Niech $G=(V,E)$ będzie grafem i $w:E\rightarrow \mathbb{R}$ będzie funkcją. Parę $(G,w)$ nazywamy **grafem ważonym**, a funkcję $w$ wagą.
 
 Innymi słowy grafem ważonym nazywamy graf, w którym każdej krawędzi przypisana jest liczba rzeczywista (może ona reprezentować odległość między wierzchołkami, przepustowość sieci, ilość interakcji, itd.) Graf ważony $(G,w)$ możemy reprezentować za pomocą macierzy sąsiedztwa.
+
 ## Algorytm Dijkstry
 Algorytm zaproponowany przez informatyka Edsgera Dijkstrę służy do wyszukiwania najkrótszej drogi od danego wierzchołka do pozostałych w grafie ważonym bez pętli, w którym wagi są liczbami nieujemnymi.
 
@@ -32,29 +34,30 @@ Algorytm zaproponowany przez informatyka Edsgera Dijkstrę służy do wyszukiwan
 > 3. **Wynik**
 > Minimalna długość drogi od $v_{0}$ do $v$ to $d(v)$ 
 
-
 Algorytm Dijkstry najczęściej reprezentujemy za pomocą tabeli. W pierwszej kolumnie umieszczane są najkrótsze drogi a w indeksie dolnym jest waga tej drogi. Elementy tabeli to wagi dróg z wierzchołka startowego $v_0$ do danego wierzchołka $v$, tutaj w wolnych indeksach umieszczamy przedostatni element ścieżki z $v_0$ do $v$. W sytuacji gdy w wierszu mamy więcej niż jedną drogę o najmniejszej wadze, wybieramy dowolną z nich.
 
 >[!example] Przykład działania algorytmu Dijkstry dla $v_{0}=A$
 >![[Pasted image 20260922214439.png|281]]
 >
 >|          | $B$                | $C$                | $D$                | $E$                | $F$                | $G$                |
-| -------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| $A_0$    | $6_A$              | $\color{red}{1_A}$ | $\infty$           | $3_A$              | $\infty$           | $\infty$           |
-| $AC_1$   | $6_A$              | –                  | $4_C$              | $\color{red}{3_A}$ | $3_C$              | $\infty$           |
-| $AE_3$   | $6_A$              | –                  | $4_C$              | –                  | $\color{red}{3_C}$ | $\infty$           |
-| $ACF_3$  | $6_A$              | –                  | $\color{red}{4_C}$ | –                  | –                  | $4_F$              |
-| $ACD_4$  | $5_D$              | –                  | –                  | –                  | –                  | $\color{red}{4_F}$ |
-| $ACFG_4$ | $\color{red}{5_D}$ | –                  | –                  | –                  | –                  | –                  |
-| $ACDB_5$ | –                  | –                  | –                  | –                  | –                  | –                  |
+>| -------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
+>| $A_0$    | $6_A$              | $\color{red}{1_A}$ | $\infty$           | $3_A$              | $\infty$           | $\infty$           |
+>| $AC_1$   | $6_A$              | –                  | $4_C$              | $\color{red}{3_A}$ | $3_C$              | $\infty$           |
+>| $AE_3$   | $6_A$              | –                  | $4_C$              | –                  | $\color{red}{3_C}$ | $\infty$           |
+>| $ACF_3$  | $6_A$              | –                  | $\color{red}{4_C}$ | –                  | –                  | $4_F$              |
+>| $ACD_4$  | $5_D$              | –                  | –                  | –                  | –                  | $\color{red}{4_F}$ |
+>| $ACFG_4$ | $\color{red}{5_D}$ | –                  | –                  | –                  | –                  | –                  |
+>| $ACDB_5$ | –                  | –                  | –                  | –                  | –                  | –                  |
 
 Problem znalezienia najkrótszej ścieżki można rozwiązać również algorytmem brute force, wystarczy określić wagę wszystkich ścieżek między rozważanymi wierzchołkami i wybrać najmniejszą. Ta metoda jest jednak niezwykle nieoptymalna dla bardziej złożonych grafów.
+
 ## Grafy eulerowskie
 Jeżeli w grafie $G$ istnieje cykl niewłaściwy $c$ przechodzący przez każdą krawędź grafu $G$ dokładnie raz, to $c$ nazywamy **cyklem Eulera**, a graf $G$ **grafem eulerowskim**.
 
 Jeżeli graf $G$ nie jest grafem eulerowskim i istnieje ścieżka $c$ przechodząca przez każdą krawędź grafu $G$ dokładnie jeden raz, to $G$ nazywamy **grafem półeulerowskim** (jednobieżnym).
 
 Innymi słowy, graf $G$ jest Eulerowski, jeżeli możemy narysować jego krawędzie bez odrywania ręki od kartki i na koniec wrócimy do wierzchołka początkowego oraz jest półeulerowski, jeżeli możemy narysować jego krawędzie bez odrywania ręki od kartki, ale na koniec **nie** wracamy do początkowego wierzchołka.
+
 ## Problem mostów królewieckich:
 Grafy eulerowskie zostały nazwane po Leonhardzie Eulerze, który zainteresował się pewną lokalną zagadką Königsberga (współcześnie Królewiec/Kaliningrad):
 
@@ -85,10 +88,12 @@ Na podstawie powyższych informacji można wyprowadzić ostatnie twierdzenie:
 
 >[!danger] Twierdzenie Veblena
 >Niech $G$ będzie grafem spójnym. Graf $G$ nazywamy eulerowskim wtedy i tylko wtedy, gdy jego zbiór krawędzi można podzielić na rozłączne cykle.
+
 ## Algorytm Fleury'ego
 **Mostem** nazywamy tę krawędź w skończonym grafie $G$, której usunięcie powoduje zwiększenie liczby spójnych składowych grafu $G$.
 
 Przy szukaniu cyklu Eulera możemy posłużyć się tzw. Algorytmem Fleury'ego. Zaczynamy od dowolnego wierzchołka, cykl tworzymy dodając do niego kolejne krawędzie w taki sposób, że dodajemy do cyklu most tylko wtedy, gdy nie ma innej możliwości.
+
 ## Problem chińskiego listonosza
 Problem chińskiego listonosza polega na znalezieniu niewłaściwego cyklu zawierającego każdą krawędź danego grafu co najmniej raz i mającego jak najmniejszy koszt.
 
@@ -98,6 +103,7 @@ Rozwiązaniem problemu chińskiego listonosza jest następujący algorytm:
 	- dla grafów nieważonych przeszukujemy go wstecz,
 	- dla grafów z nieujemnymi wagami można skorzystać z algorytmu Dijkstry,
 	- dla grafów z dowolnymi wagami można skorzystać z algorytmu Bellmana-Forda.
+
 ## Grafy hamiltonowskie
 Jeżeli w grafie $G$ istnieje cykl $c$ przechodzący przez każdy wierzchołek grafu $G$ dokładnie jeden raz, to $c$ nazywamy **cyklem Hamiltona**, a graf $G$ **grafem hamiltonowskim**.
 
@@ -119,6 +125,7 @@ Problemem komiwojażera nazywamy następujący problem: *Mając daną listę mia
 Co w języku teorii grafów możemy ubrać w następujące słowa: Znaleźć najoptymalniejszy cykl Hamiltona w ważonym grafie pełnym.
 
 Problem komiwojażera jest jednym z nierozwiązanych zadań optymalizacyjnych. Przykładową metodą może być brute force, który jest jednak niezwykle niefektywny. Jedną z najpopularniejszych metod rozwiązywania problemu komiwojażera jest tzw. algorytm najbliższego sąsiada. Zaczynamy w nim od dowolnego wierzchołka i poruszamy się zawsze wzdłuż krawędzi o najmniejszych wagach. Jest to rozwiązanie przybliżone, średnio o 25% gorsze od optymalnego.
+
 ## Grafy hipohamiltonowskie
 Graf $G$ nazywamy hipohamiltonowskim, jeżeli istnieje taki wierzchołek $v\in V(G)$, że podgraf indukowany $G−v$ jest grafem hamiltonowskim.
 

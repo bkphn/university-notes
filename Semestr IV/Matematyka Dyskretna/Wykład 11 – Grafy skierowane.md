@@ -4,6 +4,7 @@
 Dowolną parę $(x,y)\in E(D)$ nazywamy łukiem bądź krawędzią skierowaną. Wierzchołek $y$ nazywamy sąsiednim do $x$. Wierzchołek $x$ nazywamy **początkiem łuku**, a $y$ **końcem łuku**. Luk $(x,x)$ nazywamy pętlą.
 
 Dowolna krawędź $\{x,y\}$ odpowiada parze łuków $(x,y),(y,x)$. 
+
 ## Stopnie w digrafach
 **Stopniem wyjściowym** wierzchołka $v$ w digrafie $D$ nazywamy liczbę krawędzi, których początkiem jest $v$. Stopień wyjściowy oznaczamy jako $\operatorname{odeg}  v$.
 
@@ -11,26 +12,40 @@ Dowolna krawędź $\{x,y\}$ odpowiada parze łuków $(x,y),(y,x)$.
 
 Podstawowe twierdzenie teorii digrafów mówi:
 >[!danger] Podstawowe twierdzenie teorii digrafów
-> Dla każdego digrafu $D=(V,E)$ zachodzi: $$\sum_{v\in V} \operatorname{odeg} v= \sum_{v\in V} \operatorname{ideg} v = \|D \|$$
+> Dla każdego digrafu $D=(V,E)$ zachodzi:
+>
+> $$\sum_{v\in V} \operatorname{odeg} v= \sum_{v\in V} \operatorname{ideg} v = \|D \|$$
+>
 
 Podczas dodawania stopni wyjściowych oraz wejściowych każdy łuk jest liczony tylko raz. Twierdzenie do jest odpowiednikiem lematu o uściskach dłoni dla digrafów.
+
 ## Macierze digrafowe
 Macierzą sąsiedztwa digrafu $D$ jest macierz $\mathbf{A}_D=[a_{ij}]$, w której $a_{ij}$ określa liczbę łuków od $i$-tego do $j$-tego wierzchołka.
 
-Macierzą incydencji digrafu $D$ nazywamy macierz $\mathbf{B}_D=[b_{ij}]$, w której $\forall_{}$: $$b_{ij}=\begin{cases}
+Macierzą incydencji digrafu $D$ nazywamy macierz $\mathbf{B}_D=[b_{ij}]$, w której $\forall_{}$:
+
+$$b_{ij}=\begin{cases}
 1, \qquad e_j=(v_i,x) \\
 -1, \quad e_j=(x,v_i) \\
 0, \qquad e_j=(x,y)
 \end{cases}$$
+
 Suma elementów w $i$-tym wierszu macierzy incydencji digrafu $D$ wynosi $\operatorname{odeg}  v_i−\operatorname{ideg}  v_i$, a suma elementów w $j$-tej kolumnie macierzy incydencji digrafu $D$ wynosi $0$.
 
 ## Grafy pierwotne
 Niech $D=(V,E)$ będzie digrafem.
-- Digraf $D$ nazywamy **symetrycznym**, gdy: $$(u,v)\in E\implies(v,u)\in E,  \forall_{u,v\in V}$$
-- Digraf $D$ nazywamy grafem **zorientowanym**, gdy: $$(u,v)\in E\implies(v,u)\in E,  \forall_{u,v\in V}$$
+- Digraf $D$ nazywamy **symetrycznym**, gdy:
+
+$$(u,v)\in E\implies(v,u)\in E,  \forall_{u,v\in V}$$
+
+- Digraf $D$ nazywamy grafem **zorientowanym**, gdy:
+
+$$(u,v)\in E\implies(v,u)\in E,  \forall_{u,v\in V}$$
+
 - Graf $G$ nazywamy **grafem pierwotnym** bądź szkieletem digrafu $D$ gdy graf $G$ możemy otrzymać poprzez zastąpienie dowolnego łuku $(v,u)\in E$ bądź pary łuków $(v,u),(u,v)\in E$ poprzez krawędź $\{v,u\}$.
 
 - Jeżeli $G$ jest grafem pierwotnym digrafu $D$, to $D$ nazywamy **orientacją** grafu $G$.
+
 ## Drogi
 Niech $D=(V,E)$ będzie digrafem:
 - **Drogą** nazywamy ciąg wierzchołków $v_1,v_2,\dots,v_n$ taki, że $(v_i,v_{i+1})\in E$ dla każdego $i$.
@@ -69,9 +84,14 @@ Jeżeli w digrafie $D$ istnieje cykl niewłaściwy $d$ przechodzący przez każd
 
 Jeżeli digraf $D$ nie jest eulerowski i istnieje ścieżka $d$ przechodząca przez każdą krawędź digrafu $D$ dokładnie jeden raz, to $d$ nazywamy **ścieżką Eulera**, a $D$ **digrafem półeulerowskim**.
 
-Digraf $D$ jest eulerowski wtedy i tylko wtedy, gdy jest spójny oraz dla każdego wierzchołka $w\in V(D)$ zachodzi: $$\operatorname{odeg}  w=\operatorname{ideg}  w$$
+Digraf $D$ jest eulerowski wtedy i tylko wtedy, gdy jest spójny oraz dla każdego wierzchołka $w\in V(D)$ zachodzi:
+
+$$\operatorname{odeg}  w=\operatorname{ideg}  w$$
+
 Digraf $D$ jest półeulerowski wtedy i tylko wtedy, gdy jest spójny i zawiera dwa wierzchołki $u,v\in V(D)$ takie, że:
+
 $$\operatorname{odeg}  u=\operatorname{ideg}  u+1, \quad  \operatorname{ideg}  v=\operatorname{odeg}  v+1, \quad  \operatorname{odeg}  w=\operatorname{ideg}  w,   \qquad \forall_{w\in V(D)}  :w\neq u,v$$
+
 ## Digrafy hamiltonowskie
 Jeżeli w digrafie $D$ istnieje cykl $h$ przechodzący przez przez każdy wierzchołek digrafu $D$ dokładnie jeden raz, to $h$ nazywamy **cyklem Hamiltona**, a $D$ **digrafem hamiltonowskim**.
 
@@ -85,3 +105,4 @@ Przy czym w większości przypadków turnieje są półhamiltonowskie. Z powyżs
 Niech $D=(V,E)$ będzie digrafem, jeżeli dla każdej pary wierzchołków $u,v\in V$ takich, że $(u,v)\in E$ zachodzi $\operatorname{odeg}  u+\operatorname{ideg}  v\geq n$, to $D$ jest digrafem hamiltonowskim.
 
 Jeżeli dla każdego wierzchołka $v\in V(D)$ zachodzi $\operatorname{odeg}  v\geq \frac{n}{2}$ oraz $\operatorname{ideg}  v\geq \frac{n}{2}$ to $D$ również jest digrafem hamiltonowskim.
+

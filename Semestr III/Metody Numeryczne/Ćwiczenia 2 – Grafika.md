@@ -4,6 +4,7 @@ Jedną z kluczowych funkcji w Mathematice jest możliwość wyświetlenia wykres
 Minimalna liczba argumentów tej funkcji to dwa: `Plot[f(x), A]`, gdzie `f(x)` jest funkcją do wyświetlenia, a zbiór `A = {x, a, b}` zawiera zmienną oraz początek (`a`) i koniec (`b`) zakresu.
 `Plot[Sin[x], {x, 0, 2*Pi}]`
 ![[Pasted image 20260902215056.png|244]]
+
 ## Formatowanie wykresu
 W Mathematice możemy swobodnie edytować wykres, dodając kolejne argumenty do funkcji `Plot`.
 
@@ -34,12 +35,14 @@ Funkcje zapisuje się najpierw do zmiennych, a następnie wyświetla je na jedny
 * `Show[p1, p2]`
 
 ![[Pasted image 20260902215220.png|320]]
+
 ## Przechowywanie danych w tabeli
 Za pomocą polecenia `Table` możemy tworzyć pary liczb i przechowywać je w formie tabeli (zbioru punktów). 
 Funkcja ta operuje na dwóch argumentach: `Table[F, A]`, gdzie `F = {x, f(x)}`, a `A = {x, a, b, n}` (gdzie `n` to krok).
 
 **Przykład:**
 `Table[{x, x^2}, {x, -2, 2, 1}]`
+
 ## Wykresy trójwymiarowe
 Mathematica pozwala na pracę przy wykresach dwóch zmiennych, do czego wykorzystuje się polecenie `Plot3D`, działające analogicznie do zwykłego `Plot`.
 
@@ -54,6 +57,7 @@ Mathematica pozwala na pracę przy wykresach dwóch zmiennych, do czego wykorzys
 **Wykres 3D z funkcją koloru (ColorFunction):**
 `Plot3D[Exp[-x^2 - y^2], {x, -2, 2}, {y, -2.2, 2}, ColorFunction -> Hue]`
 ![[Pasted image 20260902215259.png|285]]
+
 ## Wykresy parametryczne
 Funkcje parametryczne nie są funkcjami w ścisłym kontekście matematycznym (gdzie dla każdego $x$ istnieje dokładnie jeden $y$). Operują na parametrach, gdzie współrzędne są wyliczane niezależnie: $x = f(t)$, $y = g(t)$ (np. okrąg). W programie używa się do tego funkcji `ParametricPlot`.
 
@@ -65,6 +69,7 @@ Funkcje parametryczne nie są funkcjami w ścisłym kontekście matematycznym (g
 Trójwymiarowe funkcje parametryczne tworzy się analogicznie za pomocą `ParametricPlot3D`.
 `ParametricPlot3D[{Sin[t], Cos[t], t/4}, {t, 0, 20}, PlotStyle -> Green]`
 ![[Pasted image 20260902215317.png|164]]
+
 ## Animacje
 W Mathematice możemy również animować wykresy funkcji, korzystając z polecenia `Animate[p, Z]`, gdzie `p` jest funkcją rysującą (np. `Plot`), a `Z = {t, a, b}` to zakres, w jakim zmienia się parametr czasu $t \in (a, b)$.
 

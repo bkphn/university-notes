@@ -13,7 +13,9 @@
 | Nazwa programu                   | Link                                                                                         |
 | -------------------------------- | -------------------------------------------------------------------------------------------- |
 | Mirosław Zelent - kurs obiektowy | [http://miroslawzelent.pl/kurs-obiektowy-c++/](http://miroslawzelent.pl/kurs-obiektowy-c++/) |
+
 ## Zaliczenie
 Wszystkie zadania należy zrealizować w trakcie zajęć, na ich podstawie tworzymy sprawozdania (które składać się będą z plików wykonywalnch). Pliki te należy podpisywać imieniem i nazwiskiem.
+
 ## Nieobecności
 Dopuszczalne są trzy nieobecności w semestrze. W przypadku nieobecności należy przynieść rozwiązane zadania na najbliższych zajęciach.

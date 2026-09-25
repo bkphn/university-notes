@@ -7,6 +7,7 @@
 > 3. **Szukamy takiej pary zbiorów $s_1, s_2$**, że różnica sum prawdopodobieństw jest najmniejsza: $\min(\{m_1, \dots, m_{n-1}\}) = q$, co daje podział $s_1 = \{a_1, \dots, a_q\}$ oraz $s_2 = \{a_{q+1}, \dots, a_n\}$.
 > 4. **Przyporządkowujemy bity**: dla każdego elementu ze zbioru $s_1$ przypisujemy bit $1$, a dla elementów ze zbioru $s_2$ przypisujemy bit $0$.
 > 5. **Powtarzamy kroki** dla każdego ze zbiorów $s_1, s_2$ aż do momentu dotarcia do pojedynczego elementu.
+
 ## Dekodowanie kodu Shannona-Fano
 Dekodowanie przebiega analogicznie do kodu Shannona i polega na analizowaniu kolejnych liter zakodowanego słowa $c(\vec{a})$ w celu sprawdzenia, czy dany fragment należy do kodu $C = \operatorname{Im}(c)$:
 * Jeśli $c(a_1) \notin C$, sprawdzamy kolejne znaki.

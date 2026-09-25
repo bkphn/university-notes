@@ -6,6 +6,7 @@ Ta definicja jest jednak zbyt ogólna, w ścisłym ujęciu należy uszczegółow
 - jest logicznie spójnym zbiorem danych, tzn. spełnia ograniczenia nałożone na dane;
 - jest projektowana, konstruowana i wypełniana danymi w określonym celu,
 - do bazy danych powinna być przypisana grupa użytkowników.
+
 ## System zarządzania bazą danych
 System zarządzania bazą danych, w skrócie DBMS (ang. *Database Management System*) jest zbiorem programów organizujących dane w bazie. Wśród najpopularniejszych DBMS można wyróżnić:
 - Oracle Database,
@@ -16,10 +17,12 @@ System zarządzania bazą danych, w skrócie DBMS (ang. *Database Management Sys
 - Redis.
 
 Bazy danych odgrywają kluczową rolę w życiu codziennym współczesnego społeczeństwa. Bazy danych są stosowane między innymi w: systemach bankowych, obsługach hoteli, katalogach bibliotecznych, sklepach internetowych, marketach.
+
 ## Historia baz danych
 Pierwsze profesjonalne systemy zarządzania bazami danych, pojawiły się pod koniec lat sześćdziesiątnych. Początkowo były to systemy oparte na zwykłych systemach plików. Mankamentem była trudność w szybkim dostępnie do danych oraz ryzyko ich utraty. System nie dostarczał możliwości wykonywania zapytań. Problem był również z jednoczesną pracą kilku użytkowników modyfikujące te same dane. W pierwszych systemach zarządzania bazą danych dominowały dwa modele danych: hierarchiczny i sieciowy. Systemy te nie dawały możliwości korzystania z języka zapytań wysokiego poziomu.
 
 W 1970 roku Ted Codd wprowadził relacyjny model bazy danych. Dane reprezentowane były w postaci czytelnych dla użytkownika tabel. Wewnątrz systemu istnieje złożona struktura danych, pozwalająca błyskawicznie wykonywać różnego rodzaju zapytania. Użytkownik nie musi nic wiedzieć o wewnętrznej strukturze danych, operuje jedynie wysokopoziomowym językiem zapytań.
+
 ## Moduły baz danych
 Zadaniem modułu zarządzania pamięcią jest wybieranie właściwych danych z pamięci i w razie potrzeby dostosowanie ich do wymagań modułów z wyższych poziomów. Składa się z dwóch części:
 - **Moduł zarządzania plikami**: Przechowuje informacje o miejscu zapisania plików na dysku i przekazuje zawartość bloku lub bloków, gdzie zapisany jest żądany plik modułowi zarządzania buforem.
@@ -32,11 +35,13 @@ Ostatnim wartym wspomnienia modułem jest **moduł zarządzania transakcjami**. 
 - **Spójność** (ang. *Consistency*): Dane muszą być przypisywane spójnie z wymogami.
 - **Izolacja** (ang. *Isolation*): Dwie transakcje przeprowadzone jednocześnie nie mogą na siebie wpłynąć.
 - **Trwałość** (ang. *Durability*): Jeśli transakcja zostanie zakończona to nawet w sytuacji awarii systemu wynik transakcji nie może zostać utracony.
+
 ## Wejścia
 Mamy trzy wejścia do systemu zarządzania bazą danych:
 - **Zapytania** Zapytaniami nazywamy pytania o dane. Można je wykonywać przez system zapytań bezpośrednich wbudowany w DBMS lub przez interfejsy programów użytkownika.
 - **Aktualizacje**: Aktualizacją nazywamy operację zmiany danych w bazie danych.
 - **Modyfikacje schematu**: Czynności związane ze zmianą schematu bazy danych wykonuje administrator bazy danych.
+
 ## Architektury
 Większość systemów baz danych oparta jest na architekturze **klient-serwer**. Na serwerze znajduje się DBMS, do którego dostęp posiada kilku użytkowników – klientów. Po stronie klienta znajduje się aplikacja stanowiąca interfejs graficzny użytkownika, umożliwający w czytelny sposób interpretację danych zawartych w bazie.
 

@@ -3,6 +3,7 @@
 | Prowadzący | Prof. dr hab. inż. Marcin Woźniak                                                                              |
 | Sala       | CEK Aula C                                                                                                     |
 | Platforma  | [https://platforma.polsl.pl/rms/course/view.php?id=631](https://platforma.polsl.pl/rms/course/view.php?id=631) |
+
 ## Projekt
 Na zaliczenia będzie do wykonania wybrany projekt z Algorytmionu bądź Olimpiady Informatycznej.
 

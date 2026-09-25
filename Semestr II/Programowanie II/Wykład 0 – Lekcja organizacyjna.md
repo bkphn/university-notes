@@ -13,6 +13,7 @@
 | Nazwa programu                   | Link                                                                                         |
 | -------------------------------- | -------------------------------------------------------------------------------------------- |
 | Mirosław Zelent - kurs obiektowy | [http://miroslawzelent.pl/kurs-obiektowy-c++/](http://miroslawzelent.pl/kurs-obiektowy-c++/) |
+
 ## Punktacja:
 W ramach przedmiotu można uzyskać 110 punktów:
 - sprawozdania (max 30+ pkt),

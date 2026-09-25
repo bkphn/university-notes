@@ -7,10 +7,12 @@
 | Nazwa programu                                     | Link                                                           |
 | -------------------------------------------------- | -------------------------------------------------------------- |
 | Filozofia w praktyce - czasopismo popularnonaukowe | [https://filozofiawpraktyce.pl](https://filozofiawpraktyce.pl) |
+
 ## Zaliczenie
 1. Zaliczenie przedmiotu polega na wygłoszeniu referatu przed klasą.
 2. Dodatkowe oceny można uzyskać za aktywność.
 3. Na 11 zajęciach będziemy wygłaszać grupowo przemowę.
+
 ## Tematy referatów
 1. ----
 2. Zasady dobrej komunikacji.

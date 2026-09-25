@@ -10,12 +10,14 @@ Na proces planowania składają się trzy podstawowe grupy czynności:
 
 - **Wybór sposobów**
 	Projektowanie i wybór sposobów realizacji celów, co sprowadza się do poszukiwania odpowiedzi na pytanie „jak cele mają być osiągnięte”.
+
 ## Plan biznesu
 Biznes plan można rozumieć jako plan działania przedsiębiorstwa na przyszłość. Zazwyczaj tworzymy plan biznesu w perspektywie:
 - krótkiej: 1-3 lat
 - długiej: 3-5 lat
 
 Plany biznesu są narzędziem służącym do wewnętrznego planowania działań przedsiębiorstwa, jego celem może być zachęcenie innych do możliwości biznesu. Biznes plan tworzą zarówno małe i jak duże przedsiębiorstwa.
+
 ## Cechy biznes planu
 Nie istnieje jeden, standardowy przepis na plan biznesu. Istnieją jednak cechy, często występujące przy takowych planach:
 - **Konkretny**
@@ -35,6 +37,7 @@ Nie istnieje jeden, standardowy przepis na plan biznesu. Istnieją jednak cechy,
 
 - **Kompleksowy**
 	Biznes plan powinien zawierać wszystkie niezbędne do oceny informacje.
+
 ## Funkcje planu biznesu
 Wyróżniamy dwie funkcje planu biznesu:
 - **Wewnętrzną**
@@ -42,6 +45,7 @@ Wyróżniamy dwie funkcje planu biznesu:
 
 - **Zewnętrzną**
 	Uatrakcyjnia przedsiębiorstwo w oczach inwestorów
+
 ## Układ planu biznesu
 Nie istnieje żaden standardowy układ, ani przepis na biznes plan. Można jednak wyróżnić często pojawiające się elementy:
 

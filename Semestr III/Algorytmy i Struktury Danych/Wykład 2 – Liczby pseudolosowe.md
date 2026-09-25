@@ -1,10 +1,13 @@
 ## Liczby pseudolosowe
 Liczby pseudolosowe nazywane są pseudolosowymi, ponieważ komputer nie jest w stanie wygenerować w pełni losowej liczby, zamiast tego używane są algorytmy imitujące losowość. Są to liczby, których rozkład ma ukryte regularności, lecz w praktyce nie są one rozróżnialne z liczbami losowymi. Liczby losowe powstają z generatorów mechanicznych i fizycznych (np. losowanie z urny, rozkład radioaktywny), podczas gdy liczby pseudolosowe tworzone są przez generatory (np. LFG).
+
 ## Ciąg Fibonacciego
 Urodzony w 1175 roku Leonardo da Pisa, zwany Fibonaccim, był jednym z najlepszych włoskich matematyków na przełomie XII i XIII wieku. W pracy *Liber abaci* przedstawił model ciągu Fibonacciego jako rozwiązanie problemu o rozmnażaniu się królików. Nazwa ciąg Fibonacciego spopularyzowana została dopiero w XIX wieku.
 
 Ciąg Fibonacciego określamy wzorem rekurencyjnym:
-$$ F_n = \begin{cases} 0, & n = 0 \\ 1, & n = 1 \\ F_{n-1} + F_{n-2}, & n > 1 \end{cases} $$
+
+$$F_n = \begin{cases} 0, & n = 0 \\ 1, & n = 1 \\ F_{n-1} + F_{n-2}, & n > 1 \end{cases}$$
+
 Zatem kilka kolejnych wyrazów ciągu to: $0, 1, 1, 2, 3, 5, 8, 13, \dots$
 
 Fibonacci przedstawił następujące założenia dotyczące rozmnażania się królików:
@@ -23,10 +26,16 @@ Rozwiązaniem problemu były liczby, z początku wyglądające na losowe, które
 > * $F_3 = F_2 + F_1 = 1 + 1 = 2$
 > * $F_4 = F_3 + F_2 = 1 + 2 = 3$
 > * $F_5 = F_4 + F_3 = 2 + 3 = 5$
+
 ## Złota proporcja
 Złotym podziałem nazywamy podział odcinka na dwie części tak, by stosunek długości dłuższej z nich do krótszej był taki sam jak całego odcinka do dłuższej:
-$$ \frac{a+b}{a} = \frac{a}{b} $$Stosunek ten jest równy:
-$$ \frac{1+\sqrt{5}}{2} = 1.6180339887\dots $$
+
+$$\frac{a+b}{a} = \frac{a}{b}$$
+
+Stosunek ten jest równy:
+
+$$\frac{1+\sqrt{5}}{2} = 1.6180339887\dots$$
+
 Liczbę tę nazywamy złotą proporcją i oznaczamy jako $\varphi$.
 
 **Złota proporcja** jest ściśle powiązana z ciągiem Fibonacciego. Stosunek dwóch kolejnych wyrazów ciągu zbiega do liczby $\varphi$:
@@ -39,16 +48,24 @@ Liczbę tę nazywamy złotą proporcją i oznaczamy jako $\varphi$.
 - $\lim_{n \to \infty} \frac{F_{n+1}}{F_n} = \varphi$
 
 Granicę można uogólnić do postaci:
-$$ \lim_{n \to \infty} \frac{F_{n+a}}{F_n} = \varphi^a $$
+
+$$\lim_{n \to \infty} \frac{F_{n+a}}{F_n} = \varphi^a$$
+
 ## Opóźniony generator Fibonacciego (LFG)
 Przykładem algorytmu generowania liczb pseudolosowych jest opóźniony generator Fibonacciego LFG. Generator ten korzysta z ciągu Fibonacciego.
 
 Wzór na kolejne liczby pseudolosowe wygląda następująco:
-$$ X_n = (X_{n-1} + X_{n-2}) \pmod m $$
+
+$$X_n = (X_{n-1} + X_{n-2}) \pmod m$$
+
 Wadą podstawowej wersji jest duża korelacja między kolejnymi wyrazami ciągu. Wady tej można się pozbyć, zastępując dwa kolejne wyrazy ciągu dwoma dowolnymi za pomocą opóźnień $p, q$. Tę wersję generatora nazywamy opóźnionym generatorem Fibonacciego i definiujemy wzorem:
-$$ X_n = (X_{n-p} + X_{n-q}) \pmod m $$
+
+$$X_n = (X_{n-p} + X_{n-q}) \pmod m$$
+
 Kolejnym uogólnieniem jest zastąpienie operatora $+$ dowolnym innym operatorem (odejmowanie, mnożenie, XOR itp.). Wybrany operator oznaczymy jako $\diamond$, wtedy wzór przybierze postać:
-$$ X_n = (X_{n-p} \diamond X_{n-q}) \pmod m $$
+
+$$X_n = (X_{n-p} \diamond X_{n-q}) \pmod m$$
+
 Generator taki oznaczamy jako $F(p, q, \diamond)$.
 
 > [!example] Przykład generowania LFG
@@ -59,10 +76,14 @@ Generator taki oznaczamy jako $F(p, q, \diamond)$.
 > * $X_{11} = X_8 + X_4 = 5 + 1 = 6$
 > * $X_{12} = X_9 + X_5 = 13 + 3 = 16$
 > * $X_{13} = X_{10} + X_6 = 7 + 4 = 11$
+
 ## Opóźniony generator na zasadzie dodawania z przeniesieniem (AWCG)
 Opóźniony generator na zasadzie dodawania z przeniesieniem AWCG został opracowany w 1991 roku przez G. Marsaglie'a oraz A. Zamana. Opisany jest następującym wzorem:
-$$ x_n = (x_{n-j} + x_{n-k} + c_{n-1}) \pmod m $$
-$$ c_n = \begin{cases} 0, & (x_{n-j} + x_{n-k} + c_{n-1}) < m \\ 1, & (x_{n-j} + x_{n-k} + c_{n-1}) \ge m \end{cases} $$
+
+$$x_n = (x_{n-j} + x_{n-k} + c_{n-1}) \pmod m$$
+
+$$c_n = \begin{cases} 0, & (x_{n-j} + x_{n-k} + c_{n-1}) < m \\ 1, & (x_{n-j} + x_{n-k} + c_{n-1}) \ge m \end{cases}$$
+
 Jest to modyfikacja opóźnionego generatora Fibonacciego.
 
 **Implementacja w języku Python:**
@@ -98,9 +119,12 @@ while i < count_iteration:
 > * $x_{11} = x_8 + x_4 + c_{10} \pmod{10} = 5 + 1 + 0 \pmod{10} = 6$, $c_{11} = 0$
 > * $x_{12} = x_9 + x_5 + c_{11} \pmod{10} = 3 + 3 + 0 \pmod{10} = 6$, $c_{12} = 0$
 > * $x_{13} = x_{10} + x_6 + c_{12} \pmod{10} = 8 + 4 + 0 \pmod{10} = 2$, $c_{13} = 1$
+
 ## Liniowy generator kongruencyjny (LCG)
 Liniowy generator kongruencyjny LCG określamy następującym wzorem:
-$$ x_{i+1} = (a \cdot x_i + c) \pmod m $$
+
+$$x_{i+1} = (a \cdot x_i + c) \pmod m$$
+
 gdzie:
 * $m$ – zakres $\{0, \dots, m\}$ w którym generowane są liczby pseudolosowe.
 * $a$ – współczynnik generujący liczbę, $a \in \{1, \dots, m-1\}$.
@@ -142,13 +166,19 @@ if __name__ == "__main__":
 > * $x_3 = (7 \cdot 0 + 9) \pmod{10} = 9 \pmod{10} = 9$
 > * $x_4 = (7 \cdot 9 + 9) \pmod{10} = 72 \pmod{10} = 2$
 > * $x_5 = (7 \cdot 2 + 9) \pmod{10} = 23 \pmod{10} = 3$
+
 ## Generator Parka-Millera
 Generator Parka-Millera, nazywany inaczej generatorem Lehmera, określamy następującym wzorem:
-$$ x_i = (a \cdot x_{i-1}) \pmod m $$
+
+$$x_i = (a \cdot x_{i-1}) \pmod m$$
+
 W przeciwieństwie do generatorów LCG, AWCG, współczynniki $a, m$ muszą być starannie dobrane:
 * $m$ musi być liczbą pierwszą bądź jej wielokrotnością.
 * $x_0$ musi być względnie pierwsze z $m$ ($\operatorname{NWD}(x_0, m) = 1$).
-* $a$ musi być pierwiastkiem pierwotnym modulo $m$ $$\forall_{b \in \mathbb{Z}} : \operatorname{NWD}(b, m) = 1, \exists_{k \in \mathbb{Z}} : a^k \pmod m = b$$
+* $a$ musi być pierwiastkiem pierwotnym modulo $m$
+
+$$\forall_{b \in \mathbb{Z}} : \operatorname{NWD}(b, m) = 1, \exists_{k \in \mathbb{Z}} : a^k \pmod m = b$$
+
 Konieczne jest dopasowanie odpowiednich wartości, by uniknąć 0 w algorytmie, który wyzeruje następne wyniki.
 
 > [!example] Przykład generowania Parka-Millera

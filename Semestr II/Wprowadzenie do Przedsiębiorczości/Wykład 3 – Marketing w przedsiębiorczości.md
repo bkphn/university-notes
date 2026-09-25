@@ -2,6 +2,7 @@
 Marketing jest procesem, w którym jednostki i grupy otrzymują to, czego potrzebują poprzez tworzenie, oferowanie oraz wymianę z innymi towarów i usług, które posiadają wartość.
 
 Celem marketingu jest zaspokajanie wymagań klienta w sposób zyskowany dla organizacji.
+
 ## Orientacje marketingowe
 Orientacja marketingowa to konkretny rodzaj podejścia do rynku, obieracjąc daną strategię. Możemy wyróżnić następujące orientacje:
 - **Produkcyjna**
@@ -32,6 +33,7 @@ Orientacja marketingowa to konkretny rodzaj podejścia do rynku, obieracjąc dan
 
 - **Społecznie odpowiedzialna**
 	W tej koncepcji najważniejszym celem przedsiębiorstwa jest efektywne i skuteczne zaspokajanie potrzeb klientów, przy zachowaniu zgodności interesów indywidualnych.
+
 ## Proces segmentacji rynku
 Segmentacja rynku to proces podziału rynku według określonych kryteriów na jednorodne grupy nabywców. Każdy z segmentów wymaga innej strategii marketingowej.
 
@@ -59,6 +61,7 @@ Możemy wyróżnić parę cech determinujących czy dany segment rynku jest uży
 
 - **Wrażliwość**
 	Docelowe grupy nabywców powinny być zainteresowane produktem i cechować się wrażliwością na opracowane strategie marketingowe.
+
 ## Procedura segmentacji rynku
 Segmentacja rynku powinna rozpocząć się od rozpoznania problemów i potrzeb konsumentów. Kiedy otrzyma się już wstępne wyniki, należy przeanalizować grupy, które się wyklarowały. Na tej podstawie dobiera się kryterium segmentacji, a następnie najatrakcyjniejszą grupę docelową. Później opracowuje się adekwatną strategię marketingową i rozpoczyna wdrażanie działań.
 
@@ -84,6 +87,7 @@ Aby wybrać najlepszy segment rynku trzeba dokonać ich oceny. Do oceny atrakcyj
 	
 	4. **Sumowanie punktów**
 		Sumuje się punkty dla każdej opcji. Najwyższy wynik - najlepsza opcja według tej metody.
+
 ## Sposoby działania przedsiębiorstwa
 Możemy wyróżnić parę sposobów działania przedsiębiorstwa na rynku:
 - **Koncentracja jednosegmentowa**
@@ -129,6 +133,7 @@ Marketing mix to kompozycja marketingowa pozwalająca na efektywne planowanie i 
 - Stosowany rzadko **8P** dodaje do puli jeszcze jeden:
 	0. **Performance**
 		Jak chcemy badać skuteczność naszych działań? Czy chcemy pozyskiwać od klientów opinie, oceny? Czy opieramy się na wynikach sprzedaży?
+
 ## Układ planu marketingowego
 Podobnie jak w przypadku planu biznesu nie istnieje jeden, ustrukturyzowany układ planu marketingowego, możemy jednak wyróżnić elementy, często pojawiające się w takowych planach:
 - **Streszczenie**

@@ -11,6 +11,7 @@
 - **Stationers' Company w Londynie**: W 1577 roku królowa Maria I nadała zrzeszeniu Stationers' Company monopol na wydawanie książek. Tylko członkowie tej gildii mogli legalnie drukować dzieła, prawa te chroniły jednak ponownie wydawców, a nie autorów. Dzieła pisarzy, były traktowane bardziej jako produkty, a nie ich własność intelektualna.
 
 - **Statue of Anne**: Statut Królowej Anny, nazywany inaczej Copyright Act 1710, był pierwszym nowoczesnym aktem prawnym, który przyznawał prawa autorskie autorom. Ustawa ta dawała autorom wyłączne prawo do publikacji dzieła na okres 14 lat z możliwością przedłużenia.
+
 ## Sprawa międzynarodowa
 W XIX wieku, w dobie rozwoju druku i literatury, zaczęto dostrzegać problem braku międzynarodowej ochrony praw autorskich. Twórcy nie byli chronieni poza granicami swojego kraju. W związku z tym w życie zaczęły wchodzić różne ustawy dbające o dobro autorów, oto najważniejsze z nich:
 

@@ -1,21 +1,31 @@
 ## Sformułowanie zagadnienia
 Wyznaczenie funkcji pierwotnej często jest bardzo trudne lub wręcz niemożliwe. Ponadto, jeśli funkcja podcałkowa jest znana tylko w wybranych punktach przedziału całkowania, pojęcie funkcji pierwotnej traci sens, co wymusza obliczanie przybliżonej wartości całki.
 
-Przybliżenie całki wzorem: $$ \int_a^b f(x)dx \approx \sum_{j=0}^n A_j f(x_j) $$nazywamy kwadraturą, liczby $x_0, \dots, x_n$ nazywamy węzłami kwadratury, natomiast liczby $A_0, \dots, A_n$ współczynnikami kwadratury.
+Przybliżenie całki wzorem:
+
+$$\int_a^b f(x)dx \approx \sum_{j=0}^n A_j f(x_j)$$
+
+nazywamy kwadraturą, liczby $x_0, \dots, x_n$ nazywamy węzłami kwadratury, natomiast liczby $A_0, \dots, A_n$ współczynnikami kwadratury.
+
 ## Proste kwadratury Newtona-Cotesa
 Kwadratury te uzyskuje się, całkując wielomian interpolacyjny (np. Lagrange'a) zastępujący funkcję podcałkową $f$ w węzłach równoodległych na przedziale $[a, b]$.
 Węzły $x_i = a + ih$, gdzie $h = \frac{b-a}{n}$.
 
 Po całkowaniu wielomianu $W_n(x)$ otrzymuje się równanie:
-$$ \int_a^b W_n(x)dx = h \cdot \sum_{i=0}^n f(x_i) \cdot \alpha_i $$
+
+$$\int_a^b W_n(x)dx = h \cdot \sum_{i=0}^n f(x_i) \cdot \alpha_i$$
+
 Współczynniki $\alpha_i$ nie zależą od granic całkowania ani od funkcji $f$, lecz jedynie od stopnia wielomianu $n$. 
 
 Ponieważ $\alpha_i$ to liczby wymierne, wprowadza się liczbę $r \in \mathbb{Q}$ oraz współczynniki całkowitoliczbowe $\sigma_i = r \alpha_i$. 
 Ostateczny wzór przybliżonej całki wynosi:
-$$ I = \begin{cases} \frac{b-a}{r} \cdot f(x_0) \cdot \sigma_0, & n=0 \\ \frac{b-a}{n \cdot r} \cdot \sum_{i=0}^n f(x_i) \cdot \sigma_i, & n \ge 1 \end{cases} $$
+
+$$I = \begin{cases} \frac{b-a}{r} \cdot f(x_0) \cdot \sigma_0, & n=0 \\ \frac{b-a}{n \cdot r} \cdot \sum_{i=0}^n f(x_i) \cdot \sigma_i, & n \ge 1 \end{cases}$$
 
 Błąd metody (prostej) wyraża wzór:
-$$ E_n = h^{p+1}K \cdot f^{(p)}(\xi) $$
+
+$$E_n = h^{p+1}K \cdot f^{(p)}(\xi)$$
+
 Dla obliczenia najgorszego przypadku błędu przyjmuje się $\sup_{x \in [a, b]} |f^{(p)}(x)|$.
 
 ### Tabela kwadratur Newtona-Cotesa
@@ -45,11 +55,13 @@ Dla obliczenia najgorszego przypadku błędu przyjmuje się $\sup_{x \in [a, b]}
 >    - Szukamy supremum modułu pochodnej na przedziale
 > 5. **Wynik**
 >    - $I \pm E_n$
+
 ## Złożone kwadratury Newtona-Cotesa
 Ponieważ błąd metody zależy od $h$, stosowanie prostej kwadratury na dużym przedziale daje duży błąd. Dzieli się więc przedział $[a, b]$ na $m=kn$ mniejszych podprzedziałów o długości $\Delta x = \frac{b-a}{m}$ i na każdym z nich z osobna stosuje metodę (gdzie $k$ to krotność stosowania kwadratury stopnia $n$).
 
 Wzór na całkę przybiera formę:
-$$ I \approx \frac{\Delta x}{r} \cdot \sum_{i=0}^m \overline{\sigma}_i \cdot f(x_i) $$
+
+$$I \approx \frac{\Delta x}{r} \cdot \sum_{i=0}^m \overline{\sigma}_i \cdot f(x_i)$$
 
 **Konkretne przypadki błędu $R$ i współczynników $\overline{\sigma}_i$:**
 * **Złożony wzór prostokątów:** 
@@ -72,6 +84,7 @@ $$ I \approx \frac{\Delta x}{r} \cdot \sum_{i=0}^m \overline{\sigma}_i \cdot f(x
 > 4. **Obliczamy wartość $M$ i błąd $R$ dla najgorszego przypadku**
 > 5. **Wynik**
 >    - $I \pm R$
+
 ## Kwadratury Gaussa
 Całkę postaci $\int_a^b w(x)f(x)dx$ (gdzie $w(x)>0$) przybliża się sumą $\sum_{i=1}^n w_i f(x_i)$.
 Współczynniki $w_i$ (wagi) i węzły $x_i$ dobiera się tak, aby błąd przybliżenia znikał dla wielomianu najwyższego możliwego stopnia. Kwadratura rzędu $r$ jest dokładna dla wielomianów stopnia $\le r$. Kwadraturę uzyskującą najwyższy możliwy rząd nazywamy **kwadraturą Gaussa**.
@@ -81,9 +94,12 @@ Węzły $x_i$ są zerami $n$-tego wielomianu ortogonalnego (dla wagi $w(x) \equi
 Kwadraturę na przedziale $[-1, 1]$ z wagą $w(x) \equiv 1$ zadają ustalone w tabeli wartości węzłów i wag (np. dla $n=2$: $x_i = \pm \frac{1}{\sqrt{3}}$, $w_1=w_2=1$).
 
 Dla innych przedziałów stosuje się zamianę zmiennych:
-$$ t = \frac{b-a}{2}x + \frac{a+b}{2} \Rightarrow dt = \frac{b-a}{2}dx $$
+
+$$t = \frac{b-a}{2}x + \frac{a+b}{2} \Rightarrow dt = \frac{b-a}{2}dx$$
+
 Wtedy całka przyjmuje postać:
-$$ \int_a^b f(t)dt = \frac{b-a}{2} \int_{-1}^1 g(x)dx, \quad \text{gdzie } g(x) = f\left(\frac{b-a}{2}x + \frac{a+b}{2}\right) $$
+
+$$\int_a^b f(t)dt = \frac{b-a}{2} \int_{-1}^1 g(x)dx, \quad \text{gdzie } g(x) = f\left(\frac{b-a}{2}x + \frac{a+b}{2}\right)$$
 
 > [!abstract] Algorytm kwadratur Gaussa
 > 0. **Dane**

@@ -1,5 +1,6 @@
 ## Równania różnicowe
 Równaniem różnicowym nazywamy równanie wiążące ze sobą ogólny wyraz ciągu $a_n$ z jego wcześniejszymi elementami $a_{n-k}$. W równaniach różnicowych często stosuje się zapis $a(n)$ zamiast $a_n$. Równanie często ma również podane warunki początkowe $a(0) = \alpha, \dots$, które pozwalają nam na obliczenie ogólnego wyrazu ciągu.
+
 ## Funkcja sterująca i impulsowa
 * **Funkcję $s(n)$** nazywamy impulsową, jeżeli wysyła dwa różne sygnały (wartości) w zależności od argumentu.
 * **Funkcję $p(n)$** nazywamy sterującą, jeżeli jej działanie wynika z wymuszenia (lewej strony równania różnicowego). Znając wzór funkcji impulsowej, jesteśmy w stanie wyznaczyć funkcję sterującą.
@@ -7,9 +8,13 @@ Równaniem różnicowym nazywamy równanie wiążące ze sobą ogólny wyraz ci�
 > [!example] Przykład wyznaczenia funkcji sterującej
 > Niech $p(n) = s(n+2) - 2s(n+1) + s(n)$, gdzie $s(n) = \frac{1}{2}(1 + (-1)^n)$.
 > Po rozpisaniu wartości dla parzystych i nieparzystych $n$:
-> $$ s(n) = \begin{cases} \frac{1}{2}(1+1), & 2 \mid n \\ \frac{1}{2}(1-1), & 2 \nmid n \end{cases} \implies s(n) = \begin{cases} 1, & 2 \mid n \\ 0, & 2 \nmid n \end{cases} $$
+>
+> $$s(n) = \begin{cases} \frac{1}{2}(1+1), & 2 \mid n \\ \frac{1}{2}(1-1), & 2 \nmid n \end{cases} \implies s(n) = \begin{cases} 1, & 2 \mid n \\ 0, & 2 \nmid n \end{cases}$$
+>
 > Podstawiając do wzoru na $p(n)$:
-> $$ p(n) = s(n+2) - 2s(n+1) + s(n) = \begin{cases} 1 - 2 \cdot 0 + 1, & 2 \mid n \\ 0 - 2 \cdot 1 + 0, & 2 \nmid n \end{cases} \implies p(n) = \begin{cases} 2, & 2 \mid n \\ -2, & 2 \nmid n \end{cases} $$
+>
+> $$p(n) = s(n+2) - 2s(n+1) + s(n) = \begin{cases} 1 - 2 \cdot 0 + 1, & 2 \mid n \\ 0 - 2 \cdot 1 + 0, & 2 \nmid n \end{cases} \implies p(n) = \begin{cases} 2, & 2 \mid n \\ -2, & 2 \nmid n \end{cases}$$
+>
 > Ostatecznie funkcja sterująca przyjmuje postać: $p(n) = 2(-1)^n$.
 
 ## Schemat rozwiązywania równań różnicowych

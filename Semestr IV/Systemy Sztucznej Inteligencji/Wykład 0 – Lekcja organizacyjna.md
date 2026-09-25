@@ -17,8 +17,10 @@
 | --------------- | ------------------------------------------------------------------ |
 | Tutorials Point | [https://www.tutorialspoint.com/](https://www.tutorialspoint.com/) |
 | CEUR            | [https://ceur-ws.org/Vol-3885/](https://ceur-ws.org/Vol-3885/)     |
+
 ## Kolokwia
 Terminy kolokwiów będą ustalane z prowadzącymi. Przed oddaniem projektu czeka nas kolokwium praktyczne. Za kolokwium do zdobycia będzie 40 punktów.
+
 ## Projekt
 Jako starosta przygotować listę projetków, dostępną dla dziekana. Projekt ma być programem wykorzystującym poznane na wykładach modele SI. Istotne jest, że algorytmy piszemy od zera, nie importując ich z gotowych bibliotek, wyjątkiem może być PCA.
 
@@ -27,8 +29,10 @@ Projekt ma być tworzony w grupach 2 - 3 osobowych. Obowiązkowa jest prezentacj
 Projekt powinien zostać napisany w języku Python bądź C#, w dokumentacji powinien pojawić się model matematyczny, opis procedury, wyniki badań i ich analiza.
 
 Do projektu można skorzystać z dowolnych baz danych, np. [kaggle.com](https://www.kaggle.com/).
+
 ## Projekt dodatkowy
 Oprócz zwykłego projektu jest możliwość napisania dodatkowego projektu związanego z tematyką SI. Projekt dodatkowy, może być rozwinięciem głównego projektu. Kluczową częścią dodatkowego projektu jest napisanie artykułu naukowego w języku angielskim, który następnie może zostać opublikowany w jednym z czasopism. Projekt dodatkowy jest wymagany do uzyskania oceny 5.0 na koniec przedmiotu.
+
 ## Tematyka wykładów
 - Przestrzeń decyzyjna i różne aspekty modelowania systemów ekspertowych
 - Analiza danych i klasteryzacja
@@ -40,6 +44,7 @@ Oprócz zwykłego projektu jest możliwość napisania dodatkowego projektu zwi�
 - Sieci Neuronowe
 - Metody uczenia z nauczycielem lub bez nauczyciela
 - Zastosowania: przetwarzanie sygnałów multimedialnych, detekcja cech, klasyfikatory, predykcja
+
 ## Przykładowe tematy projetków
 - Program rozpoznający cyfry
 - Program rozpoznający litery

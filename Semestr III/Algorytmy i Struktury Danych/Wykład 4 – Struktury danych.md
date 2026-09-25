@@ -2,6 +2,7 @@
 Tablicą jednowymiarową nazywamy zbiór zmiennych określonego typu, uporządkowany według indeksu oznaczającego numer w zbiorze. Każda tablica ma zadeklarowany rozmiar, a więc wyznaczone miejsce w pamięci. Dla tablicy n-elementowej zmiennych typu `int`, zajęte zostanie dokładnie $n \cdot \mathtt{sizeof(int)}$. W trakcie działania programu, raz zadeklarowana wartość nie może ulec zmianie. 
 
 Umiejscowienie tablicy w pamięci jest połączone ze wskaźnikiem, który wskazuje na jej początek. Każda tablica jest indeksowana od $0$ do $n-1$, a każdy numer nazywany jest indeksem. Tablice dwuwymiarowe to tablica tablic, co oznacza grupowanie jednego elementu typu w formie macierzy. Tablice dwuwymiarowe mają dwa indeksy. Raz zadeklarowany rozmiar tablicy nie może być zmieniony. Gdy istnieje konieczność zwiększenia rozmiaru tablicy możliwa jest relokacja pamięci.
+
 ## Stosy
 Stosem nazywamy dynamiczną strukturę liniowo uporządkowanych danych, w której mamy dostęp jedynie do ostatniego elementu nazywanego **wierzchołkiem stosu**. Zapisywanie i pobieranie danych jest wykonywane za pomocą strategii **Last In - First Out** (LIFO). 
 
@@ -12,6 +13,7 @@ Stosy skojarzyć można ze stertą książek, z którą jedyne co możemy zrobi�
 * `push(x)` – Dodaje element x na szczyt stosu.
 * `pop()` – Zwraca element znajdujący się na szczycie stosu i go usuwa.
 * `peek()` – Zwraca element na szczycie stosu (bez usuwania go).
+
 ## Kolejki
 Kolejką nazywamy dynamiczną strukturę liniowo uporządkowanych danych, w której mamy dostęp do elementów na początku i na końcu. Możemy usuwać elementy z początku kolejki, a dodawać na końcu za pomocą strategii **First In - First Out** (FIFO).
 
@@ -37,10 +39,12 @@ Podobnie jak w przypadku stosu, kolejki również mają własne operacje:
 * `dequeue()` – Usuwa element z kolejki, a jeżeli ta jest pusta to zwraca błąd.
 * `peek()` – Zwraca element na początku kolejki (bez usuwania go).
 * `size()` – Zwraca ilość elementów w kolejce.
+
 ## Kolejka priorytetowa
 Kolejka priorytetowa zakłada, że każdy element ma swój priorytet, względem którego jest ustawiony. Im wyższy priorytet, tym bliżej początku kolejki. Każdy element posiada dodatkową wartość nazywaną kluczem. Klucz odpowiada za ważność tego elementu. Umiejscowienie danego elementu w kolejce zależy od klucza, a więc dodatkowo będzie potrzebny mechanizm przeszukiwania lub sortowania według kluczy. 
 
 Kolejki priorytetowe powszechnie stosuje się w szeregowaniu procesów w jądrach systemowych bądź symulatorach. Rozpatrując dane w postaci bitów, operacje dodawania czy zwracania danego elementu będziemy mieli do czynienia ze złożonością $\mathcal{O}(\sqrt{\log_2 n})$.
+
 ## Listy
 Listą nazywamy dynamiczną strukturę liniowo uporządkowanych danych, w której mamy dostęp do każdego z elementów, ponieważ każdemu rekordowi odpowiada pole zawierające adres kolejnego rekordu listy. Odnośnik do pierwszego rekordu nazywamy korzeniem listy, a wskaźnik ostatniego elementu jest pusty. Możemy wyróżnić następujące rodzaje list:
 * **Listy jednokierunkowe**: Każdy element posiada wskaźnik do swojego następnika. Przeszukiwanie zaczyna się od korzenia i jest przeprowadzane w jednym kierunku.
@@ -52,6 +56,7 @@ Listą nazywamy dynamiczną strukturę liniowo uporządkowanych danych, w które
 Listę możemy zaimplementować na jeden z dwóch sposobów:
 * **Implementacja tablicowa**: Konstrukcja opiera się na stworzeniu tablicy elementów i mechanizmie dodawania/usuwania elementu. Dodawanie elementów polega na wstawieniu go na koniec tablicy. W przypadku dodania elementu do środka należy przesunąć wszystkie elementy o jedno pole dalej i w powstałe miejsce wstawić nowy. W przypadku usuwania i-tego elementu, wszystkie na kolejnych pozycjach przesuwamy.
 * **Implementacja wskaźnikowa**: Każdy element posiada wskaźnik do innego elementu zadanego typu. Jeśli dodawanie elementu jest na końcu listy wskaźnik z końca ustawia się na nowym elemencie. Jeśli dodawanie jest wewnątrz listy należy ustawić obiekt pod zadany wskaźnik. Usuwanie elementów polega na zastosowaniu tymczasowego elementu, wskazuje on na usuwany element, a wskaźnik poprzednika przemieszczamy do następnika. Po przesunięciu zwalniamy pamięć.
+
 ## Notacja Polska i Odwrotna Notacja Polska
 Operandami nazywamy argumenty operatora, czyli elementy, na których wykonywane są działania (liczby, zmienne). Notacją **infiksową** nazywamy sposób notacji wyrażeń algebraicznych, w których operator umieszczamy pomiędzy operandami: $a+b$.
 

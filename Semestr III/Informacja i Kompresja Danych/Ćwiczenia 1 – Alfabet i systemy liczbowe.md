@@ -3,8 +3,12 @@
 
 **Liczbą liter w słowie** nazywamy długość słowa. Słowo niezawierające żadnej litery jest nazywane **słowem pustym** bądź **spacją** i zwyczajowo oznaczamy je przez $\varepsilon$.
 
-Przez $\mathcal{A}^n$ oznaczamy zbiór wszystkich słów długości $n$ nad alfabetem $\mathcal{A}$. Zbiór zawierający wszystkie możliwe słowa nad alfabetem $\mathcal{A}$ oznaczamy jako $\mathcal{A}^*$ i definiujemy wzorem:
-$$\mathcal{A}^* = \bigcup_{n \in \mathbb{N}} \mathcal{A}^n = \mathcal{A}^0 \cup \mathcal{A}^1 \cup \dots$$**Językiem** nazywamy dowolny podzbiór $L \subset \mathcal{A}^*$.
+Przez $\mathcal{A}^n$ oznaczamy zbiór wszystkich słów długości $n$ nad alfabetem $\mathcal{A}$. Zbiór zawierający wszystkie możliwe słowa nad alfabetem $\mathcal{A}$ oznaczamy jako $\mathcal{A}^{\ast}$ i definiujemy wzorem:
+
+$$\mathcal{A}^{\ast} = \bigcup_{n \in \mathbb{N}} \mathcal{A}^n = \mathcal{A}^0 \cup \mathcal{A}^1 \cup \dots$$
+
+**Językiem** nazywamy dowolny podzbiór $L \subset \mathcal{A}^{\ast}$.
+
 ## Systemy niepozycyjne
 Systemami niepozycyjnymi nazywamy systemy liczbowe, w których pozycja nie zmienia wartości symbolu.
 
@@ -25,12 +29,15 @@ Zasady systemu rzymskiego:
 * Ograniczenie: Największą liczbą możliwą do zapisania w tym systemie jest $3999$ ($\text{MMMCMXCIX}$).
 
 *(Uwaga: prowadzący określa również systemy dwunastkowe i sześćdziesiętne jako niepozycyjne, jednak ze względów merytorycznych umieszczono je w sekcji pozycyjnych)*
+
 ## Systemy pozycyjne
 Każdy układ pozycyjny składa się z podstawy $p$ i alfabetu $\mathcal{A}$.
 
 Podstawa nie musi być liczbą naturalną; istnieją systemy oparte na ujemnych wartościach lub na liczbie $\varphi$. Alfabet $\mathcal{A} = \{a_1, a_2, \dots\}$ to zbiór cyfr określających całkowite liczby $a < p$.
 Liczba $b \in \mathbb{N}$ ma postać $b = b_0b_1\dots b_n$, co odpowiada:
-$$ b = b_0 \cdot p^n + b_1 \cdot p^{n-1} + \dots + b_n \cdot p^0 $$
+
+$$b = b_0 \cdot p^n + b_1 \cdot p^{n-1} + \dots + b_n \cdot p^0$$
+
 gdzie $b_i \in \mathcal{A}$.
 
 Wśród przykładowych systemów pozycyjnych możemy wyróżnić:
@@ -51,6 +58,7 @@ Wśród przykładowych systemów pozycyjnych możemy wyróżnić:
 
 * **System o złotej podstawie** $p=\varphi$, $\mathcal{A}=\{0,1\}$ 
 	Stosowany w zaawansowanej matematyce.
+
 ## Przekształcenia między systemami liczbowymi
 Podstawę systemu liczbowego często zapisuje się w indeksie dolnym, np. $2025_{10}, 110_2, \text{F}3_{16}$.
 

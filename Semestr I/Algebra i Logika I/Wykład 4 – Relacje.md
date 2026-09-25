@@ -6,13 +6,16 @@
 
 **Symbol relacji:**
 Niech $\mathcal{R}$ będzie relacją w zbiorze $X$. Możemy to zapisać jako:
+
 $$
 \mathcal{R} \subseteq X^{2} = X \times X
 $$
+
 Jeśli $(x,y) \in \mathcal{R}$, to będziemy pisać $x\mathcal{R}y$.
 Jeśli $(x,y) \notin \mathcal{R}$, to będziemy pisać $x\mathcal{\cancel{ R }}y$.
 
 ---
+
 ## Rodzaje relacji
 Niech $\mathcal{R} \subseteq A \times A$.
 
@@ -33,26 +36,33 @@ Niech $\mathcal{R} \subseteq A \times A$.
 
 ## Relacja przystawania modulo $n$
 Niech $n \in \mathbb{N}$. Definiujemy przystawanie modulo $n$ jako:
+
 $$
 a \equiv b \pmod{n} \iff  n | (a-b)
 $$
+
 *Interpretacja:* Jeżeli podzielimy $a$ lub $b$ przez $n$, to otrzymamy tę samą resztę z dzielenia.
 
 **Własności relacji przystawania:**
 1.  **Zwrotność:** $a \equiv a \pmod{n} \Rightarrow n | (a-a)$
 2.  **Symetria:** $a \equiv b \pmod{n} \Rightarrow b \equiv a \pmod{n}$, ponieważ:
+
     $$
     n | (a-b) \implies a-b = n \cdot k \quad (\text{dla } k \in \mathbb{Z})
     $$
+
     $$
     b-a = n \cdot (-k) \implies n | (b-a) \Rightarrow b \equiv a \pmod{n}
     $$
+
 3.  **Przechodniość:** $(a \equiv b \pmod{n} \wedge b \equiv c \pmod{n}) \implies a \equiv c \pmod{n}$
 4.  **Dodawanie/Mnożenie:** $(a \equiv b \pmod{n} \wedge c \equiv d \pmod{n}) \implies a+c \equiv b+d \pmod{n} \wedge a \cdot c \equiv b \cdot d \pmod{n}$
 
 > [!tip] Twierdzenie o dzieleniu z resztą
 > Niech $a, b \in \mathbb{Z}$ oraz $b > 0$. Wtedy istnieje dokładnie jedna para liczb całkowitych $q, r$ taka, że:
-> $$ a = q \cdot b + r \quad \text{oraz} \quad 0 \le r < b $$
+>
+> $$a = q \cdot b + r \quad \text{oraz} \quad 0 \le r < b$$
+>
 > Liczbę $r$ nazywamy **resztą z dzielenia** $a$ przez $b$.
 
 ---
@@ -68,9 +78,12 @@ Dane są relacje $\mathcal{R}_{1}$ oraz $\mathcal{R}_{2}$ w zbiorze $X$.
 ## Klasy abstrakcji
 > [!info] Definicja Klasy Abstrakcji
 > Niech $\mathcal{R}$ będzie **relacją równoważności** w zbiorze $X$ i niech $x \in X$. Klasą abstrakcji elementu $x$ nazywamy zbiór:
+>
 > $$[x]_{\mathcal{R}} = \{ y \in X : x\mathcal{R}y \}$$
+>
 
 Istnieje podzbiór $S \subseteq X$ (tzw. zbiór reprezentantów) taki, że zbiór $X$ jest sumą rozłącznych klas abstrakcji:
+
 $$
 X = \bigcup_{x \in S} [x]_{\mathcal{R}}
 $$
@@ -98,20 +111,31 @@ $$
 > Liczbę wszystkich możliwych relacji równoważności (czyli podziałów zbioru na rozłączne klasy abstrakcji) na zbiorze $n$-elementowym nazywamy **$n$-tą liczbą Bella** i oznaczamy ją przez $B_{n}$.
 
 **Początkowe liczby Bella:**
-$$ B_{0} = 1 $$
-$$ B_{1} = 1 $$
-$$ B_{2} = 2 $$
-$$ B_{3} = 5 $$
+
+$$B_{0} = 1$$
+
+$$B_{1} = 1$$
+
+$$B_{2} = 2$$
+
+$$B_{3} = 5$$
 
 **Wzór rekurencyjny:**
+
 $$
 B_{n+1} = \sum_{k=0}^{n} \binom{n}{k} \cdot B_{k}
 $$
+
 Gdzie symbol Newtona to: $\binom{n}{k} = \frac{n!}{k! \cdot (n-k)!}$
 
 **Przykład dla $B_4$:**
 Obliczamy $B_{4}$ na podstawie wzoru (dla $n=3$):
-$$ B_{4} = \sum_{k=0}^{3} \binom{3}{k} \cdot B_{k} $$
-$$ B_{4} = \binom{3}{0}B_{0} + \binom{3}{1}B_{1} + \binom{3}{2}B_{2} + \binom{3}{3}B_{3} $$
+
+$$B_{4} = \sum_{k=0}^{3} \binom{3}{k} \cdot B_{k}$$
+
+$$B_{4} = \binom{3}{0}B_{0} + \binom{3}{1}B_{1} + \binom{3}{2}B_{2} + \binom{3}{3}B_{3}$$
+
 Wiedząc, że $\binom{n}{0}=1$, $\binom{n}{n}=1$ oraz $\binom{n}{1}=n$:
-$$ B_{4} = 1 \cdot 1 + 3 \cdot 1 + 3 \cdot 2 + 1 \cdot 5 = 1 + 3 + 6 + 5 = 15 $$
+
+$$B_{4} = 1 \cdot 1 + 3 \cdot 1 + 3 \cdot 2 + 1 \cdot 5 = 1 + 3 + 6 + 5 = 15$$
+

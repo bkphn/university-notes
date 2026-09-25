@@ -8,6 +8,7 @@
 | Vocabulary                                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Pedestrian** – przechodzień  <br>**Lane** – pas ruchu  <br>**Crowd** – tłum  <br>**Angular** **spread** – rozrzut kątowy  <br>**Disordered** – niezorganizowany  <br>**Flow** – przepływ  <br>**Fluid dynamics** – dynamika płynów  <br>**Optimizing** – optymalizowanie<br>**Public space** – przestrzeń publiczna  <br>**Movement** – przemieszczanie się  <br>**Dodge** – unik |
+
 ## Summary
 During the pandemic of coronavirus, three Polish scientists: Karol Bacik, Bogdan Bacik, and Grzegorz Sobota, who were trained in **fluid dynamics**, started thinking about optimizing movement in public spaces under the **social distance restrictions**.  
 

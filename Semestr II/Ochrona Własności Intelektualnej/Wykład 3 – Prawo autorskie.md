@@ -30,6 +30,7 @@ Pola eksploatacji:
 - wprowadzenie do obrotu, użyczenie lub najem oryginału albo egzemplarzy
 - publiczne wykonanie, wystawienie, wyświetlenie, odtworzenie, nadanie oraz takie udostępnienie, aby każdy mógł mieć do niego dostęp w czasie i miejscu przez siebie wybranym
 - …
+
 ## Dozwolony użytek
 Wyjątek od autorskich praw majątkowch stanowi dozwolony użytek. Aby móc z niego korzystać należy, w miarę możliwości, podać imię i nazwisko oryginalnego autora oraz źródło. Dozwolony użytek nie może również naruszać normalnego korzystania z utworu lub godzić w interesy twórcy. Dzielimy go na dwa rodzaje:
 
@@ -57,6 +58,7 @@ Wyjątek od autorskich praw majątkowch stanowi dozwolony użytek. Aby móc z ni
 	Art. 33 "Prawo panoramy" mówi o tym, że wolno rozpowszechniać utwory wystawione na stałe na ogólnie dostępnych drogach, ulicach, placach lub w ogrodach. Prawo to jednak nie funkcjonuje w wielu Państwach i np. w celu rozpowszechniania wizerunku wieży Eiffla nocą trzeba uzyskać specjalne pozwolenie.
 	
 	Art. 331-335 pozwala na udostępnianie utworów na rzecz osób niepełnosprawnych, bezpieczeństwa publicznego, w celach serwisowych (np. instrukcja obsługi), reklamy (np. reklama wystawy)
+
 ## Czas ochrony praw autorskich
 Mimo, że praw autorskich nie da się zrzec to czas ich działania jest z góry określony. Zgodnie z art. 36 autorskie prawa majątkowe gasną z upływem siedemdziesięciu lat od śmierci twórcy / ostatniego ze współtwórców. Jeżeli autor nie jest znany bądź prawa przysługują innemu [podmiotowi](onenote:#Wykład%203%20-%20Treść%20praw%20autorskich&section-id={5E35EE99-D872-4FFA-B0F6-5F12337E81BA}&page-id={BFC2D762-A20C-4A86-BCDC-2F1E9DC8C21D}&object-id={B26D3BC0-D453-498C-BE16-190AE396C29A}&C&base-path=https://d.docs.live.net/2eab878a15b41621/Documents/Politechnika%20Śląska/Semestr%20II/Ochrona%20Własności%20Intelektualnej.one) to okres 70 lat liczony jest od daty pierwszego rozpowszechnienia.
 

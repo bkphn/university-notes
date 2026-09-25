@@ -22,6 +22,7 @@ Układy równań liniowych, których macierze są macierzami trójkątnymi, rozw
 >    $x_1 = \frac{1 + 4x_3 - 3x_2}{2} = 1$
 > 3. **Wynik:**
 >    Wektor $\mathbf{x} = (1, 1, 1)$
+
 ## Eliminacja Gaussa
 Najważniejszą z metod bezpośredniego rozwiązywania układ równań liniowych jest 
 eliminacja Gaussa.
@@ -31,11 +32,14 @@ Zaczynamy od doprowadzenia macierzy do postaci REF. W tym celu wykonujemy kolejn
 Gdy doprowadzimy parę $[\mathbf{A} \mid \mathbf{b}]$  do postaci REF otrzymujemy macierz trójkątną górną, możemy teraz skorzystać z postępowania odwrotnego, żeby wyznaczyć macierz $\mathbf{x}$.
 
 Standardowa eliminacja Gaussa zawodzi, gdy któryś z elementów wiodących $a_{ii}=0$, możemy wtedy skorzystać z tzw. częściowego wyboru elementów wiodących.
+
 ## Algorytm Thomasa
 Macierzą trójdiagonalną (trójprzekątniową) nazywamy macierz kwadratową $\mathbf{A}$, w której wszystkie elementy poza główną przekątną i dwoma sąsiednimi przekątnymi są zerowe.
 
 Rozważać będziemy trójprzekątniowy układ równań liniowych $\mathbf{A}\mathbf{x} = \mathbf{d}$, zapisany w postaci:
-$$ d_i = a_i x_{i-1} + b_i x_i + c_i x_{i+1}, \quad i \in \{1, 2, \dots, n\} $$
+
+$$d_i = a_i x_{i-1} + b_i x_i + c_i x_{i+1}, \quad i \in \{1, 2, \dots, n\}$$
+
 Rozwiązania układu szukamy w postaci zależnej od współczynników: $x_i = \beta_i x_{i+1} + \gamma_i$.
 
 > [!abstract] Algorytm Thomasa
@@ -54,6 +58,7 @@ Rozwiązania układu szukamy w postaci zależnej od współczynników: $x_i = \b
 >    - $x_i = \beta_i x_{i+1} + \gamma_i$
 > 6. **Wynik**
 >    - $\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}$
+
 ## Algorytm Banachiewicza rozkładu LU
 W tej metodzie macierz $\mathbf{A}$ układu równań liniowych przedstawiamy w postaci iloczynu dwóch macierzy trójkątnych $\mathbf{L}$ oraz $\mathbf{U}$, gdzie $\mathbf{L}$ jest macierzą trójkątną dolną, a $\mathbf{U}$ macierzą trójkątną górną (z jedynkami na przekątnej).
 * Równanie $\mathbf{A}\mathbf{x} = \mathbf{b}$ przyjmuje postać $\mathbf{L}\mathbf{U}\mathbf{x} = \mathbf{b}$.

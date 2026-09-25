@@ -40,8 +40,10 @@ ocena 4.0 - 60 punktów
 ocena 3.5 - 50 punktów
 ocena 3.0 - 40 punktów
 ocena 2.0 - 0 punktów
+
 ## Zwolnienie z egzaminu
 Osoby, które wyślą wszystkie (z naciskiem na „wszystkie”) przewidziane sprawozdania i projekt końcowy do przedmiotu w platformie PZE do godz. 23:59 w dniu poprzedzającym egzamin w terminie „0”, będą zwolnione z egzaminu, i będą mieć naliczone z niego 80 punktów.
+
 ## Oceny
 W stosunku do ilości uzyskanych punktów w ramach laboratorium przyznawane są oceny:
 - (5.0) bdb – powyżej 85% punktów
@@ -50,11 +52,14 @@ W stosunku do ilości uzyskanych punktów w ramach laboratorium przyznawane są 
 - (3.5) dostateczny plus – powyżej 60% punktów
 - (3.0) dostateczny – powyżej 50% punktów
 Przy czym do uzyskania zaliczenia, konieczne jest oczywiście zaliczenie samego laboratorium z osobna, oraz egzaminu z osobna - tj. konieczne jest uzyskanie co najmniej 50% punktów z laboratorium, oraz co najmniej ocena 3 z egzaminu. Jak również z każdego tematu, konieczne jest wysłanie sprawozdania (czy to z laboratorium, czy to z zadania domowego już obojętne - po prostu, aby wykazać pokrycie efektu kształcenia).
+
 ## Sprawozdania
 Na laboratoriach z dr Sobotą mamy robić zrzut ekranu zawierający tylko wycinek całego ekranu, a nie tak jak jest na platformie - cały ekran. Nie dotyczy to projektu.
 
 Sprawozdania do zrobienia samodzielnie w domu są wyżej puntkowane niż te robione na laboratoriach. Na sprawozdania wykonane samodzielnie w domu mamy dwa tygodnie.
+
 ## Obecność
 Obecność jest przyznawana za odesłane sprawozdania, na odesłanie danego modułu jest zawsze tydzień od ostatnich laboratoriów.
+
 ## Projekt końcowy
 Zamiast kolokwium z przedmiotu mamy do wykonania projekt, do realizacji w domu.

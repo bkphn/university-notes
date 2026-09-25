@@ -6,10 +6,12 @@ W języku C# klasa niewyposażona w żaden konstruktor, posiada konstruktor domn
 - `static`: Klasa statyczna, wszystkie składowe klasy muszą być wówczas statyczne.
 - `abstract`: Klasa abstrakcyjna, ma przynajmniej jedną składową abstrakcyjną, służy jedynie do dziedziczenia.
 - `partial`: Oznacza, że jest to tylko częściowa implementacja tej klasy.
+
 ## Pola
 **Pola** reprezentują stan obiektu. Zgodnie z paradygmatem hermetyzacji dostęp do pól powinien być zamknięty spoza klasy. Domyślnym modyfikatorem dostępu dla pola jest `private`.
 
 Modyfikator `readonly` uniemożliwia zmianę wartości po utworzeniu obiektu. Wartość takiemu polu można przypisać tylko w trakcie deklaracji lub w konstrutkorze. Modyfikator `const` wymaga inicjalizacji w trakcie deklarowania, nie można go więc łączyć z modyfikatorem `static`. Stałe `const` mogą być tylko typu liczbowego, `bool`, `char`, `string` oraz wyliczeniem.
+
 ## Własności
 Bardzo ważną składową klasy jest **własność** (ang. *property*). Cechuje ją to, że na zewnątrz klasy wygląda jak pole, ale wewnątrz zachowuje się jak metoda. Podstawowa składnia własności wygląda następująco:
 ```csharp
@@ -21,6 +23,7 @@ public int Cena
 }
 ```
 W powyższej składni pojawiają się dwa akcesory: `get` i `set`, metody wykonawcze. Ich ciało może zawierać logikę działania. Akcesor `get` musi zawierać instrukcję `return`, zawierającą zwracaną wartość, ewentualnie zmienną referencyjną. W obrębie akcesora `set` dostępną mamy przypisywaną wartość własności oznaczoną słowem kluczowym `value`.
+
 ## Metody
 Domyślnym modyfikatorem metody w C# jest `private`. Od C# 6 można tworzyć metody wyrażeniowe. Jeśli metoda zawiera tylko wyrażenie możemy zapisać ją zwięźlej:
 ```csharp
@@ -41,6 +44,7 @@ public void PrintCubed(int n)
 
 }
 ```
+
 ## Indeksatory
 Indeksatory są naturalnym rozwiązaniem, gdy klasa implementuje słownik wartości bądź listę:
 ```csharp
@@ -64,6 +68,7 @@ public int this[int n]
         }
 }
 ```
+
 ## Konstruktory
 Konstruktor nie musi być publiczny. Zazwyczaj konstruktor niepubliczny tworzy się po to, żeby kontrolować proces tworzenia egzemplarzy klasy poprzez wywołanie metod/własności statycznych. Wykorzystywany we wzorcu singleton, który gwarantuje stworzenie tylko jednego egzemplarza danej klasy:
 ```csharp
@@ -84,3 +89,4 @@ public class Singleton
         private Singleton() {}
 }
 ```
+

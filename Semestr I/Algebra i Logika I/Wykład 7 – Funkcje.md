@@ -40,7 +40,9 @@ Rozważmy operacje dodawania ($+_{2}$) i mnożenia ($\cdot_{2}$) modulo 2 w zbio
 > [!tip] Zbiór wszystkich funkcji $Y^X$
 > Jeśli $X, Y$ są zbiorami, to przez $Y^X$ oznaczamy zbiór wszystkich funkcji $f: X \rightarrow Y$.
 > Jeśli $|X| = m$ oraz $|Y| = n$, to liczba wszystkich możliwych funkcji wynosi:
-> $$ |Y^X| = n^m $$
+>
+> $$|Y^X| = n^m$$
+>
 
 **Wariacje (Ciągi):**
 Niech $X$ będzie zbiorem $n$-elementowym. Funkcję $f: \{1, \dots, k\} \rightarrow X$ nazywamy $k$-wyrazową wariacją zbioru $n$-elementowego. Takich wariacji (ciągów długości $k$) jest $n^k$.
@@ -52,19 +54,26 @@ Niech $X$ będzie zbiorem $n$-elementowym. Funkcję $f: \{1, \dots, k\} \rightar
 ### Złożenie (Superpozycja)
 Dane są funkcje $f: X \rightarrow Y$ oraz $g: Y \rightarrow Z$.
 Złożeniem funkcji $f$ i $g$ nazywamy funkcję $(g \circ f): X \rightarrow Z$, określoną wzorem:
-$$ (g \circ f)(x) = g(f(x)) $$
+
+$$(g \circ f)(x) = g(f(x))$$
+
 Złożenie funkcji jest działaniem łącznym: $h \circ (g \circ f) = (h \circ g) \circ f$.
 
 ### Funkcja identycznościowa
 W zbiorze $X$ funkcję $id_{X}: X \rightarrow X$ nazywamy identycznością, jeżeli dla każdego elementu zwraca ona ten sam argument:
-$$ id_{X}(x) = x $$
+
+$$id_{X}(x) = x$$
+
 Dla dowolnej funkcji $f: X \rightarrow Y$ zachodzą równości:
-$$ id_{Y} \circ f = f $$
-$$ f \circ id_{X} = f $$
+
+$$id_{Y} \circ f = f$$
+
+$$f \circ id_{X} = f$$
 
 ### Funkcja odwrotna
 Dana jest funkcja $f: X \rightarrow Y$. Funkcję $g: Y \rightarrow X$ nazywamy funkcją odwrotną do $f$, jeśli:
-$$ f \circ g = id_{Y} \wedge g \circ f = id_{X} $$
+
+$$f \circ g = id_{Y} \wedge g \circ f = id_{X}$$
 
 * Funkcje, które posiadają funkcje odwrotne, nazywamy **funkcjami odwracalnymi**.
 * Jeśli $f$ jest odwracalna, to posiada *dokładnie jedną* funkcję odwrotną, oznaczaną jako $f^{-1}$.
@@ -72,9 +81,12 @@ $$ f \circ g = id_{Y} \wedge g \circ f = id_{X} $$
 * Wykres funkcji odwrotnej jest odbiciem wykresu funkcji odwracalnej względem prostej $y=x$ (np. $f(x)=e^x$ oraz $f^{-1}(x)=\ln x$).
 
 **Przykład wyliczania funkcji odwrotnej:**
-$$ y = 2x+3 $$
-$$ y-3 = 2x $$
-$$ x = \frac{y-3}{2} \Rightarrow f^{-1}(x) = \frac{x-3}{2} $$
+
+$$y = 2x+3$$
+
+$$y-3 = 2x$$
+
+$$x = \frac{y-3}{2} \Rightarrow f^{-1}(x) = \frac{x-3}{2}$$
 
 ### Potęgi funkcji złożonych
 Wielokrotne złożenie tej samej funkcji ze sobą oznaczamy jako potęgowanie:

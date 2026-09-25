@@ -16,6 +16,7 @@ Oznaczenia dotyczą produktów rolnych oraz środków spożywczych stosowanych w
 	Roquefort, Gorgonzola, Bryndza, Oscypek, Stilton, Wielkopolski sersmażony, Camembert, Feta, Mozarella, Brie, Emmentaler, Gouda, Edammer
 - **Słodycze**
 	rogal świętomarciński, andruty kaliskie, Luebecker Marzipan, Skansspettkaka
+
 ## Znak towarowy
 Znak towarowy to niepowtarzalna nazwa, symbol, fraza, logo, projekt, obraz bądź motyw używane przez przedsiębiorstwo w celu identyfikacji towarów bądź usług wśród konsumentów.
 
@@ -31,6 +32,7 @@ Aby dany znak można było zastrzec musi spełniać następujące wymogi:
 - Nie wprowadza w błąd co do charakteru, jakości bądź pochodzenia.
 - Nie może być związany z pospolitą frazą (chyba, że jest związany z oznaczeniem geograficznym).
 - Nie jest nazwą własną, symbolem narodowym, herbem, znakiem urzędowym bądź religijnym.
+
 ## Naruszenia znaków towarowych
 W normalnych okolicznościach wykorzystywanie chronionego znaku towarowego jest zabronione, w przypadku złamania zakazu należy zapłacić poszkodowanie osobie, posiadającej prawa do znaku. Przykładem złamania zakazu jest reprodukcja, imitacja bądź kopia idei znaku towarowego.
 

@@ -18,11 +18,13 @@
 | *Jak współcześnie definiować kompetencje komunikacyjne*      | Osika G.       |
 | *Mosty zamiast murów. O komunikowaniu się między ludźmi*     | Stewart J.     |
 | *Samotni razem*                                              | Turkle S.      |
+
 ## Zaliczenie
 1. **Empatyzacja** – uważne rozpoznanie potrzeb, szukanie problemu komunikacyjnego.
 2. **Definiowanie problemu** – to wyciąganie wniosków z obserwacji pozwalających ustalić istotę problemu, jaki jest mój problem?
 3. **Generowanie pomysłów** – polegające na tworzeniu szerokiej gamy potencjalnych rozwiązań, moja propozycja rozwiązania, techniki i zastosowane narzędzia komunikacji
 4. **W ramach prototypowania i testowania** – jaka może być wada mojej propozycji?
+
 ## Kryteria oceny:
 1. Komunikacyjna wnikliwość w rozpoznaniu problemu.
 2. Stopień wykorzystania wiedzy z zakresu TiNK.

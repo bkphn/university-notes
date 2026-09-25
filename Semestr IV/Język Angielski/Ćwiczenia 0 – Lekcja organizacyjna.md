@@ -7,5 +7,6 @@
 | Tytuł                      | Autor                                          |
 | -------------------------- | ---------------------------------------------- |
 | Keynote Proficient Split A | Paul Dummett, Helen Stephenson, Lewis Lansford |
+
 ## Projekt
 Jako zaliczenie mamy zaprezentować projekt związany z tematykę przedmiotu. Prezentacja projektu odbędzie się w grupach. Pani zależy by projekt był związany z communicative, a mniej z tematykę przedmiotu.
