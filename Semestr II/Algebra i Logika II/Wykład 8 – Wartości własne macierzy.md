@@ -56,11 +56,9 @@ Skalar $\lambda$ jest wartością własną macierzy $\mathbf{A}$ wtedy i tylko w
 
 >[!danger] Twierdzenie Hamiltona - Cayleya
 > Jeśli $w_{\mathbf{A}}(x)$ jest wielomianem charakterystycznym macierzy $\mathbf{A}$, to:
-> *
 >
 > $$w_{\mathbf{A}}(\mathbf{A}) = 0$$
 >
-> *
 
 ## Macierze podobne
 Macierze $\mathbf{A}$ i $\mathbf{B}$ nazywamy **podobnymi**, gdy istnieje macierz odwracalna $\mathbf{P}$ taka, że:
