@@ -1,5 +1,5 @@
 ## Wartość oczekiwana
-**Wartość oczekiwaną** zmiennej losowej $\xi$ (czasem nazywaną wartością przeciętną, bądź nadzieją matematyczną) oznaczamy symbolem $\mathbb{E}[x]$, innymi stosowanymi notacjami są $E(\xi )$ bądź $\operatorname{E}\xi $, i definiujemy następująco:
+**Wartość oczekiwaną** zmiennej losowej $\xi$ (czasem nazywaną wartością przeciętną, bądź nadzieją matematyczną) oznaczamy symbolem $\mathbb{E}[x]$, innymi stosowanymi notacjami są $E(\xi )$ bądź $\mathrm{E}\xi $, i definiujemy następująco:
 - Jeśli zmienna losowa $\xi$ jest typu dyskretnego o rozkładzie $P(x_i )=p_i$, to:
 
 $$\mathbb{E}[\xi]=\sum_{k=1}^\infty x_{k}p_{k}$$

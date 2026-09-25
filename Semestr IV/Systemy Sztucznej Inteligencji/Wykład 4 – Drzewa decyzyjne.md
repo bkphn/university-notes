@@ -20,25 +20,25 @@ Określając warunek podziału korzystamy z tak zwanych testów binarnych. Słu�
 - **Testy równościowe**
 
 $$t(\mathbf{x})=\begin{cases}
-1, \quad \operatorname{atr}(\mathbf{x})=u \\
-0, \quad \operatorname{atr}(\mathbf{x})\neq u
+1, \quad \mathrm{atr}(\mathbf{x})=u \\
+0, \quad \mathrm{atr}(\mathbf{x})\neq u
 \end{cases}$$
 
 - **Testy przynależnościowe**
 
 $$t(\mathbf{x})=\begin{cases}
-1, \quad \operatorname{atr}(\mathbf{x})\in U \\
-0, \quad \operatorname{atr}(\mathbf{x})\not \in U
+1, \quad \mathrm{atr}(\mathbf{x})\in U \\
+0, \quad \mathrm{atr}(\mathbf{x})\not \in U
 \end{cases}$$
 
 - **Testy progowe**
 
 $$t(\mathbf{x})=\begin{cases}
-1, \quad \operatorname{atr}(\mathbf{x})\leq \theta \\
-0, \quad \operatorname{atr}(\mathbf{x})\ge \theta
+1, \quad \mathrm{atr}(\mathbf{x})\leq \theta \\
+0, \quad \mathrm{atr}(\mathbf{x})\ge \theta
 \end{cases}$$
 
-Przez $\operatorname{atr}(\mathbf{x})=\mathbf{x}_i$ rozumiemy sprawdzany aktualnie atrybut obiektu $\mathbf{x}$. $U$ oznacza zbiór pewnych atrybutó, a $u$ pewien atrybut. Natomiast przez $\theta$ rozumiemy środek posortowanego zbioru atrybutów obiektów $\mathbf{x}_j\in P$. Przez $0, 1$ rozumiemy tutaj podążenie prawą lub lewą ścieżką drzewa.
+Przez $\mathrm{atr}(\mathbf{x})=\mathbf{x}_i$ rozumiemy sprawdzany aktualnie atrybut obiektu $\mathbf{x}$. $U$ oznacza zbiór pewnych atrybutó, a $u$ pewien atrybut. Natomiast przez $\theta$ rozumiemy środek posortowanego zbioru atrybutów obiektów $\mathbf{x}_j\in P$. Przez $0, 1$ rozumiemy tutaj podążenie prawą lub lewą ścieżką drzewa.
 
 ## Przyrost informacji
 Niech $P$ oznacza zbiór wszystkich obiektów w obecnym węźle. Przez $D$ oznaczamy wszystkich możliwych klas decyzyjnych np. $D=\{\mathtt{chory}, \mathtt{zdrowy}\}$. Niech $P^d$ oznacza zbiór wszystkich obiektów w klasie $d\in D$. Niech $R$ oznacza zbiór wszystkich możliwych wyników pewnego testu $t$ (zbiór wszystkich gałęzi wychodzących z węzła), a przez $P_r$ rozumiemy zbiór wszystkich elementów, które wpadają do gałęzi $r\in R$ po teście $t$.
@@ -49,7 +49,7 @@ Przyrostem informacji nazywamy różnicę entropii pewnego zbioru $P$ oraz entro
 
 $$I(P;R)=H(P)-H(P\mid R)$$
 
-Chcąc wyznaczyć najlepszy test zależy nam na zmaksymalizowaniu ilości informacji po teście $R$, zależy nam więc na wartości $\operatorname{argmax}_{R}I(P;R)$. 
+Chcąc wyznaczyć najlepszy test zależy nam na zmaksymalizowaniu ilości informacji po teście $R$, zależy nam więc na wartości $\mathrm{argmax}_{R}I(P;R)$. 
 
 Entropię $H(P)$ obliczamy ze wzoru:
 

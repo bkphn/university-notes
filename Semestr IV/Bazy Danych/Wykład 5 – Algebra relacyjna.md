@@ -120,11 +120,11 @@ $$R \bowtie_{\theta} S=\sigma_{\theta}(R\times S)$$
 Czasem konieczne jest zachowanie wszystkich rekordów przy złączaniu tabel, przydaje się wtedy złączenie zewnętrzne, które ustawia każdy atrybut niesparowanego rekrodu na wartość `NULL`.
 Złączenie zewnętrzne oznaczamy jako:
 
-$$R \operatorname{⟗} S$$
+$$R \mathrm{⟗} S$$
 
 co odpowiada poleceniu `OUTER JOIN` $S$.
 
-Złączenie zewnętrzne $R \operatorname{⟗} S$ ma postać:
+Złączenie zewnętrzne $R \mathrm{⟗} S$ ma postać:
 
 | $\mathtt{FILM}$   | $\mathtt{AKTOR}$        | $\mathtt{ROK\_WYDANIA}$ |
 | ----------------- | ----------------------- | ----------------------- |
@@ -141,7 +141,7 @@ $$R \ltimes S=\pi_{r_{i}\in R}(R\bowtie S)$$
 
 - **Złączenia zewnętrzne**: Jednostronne złączenia zewnętrzne zwracają, złączenie dwóch tabel, a w miejscach w których druga tabela nie mogła znaleźć pasujących rekordów, ustawiane są wartości `NULL` dla każdego z atrybutów. Odpowiadają one poleceniom `LEFT JOIN` oraz `RIGHT JOIN`:
 
-$$(R\operatorname{⟕}S)\cup (R\operatorname{⟖}S)=R\operatorname{⟗}S$$
+$$(R\mathrm{⟕}S)\cup (R\mathrm{⟖}S)=R\mathrm{⟗}S$$
 
 - **Anty-złączenia**: Anty-złączenia zwracają tylko rekordy, które nie znalazły pasujących rekordów do sparowania:
 

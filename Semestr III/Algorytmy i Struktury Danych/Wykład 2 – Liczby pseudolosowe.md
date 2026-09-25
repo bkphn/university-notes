@@ -174,10 +174,10 @@ $$x_i = (a \cdot x_{i-1}) \pmod m$$
 
 W przeciwieństwie do generatorów LCG, AWCG, współczynniki $a, m$ muszą być starannie dobrane:
 * $m$ musi być liczbą pierwszą bądź jej wielokrotnością.
-* $x_0$ musi być względnie pierwsze z $m$ ($\operatorname{NWD}(x_0, m) = 1$).
+* $x_0$ musi być względnie pierwsze z $m$ ($\mathrm{NWD}(x_0, m) = 1$).
 * $a$ musi być pierwiastkiem pierwotnym modulo $m$
 
-$$\forall_{b \in \mathbb{Z}} : \operatorname{NWD}(b, m) = 1, \exists_{k \in \mathbb{Z}} : a^k \pmod m = b$$
+$$\forall_{b \in \mathbb{Z}} : \mathrm{NWD}(b, m) = 1, \exists_{k \in \mathbb{Z}} : a^k \pmod m = b$$
 
 Konieczne jest dopasowanie odpowiednich wartości, by uniknąć 0 w algorytmie, który wyzeruje następne wyniki.
 

@@ -17,8 +17,8 @@ Zbiór liczb zespolonych $\mathbb{C}$ jest rozszerzeniem zbioru liczb rzeczywist
 
 ## Liczby zespolone
 Liczby zespolone to pary liczb zapisywane w postaci $a + bi$, gdzie $a, b \in \mathbb{R}$ oraz $i^2 = -1$.
-* $a$ nazywamy częścią rzeczywistą liczby $a + bi$ i zapisujemy jako $\operatorname{Re}(a + bi)$ lub $\mathfrak{R}(a + bi)$.
-* $b$ nazywamy częścią urojoną liczby $a + bi$ i zapisujemy jako $\operatorname{Im}(a + bi)$ lub $\mathfrak{I}(a + bi)$.
+* $a$ nazywamy częścią rzeczywistą liczby $a + bi$ i zapisujemy jako $\mathrm{Re}(a + bi)$ lub $\mathfrak{R}(a + bi)$.
+* $b$ nazywamy częścią urojoną liczby $a + bi$ i zapisujemy jako $\mathrm{Im}(a + bi)$ lub $\mathfrak{I}(a + bi)$.
 
 Dwie liczby zespolone $a + bi$ oraz $c + di$ są równe wtedy i tylko wtedy, gdy $a = c$ oraz $b = d$. Często liczbę zespoloną zapisujemy jako $z$, taka że $z = a + bi$.
 
@@ -101,16 +101,16 @@ Współrzędne punktu na płaszczyźnie możemy zapisać w jednym z dwóch sposo
 
 **Argument główny liczby zespolonej** to wartość kąta ograniczona w przedziale $(0, 2\pi)$ (często stosujemy też $\langle -\pi, \pi \rangle$). Argument główny możemy obliczyć ze wzoru:
 
-$$\operatorname{Arg}(a + bi) = \arctan\left(\frac{b}{a}\right) = \operatorname{atan2}(b, a)$$
+$$\mathrm{Arg}(a + bi) = \arctan\left(\frac{b}{a}\right) = \mathrm{atan2}(b, a)$$
 
-W przypadku liczenia funkcją tangens należy pamiętać, by wartość przesunąć o odpowiedni okres, aby zmieścić się w przedziale. Funkcja $\operatorname{atan2}$ ma już uwzględnione odpowiednie przesunięcia ćwiartkowe. Na płaszczyźnie zespolonej powstaje trójkąt prostokątny, więc by obliczyć $\cos \varphi$ oraz $\sin \varphi$, wystarczy obliczyć stosunek poszczególnych boków.
+W przypadku liczenia funkcją tangens należy pamiętać, by wartość przesunąć o odpowiedni okres, aby zmieścić się w przedziale. Funkcja $\mathrm{atan2}$ ma już uwzględnione odpowiednie przesunięcia ćwiartkowe. Na płaszczyźnie zespolonej powstaje trójkąt prostokątny, więc by obliczyć $\cos \varphi$ oraz $\sin \varphi$, wystarczy obliczyć stosunek poszczególnych boków.
 
 > [!example] Przykład
-> Wyznaczyć $\arg(i)$ oraz $\operatorname{Arg}(i)$:
+> Wyznaczyć $\arg(i)$ oraz $\mathrm{Arg}(i)$:
 >
 > $$\arg(i) = \left\{\frac{\pi}{2} + 2k\pi : k \in \mathbb{Z}\right\}$$
 >
-> $$\operatorname{Arg}(i) = \frac{\pi}{2}$$
+> $$\mathrm{Arg}(i) = \frac{\pi}{2}$$
 >
 
 ## Moduł liczby zespolonej
@@ -155,7 +155,7 @@ Znając ten wzór, możemy zapisać liczbę zespoloną za pomocą jej postaci wy
 
 $$z = |z| \cdot e^{i\varphi}$$
 
-Ponieważ $\operatorname{Arg}(-1) = \pi$ oraz $|-1| = 1$, dla liczby $-1$ wzór ten przyjmuje postać:
+Ponieważ $\mathrm{Arg}(-1) = \pi$ oraz $|-1| = 1$, dla liczby $-1$ wzór ten przyjmuje postać:
 
 $$-1 = 1 \cdot e^{i\pi} \implies e^{i\pi} + 1 = 0$$
 

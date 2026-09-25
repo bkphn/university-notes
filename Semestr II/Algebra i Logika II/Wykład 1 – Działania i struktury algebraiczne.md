@@ -91,12 +91,12 @@ Działanie $\circ$ jest rozdzielne względem działania $\oplus$, jeżeli:
 > Permutacją zbioru nazywamy dane uporządkowanie jego elementów. Można ją wyrazić za pomocą bijekcji $f: X \rightarrow X$. 
 > Liczbę wszystkich możliwych permutacji zbioru $n$-elementowego oblicza się ze wzoru silni: **$n!$**.
 
-* Zbiór wszystkich permutacji zbioru $X$ zapisujemy jako $\operatorname{Sym}(X)$ i nazywamy **grupą symetryczną** zbioru $X$.
+* Zbiór wszystkich permutacji zbioru $X$ zapisujemy jako $\mathrm{Sym}(X)$ i nazywamy **grupą symetryczną** zbioru $X$.
 
 > [!example] Przykład dla zbioru 3-elementowego
 > Niech $X = \{1, 2, 3\}$. Moc zbioru $|X| = 3$.
-> Liczba permutacji: $|\operatorname{Sym}(X)| = 3! = 6$.
+> Liczba permutacji: $|\mathrm{Sym}(X)| = 3! = 6$.
 > Wypisane zbiory permutacji to:
 >
-> $$\operatorname{Sym}(X) = \{(1,2,3), (1,3,2), (2,1,3), (2,3,1), (3,2,1), (3,1,2)\}$$
+> $$\mathrm{Sym}(X) = \{(1,2,3), (1,3,2), (2,1,3), (2,3,1), (3,2,1), (3,1,2)\}$$
 >

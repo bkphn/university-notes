@@ -74,11 +74,11 @@ $$V_\lambda = \{\mathbf{x} \in F^n : (\mathbf{A} - \lambda \mathbf{I})\mathbf{x}
 Przestrzeń własna $V_\lambda$ jest podprzestrzenią przestrzeni $F^n$. Jej wymiar jest większy od 0 i nie przekracza krotności pierwiastka charakterystycznego $\lambda$.
 
 ## Kombinacja liniowa wektorów
-Dane są wektory $\mathbf{v}_1, \dots, \mathbf{v}_n$. Wektor $\mathbf{v} = \alpha_1 \mathbf{v}_1 + \dots + \alpha_n \mathbf{v}_n$ nazywamy liniową kombinacją wektorów $\mathbf{v}_1, \dots, \mathbf{v}_n$. Zbiór wszystkich liniowych kombinacji wektorów $\mathbf{v}_1, \dots, \mathbf{v}_n$ będziemy oznaczać jako $\operatorname{Lin}(\mathbf{v}_1, \dots, \mathbf{v}_n)$ (stosuje się również zapis $\operatorname{span}$ zamiast $\operatorname{Lin}$):
+Dane są wektory $\mathbf{v}_1, \dots, \mathbf{v}_n$. Wektor $\mathbf{v} = \alpha_1 \mathbf{v}_1 + \dots + \alpha_n \mathbf{v}_n$ nazywamy liniową kombinacją wektorów $\mathbf{v}_1, \dots, \mathbf{v}_n$. Zbiór wszystkich liniowych kombinacji wektorów $\mathbf{v}_1, \dots, \mathbf{v}_n$ będziemy oznaczać jako $\mathrm{Lin}(\mathbf{v}_1, \dots, \mathbf{v}_n)$ (stosuje się również zapis $\mathrm{span}$ zamiast $\mathrm{Lin}$):
 
-$$\operatorname{Lin}(\mathbf{v}_1, \dots, \mathbf{v}_n) = \{\alpha_1 \mathbf{v}_1 + \dots + \alpha_n \mathbf{v}_n : \forall_n \alpha_n \in F \land \mathbf{v}_n \in F\}$$
+$$\mathrm{Lin}(\mathbf{v}_1, \dots, \mathbf{v}_n) = \{\alpha_1 \mathbf{v}_1 + \dots + \alpha_n \mathbf{v}_n : \forall_n \alpha_n \in F \land \mathbf{v}_n \in F\}$$
 
-Zbiór $\operatorname{Lin}(X)$ jest najmniejszą podprzestrzenią przestrzeni $V$ zawierającą zbiór $X$. Podprzestrzeń tę nazywamy **powłoką liniową** zbioru $X$ bądź podprzestrzenią rozpiętą na zbiorze $X$, a sam zbiór $X$ nazywamy **zbiorem generatorów** przestrzeni $\operatorname{Lin}(X)$.
+Zbiór $\mathrm{Lin}(X)$ jest najmniejszą podprzestrzenią przestrzeni $V$ zawierającą zbiór $X$. Podprzestrzeń tę nazywamy **powłoką liniową** zbioru $X$ bądź podprzestrzenią rozpiętą na zbiorze $X$, a sam zbiór $X$ nazywamy **zbiorem generatorów** przestrzeni $\mathrm{Lin}(X)$.
 
 ## Zależność liniowa
 Powiemy, że wektory $\mathbf{v}_1, \dots, \mathbf{v}_n$ są **liniowo zależne**, jeżeli istnieją skalary $\alpha_1, \dots, \alpha_n$, z których przynajmniej jeden jest niezerowy, oraz:
@@ -91,7 +91,7 @@ W przestrzeni $V = F^n$ może istnieć maksymalnie $n$ wektorów liniowo niezale
 
 ## Baza przestrzeni
 Zbiór liniowo niezależnych wektorów, który generuje całą przestrzeń $V$, nazywamy **bazą** przestrzeni $V$ i oznaczamy jako $\mathcal{B}$. Zbiór $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\} \subset V$ jest bazą, jeżeli:
-* $\operatorname{Lin}(\mathcal{B}) = V$
+* $\mathrm{Lin}(\mathcal{B}) = V$
 * $\mathbf{b}_1, \dots, \mathbf{b}_n$ są liniowo niezależne
 
 Gdzie $n = \dim V$. Jeżeli $\mathcal{B}$ jest bazą $V$, to każdy wektor $\mathbf{v} \in V$ można zapisać jako kombinację liniową wektorów bazowych:
@@ -106,7 +106,7 @@ Dla każdej przestrzeni $F^n$ możemy zdefiniować bazę kanoniczną (standardow
 * $\mathbf{e}_n = (0, 0, \dots, 1)$
 
 ## Twierdzenie Steinitza o wymianie
-W przestrzeni $F^n$ istnieje prosty sposób sprawdzenia, czy zbiór wektorów jest liniowo niezależny. Dane są wektory $\mathbf{a}_1, \dots, \mathbf{a}_m$. Tworzymy z nich macierz $\mathbf{A} = [\mathbf{a}_1 \mid \dots \mid \mathbf{a}_m]$. Zbiór $\{\mathbf{a}_1, \dots, \mathbf{a}_m\}$ jest liniowo niezależny wtedy i tylko wtedy, gdy $\operatorname{rank}(\mathbf{A}) = m$. Jeżeli ponadto $n = m$, to zbiór ten stanowi bazę przestrzeni $F^n$.
+W przestrzeni $F^n$ istnieje prosty sposób sprawdzenia, czy zbiór wektorów jest liniowo niezależny. Dane są wektory $\mathbf{a}_1, \dots, \mathbf{a}_m$. Tworzymy z nich macierz $\mathbf{A} = [\mathbf{a}_1 \mid \dots \mid \mathbf{a}_m]$. Zbiór $\{\mathbf{a}_1, \dots, \mathbf{a}_m\}$ jest liniowo niezależny wtedy i tylko wtedy, gdy $\mathrm{rank}(\mathbf{A}) = m$. Jeżeli ponadto $n = m$, to zbiór ten stanowi bazę przestrzeni $F^n$.
 
 >[!danger] Twierdzenie Steinitza
 >Jeśli $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ jest bazą przestrzeni $V$, a wektory $\mathbf{v}_1, \dots, \mathbf{v}_m$ są liniowo niezależne, to:

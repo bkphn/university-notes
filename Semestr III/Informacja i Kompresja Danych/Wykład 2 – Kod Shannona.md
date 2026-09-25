@@ -6,9 +6,9 @@
 * **Kompresja statyczna:** Rodzaj kompresji, w którym alfabet wyjściowy pozostaje niezmieniony, a najczęściej spotykanym alfabetem wyjściowym jest $\mathcal{B} = \{0, 1\}$.
 
 ## Efektywność kodu
-Efektywność kodu $C \subseteq \{0,1\}^{\ast}$ kodującego litery alfabetu $\mathcal{A} = \{a_1, \dots, a_n\}$ oznaczamy jako $\operatorname{ef}(C)$ i definiujemy wzorem:
+Efektywność kodu $C \subseteq \{0,1\}^{\ast}$ kodującego litery alfabetu $\mathcal{A} = \{a_1, \dots, a_n\}$ oznaczamy jako $\mathrm{ef}(C)$ i definiujemy wzorem:
 
-$$\operatorname{ef}(C) = \frac{H(\mathcal{A})}{l(C)} \cdot 100\%$$
+$$\mathrm{ef}(C) = \frac{H(\mathcal{A})}{l(C)} \cdot 100\%$$
 
 gdzie średnia długość słów kodowych $l(C)$ dana jest wzorem:
 

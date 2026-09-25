@@ -9,6 +9,6 @@
 > 5. **Powtarzamy kroki** dla każdego ze zbiorów $s_1, s_2$ aż do momentu dotarcia do pojedynczego elementu.
 
 ## Dekodowanie kodu Shannona-Fano
-Dekodowanie przebiega analogicznie do kodu Shannona i polega na analizowaniu kolejnych liter zakodowanego słowa $c(\vec{a})$ w celu sprawdzenia, czy dany fragment należy do kodu $C = \operatorname{Im}(c)$:
+Dekodowanie przebiega analogicznie do kodu Shannona i polega na analizowaniu kolejnych liter zakodowanego słowa $c(\vec{a})$ w celu sprawdzenia, czy dany fragment należy do kodu $C = \mathrm{Im}(c)$:
 * Jeśli $c(a_1) \notin C$, sprawdzamy kolejne znaki.
 * Jeżeli $c(a_1 \dots a_q) \in C$, oznacza to, że odnaleziono prefiks kodujący komunikat $m_1$.

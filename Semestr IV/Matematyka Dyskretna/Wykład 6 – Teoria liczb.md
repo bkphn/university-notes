@@ -3,33 +3,33 @@ Niech $a,b\in\mathbb{Z}$ i niech przynajmniej jedna z nich jest różna od $0$. 
 
 $$d|a\land d|b$$
 
-Największy wspólny dzielnik liczb $a$ i $b$ oznaczamy jako $\operatorname{NWD}(a,b)$ innymi spotykanymi notacjami jest notacja amerykańska $\gcd⁡(a,b)$ bądź notacja nawiasowa $(a,b)$.
+Największy wspólny dzielnik liczb $a$ i $b$ oznaczamy jako $\mathrm{NWD}(a,b)$ innymi spotykanymi notacjami jest notacja amerykańska $\gcd⁡(a,b)$ bądź notacja nawiasowa $(a,b)$.
 
 ## Najmniejsza wspólna wielokrotność
 Niech $a,b\in\mathbb{Z}\setminus\{0\}$. Liczbę $D$ nazywamy najmniejszą wspólną wielokrotnością liczb $a,b$, gdy:
 
 $$a|D\land b|D$$
 
-Najmniejszą wspólną wielokrotność liczb $a$ i $b$ oznaczamy jako $\operatorname{NWW}(a,b)$, innymi spotykanymi notacjami jest notacja amerykańska $\operatorname{lcm}(a,b)$ bądź notacja nawiasowa $[a,b]$.
+Najmniejszą wspólną wielokrotność liczb $a$ i $b$ oznaczamy jako $\mathrm{NWW}(a,b)$, innymi spotykanymi notacjami jest notacja amerykańska $\mathrm{lcm}(a,b)$ bądź notacja nawiasowa $[a,b]$.
 
 ## Własności NWW i NWD
 Niech $a,b\in\mathbb{Z}\setminus\{0\}$ i $q\in \mathbb{Z}$, wtedy NWW oraz NWD spełnia następujące własności:
 
-$$a\vert b\implies \operatorname{NWD}(a,b)=|a| \land\operatorname{NWW}(a,b)=|b|$$
+$$a\vert b\implies \mathrm{NWD}(a,b)=|a| \land\mathrm{NWW}(a,b)=|b|$$
 
-$$\operatorname{NWD}(a,b)=\operatorname{NWD}(|a|,|b|)$$
+$$\mathrm{NWD}(a,b)=\mathrm{NWD}(|a|,|b|)$$
 
-$$\operatorname{NWW}(a,b)=\operatorname{NWW}(|a|,|b|)$$
+$$\mathrm{NWW}(a,b)=\mathrm{NWW}(|a|,|b|)$$
 
-$$\operatorname{NWD}(a,b)=\operatorname{NWD}(a-qb,b)$$
+$$\mathrm{NWD}(a,b)=\mathrm{NWD}(a-qb,b)$$
 
-$$\operatorname{NWD}(a,b)\cdot\operatorname{NWW}(a,b)=|a\cdot b|$$
+$$\mathrm{NWD}(a,b)\cdot\mathrm{NWW}(a,b)=|a\cdot b|$$
 
 Niech $a=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\dots p_{k}^{\alpha_k}$ oraz $b=p_{1}^{\beta_{1}}p_{2}^{\beta_{2}}\dots p_{k}^{\beta_{k}}$, wtedy:
 
-$$\operatorname{NWD}(a,b)=p_1^{\min\{\alpha_{1},\beta_{1}\}}\cdot p_2^{\min\{\alpha_{2},\beta_{}\}}\cdot\dots\cdot p_k^{\min\{\alpha_{k},\beta_{k}\}}$$
+$$\mathrm{NWD}(a,b)=p_1^{\min\{\alpha_{1},\beta_{1}\}}\cdot p_2^{\min\{\alpha_{2},\beta_{}\}}\cdot\dots\cdot p_k^{\min\{\alpha_{k},\beta_{k}\}}$$
 
-$$\operatorname{NWW}(a,b)=p_1^{\max\{\alpha_{1},\beta_{1}\}}\cdot p_2^{\min\{\alpha_{2},\beta_{}\}}\cdot\dots\cdot p_k^{\min\{\alpha_{k},\beta_{k}\}}$$
+$$\mathrm{NWW}(a,b)=p_1^{\max\{\alpha_{1},\beta_{1}\}}\cdot p_2^{\min\{\alpha_{2},\beta_{}\}}\cdot\dots\cdot p_k^{\min\{\alpha_{k},\beta_{k}\}}$$
 
 ## Przedziały
 Niech $d$ będzie metryką, czyli funkcją przyporządkowującą odległość dwóm elementom $a,b$. Kulą otwartą nazywamy zbiór:
@@ -53,14 +53,14 @@ Niezmiennikiem nazywamy własność pewnej funkcji bądź algorytmu, która nie 
 
 Przykładem niezmiennika NWD może być własność:
 
-$$\operatorname{NWD}(a,b)=\operatorname{NWD}(a-qb,b)$$
+$$\mathrm{NWD}(a,b)=\mathrm{NWD}(a-qb,b)$$
 
 Mówi nam ona, że mimo zmiany argumentu $a$ o liczbę $q\cdot b$ wartość funkcji NWD pozostaje niezmienna.
 
 ## Algorytm Euklidesa
 Korzystając z algorytmu Euklidesa możemy zdecydowanie efektywniej wyznaczać największy wspólny dzielnik wybranych liczb. Niech $a,b\in\mathbb{N}$ i $a>b$.
 
-Po podzieleniu z resztą $a$ przez $b$ dostajemy $q_1 b+r_1$. Jeżeli $r_1=0$ to $\operatorname{NWD}(a,b)=b$, jeżeli nie to dzielimy z resztą $r_1$ przez $b$ i otrzymujemy $b=q_2 r_1+r_2$. Procedurę powtarzamy do pewnego indeksu $n$ gdy $r_n\neq0$ oraz $r_{n+1}=0$. Wtedy $\operatorname{NWD}(a,b)=r_n$.
+Po podzieleniu z resztą $a$ przez $b$ dostajemy $q_1 b+r_1$. Jeżeli $r_1=0$ to $\mathrm{NWD}(a,b)=b$, jeżeli nie to dzielimy z resztą $r_1$ przez $b$ i otrzymujemy $b=q_2 r_1+r_2$. Procedurę powtarzamy do pewnego indeksu $n$ gdy $r_n\neq0$ oraz $r_{n+1}=0$. Wtedy $\mathrm{NWD}(a,b)=r_n$.
 
 > [!example] Wyznaczanie NWD algorytmem Euklidesa
 > Wyznacz $\text{NWD}(48, 180)$ stosując algorytm Euklidesa.
@@ -78,18 +78,18 @@ Po podzieleniu z resztą $a$ przez $b$ dostajemy $q_1 b+r_1$. Jeżeli $r_1=0$ to
 > $$\text{NWD}(48, 180) = 12$$
 >
 
-Przekształcając równanie $\operatorname{NWW}(a,b)\cdot\operatorname{NWW}(a,b)=|ab|$ do postaci:
+Przekształcając równanie $\mathrm{NWW}(a,b)\cdot\mathrm{NWW}(a,b)=|ab|$ do postaci:
 
-$$\operatorname{NWW}(a,b)=\frac{|a\cdot b|}{\operatorname{NWD}(a,b)}$$
+$$\mathrm{NWW}(a,b)=\frac{|a\cdot b|}{\mathrm{NWD}(a,b)}$$
 
 Możemy wyznaczać NWW korzystając z algorytmu Euklidesa.
 
 ## Kombinacje liniowe
 Dla dowolnych $\alpha,\beta\in\mathbb{Z}$ oraz $υ,\nu\in\mathbb{Z}$ wyrażenie w postaci $\alpha\upsilon+\beta\nu$ nazywamy kombinacją liniową $\alpha$ i $\beta$. Dla dowolnych $a,b\in\mathbb{Z}$ takich, że co najmniej jedna z nich jest różna od $0$, istnieją $u,v∈Z$ takie, że:
 
-$$\operatorname{NWW}(a,b)=ua+vb$$
+$$\mathrm{NWW}(a,b)=ua+vb$$
 
-W powyższym przypadku $\operatorname{NWD}(a,b)$ jest najmniejszą możliwą dodatnią kombinacją liniową $a$ i $b$.
+W powyższym przypadku $\mathrm{NWD}(a,b)$ jest najmniejszą możliwą dodatnią kombinacją liniową $a$ i $b$.
 
 ## Liczby pierwsze
 Liczba $p\in\mathbb{N}$ jest liczbą pierwszą jeżeli ma dokładnie dwa dodatnie dzielniki. Zbiór wszystkich liczb pierwszych oznaczamy jako $\mathbb{P}=\{2, 3, 5, 7, 11, 13,\cdots\}$. Liczby naturalne większe od $1$, które nie są pierwsze nazywamy liczbami złożonymi.
@@ -148,9 +148,9 @@ gdzie $q_i\in\mathbb{P}$ a $\alpha_i\in\mathbb{N}$.
 Powyższy iloczyn nazywamy **postacią kanoniczną** liczby $n$.
 
 ## Funkcja $\varphi$-Eulera
-Liczby całkowite $a,b$ nazywamy względnie pierwszymi, gdy $\operatorname{NWD}(a,b)=1$. Fakt ten oznaczamy jako $a\perp b$. Przykładowo zachodzi relacja:
+Liczby całkowite $a,b$ nazywamy względnie pierwszymi, gdy $\mathrm{NWD}(a,b)=1$. Fakt ten oznaczamy jako $a\perp b$. Przykładowo zachodzi relacja:
 
-$$\frac{a}{\operatorname{NWD}(a,b)}\perp \frac{b}{\operatorname{NWD}(a,b)}$$
+$$\frac{a}{\mathrm{NWD}(a,b)}\perp \frac{b}{\mathrm{NWD}(a,b)}$$
 
 Dla każdej liczby $n\in\mathbb{N}+\setminus\{1\}$ określamy liczbę $\varphi(n)$ jako liczbę dodatnich liczb całkowitych mniejszych od $n$ i względnie pierwszych z $n$:
 
@@ -204,11 +204,11 @@ $$a_1 x_1+a_2 x_2+\cdots+a_n x_n=b$$
 
 o niewiadomych $x_1,\cdots,x_n$ nazywamy **liniowym równaniem diofantycznym**.
 
-Dowolne równanie diofantyczne a postaci $ax+by=c$ o niewiadomych $x,y$ ma rozwiązanie wtedy i tylko wtedy, gdy $\operatorname{NWD}(a,b)\vert c$.
+Dowolne równanie diofantyczne a postaci $ax+by=c$ o niewiadomych $x,y$ ma rozwiązanie wtedy i tylko wtedy, gdy $\mathrm{NWD}(a,b)\vert c$.
 
 Jeżeli para $x_0,y_0$ jest rozwiązaniem równania diofantycznego $ax+by=c$, to wszystkie rozwiązania tego równania dane są wzorami:
 
-$$x=x_{0}+\frac{b\cdot t}{\operatorname{NWD}(a,b)}, \qquad y=y_{0}-\frac{a\cdot t}{\operatorname{NWD}(a,b)}, \qquad t\in\mathbb{Z}$$
+$$x=x_{0}+\frac{b\cdot t}{\mathrm{NWD}(a,b)}, \qquad y=y_{0}-\frac{a\cdot t}{\mathrm{NWD}(a,b)}, \qquad t\in\mathbb{Z}$$
 
 ## Równanie Catalana
 Równanie diofantyczne w postaci:

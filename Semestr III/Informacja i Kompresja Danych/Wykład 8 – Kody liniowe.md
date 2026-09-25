@@ -5,24 +5,24 @@
 Liniowym $(n, k)$-kodem nad ciałem $F_q$ jest nazywana podprzestrzeń $V$ wymiaru $k$ w przestrzeni liniowej $F_q^n$, gdzie $q = p^m$, $p \in \mathbb{P}$ a $F_q = \{0, 1, \dots, q-1\}$, przez $\mathbb{P}$ oznaczamy zbiór liczb pierwszych.
 
 Aby struktura $(F_q, +_q, \cdot_q)$ była ciałem Galois, zbiór $F_q$ musi być zbiorem skończonym, a liczba $q$ musi być wielokrotnością liczby pierwszej. W przeciwnym przypadku otrzymana struktura jest pierścieniem reszt modulo $n$. W ciałach Galois stosuje się arytmetykę modularną modulo $q$.
-Ciało Galois $(F_q, +_q, \cdot_q)$ możemy także oznaczać jako $\operatorname{GF}(q)$.
+Ciało Galois $(F_q, +_q, \cdot_q)$ możemy także oznaczać jako $\mathrm{GF}(q)$.
 
 **Ciała proste i złożone:**
-* **Ciałem prostym** nazywamy ciało $\operatorname{GF}(p)$, gdzie $p \in \mathbb{P}$. W ciałach prostych element odwrotny możemy wyznaczyć z następującego wzoru:
+* **Ciałem prostym** nazywamy ciało $\mathrm{GF}(p)$, gdzie $p \in \mathbb{P}$. W ciałach prostych element odwrotny możemy wyznaczyć z następującego wzoru:
 
 $$a^{-1} = a^{p-2}$$
 
-* **Ciałem złożonym** nazywamy ciało $\operatorname{GF}(q)$, gdzie $q = p^m$, $p \in \mathbb{P}$. Tutaj do wyznaczenia elementu odwrotnego $a^{-1}$ musimy skorzystać z tabeli Cayleya działania $\cdot_q$.
+* **Ciałem złożonym** nazywamy ciało $\mathrm{GF}(q)$, gdzie $q = p^m$, $p \in \mathbb{P}$. Tutaj do wyznaczenia elementu odwrotnego $a^{-1}$ musimy skorzystać z tabeli Cayleya działania $\cdot_q$.
 
 ## Kody liniowe
-Każda podprzestrzeń $C$ przestrzeni $\operatorname{GF}(q)^n$ jest nazywana kodem liniowym. Przez $n$ będziemy oznaczać długość kodu $C$. Jeśli podprzestrzeń $C \subseteq \operatorname{GF}(q)^n$ ma wymiar $k$, to $C$ jest nazywany $q$-narnym $(n, k)$-kodem liniowym. Liczbę $(n-k)$ nazywamy redundancją kodu $C$.
- * Jeśli $C = \{0\}$ lub $C = \operatorname{GF}(q)^n$, to kod $C$ nazywamy trywialnym.
- * Jeśli kod $C = \operatorname{Lin}_{\operatorname{GF}(q)}\{c_1, \dots, c_k\}$ dla pewnych $c_1, \dots, c_k$, to elementy te nazywane są generatorami kodu $C$.
+Każda podprzestrzeń $C$ przestrzeni $\mathrm{GF}(q)^n$ jest nazywana kodem liniowym. Przez $n$ będziemy oznaczać długość kodu $C$. Jeśli podprzestrzeń $C \subseteq \mathrm{GF}(q)^n$ ma wymiar $k$, to $C$ jest nazywany $q$-narnym $(n, k)$-kodem liniowym. Liczbę $(n-k)$ nazywamy redundancją kodu $C$.
+ * Jeśli $C = \{0\}$ lub $C = \mathrm{GF}(q)^n$, to kod $C$ nazywamy trywialnym.
+ * Jeśli kod $C = \mathrm{Lin}_{\mathrm{GF}(q)}\{c_1, \dots, c_k\}$ dla pewnych $c_1, \dots, c_k$, to elementy te nazywane są generatorami kodu $C$.
 
 ## Macierze generujące i równoważność kodów
-Macierz $\mathbf{G} \in \mathbb{M}_{k,n}(\operatorname{GF}(q))$ złożoną z $k$ liniowo niezależnych wektorów $(n, k)$-liniowego kodu $C$ jest nazywana macierzą generującą kod $C$.
+Macierz $\mathbf{G} \in \mathbb{M}_{k,n}(\mathrm{GF}(q))$ złożoną z $k$ liniowo niezależnych wektorów $(n, k)$-liniowego kodu $C$ jest nazywana macierzą generującą kod $C$.
 
-Niech $C$ będzie $(n, k)$-kodem liniowym oraz $\pi \in S_n$ będzie permutacją stopnia $n$ taką, że $\pi: C \rightarrow \operatorname{GF}(q)^n$. Wtedy odwzorowanie:
+Niech $C$ będzie $(n, k)$-kodem liniowym oraz $\pi \in S_n$ będzie permutacją stopnia $n$ taką, że $\pi: C \rightarrow \mathrm{GF}(q)^n$. Wtedy odwzorowanie:
 
 $$\pi: c_1c_2\dots c_n \mapsto c_{\pi(1)}c_{\pi(2)}\dots c_{\pi(n)}$$
 
@@ -35,7 +35,7 @@ Dwa $(n, k)$-kody liniowe $C, C'$ nazywamy równoważnymi, jeśli jeden jest otr
 * mnożenia symboli na pewnych ustalonych pozycjach we wszystkich słowach kodowych kodu $C$ przez element niezerowy.
 
 ## Macierze kontrolujące
-Jeśli $\mathbf{G} \in \mathbb{M}_{k,n}(\operatorname{GF}(q))$ jest macierzą generującą kod $C$, to macierz $\mathbf{H} \in \mathbb{M}_{n-k,n}(\operatorname{GF}(q))$ spełniająca warunek:
+Jeśli $\mathbf{G} \in \mathbb{M}_{k,n}(\mathrm{GF}(q))$ jest macierzą generującą kod $C$, to macierz $\mathbf{H} \in \mathbb{M}_{n-k,n}(\mathrm{GF}(q))$ spełniająca warunek:
 
 $$\mathbf{G H}^T = \mathbf{0}_{k,n-k}$$
 

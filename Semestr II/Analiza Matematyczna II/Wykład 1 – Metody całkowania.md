@@ -10,12 +10,12 @@ $$\int_{a}^{b} f(x) \, dx$$
 ## Funkcja signum
 Funkcja signum jest funkcją zwracającą wartość $1$ dla argumentów dodatnich, wartość $-1$ dla ujemnych argumentów oraz wartość $0$ dla argumentu równego $0$.
 
-$$\operatorname{sgn}(x) = \begin{cases} -1, & x < 0 \\ 0, & x = 0 \\ 1, & x > 0 \end{cases}$$
+$$\mathrm{sgn}(x) = \begin{cases} -1, & x < 0 \\ 0, & x = 0 \\ 1, & x > 0 \end{cases}$$
 
 > [!example] Przykład obliczeniowy
 > Oblicz całkę oznaczoną z przedziału $\langle -1, 1 \rangle$ funkcji signum:
 >
-> $$\int_{-1}^{1} \operatorname{sgn}(x) \, dx = \int_{-1}^{0} \operatorname{sgn}(x) \, dx + \int_{0}^{1} \operatorname{sgn}(x) \, dx = \int_{-1}^{0} -1 \, dx + \int_{0}^{1} 1 \, dx = [-x]_{-1}^{0} + [x]_0^1 = [-1 + 0] + [0 + 1] = -1 + 1 = 0$$
+> $$\int_{-1}^{1} \mathrm{sgn}(x) \, dx = \int_{-1}^{0} \mathrm{sgn}(x) \, dx + \int_{0}^{1} \mathrm{sgn}(x) \, dx = \int_{-1}^{0} -1 \, dx + \int_{0}^{1} 1 \, dx = [-x]_{-1}^{0} + [x]_0^1 = [-1 + 0] + [0 + 1] = -1 + 1 = 0$$
 >
 > Przykład ten pokazuje, że funkcja nie musi być ciągła, by była całkowalna, jednak ilość punktów ciągłości musi być policzalna.
 

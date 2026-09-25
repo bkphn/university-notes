@@ -76,10 +76,10 @@ $$\begin{cases} T(n) = O(f(n)) \\ T(n) = \Omega(f(n)) \end{cases} \implies T(n) 
 > 3. Wynik: $T(n) = \Theta(n^3)$.
 
 ## Algorytm Euklidesa
-NWD oznacza największy wspólny dzielnik dwóch liczb całkowitych $a, b$. W angielskim zapisie funkcję $\operatorname{NWD}(a, b)$ zapisuje się jako $\operatorname{gcd}(a, b)$.
+NWD oznacza największy wspólny dzielnik dwóch liczb całkowitych $a, b$. W angielskim zapisie funkcję $\mathrm{NWD}(a, b)$ zapisuje się jako $\mathrm{gcd}(a, b)$.
 Algorytm Euklidesa to jeden z najstarszych znanych algorytmów; pozwala on na bardzo efektywne wyznaczanie wartości NWD, opierając się na własności:
 
-$$\operatorname{NWD}(a, b) = \operatorname{NWD}(b, a \pmod b)$$
+$$\mathrm{NWD}(a, b) = \mathrm{NWD}(b, a \pmod b)$$
 
 **Implementacja w języku Python:**
 ```python
@@ -92,14 +92,14 @@ def NWD(a, b):
 ```
 
 ## Najmniejsza wspólna wielokrotność:
-$\operatorname{NWW}$ oznacza najmniejszą wspólną wielokrotność dwóch liczb całkowitych $a,b$. W angielskim zapisie funkcję $\operatorname{NWW}(a,b)$ zapisuje się jako $\operatorname{lcm}(a,b)$.
+$\mathrm{NWW}$ oznacza najmniejszą wspólną wielokrotność dwóch liczb całkowitych $a,b$. W angielskim zapisie funkcję $\mathrm{NWW}(a,b)$ zapisuje się jako $\mathrm{lcm}(a,b)$.
 
 Obliczając NWW korzystamy z zależności między NWW a NWD:
 
-$$a\cdot b=\operatorname{NWD}(a,b)\cdot\operatorname{NWW}(a,b)$$
+$$a\cdot b=\mathrm{NWD}(a,b)\cdot\mathrm{NWW}(a,b)$$
 
 co po przekształceniu daje nam wzór na NWW:
 
-$$\operatorname{NWW}(a,b)=\frac{a\cdot b}{\operatorname{NWD}(a,b)}$$
+$$\mathrm{NWW}(a,b)=\frac{a\cdot b}{\mathrm{NWD}(a,b)}$$
 
 Jako, że cały algorytm NWW to jedno dzielenie i mnożenie, to złożoność obliczeniowa zależy tylko i wyłącznie od złożoności NWD, więc wynosi ona $\Theta(\log n)$.

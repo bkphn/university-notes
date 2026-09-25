@@ -91,7 +91,7 @@ Transponowanie macierzy polega na zamianie jej wierszy z kolumnami. Dla $\mathbf
 Niech $\mathbf{A} = [a_{ij}]_{m \times n}$. Wyróżniamy następujące rodzaje macierzy:
 * **Macierz trójkątna górna:** Jeżeli $a_{ij} = 0$ dla każdego $i > j$.
 * **Macierz trójkątna dolna:** Jeżeli $a_{ij} = 0$ dla każdego $i < j$.
-* **Macierz diagonalna:** Jeżeli $a_{ij} = 0$ dla każdego $i \neq j$ (oznaczana jako $\operatorname{diag}(a_{11}, a_{22}, a_{33})$).
+* **Macierz diagonalna:** Jeżeli $a_{ij} = 0$ dla każdego $i \neq j$ (oznaczana jako $\mathrm{diag}(a_{11}, a_{22}, a_{33})$).
 
 ## Odwrotność macierzy
 Macierz $\mathbf{A} \in \mathbb{M}_n(F)$ nazywamy **macierzą odwracalną**, jeżeli istnieje macierz $\mathbf{B} \in \mathbb{M}_n(F)$ taka, że:
@@ -104,9 +104,9 @@ Dla macierzy stopnia $2 \times 2$ postaci $\mathbf{A} = \begin{bmatrix} a & b \\
 
 $$\mathbf{A}^{-1} = \frac{1}{\det(\mathbf{A})} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$
 
-Zbiór wszystkich macierzy odwracalnych stopnia $n$ nad ciałem $F$ zapisujemy jako $\operatorname{Gl}_n(F)$. 
-Dla $\mathbf{A, B} \in \operatorname{Gl}_n(F)$ zachodzi:
-* $\mathbf{A \cdot B} \in \operatorname{Gl}_n(F)$
+Zbiór wszystkich macierzy odwracalnych stopnia $n$ nad ciałem $F$ zapisujemy jako $\mathrm{Gl}_n(F)$. 
+Dla $\mathbf{A, B} \in \mathrm{Gl}_n(F)$ zachodzi:
+* $\mathbf{A \cdot B} \in \mathrm{Gl}_n(F)$
 * $(\mathbf{AB})^{-1} = \mathbf{B}^{-1} \cdot \mathbf{A}^{-1}$
-* $\mathbf{A}^{-1} \in \operatorname{Gl}_n(F)$
+* $\mathbf{A}^{-1} \in \mathrm{Gl}_n(F)$
 * $(\mathbf{A}^{-1})^{-1} = \mathbf{A}$

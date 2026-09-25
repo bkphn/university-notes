@@ -20,11 +20,11 @@ Należy pamiętać, że stopień wielomianu w liczniku musi być o jeden niższy
 ## Całkowanie funkcji trygonometrycznych
 Przy całkowaniu funkcji trygonometrycznych warto skorzystać z **podstawienia Weierstrassa**:
 
-$$u = \operatorname{tg}\left(\frac{x}{2}\right)$$
+$$u = \mathrm{tg}\left(\frac{x}{2}\right)$$
 
 Ze wzorów na funkcje trygonometryczne połowy kąta wiemy, że:
-* $\sin(x) = \frac{2\operatorname{tg}\left(\frac{x}{2}\right)}{1+\operatorname{tg}^2\left(\frac{x}{2}\right)} = \frac{2u}{1+u^2}$
-* $\cos(x) = \frac{1-\operatorname{tg}^2\left(\frac{x}{2}\right)}{1+\operatorname{tg}^2\left(\frac{x}{2}\right)} = \frac{1-u^2}{1+u^2}$
+* $\sin(x) = \frac{2\mathrm{tg}\left(\frac{x}{2}\right)}{1+\mathrm{tg}^2\left(\frac{x}{2}\right)} = \frac{2u}{1+u^2}$
+* $\cos(x) = \frac{1-\mathrm{tg}^2\left(\frac{x}{2}\right)}{1+\mathrm{tg}^2\left(\frac{x}{2}\right)} = \frac{1-u^2}{1+u^2}$
 
 Różniczka $dx$ w tym podstawieniu wynosi:
 

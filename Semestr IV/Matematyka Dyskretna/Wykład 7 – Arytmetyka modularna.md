@@ -30,11 +30,11 @@ $$[a]_m \cdot_m [b]_m=[a\cdot b]_m$$
 Struktura $(\mathbb{Z}_m,+_m,  ⋅_m )$  tworzy pierścień przemienny z jedynką, którą nazywamy pierścieniem reszt modulo $m$.
 
 ## Równania modularne
-Równanie $ax=b \mod{m}$ ma rozwiązanie w $\mathbb{Z}_{m}$ wtedy i tylko wtedy, gdy $\operatorname{NWD}(a,m)\vert b$.
+Równanie $ax=b \mod{m}$ ma rozwiązanie w $\mathbb{Z}_{m}$ wtedy i tylko wtedy, gdy $\mathrm{NWD}(a,m)\vert b$.
 
-Jeżeli $x_0$ jest rozwiązaniem równania $ax=b\mod{m}$, to liczba różnych rozwiązań tego równania w $\mathbb{Z}_m$ wynosi $\operatorname{NWD}(a,m)$ = a każde rozwiązanie ma postać:
+Jeżeli $x_0$ jest rozwiązaniem równania $ax=b\mod{m}$, to liczba różnych rozwiązań tego równania w $\mathbb{Z}_m$ wynosi $\mathrm{NWD}(a,m)$ = a każde rozwiązanie ma postać:
 
-$$x_{t}=x_{0}+_{m} \frac{t\cdot m}{\operatorname{NWD}(a,m)},\qquad t\in\{0, 1, \dots, \operatorname{NWD}(a,m)-1\}$$
+$$x_{t}=x_{0}+_{m} \frac{t\cdot m}{\mathrm{NWD}(a,m)},\qquad t\in\{0, 1, \dots, \mathrm{NWD}(a,m)-1\}$$
 
 Niech $a,b,c,d\in\mathbb{Z}$ i $m,k\in\mathbb{N}\setminus\{1\}$, relacja przystawania modulo $m$ spełnia własności:
 - $a\equiv_m b\iff ak\equiv_{mk} bk$

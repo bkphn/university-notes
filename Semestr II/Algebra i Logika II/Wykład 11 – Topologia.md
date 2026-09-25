@@ -45,7 +45,7 @@ Jeżeli przestrzeni topologicznej $X$ nie da się podzielić na dwa niepuste, ro
 
 Każda $n$-ta liczba Bettiego jest rangą grupy homologii $H_n$:
 
-$$\operatorname{rank}(H_n) = b_n$$
+$$\mathrm{rank}(H_n) = b_n$$
 
 ## Odporność na zaszumienie i inne pojęcia
 Klasyczna statystyka ma bardzo małą odporność na zaszumienie – dodanie losowych punktów do wykresu może całkowicie zmienić jej statystyki opisowe, wpływając na odbiór danych. Topologia podchodzi do tego problemu inaczej, badając globalny kształt danych.

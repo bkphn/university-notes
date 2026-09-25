@@ -24,7 +24,7 @@ Algorytm zaproponowany przez informatyka Edsgera Dijkstrę służy do wyszukiwan
 > $p(v_0 )\leftarrow,0, \quad p(v)\leftarrow \mathtt{NULL}$
 > 
 > 2. **Dopóki $Q\neq\emptyset$ powtarzaj:**
-> $\nu\leftarrow \operatorname{argmin}_{v} d(v)$
+> $\nu\leftarrow \mathrm{argmin}_{v} d(v)$
 > $Q\leftarrow Q\setminus\{\nu\}$
 > $S\leftarrow S\cup\{\nu\}$
 >

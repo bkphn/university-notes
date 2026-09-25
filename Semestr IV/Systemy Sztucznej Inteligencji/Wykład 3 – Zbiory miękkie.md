@@ -148,7 +148,7 @@ $(F,A)= \{ (\varepsilon_1,\{h_2,h_6 \}), (\varepsilon_2,\{h_1,h_4 \}),(\varepsil
 ## Tabele zredukowane
 Często zwykłe tabele binarne są mocno nadmiarowe, zawierają one wiele zbędnych danych, które nie niosą żadnej nowej informacji. W tym celu często redukujemy tabele do postaci zredukowanej.
 
-Reduktem nazywamy najmniejszy możliwy podzbiór $Q\subseteq E$, który grupuje elementy w sposób identyczny do wyjściowych parametrów $e_i\in E$. Fakt ten oznaczamy jako $\operatorname{IND}(Q)=\operatorname{IND}(E)$.
+Reduktem nazywamy najmniejszy możliwy podzbiór $Q\subseteq E$, który grupuje elementy w sposób identyczny do wyjściowych parametrów $e_i\in E$. Fakt ten oznaczamy jako $\mathrm{IND}(Q)=\mathrm{IND}(E)$.
 
 Jeżeli $Q$ jest reduktem $E$ to miękki zbiór $(F,Q)$ nazywamy zredukowanym miękkim zbiorem w miękkim zbiorze $(F,E)$.
 

@@ -30,6 +30,6 @@ $$\int (u \cdot v') dx = u \cdot v - \int (u' \cdot v) dx$$
 Jeżeli $\phi, \phi'$ są ciągłe, to:
 
 $$\int \phi(x) \cdot \phi'(x) dx =\left| \begin{matrix}
-t=\phi(x) \\dt=\phi'(x) dx
+t=\phi(x) \\ dt=\phi'(x) dx
 \end{matrix}\right|= \int t \, dt $$
 

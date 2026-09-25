@@ -1,15 +1,15 @@
 ## Ślad macierzy
-Ślad macierzy występuje tylko w przypadku macierzy kwadratowych. Śladem macierzy nazywamy sumę wszystkich elementów na jej głównej przekątnej i zapisujemy jako $\operatorname{tr} \mathbf{A}$:
+Ślad macierzy występuje tylko w przypadku macierzy kwadratowych. Śladem macierzy nazywamy sumę wszystkich elementów na jej głównej przekątnej i zapisujemy jako $\mathrm{tr} \mathbf{A}$:
 
-$$\operatorname{tr} \mathbf{A}_{n \times n} = \sum_{i=1}^{n} a_{ii} = a_{11} + a_{22} + \dots + a_{nn}$$
+$$\mathrm{tr} \mathbf{A}_{n \times n} = \sum_{i=1}^{n} a_{ii} = a_{11} + a_{22} + \dots + a_{nn}$$
 
 **Własności śladu macierzy:**
 
-$$\operatorname{tr} \mathbf{A} + \operatorname{tr} \mathbf{B} = \operatorname{tr}(\mathbf{A} + \mathbf{B})$$
+$$\mathrm{tr} \mathbf{A} + \mathrm{tr} \mathbf{B} = \mathrm{tr}(\mathbf{A} + \mathbf{B})$$
 
-$$\operatorname{tr}(c\mathbf{A}) = c \operatorname{tr} \mathbf{A}$$
+$$\mathrm{tr}(c\mathbf{A}) = c \mathrm{tr} \mathbf{A}$$
 
-$$\operatorname{tr} \mathbf{A} = \lambda_1 + \dots + \lambda_n$$
+$$\mathrm{tr} \mathbf{A} = \lambda_1 + \dots + \lambda_n$$
 
 ## Wektor
 Wektor to uporządkowana lista liczb reprezentująca punkt, kierunek bądź element przestrzeni wektorowej. W fizyce wektory oznaczamy strzałką nad zmienną, w matematyce ta strzałka jest często pomijana, jednak dla przejrzystości można ją stosować.
@@ -51,7 +51,7 @@ Skalar $\lambda$ jest wartością własną macierzy $\mathbf{A}$ wtedy i tylko w
 >
 > Z przykładu tego wynika, że dla macierzy stopnia $2 \times 2$ prawdziwe jest równanie:
 >
-> $$w_{\mathbf{A}}(x) = x^2 - \operatorname{tr}(\mathbf{A}) \cdot x + \det \mathbf{A}$$
+> $$w_{\mathbf{A}}(x) = x^2 - \mathrm{tr}(\mathbf{A}) \cdot x + \det \mathbf{A}$$
 >
 
 >[!danger] Twierdzenie Hamiltona - Cayleya
@@ -74,9 +74,9 @@ Macierzą diagonalizowalną nazywamy taką macierz $\mathbf{A}$, która posiada 
 
 $$\exists_{\mathbf{P}} \quad \mathbf{B} = \mathbf{P}^{-1}\mathbf{A}\mathbf{P}$$
 
-$$\mathbf{B} = \operatorname{diag}(b_{11}, \dots, b_{nn})$$
+$$\mathbf{B} = \mathrm{diag}(b_{11}, \dots, b_{nn})$$
 
-Jeżeli $\mathbf{B} = \operatorname{diag}(b_1, \dots, b_n)$ jest postacią diagonalną macierzy $\mathbf{A}$, to:
+Jeżeli $\mathbf{B} = \mathrm{diag}(b_1, \dots, b_n)$ jest postacią diagonalną macierzy $\mathbf{A}$, to:
 
 $$w_{\mathbf{A}}(x) = w_{\mathbf{B}}(x) = (x - b_1)(x - b_2) \cdot \dots \cdot (x - b_n) = (x - b_1)^{d_1} \cdot \dots \cdot (x - b_n)^{d_n}$$
 
@@ -123,13 +123,13 @@ Macierz $\mathbf{A}$ jest diagonalizowalna wtedy i tylko wtedy, gdy $n - r(\math
 > 
 > **Wyznaczenie $\mathbf{P}$ oraz iloczynu:**
 >
-> $$\mathbf{P}^{-1}\mathbf{A}\mathbf{P} = \operatorname{diag}(x_1, x_2, x_3) = \operatorname{diag}(1, 2, 3) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}$$
+> $$\mathbf{P}^{-1}\mathbf{A}\mathbf{P} = \mathrm{x_1, x_2, x_3) = \mathrm{diag}(1, 2, 3) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}$$
 >
 > $$\mathbf{P} = \begin{bmatrix} \mathbf{v}_1 \mid \mathbf{v}_2 \mid \mathbf{v}_3 \end{bmatrix} = \begin{bmatrix} -2 & 0 & -1 \\ 0 & -1 & 1 \\ 1 & 1 & 0 \end{bmatrix}$$
 >
 > Sprawdzenie macierzowe:
 >
-> $$\mathbf{A}\mathbf{P} = \mathbf{P} \cdot \operatorname{diag}(1, 2, 3) = \begin{bmatrix} -2 & 0 & -1 \\ 0 & -1 & 1 \\ 2 & 1 & 0 \end{bmatrix} \cdot \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix} = \begin{bmatrix} -2 & 0 & -3 \\ 0 & -2 & 3 \\ 1 & 2 & 0 \end{bmatrix}$$
+> $$\mathbf{A}\mathbf{P} = \mathbf{P} \cdot \mathrm{bmatrix} -2 & 0 & -1 \\ 0 & -1 & 1 \\ 2 & 1 & 0 \end{bmatrix} \cdot \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix} = \begin{bmatrix} -2 & 0 & -3 \\ 0 & -2 & 3 \\ 1 & 2 & 0 \end{bmatrix}$$
 >
 
 ## Macierz ortogonalna

@@ -27,7 +27,7 @@ $$\overline{c}(a_{i_1}a_{i_2}\dots a_{i_k}) = c(a_{i_1})c(a_{i_2})\dots c(a_{i_k
 * Kodowanie jest jednoznacznie dekodowalne, jeżeli funkcja $c$ jest iniekcją.
 
 ## Kody
-Zbiór $C = \operatorname{Im}_c = \{c(a_1), c(a_2), \dots, c(a_n)\} \subseteq \mathcal{B}^{\ast}$ nazywamy kodem, a wartość $l_{i}=l(c_{i})$ nazywamy długością słowa kodowego. Średnią długość słowa kodowego oznaczamy przez $l(C)$ i definiujemy następująco:
+Zbiór $C = \mathrm{Im}_c = \{c(a_1), c(a_2), \dots, c(a_n)\} \subseteq \mathcal{B}^{\ast}$ nazywamy kodem, a wartość $l_{i}=l(c_{i})$ nazywamy długością słowa kodowego. Średnią długość słowa kodowego oznaczamy przez $l(C)$ i definiujemy następująco:
 
 $$l(C) = \sum_{i=1}^n p_i \cdot l_i$$
 

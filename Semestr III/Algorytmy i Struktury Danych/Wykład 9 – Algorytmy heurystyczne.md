@@ -62,7 +62,7 @@ Ewolucja różnicowa została zaproponowana w 1997 roku. Algorytm ten jest heury
   * $F$ – parametr kontroli mutacji,
   * $P_C$ – prawdopodobieństwo krzyżowania.
 
-Ewolucja różnicowa działa na populacji $\mathcal{X}$ osobników $\mathbf{x}_{i}$, gdzie $i\in\set{1,\dots,N_{P}}$ oraz $\mathbf{x}_{i}=\left[\begin{matrix}x_{1i}\\\vdots\\x_{Di}\end{matrix}\right]$.
+Ewolucja różnicowa działa na populacji $\mathcal{X}$ osobników $\mathbf{x}_{i}$, gdzie $i\in\set{1,\dots,N_{P}}$ oraz $\mathbf{x}_{i}=\left[\begin{matrix}x_{1i}\\ \vdots\\ x_{Di}\end{matrix}\right]$.
 Na początek tworzymy losowo populację osobników $x_i^G$, gdzie $G=1$ jest liczbą osób w populacji. 
 
 - **Mutacja** to losowe permutacje wektorów $x_i$ poprzez różnicowanie dwóch wektorów z populacji $\mathcal{X}$, skalując je przez stałą wartość. Dla każdego wektora $x_i^G$ generujemy zmutowany wektor $\mu(x_i^G)$:

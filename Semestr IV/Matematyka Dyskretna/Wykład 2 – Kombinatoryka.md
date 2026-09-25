@@ -198,7 +198,7 @@ Chcąc dowiedzieć się ile jest liczb dodatnich mniejszych od pewnej liczby $x$
 
 Przez $A_k$ oznaczmy zbiór wszystkich liczb podzielnych przez $k$, mniejszych od $x$: $A_k=\{d :d\vert k, d<x\}$. Wtedy przekrój zbiorów $A_n, A_m$  możemy zdefiniować następująco:
 
-$$|A_n\cap A_m |=|A_{\operatorname{NWW}(n,m)} |=\left\lfloor  \frac{x}{\operatorname{NWW}(n,m)}  \right\rfloor$$
+$$|A_n\cap A_m |=|A_{\mathrm{NWW}(n,m)} |=\left\lfloor  \frac{x}{\mathrm{NWW}(n,m)}  \right\rfloor$$
 
 gdzie dla dowolnego $A_n$:
 

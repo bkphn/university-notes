@@ -4,7 +4,7 @@ Równaniem różniczkowym zwyczajnym nazywamy równanie o niewiadomej funkcji $y
 $$F(y, y', y'', \dots, y^{(n)}, x) = 0$$
 
 Rząd równania różniczkowego to najwyższy rząd pochodnej w równaniu (odpowiednik stopnia wielomianu). 
-* Rząd równania $y' \operatorname{ctg} x = \operatorname{tg} x$ jest równy 1.
+* Rząd równania $y' \mathrm{ctg} x = \mathrm{tg} x$ jest równy 1.
 * Rząd równania $y'' = y$ jest równy 2.
 
 Aby obliczyć dane równanie różniczkowe, potrzebujemy znać samo równanie oraz wartość początkową (wartości funkcji i jej pochodnej w konkretnym punkcie). Ilość pierwiastków (rozwiązań) równania różniczkowego jest równa rzędowi tego równania:
@@ -39,10 +39,10 @@ $$y' = f(x) \cdot h(y)$$
 > 9. **Podstawić do równania** na $y$: $y = H^{-1}[F(x_p) + C]$.
 
 > [!example] Przykład rozwiązania
-> Rozwiąż równanie $y' = \frac{\operatorname{tg} y}{\operatorname{ctg} x}$ z warunkiem początkowym $y\left(\frac{\pi}{4}\right) = \frac{\pi}{4}$:
-> 1. $y' = \operatorname{tg} y \cdot \frac{1}{\operatorname{ctg} x}$
-> 2. $\frac{dy}{dx} = \operatorname{tg} y \cdot \operatorname{tg} x$
-> 3. $\operatorname{ctg} y \, dy = \operatorname{tg} x \, dx$
+> Rozwiąż równanie $y' = \frac{\mathrm{tg} y}{\mathrm{ctg} x}$ z warunkiem początkowym $y\left(\frac{\pi}{4}\right) = \frac{\pi}{4}$:
+> 1. $y' = \mathrm{tg} y \cdot \frac{1}{\mathrm{ctg} x}$
+> 2. $\frac{dy}{dx} = \mathrm{tg} y \cdot \mathrm{tg} x$
+> 3. $\mathrm{ctg} y \, dy = \mathrm{tg} x \, dx$
 > 4. $\int \frac{\cos y}{\sin y} \, dy = \int \frac{\sin x}{\cos x} \, dx$
 > 5. $\ln|\sin y| = -\ln|\cos x| + c$
 > 6. $e^{\ln|\sin y|} = e^{-\ln|\cos x|} \cdot e^c \implies \sin y = \frac{1}{\cos x} \cdot c \implies y = \arcsin\left(\frac{1}{\cos x} \cdot c\right)$

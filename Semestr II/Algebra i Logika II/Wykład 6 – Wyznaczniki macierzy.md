@@ -29,7 +29,7 @@ Wyznacznik takiej macierzy jest wtedy równy iloczynowi wyznaczników macierzy $
 $$\det \mathbf{A} = \det \mathbf{A}_1 \cdot \det \mathbf{A}_2$$
 
 ## Rząd macierzy
-Rząd macierzy to jedna z jej własności, która mówi o tym, ile niezerowych wierszy zostaje po sprowadzeniu macierzy do postaci REF. Rząd macierzy $\mathbf{A}$ zapisujemy jako $r(\mathbf{A})$ bądź $\operatorname{rank} \mathbf{A}$.
+Rząd macierzy to jedna z jej własności, która mówi o tym, ile niezerowych wierszy zostaje po sprowadzeniu macierzy do postaci REF. Rząd macierzy $\mathbf{A}$ zapisujemy jako $r(\mathbf{A})$ bądź $\mathrm{rank} \mathbf{A}$.
 
 **Własności rzędu macierzy:**
 * $r(\mathbf{A}_{m \times n}) \le \min\{m, n\}$
@@ -73,11 +73,11 @@ $$\mathbf{A}^{-1} = \frac{1}{\det \mathbf{A}} \cdot (\mathbf{A}^D)^T$$
 
   $$\mathbb{M}_n(F) = \{\mathbf{A} \in \mathbb{M}_{n,m}(F) : n = m\}$$
 
-* $\operatorname{Gl}_n(F)$ – zbiór macierzy odwracalnych nad ciałem $F$:
+* $\mathrm{Gl}_n(F)$ – zbiór macierzy odwracalnych nad ciałem $F$:
 
-  $$\operatorname{Gl}_n(F) = \{\mathbf{A} \in \mathbb{M}_n(F) : \det \mathbf{A} \neq 0\}$$
+  $$\mathrm{Gl}_n(F) = \{\mathbf{A} \in \mathbb{M}_n(F) : \det \mathbf{A} \neq 0\}$$
 
-* $\operatorname{Sl}_n(F)$ – zbiór macierzy odwracalnych nad ciałem $F$ o wyznaczniku równym 1:
+* $\mathrm{Sl}_n(F)$ – zbiór macierzy odwracalnych nad ciałem $F$ o wyznaczniku równym 1:
 
-  $$\operatorname{Sl}_n(F) = \{\mathbf{A} \in \operatorname{Gl}_n(F) : \det \mathbf{A} = 1\}$$
+  $$\mathrm{Sl}_n(F) = \{\mathbf{A} \in \mathrm{Gl}_n(F) : \det \mathbf{A} = 1\}$$
 

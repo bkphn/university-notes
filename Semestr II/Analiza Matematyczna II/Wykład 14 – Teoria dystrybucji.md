@@ -27,20 +27,20 @@ Domknięciem zbioru $A$ nazywamy zbiór zawierający wszystkie elementy tego zbi
 ## Funkcje testowe
 Funkcje testowe, nazywane również funkcjami próbnymi, to funkcje, na których działają dystrybucje. Funkcja należy do klasy $C^\infty$, jeżeli ma pochodne dowolnego rzędu w każdym punkcie dziedziny ($f \in C^\infty$).
 
-Nośnikiem funkcji będziemy nazywać podzbiór jej dziedziny, który zwraca tylko niezerowe argumenty funkcji (miejsca, w których funkcja „nie znika”). Nośnik funkcji wyznaczamy za pomocą funkcji $\operatorname{supp}$, definiowanej wzorem:
+Nośnikiem funkcji będziemy nazywać podzbiór jej dziedziny, który zwraca tylko niezerowe argumenty funkcji (miejsca, w których funkcja „nie znika”). Nośnik funkcji wyznaczamy za pomocą funkcji $\mathrm{supp}$, definiowanej wzorem:
 
-$$\operatorname{supp}(f) = \{x \in \mathbb{R}^n : f(x) \neq 0\}$$
+$$\mathrm{supp}(f) = \{x \in \mathbb{R}^n : f(x) \neq 0\}$$
 
 > [!example] Przykłady wyznaczania nośników
-> * Dla $f(x) = e^x$: $e^x = 0 \iff x \in \emptyset$, więc $\operatorname{supp}(e^x) = \mathbb{R}$.
-> * Dla funkcji skokowej $g(x) = u(x)$: $u(x) = 0 \iff x < 0$, więc $\operatorname{supp}(u) = [0, \infty)$.
-> * Dla funkcji $h(x) = \operatorname{sgn}(x)$: $\operatorname{sgn}(x) = 0 \iff x = 0$, więc $\operatorname{supp}(\operatorname{sgn}) = \mathbb{R} \setminus \{0\}$.
+> * Dla $f(x) = e^x$: $e^x = 0 \iff x \in \emptyset$, więc $\mathrm{supp}(e^x) = \mathbb{R}$.
+> * Dla funkcji skokowej $g(x) = u(x)$: $u(x) = 0 \iff x < 0$, więc $\mathrm{supp}(u) = [0, \infty)$.
+> * Dla funkcji $h(x) = \mathrm{sgn}(x)$: $\mathrm{sgn}(x) = 0 \iff x = 0$, więc $\mathrm{supp}(\mathrm{sgn}) = \mathbb{R} \setminus \{0\}$.
 
 ### Przestrzeń funkcji testowych
-Przestrzeń funkcji testowych to podzbiór klasy $C^\infty$, zawierający funkcje ze zwartym nośnikiem (takie, których nośnik jest zbiorem skończonym). Przestrzeń funkcji testowych o nośniku zawartym w $U \subseteq \mathbb{R}^n$ oznaczamy jako $\mathcal{D}(U)$. Każda funkcja $f : \mathbb{R} \to \mathbb{R}$ należy do klasy $\mathcal{D}(\mathbb{R})$, gdy $f \in C^\infty$ oraz $\operatorname{supp} f \subset [c, d]$.
+Przestrzeń funkcji testowych to podzbiór klasy $C^\infty$, zawierający funkcje ze zwartym nośnikiem (takie, których nośnik jest zbiorem skończonym). Przestrzeń funkcji testowych o nośniku zawartym w $U \subseteq \mathbb{R}^n$ oznaczamy jako $\mathcal{D}(U)$. Każda funkcja $f : \mathbb{R} \to \mathbb{R}$ należy do klasy $\mathcal{D}(\mathbb{R})$, gdy $f \in C^\infty$ oraz $\mathrm{supp} f \subset [c, d]$.
 
 **Zbieżność funkcji testowych:** Dany jest ciąg funkcji $f_n \in \mathcal{D}(\mathbb{R})$ oraz funkcja $f \in \mathcal{D}(\mathbb{R})$. Mówimy, że $f_n$ zbiega w przestrzeni funkcji testowych do $f$ ($f_n \to f$), gdy:
-1. **Wspólny ograniczony nośnik:** Funkcje $f_n$ i $f$ mają wspólny ograniczony nośnik ($\exists_{[c,d]} \forall_n : \operatorname{supp} f_n \subset [c, d] \land \operatorname{supp} f \subset [c, d]$).
+1. **Wspólny ograniczony nośnik:** Funkcje $f_n$ i $f$ mają wspólny ograniczony nośnik ($\exists_{[c,d]} \forall_n : \mathrm{supp} f_n \subset [c, d] \land \mathrm{supp} f \subset [c, d]$).
 2. **Zbieżność jednostajna:** Funkcje zbiegają jednostajnie ($f_n \Rightarrow f = \max_{x \in [c,d]} |f_n(x) - f(x)| \to 0$).
 Powyższe warunki muszą być spełnione również dla pochodnej dowolnego rzędu.
 

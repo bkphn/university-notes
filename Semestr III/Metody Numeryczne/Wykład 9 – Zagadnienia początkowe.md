@@ -50,7 +50,7 @@ Metoda Eulera jest przykładem metody jednokrotnej (czyli do obliczenia $\eta_{i
 
 Niech $(x,y)$ będzie dowolnym punktem, a $z=z(t)$ będzie dokładnym rozwiązaniem zagadnienia początkowego:
 
-$$\begin{cases}z'=f(t,z)\\z(x)=y\end{cases}$$
+$$\begin{cases}z'=f(t,z)\\ z(x)=y\end{cases}$$
 
 Wówczas funkcja $\Delta$, dana wzorem:
 

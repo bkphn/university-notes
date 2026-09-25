@@ -1,5 +1,5 @@
 ## Źródła i ujścia
-Niech $T$ będzie dowolnym turniejem i niech $v\in V(T)$. Wierzchołek $v$ nazywamy źródłem, jeżeli $\operatorname{ideg}(v)=0$. Natomiast jeżeli $\operatorname{odeg}(v)=0$, to wierzchołek $v$ nazywamy ujściem.
+Niech $T$ będzie dowolnym turniejem i niech $v\in V(T)$. Wierzchołek $v$ nazywamy źródłem, jeżeli $\mathrm{ideg}(v)=0$. Natomiast jeżeli $\mathrm{odeg}(v)=0$, to wierzchołek $v$ nazywamy ujściem.
 
 ## Digrafy przeciwne
 Digrafem przeciwnym do digrafu $D$ nazywamy digraf $Ɑ$ otrzymany poprzez odwrócenie kierunku każdego łuku digrafu $D$.

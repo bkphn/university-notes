@@ -9,7 +9,7 @@
 Metoda polega na podziale przedziału $[a, b]$ na połowy i wybieraniu tej części, w której funkcja zmienia znak. 
 * Wyznaczamy środek przedziału: $m_1 = \frac{a+b}{2}$.
 * Jeśli $f(m_1) = 0$, to $m_1$ jest szukanym pierwiastkiem.
-* Jeśli nie, z przedziałów $[a, m_1]$ i $[m_1, b]$ wybieramy ten, którego skrajne punkty mają różne znaki wartości funkcji ($\operatorname{sgn} n \neq \operatorname{sgn} m$).
+* Jeśli nie, z przedziałów $[a, m_1]$ i $[m_1, b]$ wybieramy ten, którego skrajne punkty mają różne znaki wartości funkcji ($\mathrm{sgn} n \neq \mathrm{sgn} m$).
 
 Kolejne długości przedziałów dążą do zera:
 

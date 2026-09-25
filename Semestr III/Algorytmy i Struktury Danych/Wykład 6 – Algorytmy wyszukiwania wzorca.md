@@ -21,13 +21,13 @@ Jako działania proste rozumiemy:
 * usunięcie znaku
 * zamiana na inny znak
 
-Odległość Levenshteina słów $a, b$ definiujemy jako $\operatorname{lev}(a, b)$ i opisujemy wzorem:
+Odległość Levenshteina słów $a, b$ definiujemy jako $\mathrm{lev}(a, b)$ i opisujemy wzorem:
 
-$$\operatorname{lev}(a, b) = \begin{cases} |a|, & b = \varepsilon \\ |b|, & a = \varepsilon \\ \operatorname{lev}(\operatorname{tail}(a), \operatorname{tail}(b)), & \operatorname{head}(a) = \operatorname{head}(b) \\ 1 + \min\{\operatorname{lev}(\operatorname{tail}(a), b), \operatorname{lev}(a, \operatorname{tail}(b)), \operatorname{lev}(\operatorname{tail}(a), \operatorname{tail}(b))\}, & \text{w p. p.} \end{cases}$$
+$$\mathrm{lev}(a, b) = \begin{cases} |a|, & b = \varepsilon \\ |b|, & a = \varepsilon \\ \mathrm{lev}(\mathrm{tail}(a), \mathrm{tail}(b)), & \mathrm{head}(a) = \mathrm{head}(b) \\ 1 + \min\{\mathrm{lev}(\mathrm{tail}(a), b), \mathrm{lev}(a, \mathrm{tail}(b)), \mathrm{lev}(\mathrm{tail}(a), \mathrm{tail}(b))\}, & \text{w p. p.} \end{cases}$$
 
 gdzie:
-* $\operatorname{tail}(a_0a_1...a_n) = a_1...a_n$
-* $\operatorname{head}(a_0a_1...a_n) = a_0$
+* $\mathrm{tail}(a_0a_1...a_n) = a_1...a_n$
+* $\mathrm{head}(a_0a_1...a_n) = a_0$
 
 ## Algorytm N
 Naive algorithm (Algorytm N) jest najprostszym algorytmem wyszukującym. Złożoność tego algorytmu jest równa $\Theta(nm - m^2 + m)$.
