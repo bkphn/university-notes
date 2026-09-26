@@ -29,7 +29,7 @@ Największymi wadami klasyfikatora Bayesa jest fakt, że ta metoda wymaga dokła
 Sieć bayesowska to acykliczny graf skierowany, drzewo którego wierzchołki reprezentują zmienne losowe o rozkładzie $P(X_i  \mid  R(X_i))$, gdzie $R(X_i)$ to stan $X_i$ w wierzchołku rodzica. Krawędzie reprezentują bezpośrednią zależność przyczyna → skutek. Każda zmienna jest niezależna od nie-potomków pod warunkiem rodziców. Dla każdego wierzchołka zdefiniowana jest tablica prawdopodobieństw warunkowych dla każdej kombinacji wartości jego rodziców w grafie.
 
 Przykładowa sieć bayesowska:
-![[Pasted image 20260918181127.png\mid 319]]
+![[Pasted image 20260918181127.png|490]]
 
 ## Klasyfikator bayesowski
 Schemat klasyfikacji bayesowskiej prezentuje się następująco:
