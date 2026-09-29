@@ -10,11 +10,11 @@ Prowadzący przytoczył historię z życia, gdzie miał do wybrania sześciocyfr
 
 Dr Pawlik dał za zadanie odgadnięcie dlaczego ten PIN został wybrany. Okazało się, że jest to 11111-sta liczba pierwsza. Podał on przy tej okazji trzy inne kody PIN używane przez matematyków:
 
-$$p_1111=8933$$
+$$p_{1111}=8933$$
 
-$$p_11111=117763$$
+$$p_{11111}=117763$$
 
-$$p_111111=1456667$$
+$$p_{111111}=1456667$$
 
 gdzie prze $p_n$ rozumie się $n$-tą liczbę pierwszą.
 
@@ -121,9 +121,10 @@ Każdy $n$-ty wiersz trójkąta Pascala (numerując od $0$) odpowiada za współ
 ## -iliony i -iliardy
 Do zapisu dużych liczb powszechnie stosuje się dwie notacje:
 - **Skala długa**: Oryginalna skala, używana m.in. w Polsce. W długiej skali przyrostek -ilion odnosi się do miliona, a łaciński przedrostek mówi, do której potęgi musimy podnieść milion
-
-$$.
-n\text{-ilion}=(10^6 )^n$$ Uzupełnieniem skali długiej są -iliardy. Są one uzupełnieniem luk między kolejnymi ilionami. Wprowadza się mnożnik tysiąc:
+  
+  $$n\text{-ilion}=(10^6 )^n$$
+  
+  Uzupełnieniem skali długiej są -iliardy. Są one uzupełnieniem luk między kolejnymi ilionami. Wprowadza się mnożnik tysiąc:
 
 $$n\text{-iliard} =1000\cdot 10^6n=10^{6n+3}$$
 

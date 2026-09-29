@@ -1,8 +1,8 @@
-| Rodzaj     | Nazwa |
-| ---------- | ----- |
-| Prowadzący | TBA   |
-| Sala       | TBA   |
-| Platforma  |       |
+| Rodzaj     | Nazwa                 |
+| ---------- | --------------------- |
+| Prowadzący | dr inż. Rafał Brociek |
+| Sala       | TBA                   |
+| Platforma  |                       |
 
 | Tytuł | Autor |
 | ----- | ----- |

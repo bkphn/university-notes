@@ -1,8 +1,8 @@
-| Rodzaj     | Nazwa |
-| ---------- | ----- |
-| Prowadzący | TBA   |
-| Sala       | TBA   |
-| Platforma  |       |
+| Rodzaj     | Nazwa                       |
+| ---------- | --------------------------- |
+| Prowadzący | mgr inż. Mirosław Witkowski |
+| Sala       |                             |
+| Platforma  |                             |
 
 | Tytuł | Autor |
 | ----- | ----- |

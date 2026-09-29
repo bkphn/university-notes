@@ -16,11 +16,16 @@ W programie Wolfram Mathematica możemy wykonywać wszystkie podstawowe operacje
 
 ## Output (Wyniki obliczeń)
 Mathematica automatycznie wyświetla rozwiązanie każdego wprowadzonego równania:
-	`In[1]:= 2 + 2`
-	`Out[1]= 4`
+``` Mathematica
+In[1]:= 2 + 2
+Out[1]= 4
+```
 
 **Ukrywanie wyników:** W bardziej skomplikowanych programach automatyczne wyświetlanie wyników może wprowadzić duże zamieszanie. Jeżeli nie chcemy, by wynik (output) został wyświetlony na ekranie, na końcu równania należy umieścić średnik `;`:
-	`In[1]:= 2 + 2;`
+```Mathematica
+In[1]:= 2 + 2;
+```
+
 
 **Odwoływanie się do poprzednich wyników:** Mathematica automatycznie zapisuje wszystkie wyniki w zmiennej `Out[n]`, gdzie `n` to numer równania opisanego jako `In[n]`. Można wywołać wcześniejszy wynik wprost (np. `Out[1] + 2`).
 
@@ -104,7 +109,9 @@ Aby utworzyć wektor, należy do zmiennej przypisać zbiór (w nawiasach klamrow
 
 ## Macierze
 Macierze w programie tworzymy poprzez zagnieżdżanie zbiorów wewnątrz zbiorów.
-`M = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}`
+``` Mathematica
+M = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+```
 
 Aby wyświetlić macierz w postaci klasycznej tablicy, należy wywołać funkcję `MatrixForm[M]`.
 

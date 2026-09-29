@@ -1,8 +1,8 @@
-| Rodzaj     | Nazwa |
-| ---------- | ----- |
-| Prowadzący | TBA   |
-| Sala       | TBA   |
-| Platforma  |       |
+| Rodzaj     | Nazwa                 |
+| ---------- | --------------------- |
+| Prowadzący | mgr Martyna Kobielnik |
+| Sala       | TBA                   |
+| Platforma  |                       |
 
 | Tytuł | Autor |
 | ----- | ----- |

@@ -78,7 +78,7 @@ $$C\cdot f_n=\mathcal{O}(a_n )$$
 
 2. $f_n=\mathcal{O}(a_n )$ i $g_n=\mathcal{O}(a_n )$, to:
 
-$$f_n+g_n=caly(a_n )$$
+$$f_n+g_n=\mathcal{O}(a_n )$$
 
 3. Jeżeli $f_n=\mathcal{O}(a_n)$ i $g_n=\mathcal{O}(b_n )$, to:
 

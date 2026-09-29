@@ -41,7 +41,7 @@ Algorytm rozmytej analizy skupień zaczyna się od rozlosowania początkowych ce
 
 Następnie dla $p$-tego wzorca $\mathbf{x}_p$ ze zbioru uczącego wybieramy centrum $\mathbf{c}_p$ i je aktualizujemy:
 
-$$c_p\leftarrow c_p+\eta(x_p−c_p )$$
+$$\mathbf{c}_p\leftarrow \mathbf{c}_p+\eta(\mathbf{x}_p−\mathbf{c}_p )$$
 
 gdzie współczynnik $\eta$ jest współczynnikiem uczenia, który maleje w kolejnych iteracjach:
 
@@ -64,6 +64,10 @@ $$d_{E}(\mathbf{a},\mathbf{b})=\sqrt{\sum_{i=1}^n(a_{i}-b_{i})^2}$$
 - **Odległość Manhattan**
 
 $$d_{M}(\mathbf{a},\mathbf{b})=\sum_{i=1}^n |a_{i}-b_{i}|$$
+
+- **Odległość Czebyszewa**
+
+$$d_{C}(\mathbf{a},\mathbf{b})=\max_{i} |a_{i}-b_{i}|$$
 
 Funkcje te spełniają warunek identyczności elementów nieodróżnialnych, symetrii i nierówności trójkątów, a zatem reprezentują metryki. Algorytm KNN nie zbiera informacji o danym problemie, jest to tzw. leniwa klasteryzacja.
 
@@ -98,7 +102,7 @@ Standardowo wyróżniamy cztery podstawowe oceny klasyfikacji:
 - **Prawdziwe dodatni**: Prawdziwie dodatni (ang. *true positive*) oznacza, że model poprawnie zaakceptował pewną prawdziwą wartość, ocenę tę oznaczamy jako $\text{TP}$.
 - **Prawdziwie ujemny**: Prawdziwie ujemny (ang. *true negative*) oznacza, że model poprawnie odrzucił pewną fałszywą wartość, ocenę tę oznaczamy jako $\text{TN}$.
 - **Fałszywie ujemny**: Fałszywie ujemny (ang. *false negative*) oznacza, że model błędnie zaakceptował pewną fałszywą wartość, mamy tutaj do czynienia z przeoczeniem. Błąd ten nazywamy błędem I rodzaju i oznaczamy jako $\text{FP}$.
-- **Fałszywie dodatni**: Fałszywie dodatni (ang. *false positive*) oznacza, że model błędne odrzucił prawdziwą wartość, mamy tutaj do czynienia z "fałszywym alarmem".  Błąd ten nazywany błędem II rodzaju i oznaczamy jako $\text{FN}$.
+- **Fałszywie dodatni**: Fałszywie dodatni (ang. *false positive*) oznacza, że model błędne odrzucił prawdziwą wartość, mamy tutaj do czynienia z „fałszywym alarmem”.  Błąd ten nazywany błędem II rodzaju i oznaczamy jako $\text{FN}$.
 
 ## Miary oceny klasyfikatora
 Często oceny klasyfikacji nie mówią nam wystarczająco dużo o konkretnym działaniu klasyfikatora, możemy wtedy posłużyć się wybraną przez nas miarą oceny klasyfikatora, opierającą się na metrykach:
@@ -231,4 +235,3 @@ $$\text{LR}-=\frac{\text{FNR}}{\text{TNR}}$$
 - **Diagnostyczny iloraz szans** (ang. *diagnostic odds ratio*)
 
 $$\text{DOR}=\frac{\text{LR}+}{\text{LR}-}$$
-

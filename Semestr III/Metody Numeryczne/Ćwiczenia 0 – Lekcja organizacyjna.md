@@ -17,9 +17,9 @@ Na pierwszych trzech laboratoriach będziemy uczyć się programu Wolfram Mathem
 
 ## Kolokwium
 Za kolokwia można dostać:
-	6 pkt za ukończenie zadania w czasie
-	3 pkt za ukończenie zadania po czasie
-	0 pkt za nieukończenie zadania
+- 6 pkt za ukończenie zadania w czasie
+- 3 pkt za ukończenie zadania po czasie
+- 0 pkt za nieukończenie zadania
 
 Podobna punktacja obowiązuje w ramach projektu.
 
