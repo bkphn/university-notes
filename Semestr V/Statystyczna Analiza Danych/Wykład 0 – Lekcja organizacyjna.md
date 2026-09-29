@@ -1,8 +1,8 @@
-| Rodzaj     | Nazwa |
-| ---------- | ----- |
-| Prowadzący | TBA   |
-| Sala       | TBA   |
-| Platforma  |       |
+| Rodzaj     | Nazwa                           |
+| ---------- | ------------------------------- |
+| Prowadzący | prof. dr hab. Mykola Bratiichuk |
+| Sala       | CEK Aula C                      |
+| Platforma  |                                 |
 
 | Tytuł | Autor |
 | ----- | ----- |
