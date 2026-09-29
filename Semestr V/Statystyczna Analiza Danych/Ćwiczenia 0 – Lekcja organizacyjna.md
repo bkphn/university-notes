@@ -1,7 +1,7 @@
 | Rodzaj     | Nazwa                 |
 | ---------- | --------------------- |
 | Prowadzący | mgr Martyna Kobielnik |
-| Sala       | TBA                   |
+| Sala       | RMS 418               |
 | Platforma  |                       |
 
 | Tytuł | Autor |

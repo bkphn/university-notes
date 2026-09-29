@@ -1,7 +1,7 @@
 | Rodzaj     | Nazwa              |
 | ---------- | ------------------ |
-| Prowadzący | dr inż. Mert Nakip |
-| Sala       | TBA                |
+| Prowadzący | dr inż. Mert Nakıp |
+| Sala       | RMS 406            |
 | Platforma  |                    |
 
 | Tytuł | Autor |

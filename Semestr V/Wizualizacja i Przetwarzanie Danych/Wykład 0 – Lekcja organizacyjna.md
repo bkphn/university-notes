@@ -1,7 +1,7 @@
 | Rodzaj     | Nazwa                 |
 | ---------- | --------------------- |
 | Prowadzący | dr inż. Marcin Lawnik |
-| Sala       | TBA                   |
+| Sala       | RMS 402               |
 | Platforma  |                       |
 
 | Tytuł | Autor |

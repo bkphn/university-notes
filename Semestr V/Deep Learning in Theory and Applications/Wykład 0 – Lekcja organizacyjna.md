@@ -1,13 +1,13 @@
 | Rodzaj     | Nazwa              |
 | ---------- | ------------------ |
-| Prowadzący | dr inż. Mert Nakip |
-| Sala       | TBA                |
+| Prowadzący | dr inż. Mert Nakıp |
+| Sala       | CEK Aula C         |
 | Platforma  |                    |
 
 | Tytuł | Autor |
 | ----- | ----- |
 | *TBA* | TBA   |
 
-| Nazwa programu | Link |
-| -------------- | ---- |
-| TBA            | TBA  |
+| Nazwa programu | Link                       |
+| -------------- | -------------------------- |
+| mertnakip.com  | https://www.mertnakip.com/ |

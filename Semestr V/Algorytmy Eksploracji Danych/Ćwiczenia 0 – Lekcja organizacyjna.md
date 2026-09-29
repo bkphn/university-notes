@@ -1,7 +1,7 @@
 | Rodzaj     | Nazwa                       |
 | ---------- | --------------------------- |
 | Prowadzący | mgr inż. Mirosław Witkowski |
-| Sala       |                             |
+| Sala       | RMS 510                     |
 | Platforma  |                             |
 
 | Tytuł | Autor |

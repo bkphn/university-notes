@@ -1,7 +1,7 @@
 | Rodzaj     | Nazwa                 |
 | ---------- | --------------------- |
 | Prowadzący | dr inż. Marcin Sobota |
-| Sala       | TBA                   |
+| Sala       | RMS 309               |
 | Platforma  |                       |
 
 | Tytuł | Autor |

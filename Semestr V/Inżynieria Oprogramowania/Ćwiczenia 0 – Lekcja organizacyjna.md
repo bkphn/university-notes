@@ -1,7 +1,7 @@
 | Rodzaj     | Nazwa                 |
 | ---------- | --------------------- |
 | Prowadzący | dr inż. Rafał Brociek |
-| Sala       | TBA                   |
+| Sala       | RMS 406               |
 | Platforma  |                       |
 
 | Tytuł | Autor |

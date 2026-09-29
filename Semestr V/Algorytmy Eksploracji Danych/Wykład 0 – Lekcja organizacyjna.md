@@ -1,7 +1,7 @@
 | Rodzaj     | Nazwa                                 |
 | ---------- | ------------------------------------- |
 | Prowadzący | dr hab. inż. Wojciech Kempa, prof. PŚ |
-| Sala       | TBA                                   |
+| Sala       | CEK Aula C                            |
 | Platforma  |                                       |
 
 | Tytuł | Autor |

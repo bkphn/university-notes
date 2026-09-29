@@ -1,7 +1,7 @@
 | Rodzaj     | Nazwa                           |
 | ---------- | ------------------------------- |
 | Prowadzący | prof. dr hab. Mykola Bratiichuk |
-| Sala       | CEK Aula C                      |
+| Sala       | RB 425L                         |
 | Platforma  |                                 |
 
 | Tytuł | Autor |

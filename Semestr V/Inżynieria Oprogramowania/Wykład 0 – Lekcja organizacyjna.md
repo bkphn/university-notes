@@ -1,7 +1,7 @@
 | Rodzaj     | Nazwa                       |
 | ---------- | --------------------------- |
 | Prowadzący | dr inż. Zdzisław Sroczyński |
-| Sala       | TBA                         |
+| Sala       | CEK Aula C                  |
 | Platforma  |                             |
 
 | Tytuł | Autor |
