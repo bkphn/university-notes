@@ -19,13 +19,13 @@ W statystyce opisowej najczęściej posługujemy się następującymi charaktery
 
 $$\overline{x}=\frac{1}{n}\sum_{i=1}^n x_{i}$$
 
-- **Wariancja**: Wariancją próby $x_1,\dots,x_n$ nazywamy liczbę $s^2$, która odpowiada wariancji zmiennej losowej $s^2  \sim D^2 [\xi]$, definiujemy ją wzorem:
+- **Wariancja**: Wariancją próby $x_1,\dots,x_n$ nazywamy liczbę $S^2$, która odpowiada wariancji zmiennej losowej $S^2  \sim D^2 [\xi]$, definiujemy ją wzorem:
 
-$$s^2=\frac{1}{n}\sum_{i=1}^n (x_{i}-\overline{x})^2$$
+$$S^2=\frac{1}{n}\sum_{i=1}^n (x_{i}-\overline{x})^2$$
 
-- **Odchylenie standardowe**: Odchyleniem standardowym próby $x_1,\dots,x_n$ nazywamy liczbę $s$, którą określamy wzorem:
+- **Odchylenie standardowe**: Odchyleniem standardowym próby $x_1,\dots,x_n$ nazywamy liczbę $S$, którą określamy wzorem:
 
-$$s=\sqrt{ s^2 }=\sqrt{ \frac{1}{n}  \sum_{i=1}^n (x_{i}-\overline{x})^2}$$
+$$S=\sqrt{ S^2 }=\sqrt{ \frac{1}{n}  \sum_{i=1}^n (x_{i}-\overline{x})^2}$$
 
 - **Kwantyle**: Kwantyl rzędu $p$ oznaczamy jako $k(p)$, gdzie $0\leq p\leq 1$ i definiujemy wzorem:
 
