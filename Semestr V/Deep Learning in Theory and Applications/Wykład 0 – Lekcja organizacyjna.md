@@ -11,3 +11,5 @@
 | Nazwa programu | Link                       |
 | -------------- | -------------------------- |
 | mertnakip.com  | https://www.mertnakip.com/ |
+## Egzamin
+Egzamin będzie pisany na kartce, prowadzący preferuje, by zadania rozwiązywać ołówkiem, a nie długopisem.
