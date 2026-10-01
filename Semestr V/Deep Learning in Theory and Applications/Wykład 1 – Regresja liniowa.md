@@ -1,7 +1,7 @@
 ## Regresja liniowa
 **Regresja liniowa** (ang. *linear regression*) to metoda statystyczna służąca do badania i modelowania liniowej zależności między zmienną zależną $y$, a zmienną niezależną $x$. 
 
-Przez $y$ rozumiemy wartość empiryczną, którą zwracają nam zmienne niezależne $x$. Wartość przewidywaną przez model oznaczamy jako $\hat{y}$. Wartość jest jedynie szacowaniem faktcznych wartości $y$.
+Przez $y$ rozumiemy wartość empiryczną, którą zwracają nam zmienne niezależne $x$. Wartość przewidywaną przez model oznaczamy jako $\hat{y}$, wartość ta jest jedynie szacowaniem faktcznych wartości $y$.
 
 Równanie wartości przewidywanej $\hat{y}$ wygląda następująco:
 
@@ -9,9 +9,9 @@ $$\hat{y}=wx+b$$
 
 współczynniki $w,b$ nazywamy **parametrami wyuczalnymi** (ang. *learnable parameters*). Współczynniki $w,b$ przechowujemy w wektorze $\mathbf{w}=\begin{bmatrix}w \\ b\end{bmatrix}$.
 
-Wyznaczenie współczynników $w,b$ sprowadza się do zminimalizowania wartości funkcji błędu $L$ opartej na metodzie najmniejszych kwadratów (ang. *least squares loss*), danej wzorem:
+Wyznaczenie współczynników $w,b$ sprowadza się do zminimalizowania wartości **funkcji błędu** $L$ opartej na metodzie najmniejszych kwadratów (ang. *least squares loss*), danej wzorem:
 
-$$L(\mathbf{w})=\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})^2$$
+$$L(\mathbf{w})=\frac{1}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})^2$$
 
 Aby nauczyć model regresji liniowej należy od obecnych wartości $\mathbf{w}$ odejmować ich gradient $\frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$. Gradient wskazuje kierunek największego wzrostu błędu, więc odejmując go zbliżamy się w stronę minimum funkcji minimalizując błąd:
 
@@ -54,12 +54,12 @@ $$\hat{y}=w_{1}x_{1}+w_{2}x_{2}+\dots+w_{M}x_{M}+b=\sum_{m=1}^M w_{m}x_{m}+b$$
   domyślnie parametr $\alpha=0.1$
 
 ## Neurony nieliniowe
-Zbudowanie nieliniowego neuronu polega na przepuszczeniu zsumowanego, wielowymiarowego wyniku  $w_1x_1 + w_2x_2 +\dots+ b$ przez funkcję aktywacji $\psi$. Zmodyfikowane równanie przyjmuje dla $M$ wymiarów postać: 
+Zbudowanie nieliniowego neuronu polega na przepuszczeniu zsumowanego, wielowymiarowego wyniku  $w_1x_1 + w_2x_2 +\dots+ b$ przez funkcję aktywacji $\psi$. Zmodyfikowane równanie przyjmuje dla $M$ wymiarów postać:
 
 $$\hat{y} = \psi\left(\sum_{m=1}^M w_{m}x_{m}+b\right)$$
 
 ## Współczynnik uczenia
-Łatwo może dojść do sytuacji, w której trenowany model aktualizuje swoje wagi $\mathbf{w}$ w sposób powodujący oddalanie się od minimum globalnego funkcji $L$.
+Łatwo może dojść do sytuacji, w której trenowany model aktualizuje swoje wagi $\mathbf{w}$ w sposób powodujący oddalanie się od minimum globalnego funkcji $L$ (np. wartość pochodnej jest zbyt wielka i model oddala się od rozwiązania, albo utyka w minimum lokalnym).
 
 Aby temu zapobiec wprowadzamy **współczynnik uczenia** (ang. *learning rate*), oznaczany symbolem $\eta$, który jest mnożnikiem określającym wielkość kroku podczas aktualizacji wag za pomocą spadku gradientu.
 
@@ -67,20 +67,46 @@ $$\mathbf{w}^{(k+1)}=\mathbf{w}^{(k)}-\eta \frac{\partial L(\mathbf{w}^{(k)})}{\
 
 Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansowanych optymalizatorach sieci neuronowych stosuje się adaptacyjny współczynnik uczenia (ang. *adaptive learning rate*), który dostosowuje się dynamicznie w trakcie uczenia
 
->[!example] Wyznacz wagi $\mathbf{w}$ 
+>[!example] Wyznacz wagi $w,b$ 
 >0. Dane
 >Liczba epok $\varepsilon=3$
 >Współczynnik uczenia $\eta=\frac{1}{2}$
->Wartości $x=(17,12), y=(12,12)$
+>Wartości $x,y$
+>
+>| $x$ | $y$ |
+>| ---------- | ------------ |
+>| $17$ | $12$ |
+>| $12$ | $17$ |
 >
 >1. Inicjalizacja parametrów
 >
->$$w_{1}=1, \qquad b=1$$
+>$$w=1, \qquad b=0$$
 >
-> $$L=\frac{1}{2}\sum^S_{s=1} (y^{(s)}-\hat{y}^{(s)})^2$$
+>$$L(w)=\frac{1}{2}\sum^S_{s=1} (y^{(s)}-\hat{y}^{(s)})^2$$
 >
+>$$\hat{y}=wx+b, \qquad w\leftarrow w-\eta\frac{\partial L}{\partial w}, \qquad \frac{\partial L}{\partial w}=\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-x^{(s)})$$
 >
-
-
-
-
+>2. Pierwsza epoka
+>$$\hat{y}_{1}^{(1)}=1\cdot 17 + 0 =17, \qquad \hat{y}_{2}^{(1)}=1\cdot 12+0=12$$
+>
+>$$w^{(1)}=1-\frac{1}{2}\left( (12-17)(-1)(17) + (12-12)(-1)(12) \right)=-\frac{83}{2}=-41.5$$
+>
+>$$b^{(1)} = 0 - 0.5 \cdot \left( (12 - 17)(-1) + (12 - 12)(-1) \right)=-2.5$$
+>
+>3. Druga epoka
+>$$\hat{y}_{1}^{(2)}=-41.5\cdot 17 +0=-705.5, \qquad  \hat{y}_{2}^{(2)}=-41.5\cdot 12 + 0 = -498$$ 
+>
+>$$w^{(2)} = -41.5 - \frac{1}{2} \left( (12 - (-705.5))(-1)(17) + (12 - (-498))(-1)(12) \right)= 9117.25$$
+>
+>$$b^{(2)} = -2.5 - 0.5 \cdot \left( (12 - (-708))(-1) + (12 - (-500.5))(-1) \right)=613.75$$
+>
+>4. Trzecia epoka
+>$$\hat{y}_{1}^{(3)} = 9117.25 \cdot 17 + 0 = 154993.25, \qquad \hat{y}_{2}^{(3)} = 9117.25 \cdot 12 + 0 = 109407$$ 
+>
+>$$w^{(3)} = 9117.25 - \frac{1}{2} \left( (12 - 154993.25)(-1)(17) + (12 - 109407)(-1)(12) \right) = -1964593.375$$
+>
+>$$b^{(3)} = 613.75 - 0.5 \cdot \left( (12 - 156223.25)(-1) + (12 - 110455.75)(-1) \right) = -132713.75$$
+>
+>5. Wynik
+>$$\hat{y}=-1964593.375x -132713.75$$ 
+> Możemy zauważyć, że nasz model przestrzelił minimum (ang. *overshooting*) i ucieka do nieskończoności, błędnie aproksymuje on punkty $(17,12), (12,12)$.
