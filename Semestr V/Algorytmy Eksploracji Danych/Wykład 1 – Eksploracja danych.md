@@ -1,6 +1,3 @@
-## Modele przetwarzania danych
-OLAP i OLTP
-
 ## Eksploracja danych
 Dyscyplina **eksploracji danych** skupia się na analizie danych, zawyczaj w dużych ilościach. Jej zadaniem jest odkrywanie nietrywialnych zależności, związków, podobieństw, trendów i wzorców zachowań (ang. *pattern*).
 
@@ -38,7 +35,7 @@ Zasadnicze cele **analizy składowych głównych** (ang. *principal components a
 - opis zjawiska za pomocą nowych współrzędnych (składowych głównych).
 
 ## Wyznaczenie składowych głównych
-Weżmy pod uwagę zmienne $x_{1},x_{2},\dots,x_{p}$. Chcielibyśmy zredukowa¢ ich liczbę, zachowując jednocześnie tak dużo zmienności (informacji) jaką niosą ze sobą jak to tylko możliwe.
+Weżmy pod uwagę zmienne $x_{1},x_{2},\dots,x_{p}$. Chcielibyśmy zredukować ich liczbę, zachowując jednocześnie tak dużo zmienności (informacji) jaką niosą ze sobą jak to tylko możliwe.
 
 Tworzymy zatem nowe nieobserwowalne zmienne, które będą kombinacjami liniowymi zmiennych oryginalnych (obserwowalnych). Będą to tzw. **składowe główne**. Niech $z_{1}$ będzie pierwszą
 składową główną. 
@@ -61,9 +58,9 @@ $$S^2(z_{1})=S^2(\mathbf{a}_{1}^T \mathbf{x})=\mathbf{a}_{1}^T \mathbf{S}\mathbf
 
 gdzie $\mathbf{S}$ jest macierzą kowariancji układu zmiennych wejściowych $x_{1},\dots,x_{p}$:
 
-$$\mathbf{S}=\begin{bmatrix} D(x_{1}) & \mathrm{cov}(x_{1},x_{2}) & \cdots & \mathrm{cov}(x_{1},x_{p})  \\   \mathrm{cov}(x_{2},x_{1}) & D(x_{2}) & \cdots & \mathrm{cov}(x_{2},x_{p})  \\  \vdots & \vdots & \ddots & \vdots  \\  \mathrm{cov}(x_{p},x_{1}) & \mathrm{cov}(x_{p},x_{2}) & \cdots & D(x_{p})\end{bmatrix}$$
+$$\mathbf{S}=\begin{bmatrix} \mathrm{cov}(x_{1},x_{1}) & \mathrm{cov}(x_{1},x_{2}) & \cdots & \mathrm{cov}(x_{1},x_{p})  \\   \mathrm{cov}(x_{2},x_{1}) & \mathrm{cov}(x_{2},x_{2}) & \cdots & \mathrm{cov}(x_{2},x_{p})  \\  \vdots & \vdots & \ddots & \vdots  \\  \mathrm{cov}(x_{p},x_{1}) & \mathrm{cov}(x_{p},x_{2}) & \cdots & \mathrm{cov}(x_{p},x_{p})\end{bmatrix}$$
 
-gdzie $D(x_{i})$ to wariancja zmiennej $x_{i}$, a $\mathrm{cov}(x_{i},x_{j})$ kowariancja zmiennych $x_{i},x_{j}$.
+gdzie $\mathrm{cov}(x_{i},x_{j})$ jest kowariancją zmiennych $x_{i},x_{j}$.
 
 Dowolny element $s_{i,j}$ macierzy $\mathbf{S}$ możemy obliczyć ze wzoru:
 
@@ -71,7 +68,7 @@ $$s_{i,j}=\mathrm{cov}(x_{i},x_{j})=\frac{1}{n}\sum_{k=1}^n (x_{i,k}-\overline{x
 
 gdzie $x_{i,k}$ to wartość zmiennej $x_{i}$ uzyskaną dla $k$-tego elementu $p$-wymiarowej $n$-elementowej próby losowej zmiennych $x_{1},\dots,x_{p}$, a $\overline{x}_{i}$ to średnia wartość cechy $x_{i}$ w tej próbie.
 
-Poszukujemy zatem takiego wektora $a_1$, dla którego $S^2(z_{1})$ będzie maksymalne, przy czym $\mathbf{a}_{1}^T \mathbf{a1} = 1$ (jest to warunek normalizacyjny równoważny temu, że wektor $\mathbf{a}_{1}$ jest wektorem jednostkowym). W rozwiązaniu powyższego zagadnienia wykorzystamy rachunek różniczkowy, uwzględniając warunek normalizacyjny w postaci **mnożnika Lagrange'a** $l_{1}$. Obliczając pochodną względem wektora $\mathbf{a}_{1}$, otrzymujemy:
+Poszukujemy zatem takiego wektora $a_1$, dla którego $S^2(z_{1})$ będzie maksymalne, przy czym $\mathbf{a}_{1}^T \mathbf{a}_{1} = 1$ (jest to warunek normalizacyjny równoważny temu, że wektor $\mathbf{a}_{1}$ jest wektorem jednostkowym). W rozwiązaniu powyższego zagadnienia wykorzystamy rachunek różniczkowy, uwzględniając warunek normalizacyjny w postaci **mnożnika Lagrange'a** $l_{1}$. Obliczając pochodną względem wektora $\mathbf{a}_{1}$, otrzymujemy:
 
 $$\frac{\partial\left(S^2(z_{1})+l_{1}(1-\mathbf{a}_{1}^T\mathbf{a}_{1}) \right)}{\partial \mathbf{a}_{1}}=2(\mathbf{S}-l_{1}\mathbf{I})\mathbf{a}_{1}$$
 
@@ -88,3 +85,39 @@ z czego wynika
 $$l_{1}=\mathbf{a}_{1}^T \mathbf{S}\mathbf{a}_{1}=S^2(z_{1})$$
 
 Ponieważ wariancja $S^2(z_{1})$ zmiennej $z_{1}$ miała być maksymalna, zatem $l_{1}$ musi być największą wartością własną macierzy kowariancji $\mathbf{S}$, zaś $\mathbf{a}_{1}$ wektorem własnym odpowiadającym tej wartości.
+
+W analogiczny sposób definiujemy kolejne składowe główne: współczynniki kolejnych składowych będą współrzędnymi wektorów własnych odpowiadających kolejnym największym wartościom własnym macierzy kowariancji $\mathbf{S}$ wyjściowego układu zmiennych $x_{1},\dots,x_{p}$. Ogólnie zatem, ponieważ macierz $\mathbf{S}$ jest macierzą stopnia $p$, zdefiniować możemy $p$ składowych głównych $z_{1},\dots,z_{p}$ dla układu cech $x_{1},\dots,x_{p}$ w następujący sposób:
+
+$$z_{i}=a_{i,1}x_{1}+a_{i,2}x_{2}+\dots+a_{i,p}x_{p}, \qquad i\in \{1,2,\dots,p\}$$
+
+gdzie $\mathbf{a}_{i}$ jest wektorem własnym macierzy $\mathbf{S}$ odpowiadającym $i$-tej największej wartości własnej $\lambda_{i}$ tej macierzy.
+
+## Cechy składowych głównych
+Podsumowując powyższe rozważania, możemy sformułować następujące uwagi i wnioski:
+- składowe główne $z_{1},\dots,z_{p}$ wyjściowego układu cech $x_{1},\dots,x_{p}$ są nieobserwowalnymi (sztucznymi) zmiennymi będącymi liniowymi kombinacjami zmiennych oryginalnych;
+- współczynniki każdej kolejnej składowej są wyznaczane tak, by zmaksymalizować całkowitą zmienność (wariancję) wyjściowego układu cech, która nie została wyjaśniona przez poprzednią składową (poprzednie składowe);
+- współczynniki składowych głównych tworzą wektory wzajemnie ortogonalne, co sprawia, że składowe są ze sobą nieskorelowane;
+- wariancja $i$-tej składowej $z_{i}$ jest równa $i$-tej co do wielkości wartości własnej $\lambda_{i}$ macierzy kowariancji $\mathbf{S}$ układu cech $x_{1},\dots,x_{p}$.
+
+## Ładunki czynnikowe
+Ponieważ wszystkie składowe główne $z_{1},\dots,z_{p}$ wyjaśniają całkowitą zmienność układu $x_{1},\dots,x_{p}$ zatem zmienność ta jest równa
+
+$$\sum_{i=1}^p S^2(x_{i})=\sum_{i=1}^p S^2(z_{1})=\sum_{i=1}^p \lambda_{i}$$
+
+**Część wariancji** wyodrębniona przez $i$-tą składową główną wynosi $\frac{λ_{i}}{\lambda_{1}+\dots+\lambda_{p}}$.
+
+**Ładunkami czynnikowymi** naztwamy współczynniki korelacji pomiędzy daną zmienną obserwowalną $x_{k}$, a kolejnymi składowymi głównymi. W praktyce zatem zmienne obserwowalne o
+najwyższych wartościach ładunków czynnikowych dla danej składowej głównej wnoszą największy wkład w konstrukcję tej składowej. Wartości ładunków czynnikowych możemy obliczyć ze wzoru:
+
+$$R(x_{i},z_{j})=R(z_{j},x_{i})=\frac{\sqrt{ \lambda_{j} } a_{j,i}}{\sqrt{ s_{i,i} }}$$
+
+gdzie $R(x_{i},z_{j})$ oznacza współczynnik korelacji między $i$-tą zmienną, a $j$-tą składową, natomiast $s_{i,i}=S^2(x_{i})$.
+
+Czasem analizę składowych głównych prowadzi się w oparciu o macierz współczynników korelacji $\mathbf{R}$ układu cech $x_{i}$ (zamiast macierzy kowariancji $\mathbf{S}$). Oczywiście, wartości własne macierzy $\mathbf{R}$ będą inne niż wartości własne macierzy $\mathbf{S}$. Nie zmieni się natomiast procentowy udział konkretnej składowej w wyjaśnieniu całkowitej wariancji układu. Oparcie analizy na macierzy korelacji jest rekomendowane w przypadku dużych różnic pomiędzy wartościami poszczególnych zmiennych w próbie losowej. Z drugiej strony w takiej sytuacji pomóc może również standaryzacja wartości zmiennych (odjęcie średniej arytmetycznej i podzielenie przez odchylenie standardowe).
+
+Wartości ładunków czynnikowych w przypadku wykorzystania macierzy $\mathbf{R}$ obliczamy ze wzoru
+
+$$R(x_{i},z_{j})=R(z_{j},x_{i})=\sqrt{ \lambda_{j} } a_{j,i}$$
+
+Wartości ładunków czynnikowych (obliczanych na podstawie macierzy korelacji) podniesione do kwadratu wyrażają procentowy udział danej składowej w wyjaśnieniu zmienności (wariancji) danej
+zmiennej wyjściowej. Na przykład, jeżli $R(x_{1}, z_{1}) = 0.9$, to pierwsza składowa $z_{1}$ wyjaśnia $81\%$ wariancji cechy $x_{1}$.
