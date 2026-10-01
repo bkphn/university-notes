@@ -31,7 +31,7 @@ $$\frac{\partial\hat{y}}{\partial\mathbf{w}}=\begin{bmatrix}
 x \\ 1
 \end{bmatrix}$$
 ## Adaptacyjne neurony liniowe
-Adaptacyjnym liniowym neuronem (ang. *Adaptive Linear Neuron*) nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$, a zwraca wartość $\hat{y}$. Działa on w sposób identyczny do regresji linowej.
+Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*) nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$, a zwraca wartość $\hat{y}$. Działa on w sposób identyczny do regresji linowej.
 
 ## Wielowymiarowa regresja liniowa
 W praktyce wartość $x$ rzadko jest jednowymiarowa, co oznacza potrzebę rozszerzenia równania $\hat{y}=wx+b$ o kolejne wejścia. Dla $M$ wymiarów funkcja przybiera postać:
@@ -40,20 +40,18 @@ $$\hat{y}=w_{1}x_{1}+w_{2}x_{2}+\dots+w_{M}x_{M}+b=\sum_{m=1}^M w_{m}x_{m}+b$$
 
 ## Funkcja aktywacji
 **Funkcją aktywacji** (ang. *activation function*) $\psi$ nazywamy funkcję, która przekształca sumę sygnałów wejściowych neuronu. Funkcję $\psi$ można zdefiniować na wiele sposobów, w zależności od potrzeb, wśród najpopularniejszych możemy wyróżnić:
-- **Unipolarna funkcja sigmoidalna** (ang. *Unipolar Sigmoid*)
+- **Unipolarna funkcja sigmoidalna** (ang. *unipolar sigmoid*)
   $$\psi(z)=\frac{1}{1+e^{-z}}$$
 
-- **Tangens hiperboliczny** (ang. *Tangent Hyperbolic*)
+- **Tangens hiperboliczny** (ang. *tangent hyperbolic*)
   $$\psi(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}$$
 
-- **ReLU** (ang. *Rectified Linear Unit*)
+- **ReLU** (ang. *rectified linear unit*)
   $$\psi(z)=\max(\{0,z\})$$
 
-- **Leaky ReLU** (ang. *Leaky Rectified Linear Unit*)
+- **Leaky ReLU** (ang. *leaky rectified linear unit*)
   $$\psi(z)=\max{(\{\alpha z,z\})}$$
   domyślnie parametr $\alpha=0.1$
-
-
 
 ## Neurony nieliniowe
 Zbudowanie nieliniowego neuronu polega na przepuszczeniu zsumowanego, wielowymiarowego wyniku  $w_1x_1 + w_2x_2 +\dots+ b$ przez funkcję aktywacji $\psi$. Zmodyfikowane równanie przyjmuje dla $M$ wymiarów postać: 
@@ -67,7 +65,7 @@ Aby temu zapobiec wprowadzamy **współczynnik uczenia** (ang. *learning rate*),
 
 $$\mathbf{w}^{(k+1)}=\mathbf{w}^{(k)}-\eta \frac{\partial L(\mathbf{w}^{(k)})}{\partial\mathbf{w}^{(k)}}$$
 
-Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansowanych optymalizatorach sieci neuronowych stosuje się adaptacyjny współczynnik uczenia (ang. *Adaptive Learning Rate*), który dostosowuje się dynamicznie w trakcie uczenia
+Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansowanych optymalizatorach sieci neuronowych stosuje się adaptacyjny współczynnik uczenia (ang. *adaptive learning rate*), który dostosowuje się dynamicznie w trakcie uczenia
 
 >[!example] Wyznacz wagi $\mathbf{w}$ 
 >0. Dane
@@ -82,7 +80,7 @@ Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansow
 > $$L=\frac{1}{2}\sum^S_{s=1} (y^{(s)}-\hat{y}^{(s)})^2$$
 >
 >
-0. 
+
 
 
 
