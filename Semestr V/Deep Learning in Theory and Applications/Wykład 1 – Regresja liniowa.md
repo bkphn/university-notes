@@ -19,7 +19,7 @@ $$\mathbf{w}^{(k+1)}= \mathbf{w}^{(k)}-\frac{\partial L(\mathbf{w}^{(k)})}{\part
 
 gdzie $^{(k)}$ to obecna iteracja.
 
-**Reguła łańcuchowa** (ang. *chain rule*) pozwala na rozbicie gradientu $\frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$ na ilocznyn pochodnej straty po przewidywaniach $\frac{\partial L(\mathbf{w})}{\partial \hat{y}(\mathbf{w})}$ oraz pochodnej przewidywań po wagach $\frac{\partial \hat{y}}{\partial \mathbf{w}}$:
+**Reguła łańcuchowa** (ang. *chain rule*) pozwala na rozbicie gradientu $\frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$ na iloczyn pochodnej straty po przewidywaniach $\frac{\partial L(\mathbf{w})}{\partial \hat{y}(\mathbf{w})}$ oraz pochodnej przewidywań po wagach $\frac{\partial \hat{y}}{\partial \mathbf{w}}$:
 
 $$\frac{\partial L(\mathbf{w})}{\partial \mathbf{w}}=\frac{\partial L(\mathbf{w})}{\partial\hat{y}(\mathbf{w})}\cdot\frac{\partial \hat{y}}{\partial \mathbf{w}}$$
 
@@ -65,7 +65,7 @@ Aby temu zapobiec wprowadzamy **współczynnik uczenia** (ang. *learning rate*),
 
 $$\mathbf{w}^{(k+1)}=\mathbf{w}^{(k)}-\eta \frac{\partial L(\mathbf{w}^{(k)})}{\partial\mathbf{w}^{(k)}}$$
 
-Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansowanych optymalizatorach sieci neuronowych stosuje się adaptacyjny współczynnik uczenia (ang. *adaptive learning rate*), który dostosowuje się dynamicznie w trakcie uczenia
+Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansowanych optymalizatorach sieci neuronowych stosuje się adaptacyjny współczynnik uczenia (ang. *adaptive learning rate*), który dostosowuje się dynamicznie w trakcie uczenia.
 
 >[!example] Wyznacz wagi $w,b$ 
 >0. Dane
@@ -110,3 +110,4 @@ Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansow
 >5. Wynik
 >$$\hat{y}=-1964593.375x -132713.75$$ 
 > Możemy zauważyć, że nasz model przestrzelił minimum (ang. *overshooting*) i ucieka do nieskończoności, błędnie aproksymuje on punkty $(17,12), (12,12)$.
+

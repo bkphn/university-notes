@@ -11,8 +11,8 @@ $$\mathrm{tr}(c\mathbf{A}) = c \mathrm{tr} \mathbf{A}$$
 
 $$\mathrm{tr} \mathbf{A} = \lambda_1 + \dots + \lambda_n$$
 
-## Wektor
-Wektor to uporządkowana lista liczb reprezentująca punkt, kierunek bądź element przestrzeni wektorowej. W fizyce wektory oznaczamy strzałką nad zmienną, w matematyce ta strzałka jest często pomijana, jednak dla przejrzystości można ją stosować.
+## Wektory
+**Wektor** to uporządkowana lista liczb reprezentująca punkt, kierunek bądź element przestrzeni wektorowej. W fizyce wektory oznaczamy strzałką nad zmienną, w matematyce ta strzałka jest często pomijana, jednak dla przejrzystości można ją stosować.
 
 Wektor $\mathbf{v} = (a_1, \dots, a_n)$ reprezentuje kierunek w $n$-wymiarowej przestrzeni. Wektor możemy zapisać w postaci macierzy kolumnowej:
 
@@ -121,13 +121,13 @@ Macierz $\mathbf{A}$ jest diagonalizowalna wtedy i tylko wtedy, gdy $n - r(\math
 > 
 > **Wyznaczenie $\mathbf{P}$ oraz iloczynu:**
 >
-> $$\mathbf{P}^{-1}\mathbf{A}\mathbf{P} = \mathrm{x_1, x_2, x_3) = \mathrm{diag}(1, 2, 3) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}$$
+> $$\mathbf{P}^{-1}\mathbf{A}\mathbf{P} = \mathrm{diag}(x_1, x_2, x_3) = \mathrm{diag}(1, 2, 3) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}$$
 >
 > $$\mathbf{P} = \begin{bmatrix} \mathbf{v}_1 \mid \mathbf{v}_2 \mid \mathbf{v}_3 \end{bmatrix} = \begin{bmatrix} -2 & 0 & -1 \\ 0 & -1 & 1 \\ 1 & 1 & 0 \end{bmatrix}$$
 >
 > Sprawdzenie macierzowe:
 >
-> $$\mathbf{A}\mathbf{P} = \mathbf{P} \cdot \mathrm{bmatrix} -2 & 0 & -1 \\ 0 & -1 & 1 \\ 2 & 1 & 0 \end{bmatrix} \cdot \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix} = \begin{bmatrix} -2 & 0 & -3 \\ 0 & -2 & 3 \\ 1 & 2 & 0 \end{bmatrix}$$
+> $$\mathbf{A}\mathbf{P} = \mathbf{P} \cdot \begin{bmatrix} -2 & 0 & -1 \\ 0 & -1 & 1 \\ 2 & 1 & 0 \end{bmatrix} \cdot \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix} = \begin{bmatrix} -2 & 0 & -3 \\ 0 & -2 & 3 \\ 1 & 2 & 0 \end{bmatrix}$$
 >
 
 ## Macierz ortogonalna
