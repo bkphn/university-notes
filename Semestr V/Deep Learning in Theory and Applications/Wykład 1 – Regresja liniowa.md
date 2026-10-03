@@ -67,47 +67,65 @@ $$\mathbf{w}^{(k+1)}=\mathbf{w}^{(k)}-\eta \frac{\partial L(\mathbf{w}^{(k)})}{\
 
 Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansowanych optymalizatorach sieci neuronowych stosuje się adaptacyjny współczynnik uczenia (ang. *adaptive learning rate*), który dostosowuje się dynamicznie w trakcie uczenia.
 
->[!example] Wyznacz wagi $w,b$ 
+>[!example] Wyznacz wagi $w,b$
+>
 >0. Dane
+>
 >Liczba epok $\varepsilon=3$
->Współczynnik uczenia $\eta=\frac{1}{2}$
+>
+>Współczynnik uczenia $\eta=\frac{1}{2}=0.5$
+>
 >Wartości $x,y$
 >
->| $x$ | $y$ |
->| ---------- | ------------ |
->| $17$ | $12$ |
->| $12$ | $17$ |
+>
+> | $x$ | $y$ |
+> | ----- | ----- |
+> | $17$  | $12$  |
+> | $12$  | $17$  |
 >
 >1. Inicjalizacja parametrów
+  >
 >
 >$$w=1, \qquad b=0$$
 >
->$$L(w)=\frac{1}{2}\sum^S_{s=1} (y^{(s)}-\hat{y}^{(s)})^2$$
+>$$L(w,b)=\frac{1}{2}\sum^S_{s=1} (y^{(s)}-\hat{y}^{(s)})^2$$
 >
->$$\hat{y}=wx+b, \qquad w\leftarrow w-\eta\frac{\partial L}{\partial w}, \qquad \frac{\partial L}{\partial w}=\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-x^{(s)})$$
+$$\hat{y}=wx+b$$
+>
+$$w\leftarrow w-\eta\frac{\partial L}{\partial w}, \qquad b\leftarrow b-\eta\frac{\partial L}{\partial b}$$
+>
+$$\frac{\partial L}{\partial w}=\sum_{s=1}^S -(y^{(s)}-\hat{y}^{(s)})x^{(s)}, \qquad \frac{\partial L}{\partial b}=\sum_{s=1}^S -(y^{(s)}-\hat{y}^{(s)})$$
 >
 >2. Pierwsza epoka
+  >  
 >$$\hat{y}_{1}^{(1)}=1\cdot 17 + 0 =17, \qquad \hat{y}_{2}^{(1)}=1\cdot 12+0=12$$
+  > 
 >
->$$w^{(1)}=1-\frac{1}{2}\left( (12-17)(-1)(17) + (12-12)(-1)(12) \right)=-\frac{83}{2}=-41.5$$
+>$$w^{(1)}=1-0.5\cdot\left( -(12-17)(17) - (17-12)(12) \right) = 1-0.5\cdot(85 - 60) = -11.5$$
 >
->$$b^{(1)} = 0 - 0.5 \cdot \left( (12 - 17)(-1) + (12 - 12)(-1) \right)=-2.5$$
+>$$b^{(1)} = 0 - 0.5 \cdot \left( -(12-17) - (17-12) \right) = 0 - 0.5 \cdot (5 - 5) = 0$$
 >
 >3. Druga epoka
->$$\hat{y}_{1}^{(2)}=-41.5\cdot 17 +0=-705.5, \qquad  \hat{y}_{2}^{(2)}=-41.5\cdot 12 + 0 = -498$$ 
+  > 
+>$$\hat{y}_{1}^{(2)}=-11.5\cdot 17 +0=-195.5, \qquad \hat{y}_{2}^{(2)}=-11.5\cdot 12 + 0 = -138$$
+  > 
 >
->$$w^{(2)} = -41.5 - \frac{1}{2} \left( (12 - (-705.5))(-1)(17) + (12 - (-498))(-1)(12) \right)= 9117.25$$
+>$$w^{(2)} = -11.5 - 0.5 \cdot \left( -(12 - (-195.5))(17) - (17 - (-138))(12) \right)= -11.5 - 0.5 \cdot (-3527.5 - 1860) = 2682.25$$
 >
->$$b^{(2)} = -2.5 - 0.5 \cdot \left( (12 - (-708))(-1) + (12 - (-500.5))(-1) \right)=613.75$$
+>$$b^{(2)} = 0 - 0.5 \cdot \left( -(12 - (-195.5)) - (17 - (-138)) \right)= 0 - 0.5 \cdot (-207.5 - 155) = 181.25$$
 >
 >4. Trzecia epoka
->$$\hat{y}_{1}^{(3)} = 9117.25 \cdot 17 + 0 = 154993.25, \qquad \hat{y}_{2}^{(3)} = 9117.25 \cdot 12 + 0 = 109407$$ 
+  > 
+>$$\hat{y}_{1}^{(3)} = 2682.25 \cdot 17 + 181.25 = 45779.5, \qquad \hat{y}_{2}^{(3)} = 2682.25 \cdot 12 + 181.25 = 32368.25$$
+  >
+  > 
+>$$w^{(3)} = 2682.25 - 0.5 \cdot \left( -(12 - 45779.5)(17) - (17 - 32368.25)(12) \right) = 2682.25 - 0.5 \cdot (778047.5 + 388215) = -580449$$
 >
->$$w^{(3)} = 9117.25 - \frac{1}{2} \left( (12 - 154993.25)(-1)(17) + (12 - 109407)(-1)(12) \right) = -1964593.375$$
->
->$$b^{(3)} = 613.75 - 0.5 \cdot \left( (12 - 156223.25)(-1) + (12 - 110455.75)(-1) \right) = -132713.75$$
+$$b^{(3)} = 181.25 - 0.5 \cdot \left( -(12 - 45779.5) - (17 - 32368.25) \right) = 181.25 - 0.5 \cdot (45767.5 + 32351.25) = -38878.125$$
 >
 >5. Wynik
->$$\hat{y}=-1964593.375x -132713.75$$ 
-> Możemy zauważyć, że nasz model przestrzelił minimum (ang. *overshooting*) i ucieka do nieskończoności, błędnie aproksymuje on punkty $(17,12), (12,12)$.
+  > 
+>$$\hat{y}=-580449x -38878.125$$
+  > 
+>Możemy zauważyć, że nasz model przestrzelił minimum (ang. _overshooting_) i ucieka do nieskończoności, błędnie aproksymuje on punkty $(17,12), (12,17)$.
 
