@@ -52,37 +52,31 @@ O zbieżności zmiennych losowych, mówimy gdy spełniona jest własność:
 $$\xi_{n}\rightarrow\xi\implies P(\xi_{n}\in A)\rightarrow P(\xi\in A)$$
 
 W odróżnieniu do zmiennych rzeczywistych, w zmiennych losowych możemy wyróżnić parę rozdzajów zbieżności:
-- **Zbieżność prawie na pewno**: Ciąg zmiennych losowych $\xi_n$ nazywamy zbieżnym prawie na pewno (z prawdopodobieństwem $1$) do zmiennej losowej $\xi$ , jeżeli:
+- **Zbieżność prawie na pewno**: Ciąg zmiennych losowych $\xi_n$ nazywamy zbieżnym prawie na pewno (z prawdopodobieństwem $1$) do zmiennej losowej $\xi$, jeżeli:
+  
+  $$\lim_{ n \to \infty } \xi_{n}(\omega)=\xi(\omega), \qquad \omega\in\Omega$$
+  
+  Zbieżność tą będziemy oznaczać jako:
+  $$\xi_n \xrightarrow[n \to \infty]{\text{p.n.}} \xi$$
 
-$$\lim_{ n \to \infty } \xi_{n}(\omega)=\xi(\omega), \qquad \omega\in\Omega$$
-
-Zbieżność tą będziemy oznaczać jako:
-
-$$\xi_n \xrightarrow[n \to \infty]{\text{p.n.}} \xi$$
-
-- **Zbieżność według prawdopodobieństwa**: Mówimy, że ciąg zmiennych losowych $\xi_n$ jest zbieżny do $\xi$ według prawdopodobieństwa, jeżeli dla każdego $\varepsilon>0$ spełniony jest warunek:
-
-$$\lim_{ n \to \infty } P(|\xi_{n}-\xi|>\varepsilon)=0$$
-
-Zbieżność tą będziemy oznaczać jako:
-
-$$\xi_n \xrightarrow[n \to \infty]{P} \xi$$
+- **Zbieżność według prawdopodobieństwa**: Mówimy, że ciąg zmiennych losowych $\xi_n$ jest zbieżny do $\xi$ według prawdopodobieństwa, jeżeli dla każdego $\varepsilon>0$ spełniony jest warunek: 
+   $$\lim_{ n \to \infty } P(|\xi_{n}-\xi|>\varepsilon)=0$$
+   
+   Zbieżność tą będziemy oznaczać jako:
+   $$\xi_n \xrightarrow[n \to \infty]{P} \xi$$
 
 - **Zbieżność średniokwadratowa**: Mówimy, że ciąg $\xi_n$ jest zbieżny średniokwadratowo do $\xi$, jeżeli spełniony jest warunek:
-
-$$\mathbb{E}[\xi_{n}-\xi]^2\rightarrow 0$$
-
-Zbieżność tą będziemy oznaczać jako:
-
-$$\xi_n \xrightarrow[n \to \infty]{\text{ś.k.}} \xi$$
+  
+  $$\mathbb{E}[\xi_{n}-\xi]^2\rightarrow 0$$
+  Zbieżność tą będziemy oznaczać jako:   
+  $$\xi_n \xrightarrow[n \to \infty]{\text{ś.k.}} \xi$$
 
 - **Zbieżność słaba**: Mówimy, że ciąg $\xi_n$ jest zbieżny słabo (według rozkładu) do $\xi$, jeżeli spełniony jest warunek:
-
-$$P(\xi_{\eta}<x)\rightarrow P(\xi), \qquad F_{\xi_{n}}(x)\rightarrow F(x)$$
-
-Zbieżność tą będziemy oznaczać jako:
-
-$$\xi_n \xRightarrow[n \to \infty]{}\xi$$
+  
+  $$P(\xi_{\eta}<x)\rightarrow P(\xi), \qquad F_{\xi_{n}}(x)\rightarrow F(x)$$
+  
+  Zbieżność tą będziemy oznaczać jako:
+   $$\xi_n \xRightarrow[n \to \infty]{}\xi$$
 
 ## Twierdzenia o zbieżności
 

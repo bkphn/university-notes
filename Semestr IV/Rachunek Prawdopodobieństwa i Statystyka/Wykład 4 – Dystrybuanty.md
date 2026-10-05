@@ -146,14 +146,14 @@ $$P(k)=\frac{\lambda^k}{k!}\cdot e^{-\lambda}$$
 
 - **Rozkład jednostajny**: Rozkładem jednostajnym albo prostokątnym nazywamy rozkład, którego gęstość określa wzór:
 
-$$f(x)=\begin{cases}
+$$ f(x)=\begin{cases}
 \frac{1}{b-a}, \quad x\in [a,b] \\
 0, \quad x\notin[a,b]
 \end{cases}, \qquad F(x)=\begin{cases}
 0, \quad x<a \\
 \frac{x-a}{b-a}, \quad x\in[a,b] \\
 1, \quad b<x
-\end{cases}$$![[Pasted image 20260921231602.png|259]]
+\end{cases} $$![[Pasted image 20260921231602.png|259]]
 
 - **Rozkład wykładniczy**: Mówimy, że zmienna losowa $\xi$ ma rozkład wykładniczy o parametrze $\lambda$, jeśli jej gęstość jest funkcją postaci:
 

@@ -6,7 +6,7 @@ Przedziałem ufności parametru $\theta$ ze współczynnikiem ufności $1−\alp
 $$P(\theta_-<\theta<\theta_+ )=1−\alpha$$
 
 ## Konstrukcja przedziałów ufności
-Przedziały ufności możemy konstruować za pomocą statystyk bądź za pomocą twierdzeń granicznych. 
+Przedziały ufności możemy konstruować za pomocą statystyk bądź za pomocą twierdzeń granicznych.
 
 Niech $T(\mathbf{x},θ)$ będzie statystyką taką, że:
 - dla ustalonego $\mathbf{x}$ funkcja $T$ jest ciągła i monotoniczna względem $\theta$,
@@ -25,4 +25,3 @@ Stosując to rozwiązanie pod symbolem prawdopodobieństwa dostajemy:
 $$P(\theta_{-}(\mathbf{x},\alpha)<\theta<\theta_{+}(\mathbf{x},\alpha))=1-\alpha$$
 
 co daje szukany przedział ufności.
-

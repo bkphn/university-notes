@@ -1,3 +1,5 @@
+
+
 | Rodzaj     | Nazwa                           |
 | ---------- | ------------------------------- |
 | Prowadzący | prof. dr hab. Mykola Bratiichuk |
