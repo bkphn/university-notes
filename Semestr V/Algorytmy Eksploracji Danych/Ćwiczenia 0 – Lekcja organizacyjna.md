@@ -18,7 +18,7 @@
 | Anaconda       | https://www.anaconda.com/         |
 
 ## Obecność
-Obecność na zajęciach jest obowiązkowa
+Obecność na zajęciach jest obowiązkowa. Dopuszczalne są maksymalnie dwie nieusprawiedliwione nieobecności.
 
 ## Zaliczenie
 Z przedmiotu można zdobyć maksymalnie 100 pkt:
@@ -29,12 +29,14 @@ Z przedmiotu można zdobyć maksymalnie 100 pkt:
 Punkty za aktywność można zdobyć, za wykonywanie dodatkowych zadań oraz przesyłanie ich na PZE.
 
 ## Projekt
-Projekt będziemy realizować w grupach 2–3 osobowych. Projekt będzie opierać się na implementacji różnych algorytmów w języku Python (jeżeli komuś zależy, to można zmienić), dane otrzymane z algorytmów należy przetworzyć, zobrazować i wyciągnąć z nich wnioski.
+Projekt będziemy realizować w grupach 2–3 osobowych (można mieszać między grupami). Projekt będzie opierać się na implementacji różnych algorytmów w języku Python (jeżeli komuś zależy, to można zmienić język), dane otrzymane z algorytmów należy przetworzyć, zobrazować i wyciągnąć z nich wnioski.
 
 Tematyka projektu powinna opierać się na wyborze po jednej metodzie spośród:
 - algorytmów redukcji wymiarów;
 - algorytmów klasteryzacji danych;
 - reguł asocjacyjnych, wzorców sekwencji.
+
+Algorytmów nie trzeba implementować od zera – można wykorzystywać do tego biblioteki.
 
 ## Tematyka przedmiotu
 W ramach przedmiotu czekają nas:
