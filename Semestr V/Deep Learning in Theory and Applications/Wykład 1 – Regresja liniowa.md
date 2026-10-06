@@ -7,7 +7,7 @@ Równanie wartości przewidywanej $\hat{y}$ wygląda następująco:
 
 $$\hat{y}=wx+b$$
 
-współczynniki $w,b$ nazywamy **parametrami wyuczalnymi** (ang. *learnable parameters*). Współczynniki $w,b$ przechowujemy w wektorze $\mathbf{w}=\begin{bmatrix}w \\ b\end{bmatrix}$.
+współczynniki $w,b$ nazywamy **parametrami wyuczalnymi** (ang. *learnable parameters*). Współczynniki $w,b$ przechowujemy w wektorze $\mathbf{w}=(w,b)$.
 
 Wyznaczenie współczynników $w,b$ sprowadza się do zminimalizowania wartości **funkcji błędu** $L$ opartej na metodzie najmniejszych kwadratów (ang. *least squares loss*), danej wzorem:
 
