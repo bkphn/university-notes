@@ -31,7 +31,7 @@ $$\frac{\partial\hat{y}}{\partial\mathbf{w}}=\begin{bmatrix}
 x \\ 1
 \end{bmatrix}$$
 ## Adaptacyjne neurony liniowe
-Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skrócie **adaline**, nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$, a zwraca wartość $\hat{y}$. Działa on w sposób identyczny do regresji linowej.
+Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skrócie **ADALINE**, nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$, a zwraca wartość $\hat{y}$. Działa on w sposób identyczny do regresji linowej.
 
 ## Wielowymiarowa regresja liniowa
 W praktyce wartość $x$ rzadko jest jednowymiarowa, co oznacza potrzebę rozszerzenia równania $\hat{y}=wx+b$ o kolejne wejścia. Dla $M$ wymiarów funkcja przybiera postać:
