@@ -12,6 +12,6 @@
 | *Inżynieria programowania. Metody i ćwiczenia laboratoryjne*       | P. Szmal             |
 | *Inżynieria oprogramowania*                                        | A. Jaszkiewicz       |
 
-| Nazwa programu | Link |
-| -------------- | ---- |
-| TBA            | TBA  |
+| Nazwa programu | Link              |
+| -------------- | ----------------- |
+| sroczynski.pl  | www.sroczynski.pl |
