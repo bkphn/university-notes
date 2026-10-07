@@ -139,4 +139,6 @@ $$\chi_{\mathbb{R}}=2$$
 **Problem Hadwigera-Nelsona** mówi, że nie jest znana liczba chromatyczna płaszczyzny $\mathbb{R}^2$. Łatwo wykazać, że liczba ta musi być niemniejsza od $4$ i niewiększa od $9$, dzieląc płaszczyznę na 9 przystających kwadratów. Od 2018 roku dzięki pracy Aubreya de Greya posiadamy znacznie lepsze ograniczenia:
 
 $$\chi_{\mathbb{R}^2}\in\{5, 6, 7\}$$
+6 października 2026 OpenAI wydało preprint publikacji, udowadniając, że $\chi_{\mathbb{R}^2}\neq 5$, co pozostawia nas z dwiema wartościami:
 
+$$χ_{\mathbb{R}^2}\in\{6,7\}$$

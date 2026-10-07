@@ -21,9 +21,13 @@ Opiera się ona na dążeniu do uzyskania wysokiej jakości produktu – oprogra
 - co z AI?
 
 ## Dylemat wagonika
+**Dylemat wagonika** (ang. *the trolley problem*) to jeden z najsłynniejszych eksperymentów myślowych w historii etyki i filozofii moralnej. Został sformułowany w 1967 roku przez brytyjską filozofkę Philippę Foot, a następnie rozwinięty i spopularyzowany przez badaczy takich jak Judith Jarvis Thomson.
 
-*the trolley problem*
-*footbridge dilemma*
+*Rozpędzony wagonik kolejki wyrwał się spod kontroli i pędzi w dół torów. Na jego drodze znajduje się pięć osób, które są przywiązane do torów i nie mogą uciec. Stoisz obok zwrotnicy. Jeśli pociągniesz za dźwignię, skierujesz wagonik na boczny tor. Niestety, do bocznego toru przywiązana jest jedna osoba. Jedyne opcje to brak działania lub pociągnięcie dźwigni. Co robisz?*
+
+
+
+**Dylemat kładki** (ang. *the footbridge dilemma*)
 
 ## Jakość oprogramowania
 Spełnienie wymagań użytkownika
