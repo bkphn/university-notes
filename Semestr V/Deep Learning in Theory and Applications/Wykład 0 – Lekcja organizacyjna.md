@@ -9,6 +9,7 @@
 ## Egzamin
 - Egzamin odbędzie się w okolicach **10 tygodnia**. Obejmować będzie wszystkie tematy, które do tego momentu pojawią się na wykładach.
 - Na egzaminie nie można używać urządzeń elektrocznicznych, notatek, ani podręczników. W razie potrzeby można skorzystać z kalkulatora.
+- Egzamin należy pisać ołówkiem, a nie długopisem.
 
 ## Projekt
 - Grupy powinny być maksymalnie trzyosobowe.
@@ -32,7 +33,7 @@ Należy uwzględnić w swoim projekcie co najmniej jedną z poniższych metod:
 
 #### 2. Edge AI, optymalizacja i wdrażanie
 - **Opis:** Wdrażanie zoptymalizowanych modeli głębokiego uczenia na sprzęcie o ograniczonych zasobach lub systemach wbudowanych (np. NVIDIA Jetson, Raspberry Pi, urządzenia mobilne lub mikrokontrolery).
-- **Przykładowe techniki:** Klasteryzacja, przycinanie sieci (pruning), kwantyzacja (INT8/INT4, AWQ, GPTQ), przycinanie strukturalne/niestrukturalne, destylacja wiedzy (knowledge distillation), ONNX Runtime, TensorRT lub TFLite wraz z konkretnym profilowaniem opóźnień (latency), przepustowości (throughput) i zużycia energii.
+- **Przykładowe techniki:** Klasteryzacja, przycinanie sieci (ang. *pruning*), kwantyzacja (INT8/INT4, AWQ, GPTQ), przycinanie strukturalne/niestrukturalne, destylacja wiedzy (ang. *knowledge distillation*), ONNX Runtime, TensorRT lub TFLite wraz z konkretnym profilowaniem opóźnień (ang. *latency*), przepustowości (ang. *throughput*) i zużycia energii.
 
 #### 3. Uczenie federacyjne (Federated Learning) i uczenie maszynowe chroniące prywatność
 - **Opis:** Trenowanie rozproszonych modeli na zdecentralizowanych danych bez scentralizowanego dostępu.
@@ -48,11 +49,11 @@ Należy uwzględnić w swoim projekcie co najmniej jedną z poniższych metod:
 
 #### 6. Samonadzorowane (Self-Supervised), internetowe samonadzorowane i multimodalne uczenie się reprezentacji
 - **Opis:** Trenowanie lub adaptacja samouczących się modeli reprezentacji na nieetykietowanych danych domenowych.
-- **Przykładowe techniki:** Uczenie kontrastowe (np. CLIP, SimCLR), zamaskowane autokodery (Masked Autoencoders - MAE) lub wyrównywanie między modalnościami (cross-modal alignment) w strumieniach danych z czujników, obrazu i tekstu.
+- **Przykładowe techniki:** Uczenie kontrastowe (np. CLIP, SimCLR), zamaskowane autokodery (Masked Autoencoders - MAE) lub wyrównywanie między modalnościami (ang. *cross-modal alignment*) w strumieniach danych z czujników, obrazu i tekstu.
 
 #### 7. Wyjaśnialna sztuczna inteligencja (XAI), bezpieczeństwo i odporność
 - **Opis:** Projektowanie modeli z surowymi wymaganiami dotyczącymi interpretowalności lub bezpieczeństwa.
-- **Przykładowe techniki:** Interpretowalność mechanistyczna, atrybucja cech (SHAP, LIME, Integrated Gradients), ewaluacje ataków/obrony adwersaryjnej, mechanizmy zabezpieczające (guardrailing) lub ramy red-teamingu.
+- **Przykładowe techniki:** Interpretowalność mechanistyczna, atrybucja cech (SHAP, LIME, Integrated Gradients), ewaluacje ataków/obrony adwersaryjnej, mechanizmy zabezpieczające (ang. *guardrailing*) lub ramy red-teamingu.
 
 #### 8. Grafowe sieci neuronowe (GNNs) i uczenie maszynowe inspirowane fizyką (Physics-Informed ML)
 - **Opis:** Zastosowanie specjalistycznych architektur do struktur nieeuklidesowych lub układów fizycznych.
@@ -60,8 +61,8 @@ Należy uwzględnić w swoim projekcie co najmniej jedną z poniższych metod:
 
 #### 9. Adwersaryjna sztuczna inteligencja (Adversarial AI) i odporność modeli
 - **Opis:** Ocenianie i wzmacnianie systemów AI przed celowym omijaniem, manipulacją lub wykorzystywaniem podatności.
-- **Przykładowe techniki:** Metoda FGSM (Fast Gradient Sign Method), PGD (Projected Gradient Descent), ataki adwersaryjne typu black-box/white-box, bezpośrednie/pośrednie wstrzykiwanie promptów (prompt injection), ramy red-teamingu, sanityzacja danych wejściowych i trening adwersaryjny.
+- **Przykładowe techniki:** Metoda FGSM (Fast Gradient Sign Method), PGD (Projected Gradient Descent), ataki adwersaryjne typu black-box/white-box, bezpośrednie/pośrednie wstrzykiwanie promptów (ang. *prompt injection*), ramy red-teamingu, sanityzacja danych wejściowych i trening adwersaryjny.
 
 #### 10. Bezpieczeństwo, prywatność i integralność AI
-- **Opis:** Zabezpieczanie potoków (pipelines) uczenia maszynowego, ochrona własności intelektualnej modelu oraz zapobieganie wyciekom danych w całym cyklu życia AI.
-- **Przykładowe techniki:** Obrona przed inwersją modelu (model inversion) i wnioskowaniem o przynależności (membership inference), wykrywanie backdoorów i trojanów, cyfrowe znaki wodne i śledzenie pochodzenia treści, oduczanie maszynowe (machine unlearning), dynamiczne maskowanie danych osobowych (PII) oraz poufne wnioskowanie z użyciem zaufanych środowisk wykonawczych (Trusted Execution Environments - TEEs).
+- **Opis:** Zabezpieczanie potoków (ang. *pipelines*) uczenia maszynowego, ochrona własności intelektualnej modelu oraz zapobieganie wyciekom danych w całym cyklu życia AI.
+- **Przykładowe techniki:** Obrona przed inwersją modelu (ang. *model inversion*) i wnioskowaniem o przynależności (ang. *membership inference*), wykrywanie backdoorów i trojanów, cyfrowe znaki wodne i śledzenie pochodzenia treści, oduczanie maszynowe (ang. *machine unlearning*), dynamiczne maskowanie danych osobowych (PII) oraz poufne wnioskowanie z użyciem zaufanych środowisk wykonawczych (Trusted Execution Environments - TEEs).

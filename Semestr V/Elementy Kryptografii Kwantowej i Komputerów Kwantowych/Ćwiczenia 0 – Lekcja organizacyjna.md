@@ -4,11 +4,3 @@
 | Sala       | RMS 309                                                |
 | Platforma  | https://platforma.polsl.pl/rms/enrol/index.php?id=1724 |
 
-| Tytuł | Autor |
-| ----- | ----- |
-| *TBA* | TBA   |
-
-| Nazwa programu | Link |
-| -------------- | ---- |
-| TBA            | TBA  |
-

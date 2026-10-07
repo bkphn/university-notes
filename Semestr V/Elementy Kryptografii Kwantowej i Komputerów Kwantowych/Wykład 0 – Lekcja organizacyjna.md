@@ -4,13 +4,12 @@
 | Sala       | RMS 309                                                |
 | Platforma  | https://platforma.polsl.pl/rms/enrol/index.php?id=1724 |
 
-| Tytuł | Autor |
-| ----- | ----- |
-| *TBA* | TBA   |
-
-| Nazwa programu | Link |
-| -------------- | ---- |
-| TBA            | TBA  |
+| Tytuł                                                   | Autor                       |
+| ------------------------------------------------------- | --------------------------- |
+| *Quantum Computation and Quantum Information*           | M. A. Nielsen, I. L. Chuang |
+| *Quantum Computing: A Gentle Introduction*              | E. G. Rieffel, W. H. Polak  |
+| *Introduction to Quantum Cryptography*                  | S. Wehner, T. Vidick        |
+| *Introduction to Quantum Algorithms via Linear Algebra* | K. W. Regan, R. J. Lipton   |
 
 ## Zaliczenie
 Na zaliczenie składa się:
