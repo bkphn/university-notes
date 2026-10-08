@@ -6,6 +6,7 @@
 | Nazwa programu | Link                       |
 | -------------- | -------------------------- |
 | mertnakip.com  | https://www.mertnakip.com/ |
+
 ## Egzamin
 - Egzamin odbędzie się w okolicach **10 tygodnia**. Obejmować będzie wszystkie tematy, które do tego momentu pojawią się na wykładach.
 - Na egzaminie nie można używać urządzeń elektrocznicznych, notatek, ani podręczników. W razie potrzeby można skorzystać z kalkulatora.
