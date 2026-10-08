@@ -23,7 +23,7 @@ $$\frac{\partial L(\mathbf{w})}{\partial \mathbf{w}}=\frac{\partial L(\mathbf{w}
 
 które to z kolei możemy wyznaczyć ze wzorów:
 
-$$\frac{\partial L(\mathbf{w})}{\partial \hat{y}}=2\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)$$
+$$\frac{\partial L(\mathbf{w})}{\partial \hat{y}}=\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)$$
 
 $$\frac{\partial\hat{y}}{\partial\mathbf{w}}=\begin{bmatrix}
 x \\ 1
@@ -35,10 +35,16 @@ x \\ 1
   $$L(\mathbf{w})=\frac{1}{2}\sum_{s=1}^S \left(y^{(s)}-\hat{y}^{(s)}\right)^2=\mathrm{SSE}(\mathbf{w})$$
 
 - **Błąd średniokwadratowy** (ang. *mean square error*) MSE
-  $$L(\mathbf{w})=\frac{1}{S}\sum_{s=1}^s\left( y^{(s)} -\hat{y}^{(s)}\right)^2=\mathrm{MSE}(\mathbf{w})$$
+  $$L(\mathbf{w})=\frac{1}{S}\sum_{s=1}^S\left( y^{(s)} -\hat{y}^{(s)}\right)^2=\mathrm{MSE}(\mathbf{w})$$
 
 ## Adaptacyjne neurony liniowe
-Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skrócie **ADALINE**, nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$, a zwraca wartość $\hat{y}$. Działa on w sposób identyczny do regresji linowej.
+Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skrócie **ADALINE**, nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$, a zwraca wartość $\hat{y}$.
+
+ADALINE działa w fazie uczenia w sposób identyczny do regresji liniowej, jednak jako klasyfikator rozszerza ten proces o przepuszczenie ostatecznego wyniku przez funkcję progową decydującą o przynależności do klasy.
+
+
+
+
 
 ## Wielowymiarowa regresja liniowa
 W praktyce wartość $x$ rzadko jest jednowymiarowa, co oznacza potrzebę rozszerzenia równania $\hat{y}=wx+b$ o kolejne wejścia. Dla $M$ wymiarów funkcja przybiera postać:

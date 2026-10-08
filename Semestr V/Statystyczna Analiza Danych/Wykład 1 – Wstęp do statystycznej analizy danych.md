@@ -1,11 +1,11 @@
-## Pomiary
-Dana jest zmienna losowa $\xi$ taka, że $P(\xi<x)=F(x)$. Liczbę $\xi$ będziemy nazywać **populacją generalną**.
+## Statystyczna analiza danych
+**Statystyczna analiza danych** to gałąź statystyki matematycznej, która nie skupia się na dowodzeniu własności twierdzeń, a na wyciąganiu wniosków o zmiennej losowej $\xi$ z danych $x_{1},x_{2},\dots,x_{n}$.
 
-Przy wykonywaniu pomiarów należy pamiętać, że każdy z nich musi być niezależny od pozostałych, a także, że wszystkie należy wykonywać w tych samych warunkach. Dane, które uzyskamy z takich pomiarów możemy ułożyć w ciąg: $x_1,x_2,\dots,x_n$, który nazywamy **wartościami próby losowej**.
+Ciąg danych $x_{1},\dots ,x_{n}$ nazywamy **próbką** zmiennej losowej $\xi$, otrzymujemy je wykonując **pomiary**. Każdy pomiar musi być wykonany w sposób niezależny od siebie i w jednakowych warunkach, procedurę tę nazywamy **niezależnym pobieraniem próbki**.
 
-Zadaniem statystyki matematycznej jest wyznaczenie pewnych cech liczby $\xi$ na podstawie **próbek** $x_1,x_2,\dots,x_n$. Przykładem populacji generalnej $\xi$ może być wzrost wszystkich ludzi na ziemi, a próbą $x_1,\dots,x_n$ są wzrosty $n$ zmierzonych przez nas osób.
+Jeżeli dane $x_{1},\dots,x_{n}$ traktujemy jako zmienne losowe, to są to zmienne losowe o tej samej dystrybuancie $x_{i}\sim ξ$ .
 
-Statystyka opisowa zajmuje się wyciąganiem danych bez wykorzystywania zaawansowanych aparatów matematycznych.
+$$P(x_{1}<z)=P(\xi<z)=F_{\xi}(z)$$
 
 ## Elementy statystyki opisowej
 Jeżeli próbę $x_1,\dots,x_n$ ułożymy w sposób taki, że:
@@ -15,8 +15,7 @@ $$x_{(1)}\leq x_{(2)}\leq\dots\leq x_{(n)}$$
 to szereg ten nazywamy **szeregiem wariacyjnym**.
 
 W statystyce opisowej najczęściej posługujemy się następującymi charakterystykami:
-- **Średnia arytmetyczna**: Średnia arytmetyczna $\overline{x}$ odpowiada wartości oczekiwanej zmiennej losowej $\overline{x}\sim \mathbb{E}[\xi]$, definiujemy ja wzorem:
-
+- **Średnia arytmetyczna**: Średnia arytmetyczna $\overline{x}$ odpowiada wartości oczekiwanej zmiennej losowej $\overline{x}\sim \mathbb{E}[\xi]$, definiujemy ją wzorem:
 $$\overline{x}=\frac{1}{n}\sum_{i=1}^n x_{i}$$
 
 - **Wariancja**: Wariancją próby $x_1,\dots,x_n$ nazywamy liczbę $S^2$, która odpowiada wariancji zmiennej losowej $S^2  \sim D^2 [\xi]$, definiujemy ją wzorem:
@@ -59,15 +58,15 @@ $$\nu_{k}=\frac{1}{n} \sum_{i=1}^n |x_{i}-\overline{x}|^k$$
 
 - **Wskaźnik zmienności**: Wskaźnikiem zmienności zmiennej $\xi$ nazywamy liczbę $\gamma_{0}$:
 
-$$\gamma_{0}=\frac{\sigma}{|\overline{x}|}$$
+$$\gamma_{1}=\frac{S}{|\overline{x}|}$$
 
-- **Wskaźnik asymetrii**: Wskaźnikiem asymetrii zmiennej $\xi$ nazywamy liczbę $\gamma_1$:
+- **Współczynnik asymetrii**: Wskaźnikiem asymetrii zmiennej $\xi$ nazywamy liczbę $\gamma_1$:
 
-$$\gamma_{1}=\frac{\mu_{3}}{\sigma^3}$$
+$$\gamma_{2}=\frac{\mu_{3}}{S^3}$$
 
 - **Wskaźnik skupienia**: Wskaźnikiem skupienia (kurtozą) z próby $x_1,\dots,x_n$ nazywamy liczbę $\gamma_2$:
 
-$$\gamma_{2}=\frac{\mu_{4}}{\sigma^4}$$
+$$\gamma_{3}=\frac{\mu_{4}}{S^4}$$
 
 ## Obszary zmienności
 **Rozstępem** badanej cechy $\xi$ w próbie $x_{(1)}, x_{(2)}, \dots, x_{(n)}$ nazywamy liczbę $R$, daną wzorem:
@@ -87,3 +86,4 @@ Jeżeli obserwacja wpada w przedział $3\sigma$ to szansa, że sygnał jest przy
 
 **Złotym standardem** odkrycia jest próg **$5\sigma$**. Oznacza to, że prawdopodobieństwo uzyskania tak ekstremalnego wyniku wyłącznie wskutek losowej fluktuacji tła wynosi około $1 : 3\,500\,000$. Dopiero osiągnięcie tego progu uprawnia do oficjalnego ogłoszenia odkrycia.
 
+## Wyznaczanie histogramu
