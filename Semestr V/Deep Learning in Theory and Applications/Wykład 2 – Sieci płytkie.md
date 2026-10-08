@@ -44,13 +44,31 @@ Jeżeli dana sieć neuronowa posiada od trzech warstw wzwyż (w uczeniu maszynow
 >[!danger] Twierdzenie o uniwersalnej aproksymacji
 >Jednokierunkowa sieć neuronowa z jedną skończoną warstwą ukrytą może z dowolną dokładnością przybliżyć każdą ciągłą funkcję na zbiorach domkniętych i ograniczonych przestrzeni euklidesowych.
 
-$x_{1},x_{2}\rightarrow\Phi\dots\Phi\rightarrow\Psi\rightarrow \hat{y}$
-$w_{i,i}$, $v_{i}$
+![[Pasted image 20261008182839.png|400]]
+## Operator nabla
+Pole wektorowe wskazujące kierunki najszybszych wzrostów wartości danego pola skalarnego w poszczególnych punktach nazywamy **gradientem**.
+
+Gradient pewnej funkcji $f(x_{1},\dots,x_{n})$ oznaczamy jako $\nabla f$, gdzie $\nabla$ to wektorowy operator różniczkowy nazywany **nabla**. W układzie współrzędnych kartezjańskich gradient jest wektorem, którego składowe są pochodnymi cząstkowymi funkcji $f$. W układzie współrzędnych kartezjańskich składowe gradientu funkcji $f$ są pochodnymi cząstkowymi.
+
+$$\nabla f=\begin{bmatrix}
+\frac{\partial f}{\partial x_{1}} & \dots & \frac{\partial f}{\partial x_{n}}
+\end{bmatrix}$$
+
+Zapis $\nabla_{\mathbf{v}} f$ definiuje układ pochodnych cząstkowych funkcji obliczanych po kolejnych zmiennych zgrupowanych w wektorze $\mathbf{v}$. W zależności od tego, czy badana funkcja zwraca wartość liczbową, czy wektor, definicja tej macierzy przyjmuje jedną z dwóch podstawowych form:
+- **Dla funkcji skalarnej**: Jeżeli funkcja $f(\mathbf{v})$ ma charakter skalarny (tzn. $f: \mathbb{R}^n \to \mathbb{R}$), a wektor zmiennych składa się z $n$ współczynników $\mathbf{v} = [v_1, v_2, \dots, v_n]^T$, to operator $\nabla_{\mathbf{v}} f$ jest klasycznym gradientem. W ujęciu algebry liniowej wektor ten reprezentowany jest jako macierz pionowa o wymiarach $n \times 1$:
+
+$$\nabla_{\mathbf{v}} f = \begin{bmatrix} \frac{\partial f}{\partial v_1} \\ \frac{\partial f}{\partial v_2} \\ \vdots \\ \frac{\partial f}{\partial v_n} \end{bmatrix}$$
+
+- **Dla funkcji wektorowej** Jeżeli operujemy na funkcji wektorowej (tzn. $\mathbf{f}: \mathbb{R}^n \to \mathbb{R}^m$), która składa się z $m$ niezależnych funkcji skalarnych $\mathbf{f}(\mathbf{v}) = [f_1(\mathbf{v}), f_2(\mathbf{v}), \dots, f_m(\mathbf{v})]^T$, to $\nabla_{\mathbf{v}} \mathbf{f}$ oznacza pełną macierz pochodnych cząstkowych, powszechnie określaną mianem macierzy Jacobiego.
+  
+  $$\nabla_{\mathbf{v}} \mathbf{f} = \begin{bmatrix} \frac{\partial f_1}{\partial v_1} & \frac{\partial f_1}{\partial v_2} & \dots & \frac{\partial f_1}{\partial v_n} \\ \frac{\partial f_2}{\partial v_1} & \frac{\partial f_2}{\partial v_2} & \dots & \frac{\partial f_2}{\partial v_n} \\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial f_m}{\partial v_1} & \frac{\partial f_m}{\partial v_2} & \dots & \frac{\partial f_m}{\partial v_n} \end{bmatrix}$$
+
+Zastosowanie takiej konwencji macierzowej upraszcza obliczenia wymagające reguły łańcuchowej (chain rule) w rachunku wielowymiarowym, co jest fundamentalne m.in. w mechanice analitycznej przy równaniach Eulera-Lagrange'a oraz w systemach uczących algorytmów sztucznej inteligencji (wsteczna propagacja błędu).
 
 ## Sprzężenie w przód
-**Sprzężenie w przód** (ang. *feedforward*) to architektura, w której sygnał przepływa jednokierunkowo: od warstwy wejściowej, przez warstwy ukryte, aż do wyjściowej, bez tworzenia pętli sprzężenia zwrotnego
+**Sprzężenie w przód** (ang. *feedforward*) FF to architektura, w której sygnał przepływa jednokierunkowo: od warstwy wejściowej, przez warstwy ukryte, aż do wyjściowej, bez tworzenia pętli sprzężenia zwrotnego
 
-
+![[Pasted image 20261008182922.png|406]]
 
 gdzie $\Phi, \Psi$ to funkcje aktywacji. 
 
@@ -69,7 +87,7 @@ $$\mathbf{v}=[v_{1}, v_{2},\dots,v_{M}] \qquad \mathbf{z}=\begin{bmatrix} z_{1} 
 
 ## Backpropagation
 **Backpropagation** (propagacja wsteczna) BP to algorytm służący do efektywnego obliczania gradientu funkcji straty względem wag sieci, oparty na regule łańcuchowej różniczkowania. Umożliwia on aktualizację wag w procesie uczenia.
-
+![[Pasted image 20261008182959.png|443]]
 
 Niech $L(\mathbf{v})=\mathrm{MSE}(\mathbf{v})$. Pojedynczą wagę $v_{i}$ będziemy aktualizować za pomocą wzoru:
 
@@ -82,8 +100,8 @@ $$v_{i}-\eta \frac{\partial L(v_{i})}{\partial v_{i}}=v_{i}-\eta\cdot\color{red}
 W zapisie macierzowym wyrazimy to jako:
 
 $$\mathbf{v}\leftarrow \mathbf{v}-\eta\nabla_{\mathbf{v}} L=\mathbf{v}-\eta \begin{bmatrix}
- \frac{\partial L}{\partial v_{1}} & \frac{\partial L}{\partial v_{2}} & \dots &\frac{\partial L}{\partial v_{M}} & \frac{\partial L}{\partial c}
+ \frac{\partial L}{\partial v_{1}} \\ \frac{\partial L}{\partial v_{2}} \\ \vdots \\\frac{\partial L}{\partial v_{M}} \\ \frac{\partial L}{\partial c}
 \end{bmatrix}=\mathbf{v}-\eta \frac{\partial L}{\partial \hat{y}} \begin{bmatrix}
- \frac{\partial \hat{y}}{\partial v_{1}} & \frac{\partial \hat{y}}{\partial v_{2}} & \dots &\frac{\partial \hat{y}}{\partial v_{M}} & \frac{\partial \hat{y}}{\partial c}
+ \frac{\partial \hat{y}}{\partial v_{1}} \\ \frac{\partial \hat{y}}{\partial v_{2}} \\ \vdots \\ \frac{\partial \hat{y}}{\partial v_{M}} \\ \frac{\partial \hat{y}}{\partial c}
 \end{bmatrix}$$
 

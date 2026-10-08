@@ -42,9 +42,7 @@ Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skr�
 
 ADALINE działa w fazie uczenia w sposób identyczny do regresji liniowej, jednak jako klasyfikator rozszerza ten proces o przepuszczenie ostatecznego wyniku przez funkcję progową decydującą o przynależności do klasy.
 
-
-
-
+![[Pasted image 20261008182206.png|343]]
 
 ## Wielowymiarowa regresja liniowa
 W praktyce wartość $x$ rzadko jest jednowymiarowa, co oznacza potrzebę rozszerzenia równania $\hat{y}=wx+b$ o kolejne wejścia. Dla $M$ wymiarów funkcja przybiera postać:
@@ -76,6 +74,8 @@ $$\hat{y}=w_{1}x_{1}+w_{2}x_{2}+\dots+w_{M}x_{M}+b=\sum_{m=1}^M w_{m}x_{m}+b$$
 Zbudowanie nieliniowego neuronu polega na przepuszczeniu zsumowanego, wielowymiarowego wyniku  $w_1x_1 + w_2x_2 +\dots+ b$ przez funkcję aktywacji $\psi$. Zmodyfikowane równanie przyjmuje dla $M$ wymiarów postać:
 
 $$\hat{y} = \psi\left(\sum_{m=1}^M w_{m}x_{m}+b\right)$$
+
+![[Pasted image 20261008182325.png|372]]
 
 ## Współczynnik uczenia
 Łatwo może dojść do sytuacji, w której trenowany model aktualizuje swoje wagi $\mathbf{w}$ w sposób powodujący oddalanie się od minimum globalnego funkcji $L$ (np. wartość pochodnej jest zbyt wielka i model oddala się od rozwiązania, albo utyka w minimum lokalnym).
