@@ -44,7 +44,7 @@ Funkcję dyskretną nazywamy inaczej funkcją impulsową. Wyróżniamy m.in.:
 
   $$\delta(n) = \delta_{n,0} = \begin{cases} 1, & n = 0 \\ 0, & n \neq 0 \end{cases}$$
 
-* **Funkcja skokowa Heaviside'a:** Odpowiednikiem dyskretnym funkcji wskaźnikowej jest funkcja skokowa Heaviside'a $u(n)$:
+* **Funkcja skokowa Heaviside'a:** Odpowiednikiem dyskretnym funkcji wskaźnikowej jest funkcja skokowa Heaviside'a $\mathbb{1}(n)$:
 
-  $$u(n) = \begin{cases} 1, & n \ge 0 \\ 0, & n < 0 \end{cases}$$
+  $$\mathbb{1}(n) = \begin{cases} 1, & n \ge 0 \\ 0, & n < 0 \end{cases}$$
 

@@ -65,11 +65,11 @@ $T'$ jest pochodną dystrybucji $T$, gdy spełniony jest warunek:
 $$\int_{\mathbb{R}} T' \cdot f = -\int_{\mathbb{R}} T \cdot f'$$
 
 > [!example] Pochodna funkcji Heaviside'a
-> Licząc pochodną funkcji Heaviside'a $u(x)$ za pomocą definicji dystrybucyjnej:
+> Licząc pochodną funkcji Heaviside'a $\mathbb{1}(x)$ za pomocą definicji dystrybucyjnej:
 >
-> $$-\int_{\mathbb{R}} u(x) \cdot f'(x) \, dx = -\int_{0}^{\infty} f'(x) \, dx = -[f(x)]_0^\infty = f(0) = \delta(x)$$
+> $$-\int_{\mathbb{R}} \mathbb{1}(x) \cdot f'(x) \, dx = -\int_{0}^{\infty} f'(x) \, dx = -[f(x)]_0^\infty = f(0) = \delta(x)$$
 >
-> W kontekście dystrybucji delta Diraca jest pochodną funkcji skokowej Heaviside'a ($u'(x) = \delta(x)$).
+> W kontekście dystrybucji delta Diraca jest pochodną funkcji skokowej Heaviside'a ($\mathbb{1}'(x) = \delta(x)$).
 
 ### Własności delty Diraca
 Dystrybucja $\delta(x)$ to delta Diraca – reprezentacja nieskończenie krótkiego impulsu o całkowitej powierzchni równej 1. Opisuje ją wzór:

@@ -9,27 +9,34 @@ $$\hat{y}=wx+b$$
 
 współczynniki $w,b$ nazywamy **parametrami wyuczalnymi** (ang. *learnable parameters*). Współczynniki $w,b$ przechowujemy w wektorze $\mathbf{w}=(w,b)$.
 
-Wyznaczenie współczynników $w,b$ sprowadza się do zminimalizowania wartości **funkcji błędu** $L$ opartej na metodzie najmniejszych kwadratów (ang. *least squares loss*), danej wzorem:
+Wyznaczenie współczynników $w,b$ sprowadza się do zminimalizowania wartości **funkcji błędu** $L$ w tym przypadku opartej na metodzie najmniejszych kwadratów, danej wzorem:
 
 $$L(\mathbf{w})=\frac{1}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})^2$$
 
 Aby nauczyć model regresji liniowej należy od obecnych wartości $\mathbf{w}$ odejmować ich gradient $\frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$. Gradient wskazuje kierunek największego wzrostu błędu, więc odejmując go zbliżamy się w stronę minimum funkcji minimalizując błąd:
 
-$$\mathbf{w}^{(k+1)}= \mathbf{w}^{(k)}-\frac{\partial L(\mathbf{w}^{(k)})}{\partial \mathbf{w}^{(k)}}$$
+$$\mathbf{w} \leftarrow\mathbf{w}^{}-\frac{\partial L(\mathbf{w})}{\partial \mathbf{w}}$$
 
-gdzie $^{(k)}$ to obecna iteracja.
+**Reguła łańcuchowa** (ang. *chain rule*) pozwala na rozbicie gradientu $\frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$ na iloczyn pochodnej straty po przewidywaniach $\frac{\partial L(\mathbf{w})}{\partial \hat{y}}$ oraz pochodnej przewidywań po wagach $\frac{\partial \hat{y}}{\partial \mathbf{w}}$:
 
-**Reguła łańcuchowa** (ang. *chain rule*) pozwala na rozbicie gradientu $\frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$ na iloczyn pochodnej straty po przewidywaniach $\frac{\partial L(\mathbf{w})}{\partial \hat{y}(\mathbf{w})}$ oraz pochodnej przewidywań po wagach $\frac{\partial \hat{y}}{\partial \mathbf{w}}$:
-
-$$\frac{\partial L(\mathbf{w})}{\partial \mathbf{w}}=\frac{\partial L(\mathbf{w})}{\partial\hat{y}(\mathbf{w})}\cdot\frac{\partial \hat{y}}{\partial \mathbf{w}}$$
+$$\frac{\partial L(\mathbf{w})}{\partial \mathbf{w}}=\frac{\partial L(\mathbf{w})}{\partial\hat{y}}\cdot\frac{\partial \hat{y}}{\partial \mathbf{w}}$$
 
 które to z kolei możemy wyznaczyć ze wzorów:
 
-$$\frac{\partial L(\mathbf{w})}{\partial \hat{y}(\mathbf{w})}=2\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)$$
+$$\frac{\partial L(\mathbf{w})}{\partial \hat{y}}=2\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)$$
 
 $$\frac{\partial\hat{y}}{\partial\mathbf{w}}=\begin{bmatrix}
 x \\ 1
 \end{bmatrix}$$
+
+## Funkcje błędu
+**Funkcją błędu** nazywamy pewną funkcję $L$, która jako argumenty przyjmuje parametry wyuczalne danego modelu, a jako wartość zwraca ich błąd. Funkcję $L$ można zdefiniować na wiele sposobów, w zależności od potrzeb, wśród najpopularniejszych możemy wyróżnić:
+- **Metoda najmniejszych kwadratów** (ang. *least square loss*) SSE
+  $$L(\mathbf{w})=\frac{1}{2}\sum_{s=1}^S \left(y^{(s)}-\hat{y}^{(s)}\right)^2=\mathrm{SSE}(\mathbf{w})$$
+
+- **Błąd średniokwadratowy** (ang. *mean square error*) MSE
+  $$L(\mathbf{w})=\frac{1}{S}\sum_{s=1}^s\left( y^{(s)} -\hat{y}^{(s)}\right)^2=\mathrm{MSE}(\mathbf{w})$$
+
 ## Adaptacyjne neurony liniowe
 Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skrócie **ADALINE**, nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$, a zwraca wartość $\hat{y}$. Działa on w sposób identyczny do regresji linowej.
 
@@ -41,18 +48,24 @@ $$\hat{y}=w_{1}x_{1}+w_{2}x_{2}+\dots+w_{M}x_{M}+b=\sum_{m=1}^M w_{m}x_{m}+b$$
 ## Funkcja aktywacji
 **Funkcją aktywacji** (ang. *activation function*) $\psi$ nazywamy funkcję, która przekształca sumę sygnałów wejściowych neuronu. Funkcję $\psi$ można zdefiniować na wiele sposobów, w zależności od potrzeb, wśród najpopularniejszych możemy wyróżnić:
 - **Unipolarna funkcja sigmoidalna** (ang. *unipolar sigmoid*)
-  $$\psi(z)=\frac{1}{1+e^{-z}}$$
+  $$\psi(z)=\frac{1}{1+e^{-z}}=\sigma(z)$$
 
 - **Tangens hiperboliczny** (ang. *tangent hyperbolic*)
-  $$\psi(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}$$
+  $$\psi(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}=\tanh(z)$$
 
 - **ReLU** (ang. *rectified linear unit*)
-  $$\psi(z)=\max(\{0,z\})$$
+  $$\psi(z)=\max(\{0,z\})=\mathrm{ReLU}(z)$$
 
 - **Leaky ReLU** (ang. *leaky rectified linear unit*)
-  $$\psi(z)=\max{(\{\alpha z,z\})}$$
+  $$\psi(z)=\max{(\{\alpha z,z\})}=\mathrm{LReLU}(z)$$
   domyślnie parametr $\alpha=0.1$
 
+- **Funkcja skokowa Heaviside'a** (ang. *step function*)
+  $$\psi(z)=\begin{cases}
+  1, \qquad z\geq 0 \\
+  0, \qquad z < 0
+  \end{cases}=\mathbb{1}(z)$$
+  
 ## Neurony nieliniowe
 Zbudowanie nieliniowego neuronu polega na przepuszczeniu zsumowanego, wielowymiarowego wyniku  $w_1x_1 + w_2x_2 +\dots+ b$ przez funkcję aktywacji $\psi$. Zmodyfikowane równanie przyjmuje dla $M$ wymiarów postać:
 
@@ -63,7 +76,7 @@ $$\hat{y} = \psi\left(\sum_{m=1}^M w_{m}x_{m}+b\right)$$
 
 Aby temu zapobiec wprowadzamy **współczynnik uczenia** (ang. *learning rate*), oznaczany symbolem $\eta$, który jest mnożnikiem określającym wielkość kroku podczas aktualizacji wag za pomocą spadku gradientu.
 
-$$\mathbf{w}^{(k+1)}=\mathbf{w}^{(k)}-\eta \frac{\partial L(\mathbf{w}^{(k)})}{\partial\mathbf{w}^{(k)}}$$
+$$\mathbf{w}\leftarrow\mathbf{w}-\eta \frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$$
 
 Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansowanych optymalizatorach sieci neuronowych stosuje się adaptacyjny współczynnik uczenia (ang. *adaptive learning rate*), który dostosowuje się dynamicznie w trakcie uczenia.
 
@@ -73,7 +86,7 @@ Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansow
 >
 >Liczba epok $\varepsilon=3$
 >
->Współczynnik uczenia $\eta=\frac{1}{2}=0.5$
+>Współczynnik uczenia $\eta=0.5$
 >
 >Wartości $x,y$
 >
@@ -88,7 +101,7 @@ Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansow
 >
 >$$w=1, \qquad b=0$$
 >
->$$L(w,b)=\frac{1}{2}\sum^S_{s=1} (y^{(s)}-\hat{y}^{(s)})^2$$
+>$$L(\mathbf{w})=\frac{1}{2}\sum^S_{s=1} (y^{(s)}-\hat{y}^{(s)})^2$$
 >
 $$\hat{y}=wx+b$$
 >

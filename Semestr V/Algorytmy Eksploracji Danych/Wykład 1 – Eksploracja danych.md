@@ -121,3 +121,11 @@ $$R(x_{i},z_{j})=R(z_{j},x_{i})=\sqrt{ \lambda_{j} } a_{j,i}$$
 
 Wartości ładunków czynnikowych (obliczanych na podstawie macierzy korelacji) podniesione do kwadratu wyrażają procentowy udział danej składowej w wyjaśnieniu zmienności (wariancji) danej
 zmiennej wyjściowej. Na przykład, jeżli $R(x_{1}, z_{1}) = 0.9$, to pierwsza składowa $z_{1}$ wyjaśnia $81\%$ wariancji cechy $x_{1}$.
+
+## Kryterium wyboru ilości składowych
+Analiza składowych głównych pozwala na zastąpienie układu obserwowalnych wyjściowych zmiennych $x_{1},\dots,x_{p}$ układem zmiennych sztucznych (nieobserwowalnych) $z_{1},\dots,z_{p}$, zwanych
+składowymi głównymi, które kolejno wyjaśniają coraz mniejszą część całkowitej zmienności (wariancji) układu wyjściowego. Aby jednak dokonać redukcji wymiaru zadania, należy zrezygnować z niektórych składowych, pozostawiając tylko te, które pozwalają na relatywnie
+niewielką stratę wyjściowej informacji. W praktycznym użyciu są trzy podstawowe kryteria wyboru ilości składowych w analizie:
+- **Kryterium procentowe**: zakłada pozostawienie tylko takiej ilości początkowych składowych głównych wyznaczonych dla ułªadu cech, by łączny udział procentowy wyjaśnianej przez nie wariancji przekroczył pewien ustalony próg, np. $75\%$ lub $80\%$.
+- **Kryterium Kaisera**: rekomenduje pozostawienie tylko tych składowych, którym odpowiadają wartości własne macierzy korelacji większe od $1$.
+- **Kryterium Cattella**: opiera się na tzw. **wykresie osypiska**, na którym kolejne wartości własne macierzy kowariancji bądź korelacji przedstawia się za pomocą łamanej. W analizie uwzględniamy tylko te składowe, które odpowiadają wartościom własnym położonym na lewo od punktu, w którym rozpoczyna się łagodny spadek wartości własnych (osypisko). Sam punkt rozpoczęcia łagodnego spadku (dokładniej: składową odpowiadającą tej wartości własnej) możemy uwzględniać bądź nie.
