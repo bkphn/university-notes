@@ -83,7 +83,7 @@ $$\mathbf{x}=\begin{bmatrix}x_{1} \\ \vdots \\ x_{N}\end{bmatrix} \qquad
 2. **Warstwa druga**
    - Zapis skalarny: $\hat{y}=\Psi\left( \sum_{m=1}^M v_{m}z_{m}+c \right)$
    - Zapis macierzowy: $\hat{y}=\Psi(\mathbf{v}\cdot \mathbf{z}+c)$
-$$\mathbf{v}=[v_{1}, v_{2},\dots,v_{M}] \qquad \mathbf{z}=\begin{bmatrix} z_{1} \\ \vdots \\ z_{M} \end{bmatrix}$$
+$$\mathbf{v}=\begin{bmatrix} v_{1}  & v_{2}  & \dots & v_{M} \end{bmatrix} \qquad \mathbf{z}=\begin{bmatrix} z_{1} \\ \vdots \\ z_{M} \end{bmatrix}$$
 
 ## Backpropagation
 **Backpropagation** (propagacja wsteczna) BP to algorytm służący do efektywnego obliczania gradientu funkcji straty względem wag sieci, oparty na regule łańcuchowej różniczkowania. Umożliwia on aktualizację wag w procesie uczenia.
