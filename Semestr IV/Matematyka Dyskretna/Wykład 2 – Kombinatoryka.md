@@ -165,7 +165,7 @@ Korzystając z prawa iloczynu wiemy, że takich różnych przypisań jest dokła
 
 Zbiór wszystkich podzbiorów zbioru $A$ nazywamy zbiorem potęgowym zbioru $A$ i oznaczamy jako:
 
-$$\mathcal{P}(A)=2^{|A|}$$
+$$|\mathcal{P}(A)|=2^{|A|}$$
 
 z czego wynika:
 

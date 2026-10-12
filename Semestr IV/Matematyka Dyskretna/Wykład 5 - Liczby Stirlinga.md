@@ -209,7 +209,7 @@ $$B_{n+1}=\sum_{k=0}^n\binom{n}{k}B_{k}$$
 
 oraz tzw. wzór Dobińskiego:
 
-$$B_{n}=\frac{1}{e}\sum_{k=0}^n \frac{k^n}{k!}$$
+$$B_{n}=\frac{1}{e}\sum_{k=0}^\infty \frac{k^n}{k!}$$
 
 ## Hipoteza Zaremby
 Prostym ułamkiem łańcuchowym nazywamy ułamek nieskracalny przedstawiony w postaci:

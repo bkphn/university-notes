@@ -70,7 +70,7 @@ Ciąg ten w OEIS jest opisany jako ciąg [ciąg A000108](https://oeis.org/A00010
 Funkcja 91 McCarthy'ego nazywana czasem po prostu funkcją McCarthy'ego została zaproponowana w 1970 roku przez informatyka Johna McCarthy'ego. Funkcję tą definiuje się wzorem:
 
 $$M(n)=\begin{cases}
-M(M(n+11)), \quad 1\leq n<100 \\
+M(M(n+11)), \quad 1\leq n\leq100 \\
 n-10, \qquad n>100
 \end{cases}$$
 

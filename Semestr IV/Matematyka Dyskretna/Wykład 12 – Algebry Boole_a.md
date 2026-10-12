@@ -69,7 +69,7 @@ $$\alpha=\beta\land \gamma\implies \alpha=\beta\lor \alpha=\gamma$$
 
 Niezerowy element $a\in B$ jest atomem algebry $B$ wtedy i tylko wtedy, gdy nie istnieje $x\in B$ taki, że $0<x<a$, analogicznie niejedynkowy element $\alpha\in B$ jest co-atomem algebry $B$ wtedy i tylko wtedy, gdy nie istnieje $\xi \in B$ taki, że $\alpha<\xi<1$.
 
-Liczba różnych atomów i co-atomów algebrze $\mathbb{B}^n$ wynosi dokładnie $n$. Przykładowo atomami $\mathbb{B}^3$  są: $(0, 0, 1), (0, 1, 0), (0, 0, 1)$, natomiast co-atomami $\mathbb{B}^3$ są: $(0, 1, 1), (1, 0, 1), (1, 1, 0)$.
+Liczba różnych atomów i co-atomów algebrze $\mathbb{B}^n$ wynosi dokładnie $n$. Przykładowo atomami $\mathbb{B}^3$  są: $(0, 0, 1), (0, 1, 0), (1, 0, 0)$, natomiast co-atomami $\mathbb{B}^3$ są: $(0, 1, 1), (1, 0, 1), (1, 1, 0)$.
 
 Każdy niezerowy element skończonej algebry Boole'a jest alternatywą różnych atomów tej algebry, natomiast każdy niejedynkowy element skończonej algebry Boole'a jest koniunkcją różnych co-atomów tej algebry.
 

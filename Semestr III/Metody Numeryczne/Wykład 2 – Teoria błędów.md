@@ -14,7 +14,7 @@ $$\overline{\Delta}x = |\overline{x} - x|$$
 
 * **Błąd względny:** Jeśli $x \neq 0$, to błąd ten definiuje wielkość $\overline{\delta}x$:
 
-$$\overline{\delta}x = \frac{|\overline{x} - x|}{x}$$
+$$\overline{\delta}x = \frac{|\overline{x} - x|}{|x|}$$
 
 Często podaje się go w procentach: $\overline{\delta}x \cdot 100\%$.
 

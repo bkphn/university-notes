@@ -40,7 +40,7 @@ $$(u,v)\in E\implies(v,u)\in E,  \forall_{u,v\in V}$$
 
 - Digraf $D$ nazywamy grafem **zorientowanym**, gdy:
 
-$$(u,v)\in E\implies(v,u)\in E,  \forall_{u,v\in V}$$
+$$(u,v)\in E\implies(v,u)\notin E,  \forall_{u,v\in V}$$
 
 - Graf $G$ nazywamy **grafem pierwotnym** bądź szkieletem digrafu $D$ gdy graf $G$ możemy otrzymać poprzez zastąpienie dowolnego łuku $(v,u)\in E$ bądź pary łuków $(v,u),(u,v)\in E$ poprzez krawędź $\{v,u\}$.
 
