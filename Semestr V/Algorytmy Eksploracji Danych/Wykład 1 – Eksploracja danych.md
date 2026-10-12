@@ -106,8 +106,7 @@ $$\sum_{i=1}^p S^2(x_{i})=\sum_{i=1}^p S^2(z_{i})=\sum_{i=1}^p \lambda_{i}$$
 
 **Część wariancji** wyodrębniona przez $i$-tą składową główną wynosi $\frac{λ_{i}}{\lambda_{1}+\dots+\lambda_{p}}$.
 
-**Ładunkami czynnikowymi** naztwamy współczynniki korelacji pomiędzy daną zmienną obserwowalną $x_{k}$, a kolejnymi składowymi głównymi. W praktyce zatem zmienne obserwowalne o
-najwyższych wartościach ładunków czynnikowych dla danej składowej głównej wnoszą największy wkład w konstrukcję tej składowej. Wartości ładunków czynnikowych możemy obliczyć ze wzoru:
+**Ładunkami czynnikowymi** nazywamy współczynniki korelacji pomiędzy daną zmienną obserwowalną $x_{k}$, a kolejnymi składowymi głównymi. W praktyce zatem zmienne obserwowalne o najwyższych wartościach ładunków czynnikowych dla danej składowej głównej wnoszą największy wkład w konstrukcję tej składowej. Wartości ładunków czynnikowych możemy obliczyć ze wzoru:
 
 $$R(x_{i},z_{j})=R(z_{j},x_{i})=\frac{\sqrt{ \lambda_{j} } a_{j,i}}{\sqrt{ s_{i,i} }}$$
 
