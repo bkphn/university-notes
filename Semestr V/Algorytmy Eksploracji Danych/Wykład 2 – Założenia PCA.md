@@ -63,4 +63,3 @@ Bertrand zaproponował trzy naturalne sposoby losowania i otrzymał trzy różne
    $$ P(l>\sqrt{ 3 })=\frac{\frac{\pi}{4}}{\pi}=\frac{1}{4}  $$
 
 Paradoks polega na tym, że intuicyjne pojęcie „losowej cięciwy” nie wyznacza jednoznacznie rozkładu prawdopodobieństwa. Nie istnieje zatem jedna poprawna odpowiedź bez sprecyzowania mechanizmu losowania.
-
