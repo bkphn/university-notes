@@ -3,7 +3,7 @@
 
 Liczba neuronów w warstwie wyjściowej musi być równa liczbie wyjść. Dla dwóch wyjść $o_{1},o_{2}$ potrzebujemy dwóch neuronów w warstwie wyjściowej.
 
-**Linią separującą** (ang. *separation line*) nazywamy prostą $H$, która dzieli przestrzeń wejściową (tworzoną przez wektory $x$) na dwie części. Pozwala to na oddzielenie od siebie próbek należących do różnych klas, którym następnie przypisywana jest ostateczna wartość za pomocą funkcji aktywacji $\psi$.
+**Linią separującą** (ang. *separation line*) nazywamy prostą $H$, która dzieli przestrzeń wejściową (tworzoną przez wektory) na dwie części. Pozwala to na oddzielenie od siebie próbek należących do różnych klas, którym następnie przypisywana jest ostateczna wartość za pomocą funkcji aktywacji $\psi$.
 
 >[!example] Zaprojektuj jednowarstwową sieć neuronową z dwoma wejściami i dwoma wyjściami z dyskretną aktywacją $\psi$, gdzie $\psi$ jest funkcją skokową Heaviside'a.
 > 0. Dane
