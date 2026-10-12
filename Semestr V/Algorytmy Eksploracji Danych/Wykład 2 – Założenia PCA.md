@@ -31,3 +31,36 @@ korelacji liniowej Pearsona $r_{i,j}$ możemy stwierdzić, jak bardzo zależnoś
 Współczynnik $\mathrm{KMO}$ przyjmuje wartości z przedziału $[0, 1]$. Im większa jego wartość, tym bardziej zasadne jest zastosowanie metody analizy składowych głównych do układu cech $x_{1},\dots,x_{p}$ (tym większy będzie potencjalny zysk z zastosowania PCA mierzony redukcją wymiaru zadania). Współczynnik ten powinien być większy od $0.5$, a najlepiej, by przekraczał $0.7$.
 
 ## Paradoks Bertranda
+Paradoks Bertranda został przedstawiony przez francuskiego matematyka Josepha Bertranda w 1889 roku w książce *Calcul des probabilités*.
+
+Dany jest okrąg o promieniu $r=1$, wewnątrz tego okręgu wpisujemy trójkąt równoboczny, następnie losujemy cięciwę okręgu. Jakie jest prawdopodobieństwo, że długość wylosowanej cięciwy będzie większa od długości boku wpisanego trójkąta?
+
+Długość boku trójkąta równobocznego wpisanego w okrąg o promieniu $r=1$ wynosi:
+
+$$
+a=\sqrt{3}r=\sqrt{ 3 }
+$$
+
+Szukamy więc prawdopodobieństwa zdarzenia:
+
+$$
+P(l>\sqrt3)
+$$
+
+gdzie $l$ oznacza długość losowej cięciwy.
+
+Bertrand zaproponował trzy naturalne sposoby losowania i otrzymał trzy różne wyniki:
+1. **Losujemy dwa punkty na okręgu**: Losujemy punkt $A$ na obwodzie okręgu, następnie niezależnie losujemy drugi punkt $B$ na obwodzie. Łączymy oba punkty odcinkiem. Dla tego podejścia otrzymujemy:
+   
+   $$ P(l>\sqrt{ 3 })=\frac{\frac{2\pi}{3}}{2\pi} =\frac{1}{3}$$
+
+2. **Losujemy odległość cięciwy od środka**: Losujemy kierunek promienia okręgu. Na tym promieniu losujemy punkt $M$, jednostajnie względem odległości od środka. Przez punkt $M$ prowadzimy cięciwę prostopadłą do promienia. Dla tego podejścia otrzymujemy:
+   
+   $$ P(l>\sqrt{ 3 })=\frac{1}{2} $$
+
+3. **Losujemy środek cięciwy**: Losujemy punkt $M$ jednostajnie z powierzchni koła. Konstruujemy cięciwę, której środkiem jest punkt $M$. Dla tego podejścia otrzymujemy:
+   
+   $$ P(l>\sqrt{ 3 })=\frac{\frac{\pi}{4}}{\pi}=\frac{1}{4}  $$
+
+Paradoks polega na tym, że intuicyjne pojęcie „losowej cięciwy” nie wyznacza jednoznacznie rozkładu prawdopodobieństwa. Nie istnieje zatem jedna poprawna odpowiedź bez sprecyzowania mechanizmu losowania.
+
