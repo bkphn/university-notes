@@ -12,13 +12,13 @@ Niech $T(\mathbf{x},θ)$ będzie statystyką taką, że:
 - dla ustalonego $\mathbf{x}$ funkcja $T$ jest ciągła i monotoniczna względem $\theta$,
 - rozkład $P(T(\mathbf{x},\theta)<x)=G(x)$ jest ciągły, znany i nie zależy od parametru $\theta$.
 
-Zachodzi wtedy $P(z_{1}<T(\mathbf{x},\theta)<z_{2})=G(z_{2})-G(z_{1})$. Niech $k\left( \frac{\alpha}{2} \right), k\left( \frac{1-\alpha}{2} \right)$ będą kwantylami rzędu $\frac{\alpha}{2}, \frac{1-\alpha}{2}$ dla dystrybuanty $G(x)$, po podstawieniu:
+Zachodzi wtedy $P(z_{1}<T(\mathbf{x},\theta)<z_{2})=G(z_{2})-G(z_{1})$. Niech $k\left( \frac{\alpha}{2} \right), k\left( 1-\frac{\alpha}{2} \right)$ będą kwantylami rzędu $\frac{\alpha}{2}, \frac{1-\alpha}{2}$ dla dystrybuanty $G(x)$, po podstawieniu:
 
-$$P\left(k\left(\frac{\alpha}{2}\right)<T(\mathbf{x},\theta)<k\left(\frac{1-\alpha}{2}\right)\right)=1-\frac{\alpha}{2}-\frac{\alpha}{2}=1-\alpha$$
+$$P\left(k\left(\frac{\alpha}{2}\right)<T(\mathbf{x},\theta)<k\left(1-\frac{\alpha}{2}\right)\right)=1-\frac{\alpha}{2}-\frac{\alpha}{2}=1-\alpha$$
 
-Ponieważ zgodnie z założeniem, funkcja $T$ jest monotoniczna względem $\theta$ dla każdego $\mathbf{x}$ to dla nierówności $k\left(\frac{\alpha}{2}\right)<T(\mathbf{x},\theta)<k\left(\frac{1-\alpha}{2}\right)$ istnieje jedyne rozwiązanie względem $\theta$, które może być zapisane w postaci $\theta_{-}(\mathbf{x},\alpha)<\theta<\theta_{+}(\mathbf{x},\alpha)$, innymi słowy:
+Ponieważ zgodnie z założeniem, funkcja $T$ jest monotoniczna względem $\theta$ dla każdego $\mathbf{x}$ to dla nierówności $k\left(\frac{\alpha}{2}\right)<T(\mathbf{x},\theta)<k\left(1-\frac{\alpha}{2}\right)$ istnieje jedyne rozwiązanie względem $\theta$, które może być zapisane w postaci $\theta_{-}(\mathbf{x},\alpha)<\theta<\theta_{+}(\mathbf{x},\alpha)$, innymi słowy:
 
-$$k\left(\frac{\alpha}{2}\right)<T(\mathbf{x},\theta)<k\left(\frac{1-\alpha}{2}\right)\iff \theta_{-}(\mathbf{x},\alpha)<\theta<\theta_{+}(\mathbf{x},\alpha)$$
+$$k\left(\frac{\alpha}{2}\right)<T(\mathbf{x},\theta)<k\left(1-\frac{\alpha}{2}\right)\iff \theta_{-}(\mathbf{x},\alpha)<\theta<\theta_{+}(\mathbf{x},\alpha)$$
 
 Stosując to rozwiązanie pod symbolem prawdopodobieństwa dostajemy:
 

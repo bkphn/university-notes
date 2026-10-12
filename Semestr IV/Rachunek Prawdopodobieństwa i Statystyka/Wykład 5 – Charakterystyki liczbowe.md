@@ -51,7 +51,7 @@ Niech $a,b\in\mathbb{R}$ będą stałymi, a $\xi,\eta$ niezależnymi zmiennymi l
 ## Wariancja
 Wariancję zmiennej losowej $\xi$ oznaczamy jako $D[\xi]$ (w europejskiej notacji stosuje się zapis $V[\xi ]$) i definiujemy wzorem:
 
-$$D^2 [\xi ]=\mathbb{E}[\xi −\mathbb{E}[\xi ]]^2$$
+$${ D^2[\xi] = \mathbb E\left[ (\xi-\mathbb E[\xi])^2 \right] }$$
 
 przy czym zachodzi związek:
 
@@ -91,11 +91,16 @@ $$m_{k}=\mathbb{E}\left[\xi^k\right]$$
 
 **Momentem centralnym rzędu** $k$ zmiennej losowej $\xi$ o dystrybuancie $F(x)$ nazywamy wielkość:
 
-$$\mu_{k}=\mathbb{E}[\xi-\mathbb{E}[\xi]]^k$$
+$$\mu_k= \mathbb E\left[ (\xi-\mathbb E[\xi])^k \right]$$
 
 **Momentem absolutnym rzędu** $k$ zmiennej losowej $\xi$ o dytrybuancie $F(x)$ nazywamy wielkość:
 
-$$\nu_{k}=\mathbb{E}[|\xi-\mathbb{E}[\xi]|]^k$$
+$$
+\nu_k=
+\mathbb E\left[
+|\xi-\mathbb E[\xi]|^k
+\right]
+$$
 
 ## Wskaźniki
 Niech dystrybuanta $F(x)$ będzie ciągła. **Kwantylem rzędu** $p$ dystrybuanty $F$ nazywamy najmniejszy pierwiastek równania $F(x)=p$, czyli liczbę $k(p)$, dla której:
@@ -120,7 +125,7 @@ $$\gamma_{3}=\frac{\mu_{4}}{D^4[\xi]}-3$$
 ## Współczynniki korelacji
 Współczynnikiem korelacji zmiennych losowych $\xi ,\eta$ nazywamy liczbę:
 
-$$\rho_{\xi\eta}=\frac{\mathbb{E}\left[(\xi-\mathbb{E}[\xi])(\eta-\mathbb{E}[\xi])\right]}{D[\xi]D[\eta]}$$
+$$\rho_{\xi\eta}= \frac{ \mathbb E[ (\xi-\mathbb E[\xi]) (\eta-\mathbb E[\eta]) ] }{ D[\xi]D[\eta] } $$
 
 Współczynnik korelacji spełnia własności:
 - $|\rho_{\xi \eta}  |\leq 1$

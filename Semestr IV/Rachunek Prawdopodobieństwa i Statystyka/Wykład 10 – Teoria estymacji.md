@@ -103,7 +103,7 @@ $$P\left(Q_n = \frac{k}{n}\right) = \binom{n}{k} (F(x))^k (1-F(x))^{n-k}$$
 
 Z twierdzenia Kołmogorowa możemy wywnioskować zbieżność asymptotyczną:
 
-$$Q_n(x) = F(x) + \omicron\left( \frac{1}{\sqrt{n}} \right)$$
+$$ Q_n(x)-F(x) = \mathcal{O}\left(\frac1{\sqrt n}\right) $$
 
-gdzie $\omicron$ to notacja małego $\omicron$. Oznacza to, że występuje błąd rzędu $\frac{1}{\sqrt{ n }}$.
+gdzie $\mathcal{O}$ to notacja dużego O. Oznacza to, że występuje błąd rzędu $\frac{1}{\sqrt{ n }}$.
 

@@ -164,7 +164,7 @@ $$f(x)=\begin{cases}
 
 - **Rozkład Gaussa**: Mówimy, że zmienna losowa $\xi$ ma rozkład Gaussa (normalny) o parametrach $m\in \mathbb{R}, \sigma>0$, jeśli jej gęstość jest funkcją postaci:
 
-$$f(x)=\frac{e^{-\frac{(x-m)^2}{2\sigma}}}{\sigma \sqrt{ 2\pi }}$$
+$$f(x)=\frac{e^{-\frac{(x-m)^2}{2\sigma^2}}}{\sigma \sqrt{ 2\pi }}$$
 
 ![[Pasted image 20260921231925.png|255]]
 Fakt, że zmienna losowa $\xi$ ma rozkład Gaussa o parametrach $m,\sigma$ będziemy oznaczać jako:

@@ -69,7 +69,7 @@ Korzystając z przyjętych definicji możemy określic podstawowe własności pr
 - $A_i, i\geq 1, A_i A_j=\emptyset, i\neq j\implies P\left( \bigcup_{i=1}^\infty A_i \right)=\sum_{i=1}^\infty P(A_i)$
 
 ## Schemat klasyczny
-Schemat klasyczny prawdopodobieństwa stosujemy gdy dla przestrzeni $\Omega=\{\omega_1, \omega_2,\dots,\omega_n \}$ prawdopodobieństwo dwóch dowolnych zdarzeń jest jednakowe: $\forall_{i,j\leq n}  p(\omega_i )=p(\omega_j )$. W schemacie klasycznym $p(\omega_i )=\frac{1}{n}$. 
+Schemat klasyczny prawdopodobieństwa stosujemy gdy dla przestrzeni $\Omega=\{\omega_1, \omega_2,\dots,\omega_n \}$ prawdopodobieństwo dwóch dowolnych zdarzeń elementarnych jest jednakowe: $\forall_{i,j\leq n}  p(\omega_i )=p(\omega_j )$. W schemacie klasycznym $p(\omega_i )=\frac{1}{n}$. 
 
 Schemat klasyczny jest wyjątkowo dobrze poznany z powodu faktu, że większość hazardowych gier karcianych podlega właśnie pod schemat klasyczny.
 

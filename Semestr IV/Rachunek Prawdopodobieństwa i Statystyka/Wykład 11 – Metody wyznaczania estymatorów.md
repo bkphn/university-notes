@@ -7,7 +7,7 @@ $$\theta_n = h\left( \frac{1}{n} \sum_{i=1}^n g(x_i) \right)$$
 
 Jeśli założymy, że pochodna $h'(\mathbb{E}[\xi]) \neq 0$, to jesteśmy w stanie opisać asymptotyczny rozkład tego estymatora. Na mocy Centralnego Twierdzenia Granicznego, ustandaryzowany błąd estymacji zbiega według rozkładu do standardowego rozkładu normalnego $\mathcal{N}(0,1)$, co zapisujemy za pomocą granicy dystrybuanty $\Phi(z)$:
 
-$$\lim_{n \to \infty} P\left( \frac{\sqrt{n} \cdot (\theta_n - \theta)}{h'(\mathbb{E}[\xi]) \cdot \sqrt{D^2[g(\xi)]}} < z \right) = \Phi(z)$$
+$$\lim_{n \to \infty} P\left( \frac{\sqrt{n} \cdot (\theta_n - \theta)}{h'(\mathbb{E}[g(\xi)]) \cdot \sqrt{D^2[g(\xi)]}} < z \right) = \Phi(z)$$
 
 Wnioskiem z tego twierdzenia jest to, że rozrzut estymatora zachowuje się jak przeskalowana, losowa zmienna normalna $\eta$. Dystans między prawdziwym parametrem a naszą oceną dąży do zera wraz ze wzrostem wielkości próby w tempie odwrotnie proporcjonalnym do $\sqrt{n}$. Używając notacji asymptotycznej $\mathcal{O}$ możemy to zapisać jako:
 

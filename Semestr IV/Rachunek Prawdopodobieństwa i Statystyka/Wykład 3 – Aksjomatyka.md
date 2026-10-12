@@ -35,7 +35,7 @@ $$P(\Omega)=1$$
 
 - **Aksjomat P3**: Prawdopodobieństwo sumy przeliczalnego ciągu zdarzeń, które wzajemnie się wykluczają jest równe sumie ich prawdopodobieństw.
 
-$$P\left(\bigcup_{i=1}^\infty A_{i}\right)=\sum_{i=1}^\infty P(A_{i}), \qquad i\neq j\implies A_{i}\cap A_{j}\neq\emptyset$$
+$$P\left(\bigcup_{i=1}^\infty A_{i}\right)=\sum_{i=1}^\infty P(A_{i}), \qquad i\neq j\implies A_{i}\cap A_{j}=\emptyset$$
 
 ## Twierdzenia rachunku prawdopodobieństwa
 Na podstawie trzech aksjomatów możemy udowodnić następujące twierdzenia:
@@ -68,7 +68,7 @@ Dane są punkty $a,b$ leżące na osi geometrycznej, takie że $b>a$. Przez $\la
 
 $$\lambda([a,b])=b−a$$
 
-Niech $A\subset[a,b]$, aby wyznaczyć długość zdarzenia $\lambda(A)$ poszczególne podzbiory $A_i\subset A$ nie mogą na siebie nachodzić, matematycznie rzecz ujmując, dla każdego $A_i\cap A_j\neq \emptyset$ musi zachodzić:
+Niech $A\subset[a,b]$, aby wyznaczyć długość zdarzenia $\lambda(A)$ poszczególne podzbiory $A_i\subset A$ nie mogą na siebie nachodzić, matematycznie rzecz ujmując, dla każdego $A_i\cap A_j= \emptyset$ musi zachodzić:
 
 $$\lambda\left(\bigcup_{i=1}^\infty A_{i}\right)=\sum_{i=1}^\infty \lambda(A_{i})$$
 
