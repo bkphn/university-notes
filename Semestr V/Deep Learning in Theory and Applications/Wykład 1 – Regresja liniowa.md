@@ -21,21 +21,15 @@ $$\mathbf{w} \leftarrow\mathbf{w}^{}-\frac{\partial L(\mathbf{w})}{\partial \mat
 
 $$\frac{\partial L(\mathbf{w})}{\partial \mathbf{w}}=\frac{\partial L(\mathbf{w})}{\partial\hat{y}}\cdot\frac{\partial \hat{y}}{\partial \mathbf{w}}$$
 
-które to z kolei możemy wyznaczyć ze wzorów:
-
-$$\frac{\partial L(\mathbf{w})}{\partial \hat{y}}=\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)$$
-
-$$\frac{\partial\hat{y}}{\partial\mathbf{w}}=\begin{bmatrix}
-x \\ 1
-\end{bmatrix}$$
-
 ## Funkcje błędu
 **Funkcją błędu** nazywamy pewną funkcję $L$, która jako argumenty przyjmuje parametry wyuczalne danego modelu, a jako wartość zwraca ich błąd. Funkcję $L$ można zdefiniować na wiele sposobów, w zależności od potrzeb, wśród najpopularniejszych możemy wyróżnić:
 - **Metoda najmniejszych kwadratów** (ang. *least square loss*) SSE
   $$L(\mathbf{w})=\frac{1}{2}\sum_{s=1}^S \left(y^{(s)}-\hat{y}^{(s)}\right)^2=\mathrm{SSE}(\mathbf{w})$$
+  $$L'(\mathbf{w})=\hat y^{(s)}-y^{(s)}=\mathrm{SSE}'(\mathbf{w})$$
 
 - **Błąd średniokwadratowy** (ang. *mean square error*) MSE
   $$L(\mathbf{w})=\frac{1}{S}\sum_{s=1}^S\left( y^{(s)} -\hat{y}^{(s)}\right)^2=\mathrm{MSE}(\mathbf{w})$$
+  $$L'(\mathbf{w})=\frac{2}{S}(\hat y^{(s)}-y^{(s)})=\mathrm{MSE}'(\mathbf{w})$$
 
 ## Adaptacyjne neurony liniowe
 Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skrócie **ADALINE**, nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$, a zwraca wartość $\hat{y}$.
@@ -53,22 +47,38 @@ $$\hat{y}=w_{1}x_{1}+w_{2}x_{2}+\dots+w_{M}x_{M}+b=\sum_{m=1}^M w_{m}x_{m}+b$$
 **Funkcją aktywacji** (ang. *activation function*) $\psi$ nazywamy funkcję, która przekształca sumę sygnałów wejściowych neuronu. Funkcję $\psi$ można zdefiniować na wiele sposobów, w zależności od potrzeb, wśród najpopularniejszych możemy wyróżnić:
 - **Unipolarna funkcja sigmoidalna** (ang. *unipolar sigmoid*)
   $$\psi(z)=\frac{1}{1+e^{-z}}=\sigma(z)$$
+  $$\psi'(z)=\frac{e^{-z}}{(1+e^{-z})^2}=\sigma'(z)
+$$
 
 - **Tangens hiperboliczny** (ang. *tangent hyperbolic*)
   $$\psi(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}=\tanh(z)$$
+  $$
+\psi'(z)=\frac{4}{(e^z+e^{-z})^2}=\tanh'(z)
+$$
 
 - **ReLU** (ang. *rectified linear unit*)
   $$\psi(z)=\max(\{0,z\})=\mathrm{ReLU}(z)$$
+  $$
+\psi'(z)=
+\begin{cases}
+0 & z<0\\
+1 & z>0
+\end{cases}=\mathrm{ReLU}'(z)
+$$
 
 - **Leaky ReLU** (ang. *leaky rectified linear unit*)
   $$\psi(z)=\max{(\{\alpha z,z\})}=\mathrm{LReLU}(z)$$
-  domyślnie parametr $\alpha=0.1$
+   $$
+\psi'(z)=\max{(\{\alpha,1\})}=\mathrm{LReLU}'(z)
+$$
+domyślnie parametr $\alpha=0.1$
 
 - **Funkcja skokowa Heaviside'a** (ang. *step function*)
   $$\psi(z)=\begin{cases}
   1, \qquad z\geq 0 \\
   0, \qquad z < 0
   \end{cases}=\mathbb{1}(z)$$
+  $$ \psi'(z)=0= \mathbb{1}'(z)  $$
   
 ## Neurony nieliniowe
 Zbudowanie nieliniowego neuronu polega na przepuszczeniu zsumowanego, wielowymiarowego wyniku  $w_1x_1 + w_2x_2 +\dots+ b$ przez funkcję aktywacji $\psi$. Zmodyfikowane równanie przyjmuje dla $M$ wymiarów postać:
