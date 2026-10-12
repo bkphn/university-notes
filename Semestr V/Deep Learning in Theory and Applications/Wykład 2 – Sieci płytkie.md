@@ -51,7 +51,7 @@ Pole wektorowe wskazujące kierunki najszybszych wzrostów wartości danego pola
 Gradient pewnej funkcji $f(x_{1},\dots,x_{n})$ oznaczamy jako $\nabla f$, gdzie $\nabla$ to wektorowy operator różniczkowy nazywany **nabla**. W układzie współrzędnych kartezjańskich gradient jest wektorem, którego składowe są pochodnymi cząstkowymi funkcji $f$. W układzie współrzędnych kartezjańskich składowe gradientu funkcji $f$ są pochodnymi cząstkowymi.
 
 $$\nabla f=\begin{bmatrix}
-\frac{\partial f}{\partial x_{1}} & \dots & \frac{\partial f}{\partial x_{n}}
+\frac{\partial f}{\partial x_{1}} \\ \vdots \\ \frac{\partial f}{\partial x_{n}}
 \end{bmatrix}$$
 
 Zapis $\nabla_{\mathbf{v}} f$ definiuje układ pochodnych cząstkowych funkcji obliczanych po kolejnych zmiennych zgrupowanych w wektorze $\mathbf{v}$. W zależności od tego, czy badana funkcja zwraca wartość liczbową, czy wektor, definicja tej macierzy przyjmuje jedną z dwóch podstawowych form:
@@ -78,7 +78,7 @@ W powyższej sieci możemy wyróżnić dwie warstwy, każdą z nich możemy wyra
    - Zapis macierzowy: $\mathbf{z}=\Phi(\mathbf{W}\mathbf{x}+\mathbf{b})$
 
 $$\mathbf{x}=\begin{bmatrix}x_{1} \\ \vdots \\ x_{N}\end{bmatrix} \qquad 
-\mathbf{b}=\begin{bmatrix} b_{1}\\ \vdots \\ b_{M} \end{bmatrix} \qquad \mathbf{W}=\begin{bmatrix} w_{1,1} & \cdots & w_{1,n} \\  \vdots & \ddots & \vdots \\w_{M,1} & \cdots & w_{M,N}\end{bmatrix}$$
+\mathbf{b}=\begin{bmatrix} b_{1}\\ \vdots \\ b_{M} \end{bmatrix} \qquad \mathbf{W}=\begin{bmatrix} w_{1,1} & \cdots & w_{1,N} \\  \vdots & \ddots & \vdots \\w_{M,1} & \cdots & w_{M,N}\end{bmatrix}$$
 
 2. **Warstwa druga**
    - Zapis skalarny: $\hat{y}=\Psi\left( \sum_{m=1}^M v_{m}z_{m}+c \right)$

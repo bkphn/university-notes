@@ -14,7 +14,7 @@ $$\chi^2=-\left( n-1-\frac{2p+5}{6} \right)\cdot\ln|R|=-\left( n-1-\frac{2p+5}{6
 gdzie $\lambda_{i}, i\in\{1,\dots,p\}$, są wartościami własnymi macierzy korelacji $\mathbf{R}$, natomiast $n$ oznacza liczebność próby, czyli liczbę przypadków, na podstawie których wyznaczana jest postać macierzy $\mathbf{R}$. Przy założeniu prawdziwości hipotezy $H_{0}$ powyższa statystyka testowa ma rozkład chi kwadrat o $\frac{p(p−1)}{2}$ stopniach swobody. Zbiór krytyczny testu sferyczności ma postać $K = [\chi^2_{ \frac{p(p−1)}{2},1−\alpha}, \infty)$,
 gdzie $χ^2_{\frac{p(p-1)}{2},1-\alpha}$ jest kwantylem rzędu $1 -\alpha$ rozkładu chi kwadrat o $\frac{p(p−1)}{2}$ stopniach swobody, a $\alpha$ oznacza poziom istotności testu.
 
-Zweryfikować należy adekwatność macierzy współczynników korelacji pomiędzy zmiennymi $x_{1},\dots,x_{p}$. Do tego celu służy współczynnik Kaisera-Mayera-Olkina $\mathrm{KMO}$, obliczany ze wzoru:
+Zweryfikować należy adekwatność macierzy współczynników korelacji pomiędzy zmiennymi $x_{1},\dots,x_{p}$. Do tego celu służy współczynnik Kaisera-Meyera-Olkina $\mathrm{KMO}$, obliczany ze wzoru:
 
 $$\mathrm{KMO}=\frac{\sum_{i\neq j} r^2_{i,j}}{\sum_{i\neq j} r^2_{i,j}+\sum_{i\neq j}\hat{r}^2_{i,j}}$$
 

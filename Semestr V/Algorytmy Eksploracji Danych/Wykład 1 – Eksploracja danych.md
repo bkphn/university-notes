@@ -1,7 +1,7 @@
 ## Eksploracja danych
 Dyscyplina **eksploracji danych** skupia się na analizie danych, zawyczaj w dużych ilościach. Jej zadaniem jest odkrywanie nietrywialnych zależności, związków, podobieństw, trendów i wzorców zachowań (ang. *pattern*).
 
-Wzroce mają najczęściej postać reguł logicznych, klasyfikatorówm zbiorów skupień (tzw. klastrów) czy też różnego rodzaju wykresów. Same wzorce czasem mogą być przewidywalne, ale w większości przypadków są nie do wykrycia gołym okiem. Do analityka należy ich selekcja, często przy wykorzystaniu dodatkowych założeń.
+Wzroce mają najczęściej postać reguł logicznych, klasyfikatorów zbiorów skupień (tzw. klastrów) czy też różnego rodzaju wykresów. Same wzorce czasem mogą być przewidywalne, ale w większości przypadków są nie do wykrycia gołym okiem. Do analityka należy ich selekcja, często przy wykorzystaniu dodatkowych założeń.
 
 ## Odkrywanie wiedzy
 Szerszą dyscypliną od eksploracji danych jest tzw. **odkrywanie wiedzy**. Wyróżniamy w nim następujące etapy:
@@ -9,7 +9,7 @@ Szerszą dyscypliną od eksploracji danych jest tzw. **odkrywanie wiedzy**. Wyr�
 - **integracja danych** (ang. *data integration*): łączenie danych pochodzących z różnych, często rozproszonych źródeł;
 - **selekcja danych** (ang. *data selection*);
 - **konsolidacja danych** (ang. *data consolidation*) oraz **transformacja danych** (ang. *data transformation*): przekształcenie danych po ich selekcji do postaci wymaganej przez konkretną metodą ekploracji danych;
-- **ekploracja danych** (ang. *data mining*);
+- **eksploracja danych** (ang. *data mining*);
 - **ocena uzyskanych wzorców** (ang. *pattern evaluation*);
 - **wizualizacja uzyskanych wzorców** (ang. *knowledge visualization*).
 
@@ -76,7 +76,7 @@ gdzie przez $\mathbf{I}$ oznaczamy macierz jednostkową.
 
 Poszukiwane współrzędne wektora $\mathbf{a}_{1}$ muszę zatem spełniać układ prównać liniowych postaci (warunek konieczny istnienia ekstremum) $(\mathbf{S}-l_{1}\mathbf{I})\mathbf{a}_{1}=\mathbf{0}$.
 
-Ponieważ rozwiązanie tego układu musi być niezerowe, zatem $l_{1}$ musi być liczbą taką, by $\det{(\mathbf{S}-l_{1}\mathbf{I})}=0$. Wnioskujemy stąd, że $l_{1}$ musi być własnością własną macierzy kowariancji $\mathbf{S}$, natomiast $\mathbf{a}_{1}$ – odpowiadającym tej wartości wektorem własnym. Wykorzystując fakt, że $\mathbf{a}_{1}^T\mathbf{a}_{1}=1$ otrzymujemy:
+Ponieważ rozwiązanie tego układu musi być niezerowe, zatem $l_{1}$ musi być liczbą taką, by $\det{(\mathbf{S}-l_{1}\mathbf{I})}=0$. Wnioskujemy stąd, że $l_{1}$ musi być wartością własną macierzy kowariancji $\mathbf{S}$, natomiast $\mathbf{a}_{1}$ – odpowiadającym tej wartości wektorem własnym. Wykorzystując fakt, że $\mathbf{a}_{1}^T\mathbf{a}_{1}=1$ otrzymujemy:
 
 $$\mathbf{a}_{1}^T (\mathbf{S}-l_{1}\mathbf{I})\mathbf{a}_{1}=0$$
 
@@ -102,7 +102,7 @@ Podsumowując powyższe rozważania, możemy sformułować następujące uwagi i
 ## Ładunki czynnikowe
 Ponieważ wszystkie składowe główne $z_{1},\dots,z_{p}$ wyjaśniają całkowitą zmienność układu $x_{1},\dots,x_{p}$ zatem zmienność ta jest równa
 
-$$\sum_{i=1}^p S^2(x_{i})=\sum_{i=1}^p S^2(z_{1})=\sum_{i=1}^p \lambda_{i}$$
+$$\sum_{i=1}^p S^2(x_{i})=\sum_{i=1}^p S^2(z_{i})=\sum_{i=1}^p \lambda_{i}$$
 
 **Część wariancji** wyodrębniona przez $i$-tą składową główną wynosi $\frac{λ_{i}}{\lambda_{1}+\dots+\lambda_{p}}$.
 
@@ -113,7 +113,7 @@ $$R(x_{i},z_{j})=R(z_{j},x_{i})=\frac{\sqrt{ \lambda_{j} } a_{j,i}}{\sqrt{ s_{i,
 
 gdzie $R(x_{i},z_{j})$ oznacza współczynnik korelacji między $i$-tą zmienną, a $j$-tą składową, natomiast $s_{i,i}=S^2(x_{i})$.
 
-Czasem analizę składowych głównych prowadzi się w oparciu o macierz współczynników korelacji $\mathbf{R}$ układu cech $x_{i}$ (zamiast macierzy kowariancji $\mathbf{S}$). Oczywiście, wartości własne macierzy $\mathbf{R}$ będą inne niż wartości własne macierzy $\mathbf{S}$. Nie zmieni się natomiast procentowy udział konkretnej składowej w wyjaśnieniu całkowitej wariancji układu. Oparcie analizy na macierzy korelacji jest rekomendowane w przypadku dużych różnic pomiędzy wartościami poszczególnych zmiennych w próbie losowej. Z drugiej strony w takiej sytuacji pomóc może również standaryzacja wartości zmiennych (odjęcie średniej arytmetycznej i podzielenie przez odchylenie standardowe).
+Czasem analizę składowych głównych prowadzi się w oparciu o macierz współczynników korelacji $\mathbf{R}$ układu cech $x_{i}$ (zamiast macierzy kowariancji $\mathbf{S}$). Oczywiście, wartości własne macierzy $\mathbf{R}$ będą inne niż wartości własne macierzy $\mathbf{S}$. Zastosowanie PCA do macierzy korelacji zamiast macierzy kowariancji może zmienić wartości własne, wektory własne oraz procentowe udziały poszczególnych składowych w wyjaśnianiu całkowitej wariancji. PCA oparte na macierzy korelacji jest równoważne PCA przeprowadzonemu na zmiennych standaryzowanych. Oparcie analizy na macierzy korelacji jest rekomendowane w przypadku dużych różnic pomiędzy wartościami poszczególnych zmiennych w próbie losowej. Z drugiej strony w takiej sytuacji pomóc może również standaryzacja wartości zmiennych (odjęcie średniej arytmetycznej i podzielenie przez odchylenie standardowe).
 
 Wartości ładunków czynnikowych w przypadku wykorzystania macierzy $\mathbf{R}$ obliczamy ze wzoru
 

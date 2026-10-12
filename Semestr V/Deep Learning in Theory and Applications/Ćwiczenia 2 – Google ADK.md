@@ -43,7 +43,7 @@ class LandmarkList(BaseModel):
 ```
 
 ## Koordynacja systemów wieloagentowych
-Do realizacji skomplikowanych zadań wykorzystuje się **koordynatora**. Jest to oddzielny `LlmAgent`, któremu przekazuje się listę innych agentów w parametrze `sub_agents`. Koordynator nie wykonuje zadań bezpośrednio, ale funkcjonuje jako wirtualny pomost – analizuje intencję użytkownika i decyduje o przekazaniu sterowania.
+Do realizacji skomplikowanych zadań wykorzystuje się **koordynatora**. Jest to oddzielny `LlmAgent`, któremu przekazuje się listę innych agentów w parametrze `sub_agents`. Koordynator jest agentem odpowiedzialnym przede wszystkim za kierowanie przepływem pracy między wyspecjalizowanymi agentami. Może również samodzielnie wykonywać określone zadania, zależnie od konfiguracji.
 
 ``` python
 coordinator_agent = LlmAgent(

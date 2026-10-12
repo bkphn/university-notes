@@ -1,7 +1,7 @@
 ## Regresja liniowa
 **Regresja liniowa** (ang. *linear regression*) to metoda statystyczna służąca do badania i modelowania liniowej zależności między zmienną zależną $y$, a zmienną niezależną $x$. 
 
-Przez $y$ rozumiemy wartość empiryczną, którą zwracają nam zmienne niezależne $x$. Wartość przewidywaną przez model oznaczamy jako $\hat{y}$, wartość ta jest jedynie szacowaniem faktcznych wartości $y$.
+Zmienna zależna $y$ reprezentuje obserwowaną wartość objaśnianą za pomocą zmiennej niezależnej $x$. Model regresji wyznacza jej przewidywaną wartość oznaczaną jako $\hat y$.
 
 Równanie wartości przewidywanej $\hat{y}$ wygląda następująco:
 
@@ -32,7 +32,7 @@ $$\frac{\partial L(\mathbf{w})}{\partial \mathbf{w}}=\frac{\partial L(\mathbf{w}
   $$L'(\mathbf{w})=\frac{2}{S}(\hat y^{(s)}-y^{(s)})=\mathrm{MSE}'(\mathbf{w})$$
 
 ## Adaptacyjne neurony liniowe
-Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skrócie **ADALINE**, nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$, a zwraca wartość $\hat{y}$.
+Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skrócie **ADALINE**, nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$ wraz z wagami $\mathbf{w}$, a zwraca wartość $\hat{y}$.
 
 ADALINE działa w fazie uczenia w sposób identyczny do regresji liniowej, jednak jako klasyfikator rozszerza ten proces o przepuszczenie ostatecznego wyniku przez funkcję progową decydującą o przynależności do klasy.
 
@@ -68,10 +68,15 @@ $$
 
 - **Leaky ReLU** (ang. *leaky rectified linear unit*)
   $$\psi(z)=\max{(\{\alpha z,z\})}=\mathrm{LReLU}(z)$$
-   $$
-\psi'(z)=\max{(\{\alpha,1\})}=\mathrm{LReLU}'(z)
-$$
-domyślnie parametr $\alpha=0.1$
+  
+  $$
+\psi'(z)=
+\begin{cases}
+\alpha & z<0\\
+1 & z>0
+\end{cases}=\mathrm{LReLU}'(z)$$
+  
+  domyślnie parametr $\alpha=0.1$
 
 - **Funkcja skokowa Heaviside'a** (ang. *step function*)
   $$\psi(z)=\begin{cases}
@@ -80,6 +85,7 @@ domyślnie parametr $\alpha=0.1$
   \end{cases}=\mathbb{1}(z)$$
   $$ \psi'(z)=0= \mathbb{1}'(z)  $$
   
+  Pochodna $\mathbb{1}'(z)$ nie istnieje dla $z=0$.
 ## Neurony nieliniowe
 Zbudowanie nieliniowego neuronu polega na przepuszczeniu zsumowanego, wielowymiarowego wyniku  $w_1x_1 + w_2x_2 +\dots+ b$ przez funkcję aktywacji $\psi$. Zmodyfikowane równanie przyjmuje dla $M$ wymiarów postać:
 
