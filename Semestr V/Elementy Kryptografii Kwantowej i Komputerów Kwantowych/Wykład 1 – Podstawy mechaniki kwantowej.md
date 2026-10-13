@@ -52,4 +52,55 @@ $$P(0)=|\alpha|^2, \qquad P(1)=|\beta|^2$$
 >   
  > $$\left|\frac{3}{5}\right|^2+\left| \frac{4i}{5}\right|^2 = \frac{9}{25}+\frac{16}{25}=1$$
 
+## Liczby zespolone
+Dowolną amplitudę $\alpha$ możemy przedstawić w postaci iloczynowej jako $r e^{i\varphi}$, gdzie $r$ jest modułem, $\varphi$ fazą, $e$ to liczba Eulera, a $i$ to jednostka urojona.
+
+Liczby $1, -1, i, -i$ mają ten sam moduł równy $1$, ale ich fazy $0, \pi, \frac{\pi}{2}, -\frac{\pi}{2}$ są różne. Faza nie zmienia bezpośrednio prawdopodobieństwa $|\alpha|^2$ ale wpływa na interferencję.
+
+## Dualizm korpuskularno-falowy
+**Dualizm korpuskularno-falowy** (ang. *wave-particle duality*) to właściwość układów kwantowych, takich jak fotony czy elektrony, polegająca na tym, że w zależności od sposobu przeprowadzenia eksperymentu wykazują one cechy charakterystyczna zarówno dla fal, jak i dla cząstek.
+
+**Eksperyment Younga** (ang. *Young's double-slit experiment*), nazywany również **doświadczeniem z dwiema szczelinami**, to eksperyment fizyczny demonstrujący zjawisko interferencji fal. Jego kwantowa wersja stanowi jeden z najważniejszych przykładów ilustrujących dualizm korpuskularno-falowy.
+
+Układ eksperymentalny składa się z trzech podstawowych elementów:
+1. **Źródła** – emituje światło lub cząstki, np. fotony albo elektrony.
+2. **Przegrody z dwiema szczelinami** – umożliwia przejście przez jedną z dwóch dróg.
+3. **Ekranu detekcyjnego** – rejestruje miejsca trafienia cząstek.
+
+Niech: $A_1(x)$ oznacza amplitudę kwantową związaną z pierwszą szczeliną, $A_2(x)$ amplitudę kwantową związaną z drugą szczeliną, a $A(x)$ całkowitą amplitudę detekcji w punkcie $x$.
+
+Jeżeli nie dokonujemy pomiaru, amplitudy sumują się:
+
+$$ A(x)=A_1(x)+A_2(x) $$
+
+Zgodnie z regułą Borna prawdopodobieństwo detekcji w punkcie $x$ wynosi:
+
+$$P(x)=|A_1(x)+A_2(x)|^2=|A_1(x)|^2+|A_2(x)|^2+
+2\cdot\mathfrak{R}\left(A_1^*(x)A_2(x)\right)$$
+
+gdzie $\mathfrak{R}$ oznacza część rzeczywistą liczby zespolonej, a $A_1^*$ jej sprzężenie zespolone.
+
+Składnik $2\mathfrak{R}(A_{1}^*(x)A_{2}(x))$ odpowiada za rodzaj interferencji:
+- **Interferencja konstruktywna** – amplitudy wzmacniają się, zwiększając prawdopodobieństwo detekcji.
+- **Interferencja destruktywna** – amplitudy znoszą się, zmniejszając prawdopodobieństwo detekcji.
+
+Właśnie w ten sposób powstają charakterystyczne prążki interferencyjne.
+
+## Równomierna superpozycja
+
+
+## Bazy
+
+
+## Twierdzenie o nieklonowaniu
+
+
+## Dwa kubity
+
+
+## Stan splątany Bella
+
+
+## 
+
 *Wprowadzane są podstawowe idee mechaniki kwantowej wykorzystywane w przetwarzaniu informacji: dualizm korpuskularno-falowy, superpozycja, interferencja, pomiar kwantowy, zasada nieoznaczoności, splątanie oraz twierdzenie o niemożności klonowania nieznanego stanu kwantowego.*
