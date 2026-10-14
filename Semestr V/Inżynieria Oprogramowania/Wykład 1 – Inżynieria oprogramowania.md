@@ -35,3 +35,9 @@ Zasada Dijkstry mówi, że „Testowanie programów może dowodzić obecności b
 >Wszystkie nietrywialne właściwości semantyczne programów są nierozstrzygalne.
 
 ## Manifest Agile
+**Manifest Agile** (ang. *Manifesto for Agile Software Development*), nazywany również **Manifestem Programowania Zwinnego**, to dokument określający podstawowe wartości i zasady zwinnego tworzenia oprogramowania.
+
+Powstał w lutym 2001 roku, podczas spotkania 17 specjalistów zajmujących się wytwarzaniem oprogramowania w ośrodku Snowbird w stanie Utah (USA).
+
+Jego celem było zaproponowanie podejścia do tworzenia oprogramowania, które kładzie większy nacisk na współpracę, elastyczność, dostarczanie wartości klientowi i reagowanie na zmiany niż na sztywne procedury i szczegółowe planowanie.
+
