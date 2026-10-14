@@ -96,7 +96,9 @@ W przeciwieństwie do standardowego opisu pomiaru z postulatem kolapsu, interpre
 ## Równomierna superpozycja
 **Równomierna superpozycja** dwóch stanów bazowych oznacza jednakowe moduły odpowiadających im amplitud. Przykładami równomiernych superpozycji są:
 
-$$\ket{+}=\frac{\ket{0}+\ket{1}}{\sqrt2}, \qquad \ket{-}=\frac{\ket{0}-\ket{1}}{\sqrt2}$$
+$$\ket{+}=\frac{1}{\sqrt{ 2 }}\ket{0}+\frac{1}{\sqrt{ 2 }}\ket{1}=\frac{\ket{0} + \ket{1}  }{\sqrt{ 2 }}$$
+
+$$\ket{-}=\frac{1}{\sqrt{ 2 }}\ket{0}-\frac{1}{\sqrt{ 2 }}\ket{1}=\frac{\ket{0} - \ket{1}  }{\sqrt{ 2 }}$$
 
 Pomiar stanu $\ket{+}$ w bazie obliczeniowej $\{\ket{0}, \ket{1}\}$ daje:
 
@@ -224,6 +226,7 @@ Oznacza to, że jeśli Alicja uzyska wynik $0$, może przewidzieć, że Bob rów
 
 Naruszenie odpowiedniej nierówności Bella oznacza, że zaobserwowanych korelacji nie można wyjaśnić za pomocą lokalnych modeli zmiennych ukrytych spełniających założenia wykorzystane przy jej wyprowadzeniu.
 
+## Nierówność CHSH
 **Nierówność CHSH** (ang. _Clauser–Horne–Shimony–Holt inequality_) to szczególna postać nierówności Bella, sformułowana w 1969 roku przez Johna Clausera, Michaela Horne'a, Abnera Shimony'ego i Richarda Holta.
 
 Pozwala sprawdzić, czy korelacje między wynikami pomiarów dwóch odległych układów mogą zostać opisane przez lokalny model zmiennych ukrytych.
