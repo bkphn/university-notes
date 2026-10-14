@@ -114,7 +114,7 @@ $$ \mathcal{B}_{Z}=\{\ket{0}, \ket{1}  \} $$
 
 - **Baza diagonalna** $X$:
   
-  $$\mathcal{B}_{X}=\{\ket{+}, \ket{-}  \}$$
+$$\mathcal{B}_{X}=\{\ket{+}, \ket{-}  \}$$
   
 Ten sam stan może dawać różne prawdopodobieństwa zależnie od wybranej bazy. Na przykład pomiar $\ket{+}$ w bazie $Z$ daje $0$ lub $1$ z prawdopodobieństwem $0.5$, a w bazie $X$ daje wynik $+$ z prawdopodobieństwem $1$
 
@@ -145,7 +145,7 @@ W kryptografii kwantowej podsłuchująca osoba nie może po prostu zachować dos
 Układ pary kubitów $A,B$ ma cztery stany bazowe:
 
 $$\{\ket{00}, \ket{01}, \ket{10}, \ket{11}    \}$$
-Przykładowo $\ket{01}$ oznacza stan, w którym pierwszy kubit jest w stanie $\ket0$, a drugi w stanie $\ket1$.
+Przykładowo $\ket{01}$ oznacza stan, w którym pierwszy kubit $A$ jest w stanie $\ket0$, a drugi $B$ w stanie $\ket1$.
 
 Dowolny **czysty stan** dwóch kubitów można zapisać jako:
 
@@ -204,13 +204,7 @@ Następnie rozdzielmy je między dwie osoby:
 
 Załóżmy, że Alicja i Bob znajdują się bardzo daleko od siebie.
 
-Jeżeli oboje wykonają pomiar w bazie obliczeniowej:
-
-$$
-\mathcal B_Z=\{\ket0,\ket1\}
-$$
-
-otrzymają doskonale skorelowane wyniki:
+Jeżeli oboje wykonają pomiar w bazie obliczeniowej: $\mathcal B_Z=\{\ket0,\ket1\}$ otrzymają doskonale skorelowane wyniki:
 
 $$
 P(00)=P(11)=\frac12
