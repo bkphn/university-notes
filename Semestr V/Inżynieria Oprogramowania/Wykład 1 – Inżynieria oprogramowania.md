@@ -34,3 +34,4 @@ Zasada Dijkstry mówi, że „Testowanie programów może dowodzić obecności b
 >[!danger] Twierdzenie Rice'a
 >Wszystkie nietrywialne właściwości semantyczne programów są nierozstrzygalne.
 
+## Manifest Agile
