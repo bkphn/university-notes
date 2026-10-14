@@ -84,10 +84,12 @@ Składnik $2\mathfrak{R}(A_{1}^*(x)A_{2}(x))$ odpowiada za rodzaj interferencji:
 - **Interferencja konstruktywna** – amplitudy wzmacniają się, zwiększając prawdopodobieństwo detekcji.
 - **Interferencja destruktywna** – amplitudy znoszą się, zmniejszając prawdopodobieństwo detekcji.
 
-Właśnie w ten sposób powstają charakterystyczne prążki interferencyjne.
+Wielokrotne detekcje tworzą prążki interferencyjne. Gdy informacje o drodze pozwalają w pełni rozróżnić szczeliny, interferencja zanika. Nie jest do tego potrzebna obecność świadomego obserwatora: istotna jest fizyczna dostępność informacji o drodze.
 
 ## Równomierna superpozycja
+**Równomierna superpozycja** dwóch stanów bazowych oznacza jednakowe moduły odpowiadających im amplitud. Przykładami równomiernych superpozycji są:
 
+$$\ket{+}=\frac{\ket{0}+\ket{1}}{\sqrt2}, \qquad \ket{-}=\frac{\ket{0}-\ket{1}}{\sqrt2}.$$
 
 ## Bazy
 
@@ -101,6 +103,7 @@ Właśnie w ten sposób powstają charakterystyczne prążki interferencyjne.
 ## Stan splątany Bella
 
 
-## 
+## Zasada nieoznaczoności Heisenberga
+
 
 *Wprowadzane są podstawowe idee mechaniki kwantowej wykorzystywane w przetwarzaniu informacji: dualizm korpuskularno-falowy, superpozycja, interferencja, pomiar kwantowy, zasada nieoznaczoności, splątanie oraz twierdzenie o niemożności klonowania nieznanego stanu kwantowego.*
