@@ -261,10 +261,4 @@ Mechanika kwantowa dopuszcza:
 
 $$|S|\le2\sqrt2$$
 
-Wartość $2\sqrt2\approx2{,}828$ nazywamy **granicą Tsirelsona** (ang. _Tsirelson bound_).
-
-Ponieważ:
-
-$$2\sqrt2>2$$
-
-mechanika kwantowa przewiduje korelacje, których nie można odtworzyć za pomocą lokalnych modeli zmiennych ukrytych.
+Wartość $2\sqrt2\approx2{,}828$ nazywamy **granicą Tsirelsona** (ang. _Tsirelson bound_). Ponieważ $2\sqrt2>2$ mechanika kwantowa przewiduje korelacje, których nie można odtworzyć za pomocą lokalnych modeli zmiennych ukrytych.
