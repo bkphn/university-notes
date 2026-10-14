@@ -133,11 +133,11 @@ Litery $H,V$ oznaczają polaryzacje poziomą i pionową, a $D,A$ – dwie prosto
 >[!danger] Twierdzenie o nieklonowaniu
 > Nie istnieje uniwersalna operacja kwantowa $U$ pozwalająca utworzyć idealną kopię dowolnego nieznanego stanu kwantowego, pozostawiając oryginał.
 
-Hipotetyczna uniwersalna operacja kopiująca musiałaby $U$ dla każdego stanu $\ket\psi$ spełniać:
+Hipotetyczna uniwersalna operacja kopiująca $U$ musiałaby dla każdego stanu $\ket\psi$ spełniać:
 
 $$U\ket{\psi}\ket{0}=\ket\psi\ket\psi.$$
 
-Nie może on zachodzić dla dowolnej pary różnych, nieortogonalnych stanów. Nieklonowanie nie zabrania kopiowania znanych stanów ani rozróżnialnych stanów ortogonalnych.
+Nie może to zachodzić dla dowolnej pary różnych, nieortogonalnych stanów. Nieklonowanie nie zabrania kopiowania znanych stanów ani rozróżnialnych stanów ortogonalnych.
 
 W kryptografii kwantowej podsłuchująca osoba nie może po prostu zachować doskonałej kopii każdego przesyłanego, nieznanego kubitu. Próba zdobycia informacji przez pomiar w niewłaściwej bazie może zaburzyć transmisję i ujawnić podsłuch.
 
