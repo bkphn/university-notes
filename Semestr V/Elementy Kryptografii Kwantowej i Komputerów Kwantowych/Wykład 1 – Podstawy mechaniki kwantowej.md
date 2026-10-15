@@ -24,8 +24,7 @@ gdzie $\alpha,\beta\in\mathbb{C}$ są **amplitudami** (nie prawdopodobieństwami
 
 Została sformułowana przez Maxa Borna w 1926 roku, a najważniejsza idea brzmi:
 
->[!danger] Reguła Borna
-> Prawdopodobieństwo otrzymania określonego wyniku pomiaru jest równe kwadratowi modułu odpowiadającej mu amplitudy prawdopodobieństwa
+*Prawdopodobieństwo otrzymania określonego wyniku pomiaru jest równe kwadratowi modułu odpowiadającej mu amplitudy prawdopodobieństwa*
 
 Amplitudy $\alpha,\beta$ muszą spełniać warunek normalizacji:
 
@@ -76,9 +75,9 @@ $$ A(x)=A_1(x)+A_2(x) $$
 Zgodnie z regułą Borna prawdopodobieństwo detekcji w punkcie $x$ wynosi:
 
 $$P(x)=|A_1(x)+A_2(x)|^2=|A_1(x)|^2+|A_2(x)|^2+
-2\cdot\mathfrak{R}\left(A_1^*(x)A_2(x)\right)$$
+2\cdot\mathfrak{R}\left(A_1^\ast(x)A_2(x)\right)$$
 
-gdzie $\mathfrak{R}$ oznacza część rzeczywistą liczby zespolonej, a $A_1^*$ jej sprzężenie zespolone.
+gdzie $\mathfrak{R}$ oznacza część rzeczywistą liczby zespolonej, a $A_1^\ast$ jej sprzężenie zespolone.
 
 Składnik $2\cdot\mathfrak{R}(A_{1}^*(x)A_{2}(x))$ odpowiada za rodzaj interferencji:
 - **Interferencja konstruktywna** – amplitudy wzmacniają się, zwiększając prawdopodobieństwo detekcji.
@@ -116,7 +115,7 @@ $$ \mathcal{B}_{Z}=\{\ket{0}, \ket{1}  \} $$
   
 $$\mathcal{B}_{X}=\{\ket{+}, \ket{-}  \}$$
   
-Ten sam stan może dawać różne prawdopodobieństwa zależnie od wybranej bazy. Na przykład pomiar $\ket{+}$ w bazie $Z$ daje $0$ lub $1$ z prawdopodobieństwem $0.5$, a w bazie $X$ daje wynik $+$ z prawdopodobieństwem $1$
+Ten sam stan może dawać różne prawdopodobieństwa zależnie od wybranej bazy. Na przykład pomiar stanu $\ket{+}$ w bazie $Z$ daje $0$ lub $1$ z prawdopodobieństwem $0.5$, a w bazie $X$ daje wynik $+$ z prawdopodobieństwem $1$
 
 W przypadku polaryzacji fotonu możemy utożsamić:
 
@@ -199,8 +198,8 @@ $$
 $$
 
 Następnie rozdzielmy je między dwie osoby:
-- **Alicja** otrzymuje pierwszy kubit.
-- **Bob** otrzymuje drugi kubit.
+- Alicja otrzymuje pierwszy kubit.
+- Bob otrzymuje drugi kubit.
 
 Załóżmy, że Alicja i Bob znajdują się bardzo daleko od siebie.
 
