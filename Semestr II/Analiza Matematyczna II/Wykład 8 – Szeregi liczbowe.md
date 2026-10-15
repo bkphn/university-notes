@@ -49,18 +49,15 @@ W badaniu zbieżności często porównuje się szeregi do szeregu postaci $\sum_
 * $\sum_{n=1}^{\infty} \frac{1}{n^p}$ jest **rozbieżny**, dla $p \le 1$.
 
 ## Kryteria zbieżności szeregów
-
-### 1. Badanie zbieżności szeregu całką oznaczoną
-Jeżeli $a(n)$ jest ciągła, nieujemna i malejąca oraz $a_n = a(n)$, to:
+Badając zbieżność szeregu możemy posłużyć się następującymi kryteriami:
+1. **Badanie zbieżności szeregu całką oznaczoną**: Jeżeli $a(n)$ jest ciągła, nieujemna i malejąca oraz $a_n = a(n)$, to:
 
 $$\sum_{n=0}^{\infty} a_n \text{ jest zbieżny} \implies \int_{0}^{\infty} a(x) \, dx \neq \pm\infty$$
 
-### 2. Badanie zbieżności asymptotycznej
-Jeżeli funkcje $f(n)$ i $g(n)$ zachowują się w identyczny sposób dla dużych $n$, to mówimy, że są **asymptotycznie równe** i zapisujemy jako $f(n) \sim g(n)$. Aby dwie funkcje były asymptotycznie równe, granica ich ilorazu musi być równa 1:
-
-$$f(n) \sim g(n) \iff \lim_{n \to \infty} \frac{f(n)}{g(n)} = 1$$
-
-Równość asymptotyczna pozwala nam na badanie zbieżności szeregu, ignorując mniejsze potęgi czy skalary.
+2. **Badanie zbieżności asymptotycznej**: Jeżeli funkcje $f(n)$ i $g(n)$ zachowują się w identyczny sposób dla dużych $n$, to mówimy, że są **asymptotycznie równe** i zapisujemy jako $f(n) \sim g(n)$. Aby dwie funkcje były asymptotycznie równe, granica ich ilorazu musi być równa 1:
+   $$f(n) \sim g(n) \iff \lim_{n \to \infty} \frac{f(n)}{g(n)} = 1$$
+   
+   Równość asymptotyczna pozwala nam na badanie zbieżności szeregu, ignorując mniejsze potęgi czy skalary.
 
 > [!example] Przykład
 > Badamy zbieżność szeregu $\sum_{n=1}^{\infty} \frac{\sqrt[4]{n^3 + 17}}{n^4 - 5n^2 + 3n}$:
@@ -69,24 +66,22 @@ Równość asymptotyczna pozwala nam na badanie zbieżności szeregu, ignorując
 >
 > Ponieważ szereg $\sum_{n=1}^{\infty} \frac{1}{n^{13/4}}$ jest zbieżny ($p = \frac{13}{4} > 1$), badany szereg również jest zbieżny.
 
-### 3. Kryterium Cauchy'ego
-Kryterium Cauchy'ego pozwala na badanie zbieżności szeregu poprzez badanie granicy pierwiastka z ciągu:
-* $\lim_{n \to \infty} \sqrt[n]{a_n} < 1 \implies \sum_{n=1}^{\infty} a_n$ jest **zbieżny**.
-* $\lim_{n \to \infty} \sqrt[n]{a_n} = 1 \implies$ **nie rozstrzygnięto**.
-* $\lim_{n \to \infty} \sqrt[n]{a_n} > 1 \implies \sum_{n=1}^{\infty} a_n$ jest **rozbieżny**.
+3. **Kryterium Cauchy'ego**: Kryterium Cauchy'ego pozwala na badanie zbieżności szeregu poprzez badanie granicy pierwiastka z ciągu:
+* $\lim_{n \to \infty} \sqrt[n]{a_n} < 1 \implies \sum_{n=1}^{\infty} a_n$ jest zbieżny.
+* $\lim_{n \to \infty} \sqrt[n]{a_n} = 1 \implies$ nie rozstrzygnięto.
+* $\lim_{n \to \infty} \sqrt[n]{a_n} > 1 \implies \sum_{n=1}^{\infty} a_n$ jest rozbieżny.
+  
+  Kryterium to jest bardzo przydatne w wypadkach, gdy ogólny wyraz ciągu jest podniesiony do $n$-tej potęgi, która skraca się z pierwiastkiem: $a_n = (b_n)^n \implies \lim_{n \to \infty} \sqrt[n]{(b_n)^n} = \lim_{n \to \infty} b_n$.
 
-Kryterium to jest bardzo przydatne w wypadkach, gdy ogólny wyraz ciągu jest podniesiony do $n$-tej potęgi, która skraca się z pierwiastkiem: $a_n = (b_n)^n \implies \lim_{n \to \infty} \sqrt[n]{(b_n)^n} = \lim_{n \to \infty} b_n$.
-
-### 4. Kryterium d'Alemberta
-Kryterium d'Alemberta opiera się na wyznaczeniu ilorazu dwóch kolejnych wyrazów ciągu:
+4. **Kryterium d'Alemberta**: Kryterium d'Alemberta opiera się na wyznaczeniu ilorazu dwóch kolejnych wyrazów ciągu:
 * $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} < 1 \implies \sum_{n=1}^{\infty} a_n$ jest **zbieżny**.
 * $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = 1 \implies$ **nie rozstrzygnięto**.
 * $\lim_{n \to \infty} \frac{a_{n+1}}{a_n} > 1 \implies \sum_{n=1}^{\infty} a_n$ jest **rozbieżny**.
+  
+  Kryterium d'Alemberta jest przydatne, gdy ogólny wyraz ciągu jest ilorazem $a_n = \frac{b_n}{c_n}$.
 
-Kryterium d'Alemberta jest przydatne, gdy ogólny wyraz ciągu jest ilorazem $a_n = \frac{b_n}{c_n}$.
-
-## Szeregi o wyrazach różnych znaków (naprzemienne)
-Jeżeli istnieje nieskończenie wiele wyrazów ciągu o znakach dodatnich oraz ujemnych, mamy do czynienia z szeregami o wyrazach różnych znaków, zwanymi również szeregami naprzemiennymi.
+## Szeregi o wyrazach różnych znaków
+Jeżeli istnieje nieskończenie wiele wyrazów ciągu o znakach dodatnich oraz ujemnych, mamy do czynienia z **szeregami o wyrazach różnych znaków**, zwanymi również szeregami naprzemiennymi.
 * Mówimy, że szereg $\sum_{n=1}^{\infty} a_n$ jest **zbieżny bezwzględnie**, jeżeli szereg $\sum_{n=1}^{\infty} |a_n|$ jest zbieżny.
 * Mówimy, że szereg $\sum_{n=1}^{\infty} a_n$ jest **zbieżny warunkowo**, jeżeli sam w sobie jest zbieżny, ale szereg $\sum_{n=1}^{\infty} |a_n|$ jest rozbieżny (oznacza to, że szereg jest zbieżny tylko dlatego, że jego wyrazy się znoszą).
 
@@ -98,6 +93,8 @@ Kryterium Leibniza pozwala badać zbieżność warunkową ciągów naprzemiennyc
 to szereg $\sum_{n=1}^{\infty} (-1)^n \cdot a_n$ oraz szereg $\sum_{n=1}^{\infty} (-1)^{n+1} \cdot a_n$ są **zbieżne warunkowo**.
 
 ## Twierdzenia dotyczące szeregów naprzemiennych
+Przy badaniu szeregów naprzemiennych często posługujemy się następującymi twierdzeniami:
+
 >[!danger] Twierdzenie Dirichleta
 > Jeżeli szereg $\sum_{n=1}^{\infty} a_n$ jest zbieżny bezwzględnie, to dla dowolnej permutacji $\sigma: \mathbb{N} \to \mathbb{N}$ zachodzi:
 >

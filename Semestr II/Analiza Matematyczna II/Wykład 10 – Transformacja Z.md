@@ -12,6 +12,7 @@ Najczęściej $a(n) = 0$ dla $n < 0$.
 >
 
 ## Tabela transformat $\mathcal{Z}$-Laurenta
+W poniższej tabeli zebrano najpotrzebniejsze transformaty $\mathcal{Z}$-Laurenta.
 
 | Ciąg                                          | Transformata $\mathcal{Z}$                                                         |
 | :-------------------------------------------- | :--------------------------------------------------------------------------------- |
@@ -22,7 +23,7 @@ Najczęściej $a(n) = 0$ dla $n < 0$.
 | $\alpha$                                      | $\frac{\alpha}{z-1}$                                                               |
 | $\alpha \cdot \beta^n$                        | $\frac{\alpha\beta}{z-\beta}$                                                      |
 | $a(n+k)$                                      | $z^k \left(F(a) - a(0) - \frac{a(1)}{z^1} - \dots - \frac{a(k-1)}{z^{k-1}}\right)$ |
-Transformata $\mathcal{Z}$ jest $\mathcal{Z}$:
+Dodatkowo zachodzi:
 
 $$\mathcal{Z}[\alpha \cdot a(n) + \beta \cdot b(n)] = \alpha \cdot \mathcal{Z}[a(n)] + \beta \cdot \mathcal{Z}[b(n)]$$
 

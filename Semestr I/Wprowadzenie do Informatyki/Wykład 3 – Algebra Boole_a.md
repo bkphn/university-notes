@@ -8,34 +8,29 @@ Rachunkiem zdań nazywamy badanie związków logicznych pomiędzy zdaniami. Aby 
 
 ## Tabele prawdy dla spójników logicznych
 Zdania proste można łączyć w złożone za pomocą spójników logicznych.
-1. **Negacja (*nieprawda, że*)**
-	Oznaczana symbolem $\neg$ (rzadziej $\sim$).
+1. **Negacja (*nieprawda, że*)**: Oznaczana symbolem $\neg$ (rzadziej $\sim$).
 
 $$\neg 0=1 \qquad \neg 1=0$$
 
-2. **Koniunkcja (*i*)**
-	Oznaczana symbolem $\wedge$.
+2. **Koniunkcja (*i*)**: Oznaczana symbolem $\wedge$.
 
 $$0\land 0=0 \qquad 0\land 1=0$$
 
 $$1\land 0=0 \qquad 1\land 1=1$$
 
-3. **Alternatywa (*lub*)**
-	Oznaczana symbolem $\vee$.
+3. **Alternatywa (*lub*)**: Oznaczana symbolem $\vee$.
 
 $$0\lor 0 =0 \qquad 0\lor 1=1$$
 
 $$1\lor 0=1 \qquad 0\lor 1 =1$$
 
-4.  **Implikacja (*jeżeli... to...*)**
-	Oznaczana symbolem $\Rightarrow$.
+4.  **Implikacja (*jeżeli... to...*)**: Oznaczana symbolem $\Rightarrow$.
 
 $$0\implies 0=1\qquad 0\implies 1=1$$
 
 $$1\implies 0 =0 \qquad 1\implies 1 = 1$$
 
-5. **Równoważność (*wtedy i tylko wtedy*)**
-	Oznaczana symbolem $\Leftrightarrow$.
+5. **Równoważność (*wtedy i tylko wtedy*)**: Oznaczana symbolem $\iff$.
 
 $$0\iff 0=0\qquad 0\iff 1=0$$
 
@@ -50,12 +45,9 @@ George Boole odkrył, że funkcja logiczna może być wyrażona w postaci algebr
 Zdaniom prawdziwym przyporządkowuje się wartość binarną $1$, a fałszywym $0$.
 
 **Operatory Boole'owskie:**
-1. **Negacja**
-	$\bar{A}=\neg A$
-2. **Suma**
-	$A+B=A\land B$
-3. **Iloczyn**
-	$A\cdot B=A\lor B$
+1. **Negacja** $\bar{A}=\neg A$
+2. **Suma** $A+B=A\land B$
+3. **Iloczyn** $A\cdot B=A\lor B$
 
 **Zawsze prawdziwe są następujące równości:**
 * $0 + 1 = 1$

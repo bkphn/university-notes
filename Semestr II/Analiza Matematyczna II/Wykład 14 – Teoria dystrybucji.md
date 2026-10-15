@@ -2,26 +2,25 @@
 Teoria dystrybucji to dział analizy funkcjonalnej, który rozwinął się w połowie XX wieku za sprawą Laurenta Schwarta. Jej głównym celem było rozszerzenie pojęcia funkcji w taki sposób, aby można było sensownie operować na obiektach, które nie są klasycznymi funkcjami, np. na delcie Diraca.
 
 ## Klasy funkcji
-Klasą nazywamy obiekt matematyczny zbyt duży, by być zbiorem (np. „zbiór wszystkich zbiorów”, który zgodnie z paradoksem Russella nie może istnieć jako typowy zbiór). Przykłady klas:
-* **$\text{Card}$**: klasa wszystkich liczb kardynalnych
-* **$\text{Ord}$**: klasa wszystkich liczb porządkowych
-* **$C$**: klasa wszystkich funkcji
+Klasą nazywamy obiekt matematyczny zbyt duży, by być zbiorem (np. „zbiór wszystkich zbiorów”, który zgodnie z paradoksem Russella nie może istnieć jako typowy zbiór). 
+
+Przez $C$ będziemy oznaczać klasę wszystkich funkcji.
 
 Dowolną klasę $C^n$ będziemy nazywać klasą wszystkich funkcji ciągłych, posiadających w każdym punkcie pochodną $n$-tego rzędu:
 * **Klasa $C^0$**: klasa zawierająca wszystkie funkcje ciągłe.
 * **Klasa $C^1$**: klasa zawierająca wszystkie funkcje ciągłe, które posiadają pochodną pierwszego rzędu.
 * **Klasa $C^2$**: klasa zawierająca wszystkie funkcje ciągłe, które posiadają pochodną drugiego rzędu.
-	$\vdots$
+- $\quad\vdots$
 * **Klasa $C^\infty$**: klasa wszystkich funkcji, które posiadają pochodne dowolnego rzędu i są ciągłe.
 
 ## Domknięcie zbioru
-Domknięciem zbioru $A$ nazywamy zbiór zawierający wszystkie elementy tego zbioru wraz z jego punktami granicznymi; domknięcie to oznaczamy jako $\bar{A}$.
+Domknięciem zbioru $A$ nazywamy zbiór zawierający wszystkie elementy tego zbioru wraz z jego punktami granicznymi; domknięcie to oznaczamy jako $\overline{A}$.
 
 > [!example] Przykład wyznaczenia domknięcia
 > Niech $X = \{x \in \mathbb{R} : x > 0 \land x \le 10\} = (0, 10]$.
 > Domknięcie wynosi:
 >
-> $$\bar{X} = \{x \in \mathbb{R} : x > 0 \land x \le 10\} \cup \{0, 10\} = (0, 10] \cup \{0, 10\} = [0, 10]$$
+> $$\overline{X} = \{x \in \mathbb{R} : x > 0 \land x \le 10\} \cup \{0, 10\} = (0, 10] \cup \{0, 10\} = [0, 10]$$
 >
 
 ## Funkcje testowe

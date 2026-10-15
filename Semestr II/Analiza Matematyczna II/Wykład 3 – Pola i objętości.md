@@ -44,12 +44,9 @@ $$V = \pi \cdot \int_{a}^{b} [f(x)]^2 \, dx$$
 > * **Pole powierzchni kuli:** Wykorzystujemy wzór na pole powierzchni bryły obrotowej $S = 2\pi \cdot \int_{a}^{b} f(x) \cdot \sqrt{1 + [f'(x)]^2} \, dx$:
 >
 >   $$S = 2\pi \cdot \int_{-1}^{1} \sqrt{1-x^2} \cdot \sqrt{1 + \left((\sqrt{1-x^2})'\right)^2} \, dx = 4\pi \cdot \int_{0}^{1} \sqrt{1-x^2} \cdot \frac{1}{\sqrt{1-x^2}} \, dx = 4\pi \cdot [x]_0^1 = 4\pi$$
->
-> *Warto zapamiętać, że powyższy wzór opisuje pole powierzchni bocznej dla danej figury; chcąc obliczyć pole powierzchni całkowitej dla figur różnych od kuli i jej podobnych, należy dodać do wzoru pola podstaw (np. okręgów w punktach $a$ i $b$)*.
 
-## Całki niewłaściwe
 
-### Całka niewłaściwa II rodzaju
+## Całka niewłaściwa II rodzaju
 Jeżeli granice całkowania nie należą do dziedziny funkcji, to całkę taką nazywamy całką niewłaściwą II rodzaju. Licząc ją, musimy policzyć granicę, w której zmienna dąży do wartości wykluczonej z dziedziny:
 * Niech $f: (a, b] \to \mathbb{R}$ (czyli $a \notin D_f$):
 
@@ -66,7 +63,7 @@ $$\int_{a}^{b} f(x) \, dx = \lim_{B \to b^{-}} \int_{a}^{B} f(x) \, dx$$
 >
 > Dziedziną funkcji $\frac{1}{\sqrt{1-x^2}}$ jest przedział $(-1, 1)$, więc granice całkowania $a = -1$ oraz $b = 1$ nie należą do dziedziny ($a, b \notin D_f$) – mamy do czynienia z całką niewłaściwą II rodzaju.
 
-### Całka niewłaściwa I rodzaju
+## Całka niewłaściwa I rodzaju
 Jeżeli któraś z granic całkowania jest nieskończona, to całkę taką nazywamy całką niewłaściwą I rodzaju. Podobnie jak w drugim rodzaju, liczymy granicę takiej całki:
 * Niech $f: (a, \infty) \to \mathbb{R}$:
 

@@ -22,6 +22,7 @@ Chcąc wyprowadzić transformatę Laplace'a funkcji $f$, często odgórnie zakł
 $$f(x) = \begin{cases} h(x), & x \ge 0 \\ 0, & x < 0 \end{cases}$$
 
 ## Tabela transformat Laplace'a
+W poniższej tabeli można znaleźć najważniejsze transformaty Laplace'a.
 
 | Funkcja           | Transformata $\mathcal{L}$             |
 | :---------------- | :------------------------------------- |
@@ -37,7 +38,8 @@ $$f(x) = \begin{cases} h(x), & x \ge 0 \\ 0, & x < 0 \end{cases}$$
 | $e^{ax} \cos(bx)$ | $\frac{s-a}{(s-a)^2 + b^2}$            |
 | $f'(x)$           | $s \cdot \mathcal{L}[f(x)] - f(0^{+})$ |
 
-## Funkcje specjalne
+## Funkcje w analizie
+W analizie często wykorzystujemy następujące funkcje:
 * **Funkcja wskaźnikowa:** Funkcja $\mathbb{1}(t)$ jest funkcją wskaźnikową:
 
   $$\mathbb{1}_A(t) = \begin{cases} 1, & t \in A \\ 0, & t \notin A \end{cases}$$
@@ -48,6 +50,7 @@ $$f(x) = \begin{cases} h(x), & x \ge 0 \\ 0, & x < 0 \end{cases}$$
   $$\int_{-\infty}^{\infty} \delta(t) \, dt = 1 \land \delta(t) = \begin{cases} 0, & t \neq 0 \\ \infty, & t = 0 \end{cases}$$
 
 ## Własności transformat Laplace'a
+Transformaty Laplace'a spełniają własności:
 * **Pochodne:**
 
 $$\mathcal{L}[f'(t)] = s \cdot \mathcal{L}[f(t)] - f(0^{+})$$

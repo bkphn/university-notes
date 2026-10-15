@@ -1,7 +1,7 @@
-## Jednostka urojona $i$
-Jednostka urojona $i$ to liczba wykraczająca poza zbiór liczb rzeczywistych $\mathbb{R}$. Jest to taka liczba, której kwadrat jest równy $-1$:
+## Jednostka urojona
+**Jednostka urojona** $i$ to liczba wykraczająca poza zbiór liczb rzeczywistych $\mathbb{R}$. Jest to taka liczba, której kwadrat jest równy $-1$:
 
-$$i^2 = -1, \quad i \in \mathbb{C}$$
+$$i^2 = -1$$
 
 Zbiór liczb zespolonych $\mathbb{C}$ jest rozszerzeniem zbioru liczb rzeczywistych $\mathbb{R}$ ($\mathbb{R} \subset \mathbb{C}$). Struktura $(\mathbb{C}, +, \cdot)$ jest ciałem. Rozszerzenie to pozwala na rozwiązywanie wszystkich równań kwadratowych.
 
@@ -29,12 +29,12 @@ Liczbę zespoloną $(a, b)$ zapisujemy za pomocą postaci algebraicznej $a + bi$
 * $a + 0i = a$
 
 ## Operacje na liczbach zespolonych
-
-### Dodawanie i odejmowanie
+Na liczbac zespolonych podstawowe operacje wykonujemy następująco:
+- **Dodawanie i odejmowanie**
 
 $$(a + bi) \pm (c + di) = (a \pm c) + (b \pm d)i$$
 
-### Mnożenie
+-  **Mnożenie**
 
 $$(a + bi) \cdot (c + di) = ac + bd(i^2) + (ad + bc)i = ac - bd + (ad + bc)i$$
 
@@ -45,16 +45,16 @@ $$(a + bi) \cdot (c + di) = ac + bd(i^2) + (ad + bc)i = ac - bd + (ad + bc)i$$
 >
 > $$x = \frac{-2 + 5i}{5x + 3i} \cdot \frac{5x - 3i}{5x - 3i}$$
 >
-> $$x = \frac{-10x + 6i + 25ix + 15}{(5x)^2 - (3i)^2} \dots$$
+> $$x = \frac{-10x + 6i + 25ix + 15}{(5x)^2 - (3i)^2}$$
 >
-> *(Należy zawsze wyciągać współczynniki $a, b$, by nie zostawiać niewymierności w mianowniku).* Ostatecznie:
+> Należy zawsze wyciągać współczynniki $a, b$, by nie zostawiać niewymierności w mianowniku. Ostatecznie:
 >
 > $$x = \frac{5}{34} + \frac{31}{34}i$$
 >
 
 Ponieważ $\mathbb{C}$ jest rozszerzeniem $\mathbb{R}$, wewnątrz ciała liczb zespolonych możemy skorzystać ze wszystkich operacji ze zbioru liczb rzeczywistych, np.:
 * $(a + bi)^2 = a^2 + 2abi - b^2$
-* $(a + bi)^3 = a^3 - 3ab^2 + (3a^2b - b^3)i$ (ponieważ $(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$)
+* $(a + bi)^3 = a^3 - 3ab^2 + (3a^2b - b^3)i$
 
 ### Pierwiastki zespolone
 Wyjątkiem są pierwiastki $\sqrt{r}$ dla $r \in \mathbb{R}$, nazywane pierwiastkami arytmetycznymi. Według konwencji przyjętej w ciele $\mathbb{R}$ pierwiastek taki zwraca tylko wartość dodatnią, tj. $\sqrt{4} = 2$. W ciele liczb zespolonych niemożliwe jest stwierdzenie, który z pierwiastków jest ujemny, a który dodatni, więc wynikiem równania są oba pierwiastki.
@@ -74,7 +74,7 @@ $$\begin{cases} a = x^2 - y^2 \\ b = 2xy \end{cases}$$
 a następnie rozwiązujemy go.
 
 >[!danger] Zasadnicze Twierdzenie Algebry
-> Każdy wielomian o współczynnikach zespolonych stopnia dodatniego posiada pierwiastek w ciele liczb zespolonych: każde równanie $a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x^1 + a_0 = 0$, *gdzie* $a_n, a_{n-1}, \dots, a_0 \in \mathbb{C}$ *oraz* $n \ge 1$, *ma rozwiązanie* $x \in \mathbb{C}$.
+> Każdy wielomian o współczynnikach zespolonych stopnia dodatniego posiada pierwiastek w ciele liczb zespolonych: każde równanie $a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x^1 + a_0 = 0$, *gdzie* $a_n, a_{n-1}, \dots, a_0 \in \mathbb{C}$ oraz $n \ge 1$, ma rozwiązanie $x \in \mathbb{C}$.
 
 ## Liczby sprzężone
 Liczbę sprzężoną do liczby $z \in \mathbb{C}$ zapisujemy jako $\overline{z} = \overline{a + bi} = a - bi$.
@@ -93,7 +93,7 @@ Liczbę sprzężoną do liczby $z \in \mathbb{C}$ zapisujemy jako $\overline{z} 
 >
 
 ## Interpretacja geometryczna
-Liczbę zespoloną jesteśmy w stanie zaznaczyć na układzie współrzędnych złożonym z osi $\mathfrak{I}$ (Imaginaris) oraz $\mathfrak{R}$ (Realis). 
+Liczbę zespoloną jesteśmy w stanie zaznaczyć na układzie współrzędnych złożonym z osi $\mathfrak{I}$ (łac. *imaginarius*) oraz $\mathfrak{R}$ (łac. *realis*). 
 
 Współrzędne punktu na płaszczyźnie możemy zapisać w jednym z dwóch sposobów:
 1. **Prostokątnym (kartezjańskim):** Współrzędne $(a, b)$ w postaci $a + bi$, gdzie $a$ to część rzeczywista ($a = r \cdot \cos \varphi$), a $b$ to część urojona ($b = r \cdot \sin \varphi$).
@@ -125,11 +125,9 @@ $$|z| = \sqrt{a^2 + b^2}$$
 * $\left|\frac{z}{w}\right| = \frac{|z|}{|w|}$ dla $w \neq 0$
 
 ## Operacje w postaci biegunowej i wykładniczej
-Każdą liczbę zespoloną $z$ można zapisać w postaci biegunowej: $|z|(\cos \varphi + i \sin \varphi)$.
+Każdą liczbę zespoloną $z$ można zapisać w postaci biegunowej: $|z|(\cos \varphi + i \sin \varphi)$. Dzięki postaci biegunowej możemy zapisać iloczyn liczb zespolonych $z,w$ jako:
 
-### Iloczyn
-
-$$[|z|(\cos \varphi + i \sin \varphi)] \cdot [|w|(\cos \theta + i \sin \theta)] = |z \cdot w| \cdot (\cos[\varphi + \theta] + i \sin[\varphi + \theta])$$
+$$z\cdot w=[|z|(\cos \varphi + i \sin \varphi)] \cdot [|w|(\cos \theta + i \sin \theta)] = |z \cdot w| \cdot (\cos[\varphi + \theta] + i \sin[\varphi + \theta])$$
 
 Wykorzystuje się przy tym wzory na sumę funkcji trygonometrycznych:
 * $\sin(\alpha \pm \beta) = \sin \alpha \cos \beta \pm \cos \alpha \sin \beta$
@@ -139,8 +137,7 @@ W postaci kartezjańskiej iloczyn wygląda następująco:
 
 $$z \cdot w = (a_z + b_z i) \cdot (a_w + b_w i) = a_z a_w - b_z b_w + (a_z b_w + b_z a_w)i$$
 
-### Iloraz
-W postaci biegunowej:
+Podobnie z ilorazem, w postaci biegunowej:
 
 $$\frac{|z|(\cos \varphi + i \sin \varphi)}{|w|(\cos \theta + i \sin \theta)} = \left|\frac{z}{w}\right| \cdot (\cos[\varphi - \theta] + i \sin[\varphi - \theta])$$
 

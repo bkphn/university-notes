@@ -55,8 +55,8 @@ $$y = 2^{k_1} + \dots + 2^{k_r}$$
    $$y^{2^{k_1}} = y_1$$
 
    $$y^{2^{k_2}} = y_1^{\frac{k_2}{k_1}}$$
-
-	 I tak aż do obliczenia finalnej potęgi, po czym mnożymy je ze sobą.
+   
+ I tak aż do obliczenia finalnej potęgi, po czym mnożymy je ze sobą.
 
 > [!example] Przykład
 > Oblicz $5^{30}$ w $\mathbb{Z}_{37}$:
@@ -74,6 +74,7 @@ $$y = 2^{k_1} + \dots + 2^{k_r}$$
 
 ## Małe twierdzenie Fermata
 Małe twierdzenie Fermata to istotny element teorii liczb
+
 > [!danger] Małe twierdzenie Fermata
 > Jeśli $p$ jest liczbą pierwszą, a $a$ jest liczbą całkowitą niepodzielną przez $p$, to reszta z dzielenia $a^{p-1}$ przez $p$ wynosi $1$:
 >

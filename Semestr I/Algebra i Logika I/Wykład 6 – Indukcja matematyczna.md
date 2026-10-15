@@ -61,3 +61,4 @@ Dowody przeprowadzane tą metodą nazywamy dowodami indukcyjnymi.
 > \end{align*} $$
 >
 
+## Paradoks koni

@@ -31,26 +31,19 @@ Różniczka $dx$ w tym podstawieniu wynosi:
 $$dx = \frac{2 \, du}{1+u^2}$$
 
 ## Sposoby całkowania
-
-### 1. Rozbijanie całki na sumę
-Przykład przekształcenia algebraicznego wyrażenia podcałkowego:
+Możemy wyróżnić następujące sposoby całkowania:
+1. **Rozbijanie całki na sumę**: Przykład przekształcenia algebraicznego wyrażenia podcałkowego:
 
 $$\int \frac{1}{(x^2+1)^2} \, dx = \int \frac{x^2 + 1 - x^2}{(x^2+1)^2} \, dx = \int \left(\frac{x^2+1}{(x^2+1)^2} - \frac{x}{(x^2+1)^2}\right) dx$$
 
-### 2. Dzielenie wielomianów
-Gdy stopień licznika jest większy lub równy stopniu mianownika, stosujemy dzielenie wielomianów:
+2. **Dzielenie wielomianów**: Gdy stopień licznika jest większy lub równy stopniu mianownika, stosujemy dzielenie wielomianów:
 
 $$\int \frac{x^3}{x^3 - x^2 + x - 1} \, dx = \int \left(1 + \frac{x^2 - x + 1}{x^3 - x^2 + x - 1}\right) dx$$
-
-*(Zgodnie z algorytmem dzielenia wielomianów: $\frac{x^3}{x^3 - x^2 + x - 1} = 1 \text{ reszta } x^2 - x + 1$)*.
-
-### 3. Podstawianie z pierwiastkiem (podstawianie kwadratu)
-Przykład całkowania wyrażeń niewymiernych z pierwiastkiem:
+ 3. **Podstawianie z pierwiastkiem** (podstawianie kwadratu): Przykład całkowania wyrażeń niewymiernych z pierwiastkiem:
 
 $$\int \frac{\sqrt{x}}{\sqrt{x}+1} \, dx = \begin{vmatrix} t = \sqrt{x} \\ t^2 = x \\ 2t \, dt = dx \end{vmatrix} = \int \frac{t}{t+1} \cdot 2t \, dt$$
 
-### 4. Zaawansowane podstawienie pierwiastka wymiernego
-Przykład obliczania całki z pierwiastkiem z funkcji wymiernej:
+4. **Zaawansowane podstawienie pierwiastka wymiernego**: Przykład obliczania całki z pierwiastkiem z funkcji wymiernej:
 
 $$\int \sqrt{\frac{x+1}{x-1}} \, dx$$
 
