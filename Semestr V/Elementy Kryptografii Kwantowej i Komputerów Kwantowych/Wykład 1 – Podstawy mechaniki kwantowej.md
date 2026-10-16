@@ -66,7 +66,7 @@ Układ eksperymentalny składa się z trzech podstawowych elementów:
 2. **Przegrody z dwiema szczelinami** – umożliwia przejście przez jedną z dwóch dróg.
 3. **Ekranu detekcyjnego** – rejestruje miejsca trafienia cząstek.
 
-Niech: $A_1(x)$ oznacza amplitudę kwantową związaną z pierwszą szczeliną, $A_2(x)$ amplitudę kwantową związaną z drugą szczeliną, a $A(x)$ całkowitą amplitudę detekcji w punkcie $x$.
+Niech $A_1(x)$ oznacza amplitudę kwantową związaną z pierwszą szczeliną, $A_2(x)$ amplitudę kwantową związaną z drugą szczeliną, a $A(x)$ całkowitą amplitudę detekcji w punkcie $x$.
 
 Jeżeli nie dokonujemy pomiaru, amplitudy sumują się:
 
