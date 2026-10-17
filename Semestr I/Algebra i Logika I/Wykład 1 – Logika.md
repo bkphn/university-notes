@@ -22,12 +22,12 @@ Zdaniom logicznym przyporządkowujemy dwie wartości: prawdę i fałsz. W logice
 Mając zdania logiczne możemy tworzyć **zdania złożone**, czyli takie zawierające **spójniki logiczne**. Zdania logiczne ich pozbawione nazywamy **zdaniami prostymi**.
 
 Podstawowymi spójnikami logicznymi są:
-- **Negacja**: Oznaczana symbolem $\neg$ (rzadziej $\sim$), czytamy ją jako *nieprawda, że...*;
+- **Negacja**: Oznaczana symbolem $\neg$ lub $\sim$, czytamy ją jako *nieprawda, że...*;
 - **Alternatywa**: Oznaczana symbolem $\lor$, czytamy ją jako *... lub...*;
 - **Koniunkcja**: Oznaczana symbolem $\land$, czytamy ją jako *... i...*;
 - **Alternatywa wykluczająca** (XOR): Oznaczana symbolem $\veebar$ lub $\oplus$, czytamy ją jako *albo... albo...*;
 - **Implikacja**: Oznaczana przez $\implies$, czytamy ją jako *z... wynika...*
-- **Równoważność**: Oznaczana przez $\iff$, czytamy ją jako *wtedy i tylko wtedy, gdy...*
+- **Równoważność**: Oznaczana przez $\iff$, czytamy ją jako *... wtedy i tylko wtedy, gdy...*
 
 ## Warunki konieczne i dostateczne
 Niech $p,q$ będą pewnymi zdaniami logicznymi. Jeżeli zachodzi $p\implies q$, to $p$ nazywamy **warunkiem dostatecznym** dla $q$, a $q$ nazywamy **warunkiem koniecznym** dla $p$.

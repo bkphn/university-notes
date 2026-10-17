@@ -23,7 +23,7 @@ Niech $X,Y$ będą zbiorami. **Iloczynem kartezjańskim** nazywamy zbiór wszyst
 
 $$X\times Y=\{(x,y) : x\in X, y\in Y\}$$
 
-Iloczyn kartezjański $X\times X$ będziemy oznaczać jako $X^2$. Zbiór $\mathbb{R}\times\mathbb{R}=\mathbb{R}^2$ utożsamiami ze zbiorem wszystkich punktów z płaszczyzny kartezjańskiej.
+Iloczyn kartezjański $X\times X$ będziemy oznaczać jako $X^2$. Zbiór $\mathbb{R}\times\mathbb{R}=\mathbb{R}^2$ utożsamiamy ze zbiorem wszystkich punktów z płaszczyzny kartezjańskiej.
 
 Iloczyn kartezjański $X_{1}\times X_{2}\times\dots\times X_{n}$ jest zbiorem wszystkich ciągów uporządkowanych $(x_{1},x_{2},\dots,x_{n})$:
 
