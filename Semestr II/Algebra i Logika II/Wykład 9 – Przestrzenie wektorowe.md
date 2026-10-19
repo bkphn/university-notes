@@ -1,5 +1,5 @@
 ## Wektory
-Wektor to uporządkowana lista liczb reprezentująca punkt, kierunek bądź element przestrzeni wektorowej. W fizyce wektory oznaczamy strzałką nad zmienną, w matematyce ta strzałka jest często pomijana na rzecz pogrubionej czcionki bez kursywy $\vec{v} = \mathbf{v}$, jednak dla przejrzystości można ją stosować. Wektor $\mathbf{v} = (a_1, \dots, a_n)$ reprezentuje kierunek w $n$-wymiarowej przestrzeni.
+Wektor to uporządkowana lista liczb reprezentująca punkt, kierunek bądź element przestrzeni wektorowej. W fizyce wektory oznaczamy strzałką nad zmienną, w matematyce ta strzałka jest często pomijana na rzecz pogrubionej czcionki bez kursywy $\vec{v} = \mathbf{v}$, jednak dla przejrzystości można ją stosować. Wektor $\mathbf{v} = (a_1, \dots, a_n)$ często reprezentuje kierunek w $n$-wymiarowej przestrzeni.
 
 ### Podstawowe operacje na wektorach:
 * **Dodawanie i odejmowanie wektorów:**

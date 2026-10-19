@@ -1,4 +1,3 @@
-
 ## Działania $n$-arne
 Dany jest niepusty zbiór $A$ oraz $n \in \mathbb{N}$. Funkcję $f: A^n \rightarrow A$ nazywamy $n$-arnym działaniem w zbiorze $A$. Liczba $n$ oznacza ilość elementów, które biorą udział w działaniu.
 

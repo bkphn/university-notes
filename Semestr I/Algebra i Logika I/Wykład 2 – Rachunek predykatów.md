@@ -82,6 +82,6 @@ $$\neg\forall_{x\in X}\phi(x)\iff\exists_{x\in X}\neg\phi(x)$$
 
 $$\neg\exists_{x\in X} \phi(x) \iff \forall_{x\in X} \neg\phi(x)$$
 
-Funcke zdaniowe możemy łączyć spójnikami logicznymi tworząc złożone funkcje zdaniowe. Używając ich możemy tworzyć inne prawa kwantyfikatorów, np.:
+Funkcje zdaniowe możemy łączyć spójnikami logicznymi tworząc złożone funkcje zdaniowe. Używając ich możemy tworzyć inne prawa kwantyfikatorów, np.:
 
 $$\forall_{x\in X} \phi(x)\land\psi(x)\iff\forall_{x\in X}\phi(x)\land \forall_{x\in X} \psi(x)$$

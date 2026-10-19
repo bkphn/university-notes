@@ -21,7 +21,7 @@ Każdy element jest sparowany z każdym, co dowodzi ich równoliczności.
 
 Zbiór $X$ nazywamy **przeliczalny**, jeżeli jest skończony lub gdy $|X| = |\mathbb{N}|$. Jeśli zbiór $X$ jest przeliczalny, to wszystkie jego elementy można ustawić w ciąg $x_1, x_2, x_3, \dots$.
 
-## Zbiory nieprzeliczalne i Continuum
+## Zbiory nieprzeliczalne i continuum
 Zbiory nieprzeliczalne to takie, których nie da się ponumerować kolejnymi liczbami naturalnymi. Przykładem takiego zbioru są liczby rzeczywiste $\mathbb{R}$. Dowodzi tego **metoda przekątniowa** (zawsze jesteśmy w stanie znaleźć kolejną niesparowaną liczbę rzeczywistą).
 
 Moc zbioru liczb rzeczywistych określamy jako **continuum** i oznaczamy symbolem $\mathfrak{c}$. Możemy również udowodnić, że continuum jest równe mocy zbioru potęgowego liczb naturalnych:

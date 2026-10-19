@@ -39,6 +39,7 @@ $$P\left(\bigcup_{i=1}^\infty A_{i}\right)=\sum_{i=1}^\infty P(A_{i}), \qquad i\
 
 ## Twierdzenia rachunku prawdopodobieństwa
 Na podstawie trzech aksjomatów możemy udowodnić następujące twierdzenia:
+
 >[!danger] Twierdzenie o prawdopodobieństwie zdarzenia niemożliwego
 >$$P(\emptyset)=0$$
 >
