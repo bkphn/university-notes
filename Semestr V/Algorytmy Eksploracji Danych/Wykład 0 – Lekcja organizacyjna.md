@@ -1,8 +1,8 @@
-| Rodzaj     | Nazwa                                                                                                                                                                     |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Prowadzący | dr hab. inż. Wojciech Kempa, prof. PŚ                                                                                                                                     |
-| Sala       | CEK Aula C                                                                                                                                                                |
-| Platforma  | [https://platforma.polsl.pl/rms/enrol/index.php?id=1015](https://platforma.polsl.pl/rms/enrol/index.php?id=1015 "https://platforma.polsl.pl/rms/enrol/index.php?id=1015") |
+| Rodzaj     | Nazwa                                                  |
+| ---------- | ------------------------------------------------------ |
+| Prowadzący | dr hab. inż. Wojciech Kempa, prof. PŚ                  |
+| Sala       | CEK Aula C                                             |
+| Platforma  | https://platforma.polsl.pl/rms/course/view.php?id=1755 |
 
 | Tytuł                                    | Autor                         |
 | ---------------------------------------- | ----------------------------- |
