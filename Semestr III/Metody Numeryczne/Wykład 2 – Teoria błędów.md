@@ -21,14 +21,14 @@ Często podaje się go w procentach: $\overline{\delta}x \cdot 100\%$.
 ## Dokładność
 W praktyce rzadko posługujemy się wartościami błędów (zwykle nie znamy dokładnej wartości $x$), lecz na podstawie analizy numerycznej możemy szacować ich wielkość poprzez definiowanie dokładności:
 
-### Dokładność bezwzględna
+### Dokładność bez
 Dokładnością bezwzględną $\Delta x$ wielkości przybliżonej $\overline{x}$ nazywamy każdą liczbę nie mniejszą od błędu bezwzględnego:
 
 $$\Delta x \ge \overline{\Delta}x$$
 
 Dla wartości dokładnej $x$ przyjmuje się ją często jako jej różnicę $\Delta x = |\overline{x} - x|$ z wybraną dokładnością (np. przyjmując $\pi = 3.14$, wartość $\Delta\pi \in \{0.002, 0.0016, 0.00159, \dots\}$).
 
-### Dokładność względna
+### Dokładność 
 Jeżeli $\overline{x} \neq 0$, to dokładnością względną $\delta x$ nazywamy liczbę:
 
 $$\delta x = \frac{\Delta x}{|\overline{x}|}$$
