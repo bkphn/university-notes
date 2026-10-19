@@ -267,7 +267,7 @@ Wycinek `[1:7:2]` wybiera elementy od indeksu `1` do `6` z krokiem `2`.
 print(wektor[1:7:2])
 ```
 
-Ujemny krok `[::-1]` odwraca kolejność elementów wektora.
+Ujemny krok `[: :-1]` odwraca kolejność elementów wektora.
 
 ``` python
 print(wektor[::-1])
@@ -281,13 +281,13 @@ macierz = np.array([range(i, i + 3) for i in [1, 4, 7]])
 print(macierz[:2, :2])
 ```
 
-Wycinek `[::-1, ::-1]` odwraca kolejność zarówno wierszy, jak i kolumn.
+Wycinek `[: :-1, : :-1]` odwraca kolejność zarówno wierszy, jak i kolumn.
 
 ``` python
 print(macierz[::-1, ::-1])
 ```
 
-Zapis `[:2, ::2]` wybiera pierwsze dwa wiersze i co drugą kolumnę.
+Zapis `[:2, : :2]` wybiera pierwsze dwa wiersze i co drugą kolumnę.
 
 ``` python
 print(macierz[:2, ::2])
