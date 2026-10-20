@@ -57,7 +57,7 @@ Algorytm KNN z angielskiego *K Nearest Neighbours*. Algorytm KNN jest prostym kl
 Zakładamy, że sąsiedzi sami wybiorą, do której grupy będą należeć kolejne rekordy. Wynikiem klasyfikacji jest grupa, która zawiera największą liczbę sąsiadów. Podobieństwo rekordów określamy mierząc odległości między elementami, które mają cechy opisane jako wektory. Do tego pomiaru zastosujemy metrykę euklidesową, Manhattan lub inną wybraną.
 
 Załóżmy, że $\mathbf{a},\mathbf{b}$ są rekordami o charakterystyce $n$, pomiędzy którymi mierzymy odległość. Elementy zbioru danych są interpretowane jako wektory cech. Wtedy funkcję odległości można zdefiniować na podstawie wybranej metryki, przykładowo:
-- **Odległość Euklidesa**
+- **Odległość Euklidesowa**
 
 $$d_{E}(\mathbf{a},\mathbf{b})=\sqrt{\sum_{i=1}^n(a_{i}-b_{i})^2}$$
 
