@@ -51,7 +51,7 @@ $$P(0)=|\alpha|^2, \qquad P(1)=|\beta|^2$$
 >   
  > $$\left|\frac{3}{5}\right|^2+\left| \frac{4i}{5}\right|^2 = \frac{9}{25}+\frac{16}{25}=1$$
 
-## Liczby zespolone
+## Faza liczby zespolonej
 Dowolną amplitudę $\alpha$ możemy przedstawić w postaci wykładniczej jako $r e^{i\varphi}$, gdzie $r$ jest modułem, $\varphi$ fazą, $e$ to liczba Eulera, a $i$ to jednostka urojona.
 
 Liczby $1, -1, i, -i$ mają ten sam moduł równy $1$, ale ich fazy $0, \pi, \frac{\pi}{2}, -\frac{\pi}{2}$ są różne. Faza nie zmienia bezpośrednio prawdopodobieństwa $|\alpha|^2$ ale wpływa na interferencję.
