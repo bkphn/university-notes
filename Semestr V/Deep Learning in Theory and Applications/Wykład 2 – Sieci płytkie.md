@@ -85,23 +85,35 @@ $$\mathbf{x}=\begin{bmatrix}x_{1} \\ \vdots \\ x_{N}\end{bmatrix} \qquad
    - Zapis macierzowy: $\hat{y}=\Psi(\mathbf{v}\cdot \mathbf{z}+c)$
 $$\mathbf{v}=\begin{bmatrix} v_{1}  & v_{2}  & \dots & v_{M} \end{bmatrix} \qquad \mathbf{z}=\begin{bmatrix} z_{1} \\ \vdots \\ z_{M} \end{bmatrix}$$
 
+Możemy zoptymalizować zapis macierzowy dla warstwy pierwszej, uwzględniając wartości macierzy $\mathbf{b}$ wewnątrz macierzy $\mathbf{W}$ i $\mathbf{x}$, zdefiniujmy te zmodyfikowane macierze jako:
+
+$$\mathbf{x_{b}}=\begin{bmatrix}
+x_{1} \\ \vdots \\ x_{N} \\ 1
+\end{bmatrix}, \qquad  \mathbf{W_{b}=}\begin{bmatrix} w_{1,1} & \cdots & w_{1,N} & b_{1} \\  \vdots & \ddots & \vdots & \vdots \\w_{M,1} & \cdots & w_{M,N} & b_{M}\end{bmatrix}$$
+
+Wtedy w zapisie macierzowym możemy uprościć równanie do postaci:
+
+$$\mathbf{z}=\Phi(\mathbf{Wx}+\mathbf{b})=\Phi(\mathbf{W_{b}}\mathbf{x_{b}})$$
+
+Analogicznie możemy postąpić dla warstwy drugiej.
+
 ## Backpropagation
 **Backpropagation** (propagacja wsteczna) BP to algorytm służący do efektywnego obliczania gradientu funkcji straty względem wag sieci, oparty na regule łańcuchowej różniczkowania. Umożliwia on aktualizację wag w procesie uczenia.
 ![[Pasted image 20261008182959.png|443]]
 
-Niech $L(\mathbf{v})=\mathrm{MSE}(\mathbf{v})$. Pojedynczą wagę $v_{i}$ będziemy aktualizować za pomocą wzoru:
+Niech $\mathcal{L}(\mathbf{v})=\mathrm{MSE}(\mathbf{v})$. Pojedynczą wagę $v_{i}$ będziemy aktualizować za pomocą wzoru:
 
-$$v_{i}\leftarrow v_{i}-\eta \frac{\partial L(v_{i})}{\partial v_{i}}$$
+$$v_{i}\leftarrow v_{i}-\eta \frac{\partial \mathcal{L}(v_{i})}{\partial v_{i}}$$
 
 Co możemy rozpisać jako: 
 
-$$v_{i}-\eta \frac{\partial L(v_{i})}{\partial v_{i}}=v_{i}-\eta\cdot\color{red}{\frac{\partial L(v_{i})}{\partial\hat{y}}}\color{black}{\cdot}\color{blue}{\frac{\partial \hat{y}}{\partial v_{i}}}\color{black}=v_{i}-\eta\cdot\color{red}\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)\color{black}\cdot  \color{blue}\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot z_{i}$$
+$$v_{i}-\eta \frac{\partial \mathcal{L}(v_{i})}{\partial v_{i}}=v_{i}-\eta\cdot\color{red}{\frac{\partial \mathcal{L}(v_{i})}{\partial\hat{y}}}\color{black}{\cdot}\color{blue}{\frac{\partial \hat{y}}{\partial v_{i}}}\color{black}=v_{i}-\eta\cdot\color{red}\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)\color{black}\cdot  \color{blue}\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot z_{i}$$
 
 W zapisie macierzowym wyrazimy to jako:
 
-$$\mathbf{v}\leftarrow \mathbf{v}-\eta\nabla_{\mathbf{v}} L=\mathbf{v}-\eta \begin{bmatrix}
- \frac{\partial L}{\partial v_{1}} \\ \frac{\partial L}{\partial v_{2}} \\ \vdots \\\frac{\partial L}{\partial v_{M}} \\ \frac{\partial L}{\partial c}
-\end{bmatrix}=\mathbf{v}-\eta \frac{\partial L}{\partial \hat{y}} \begin{bmatrix}
+$$\mathbf{v}\leftarrow \mathbf{v}-\eta\nabla_{\mathbf{v}} \mathcal{L}=\mathbf{v}-\eta \begin{bmatrix}
+ \frac{\partial \mathcal{L}}{\partial v_{1}} \\ \frac{\partial \mathcal{L}}{\partial v_{2}} \\ \vdots \\\frac{\partial \mathcal{L}}{\partial v_{M}} \\ \frac{\partial \mathcal{L}}{\partial c}
+\end{bmatrix}=\mathbf{v}-\eta \frac{\partial \mathcal{L}}{\partial \hat{y}} \begin{bmatrix}
  \frac{\partial \hat{y}}{\partial v_{1}} \\ \frac{\partial \hat{y}}{\partial v_{2}} \\ \vdots \\ \frac{\partial \hat{y}}{\partial v_{M}} \\ \frac{\partial \hat{y}}{\partial c}
 \end{bmatrix}$$
 

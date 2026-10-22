@@ -9,27 +9,27 @@ $$\hat{y}=wx+b$$
 
 współczynniki $w,b$ nazywamy **parametrami wyuczalnymi** (ang. *learnable parameters*). Współczynniki $w,b$ przechowujemy w wektorze $\mathbf{w}=(w,b)$.
 
-Wyznaczenie współczynników $w,b$ sprowadza się do zminimalizowania wartości **funkcji błędu** $L$ w tym przypadku opartej na metodzie najmniejszych kwadratów, danej wzorem:
+Wyznaczenie współczynników $w,b$ sprowadza się do zminimalizowania wartości **funkcji błędu** $\mathcal{L}$ w tym przypadku opartej na metodzie najmniejszych kwadratów, danej wzorem:
 
-$$L(\mathbf{w})=\frac{1}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})^2$$
+$$\mathcal{L}(\mathbf{w})=\frac{1}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})^2$$
 
-Aby nauczyć model regresji liniowej należy od obecnych wartości $\mathbf{w}$ odejmować ich gradient $\frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$. Gradient wskazuje kierunek największego wzrostu błędu, więc odejmując go zbliżamy się w stronę minimum funkcji minimalizując błąd:
+Aby nauczyć model regresji liniowej należy od obecnych wartości $\mathbf{w}$ odejmować ich gradient $\frac{\partial \mathcal{L}(\mathbf{w})}{\partial\mathbf{w}}$. Gradient wskazuje kierunek największego wzrostu błędu, więc odejmując go zbliżamy się w stronę minimum funkcji minimalizując błąd:
 
-$$\mathbf{w} \leftarrow\mathbf{w}^{}-\frac{\partial L(\mathbf{w})}{\partial \mathbf{w}}$$
+$$\mathbf{w} \leftarrow\mathbf{w}^{}-\frac{\partial \mathcal{L}(\mathbf{w})}{\partial \mathbf{w}}$$
 
-**Reguła łańcuchowa** (ang. *chain rule*) pozwala na rozbicie gradientu $\frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$ na iloczyn pochodnej straty po przewidywaniach $\frac{\partial L(\mathbf{w})}{\partial \hat{y}}$ oraz pochodnej przewidywań po wagach $\frac{\partial \hat{y}}{\partial \mathbf{w}}$:
+**Reguła łańcuchowa** (ang. *chain rule*) pozwala na rozbicie gradientu $\frac{\partial \mathcal{L}(\mathbf{w})}{\partial\mathbf{w}}$ na iloczyn pochodnej straty po przewidywaniach $\frac{\partial L(\mathbf{w})}{\partial \hat{y}}$ oraz pochodnej przewidywań po wagach $\frac{\partial \hat{y}}{\partial \mathbf{w}}$:
 
-$$\frac{\partial L(\mathbf{w})}{\partial \mathbf{w}}=\frac{\partial L(\mathbf{w})}{\partial\hat{y}}\cdot\frac{\partial \hat{y}}{\partial \mathbf{w}}$$
+$$\frac{\partial \mathcal{L}(\mathbf{w})}{\partial \mathbf{w}}=\frac{\partial \mathcal{L}(\mathbf{w})}{\partial\hat{y}}\cdot\frac{\partial \hat{y}}{\partial \mathbf{w}}$$
 
 ## Funkcje błędu
-**Funkcją błędu** nazywamy pewną funkcję $L$, która jako argumenty przyjmuje parametry wyuczalne danego modelu, a jako wartość zwraca ich błąd. Funkcję $L$ można zdefiniować na wiele sposobów, w zależności od potrzeb, wśród najpopularniejszych możemy wyróżnić:
+**Funkcją błędu** nazywamy pewną funkcję $\mathcal{L}$, która jako argumenty przyjmuje parametry wyuczalne danego modelu, a jako wartość zwraca ich błąd. Funkcję $\mathcal{L}$ można zdefiniować na wiele sposobów, w zależności od potrzeb, wśród najpopularniejszych możemy wyróżnić:
 - **Metoda najmniejszych kwadratów** (ang. *least square loss*) SSE
-  $$L(\mathbf{w})=\frac{1}{2}\sum_{s=1}^S \left(y^{(s)}-\hat{y}^{(s)}\right)^2=\mathrm{SSE}(\mathbf{w})$$
-  $$L'(\mathbf{w})=\hat y^{(s)}-y^{(s)}=\mathrm{SSE}'(\mathbf{w})$$
+  $$\mathcal{L}(\mathbf{w})=\frac{1}{2}\sum_{s=1}^S \left(y^{(s)}-\hat{y}^{(s)}\right)^2=\mathrm{SSE}(\mathbf{w})$$
+  $$\mathcal{L}'(\mathbf{w})=\hat y^{(s)}-y^{(s)}=\mathrm{SSE}'(\mathbf{w})$$
 
 - **Błąd średniokwadratowy** (ang. *mean square error*) MSE
-  $$L(\mathbf{w})=\frac{1}{S}\sum_{s=1}^S\left( y^{(s)} -\hat{y}^{(s)}\right)^2=\mathrm{MSE}(\mathbf{w})$$
-  $$L'(\mathbf{w})=\frac{2}{S}(\hat y^{(s)}-y^{(s)})=\mathrm{MSE}'(\mathbf{w})$$
+  $$\mathcal{L}(\mathbf{w})=\frac{1}{S}\sum_{s=1}^S\left( y^{(s)} -\hat{y}^{(s)}\right)^2=\mathrm{MSE}(\mathbf{w})$$
+  $$\mathcal{L}'(\mathbf{w})=\frac{2}{S}\sum_{s=1}^S(\hat y^{(s)}-y^{(s)})(-1)=\mathrm{MSE}'(\mathbf{w})$$
 
 ## Adaptacyjne neurony liniowe
 Adaptacyjnym liniowym neuronem (ang. *adaptive linear neuron*), nazywanym w skrócie **ADALINE**, nazywamy funkcję $f$, która na wejściu przyjmuje wartości $x,b$ wraz z wagami $\mathbf{w}$, a zwraca wartość $\hat{y}$.
@@ -94,11 +94,11 @@ $$\hat{y} = \psi\left(\sum_{m=1}^M w_{m}x_{m}+b\right)$$
 ![[Pasted image 20261008182325.png|372]]
 
 ## Współczynnik uczenia
-Łatwo może dojść do sytuacji, w której trenowany model aktualizuje swoje wagi $\mathbf{w}$ w sposób powodujący oddalanie się od minimum globalnego funkcji $L$ (np. wartość pochodnej jest zbyt wielka i model oddala się od rozwiązania, albo utyka w minimum lokalnym).
+Łatwo może dojść do sytuacji, w której trenowany model aktualizuje swoje wagi $\mathbf{w}$ w sposób powodujący oddalanie się od minimum globalnego funkcji $\mathcal{L}$ (np. wartość pochodnej jest zbyt wielka i model oddala się od rozwiązania, albo utyka w minimum lokalnym).
 
 Aby temu zapobiec wprowadzamy **współczynnik uczenia** (ang. *learning rate*), oznaczany symbolem $\eta$, który jest mnożnikiem określającym wielkość kroku podczas aktualizacji wag za pomocą spadku gradientu.
 
-$$\mathbf{w}\leftarrow\mathbf{w}-\eta \frac{\partial L(\mathbf{w})}{\partial\mathbf{w}}$$
+$$\mathbf{w}\leftarrow\mathbf{w}-\eta \frac{\partial \mathcal{L}(\mathbf{w})}{\partial\mathbf{w}}$$
 
 Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansowanych optymalizatorach sieci neuronowych stosuje się adaptacyjny współczynnik uczenia (ang. *adaptive learning rate*), który dostosowuje się dynamicznie w trakcie uczenia.
 
@@ -123,13 +123,13 @@ Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansow
 >
 >$$w=1, \qquad b=0$$
 >
->$$L(\mathbf{w})=\frac{1}{2}\sum^S_{s=1} (y^{(s)}-\hat{y}^{(s)})^2$$
+>$$\mathcal{L}(\mathbf{w})=\frac{1}{2}\sum^S_{s=1} (y^{(s)}-\hat{y}^{(s)})^2$$
 >
 $$\hat{y}=wx+b$$
 >
-$$w\leftarrow w-\eta\frac{\partial L}{\partial w}, \qquad b\leftarrow b-\eta\frac{\partial L}{\partial b}$$
+$$w\leftarrow w-\eta\frac{\partial \mathcal{L}}{\partial w}, \qquad b\leftarrow b-\eta\frac{\partial \mathcal{L}}{\partial b}$$
 >
-$$\frac{\partial L}{\partial w}=\sum_{s=1}^S -(y^{(s)}-\hat{y}^{(s)})x^{(s)}, \qquad \frac{\partial L}{\partial b}=\sum_{s=1}^S -(y^{(s)}-\hat{y}^{(s)})$$
+$$\frac{\partial \mathcal{L}}{\partial w}=\sum_{s=1}^S -(y^{(s)}-\hat{y}^{(s)})x^{(s)}, \qquad \frac{\partial \mathcal{L}}{\partial b}=\sum_{s=1}^S -(y^{(s)}-\hat{y}^{(s)})$$
 >
 >2. Pierwsza epoka
   >  
