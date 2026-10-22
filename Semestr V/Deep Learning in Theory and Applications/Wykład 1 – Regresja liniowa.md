@@ -13,13 +13,13 @@ Wyznaczenie współczynników $w,b$ sprowadza się do zminimalizowania wartości
 
 $$\mathcal{L}(\mathbf{w})=\frac{1}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})^2$$
 
-Aby nauczyć model regresji liniowej należy od obecnych wartości $\mathbf{w}$ odejmować ich gradient $\frac{\partial \mathcal{L}(\mathbf{w})}{\partial\mathbf{w}}$. Gradient wskazuje kierunek największego wzrostu błędu, więc odejmując go zbliżamy się w stronę minimum funkcji minimalizując błąd:
+Aby nauczyć model regresji liniowej należy od obecnych wartości $\mathbf{w}$ odejmować ich gradient $\frac{\partial \mathcal{L}}{\partial\mathbf{w}}$. Gradient wskazuje kierunek największego wzrostu błędu, więc odejmując go zbliżamy się w stronę minimum funkcji minimalizując błąd:
 
-$$\mathbf{w} \leftarrow\mathbf{w}^{}-\frac{\partial \mathcal{L}(\mathbf{w})}{\partial \mathbf{w}}$$
+$$\mathbf{w} \leftarrow\mathbf{w}^{}-\frac{\partial \mathcal{L}}{\partial \mathbf{w}}$$
 
-**Reguła łańcuchowa** (ang. *chain rule*) pozwala na rozbicie gradientu $\frac{\partial \mathcal{L}(\mathbf{w})}{\partial\mathbf{w}}$ na iloczyn pochodnej straty po przewidywaniach $\frac{\partial L(\mathbf{w})}{\partial \hat{y}}$ oraz pochodnej przewidywań po wagach $\frac{\partial \hat{y}}{\partial \mathbf{w}}$:
+**Reguła łańcuchowa** (ang. *chain rule*) pozwala na rozbicie gradientu $\frac{\partial \mathcal{L}}{\partial\mathbf{w}}$ na iloczyn pochodnej straty po przewidywaniach $\frac{\partial L}{\partial \hat{y}}$ oraz pochodnej przewidywań po wagach $\frac{\partial \hat{y}}{\partial \mathbf{w}}$:
 
-$$\frac{\partial \mathcal{L}(\mathbf{w})}{\partial \mathbf{w}}=\frac{\partial \mathcal{L}(\mathbf{w})}{\partial\hat{y}}\cdot\frac{\partial \hat{y}}{\partial \mathbf{w}}$$
+$$\frac{\partial \mathcal{L}}{\partial \mathbf{w}}=\frac{\partial \mathcal{L}}{\partial\hat{y}}\cdot\frac{\partial \hat{y}}{\partial \mathbf{w}}$$
 
 ## Funkcje błędu
 **Funkcją błędu** nazywamy pewną funkcję $\mathcal{L}$, która jako argumenty przyjmuje parametry wyuczalne danego modelu, a jako wartość zwraca ich błąd. Funkcję $\mathcal{L}$ można zdefiniować na wiele sposobów, w zależności od potrzeb, wśród najpopularniejszych możemy wyróżnić:
@@ -98,7 +98,7 @@ $$\hat{y} = \psi\left(\sum_{m=1}^M w_{m}x_{m}+b\right)$$
 
 Aby temu zapobiec wprowadzamy **współczynnik uczenia** (ang. *learning rate*), oznaczany symbolem $\eta$, który jest mnożnikiem określającym wielkość kroku podczas aktualizacji wag za pomocą spadku gradientu.
 
-$$\mathbf{w}\leftarrow\mathbf{w}-\eta \frac{\partial \mathcal{L}(\mathbf{w})}{\partial\mathbf{w}}$$
+$$\mathbf{w}\leftarrow\mathbf{w}-\eta \frac{\partial \mathcal{L}}{\partial\mathbf{w}}$$
 
 Współczynnik uczenia zazwyczaj przyjmuje wartość $\eta\in(0,1)$. W zaawansowanych optymalizatorach sieci neuronowych stosuje się adaptacyjny współczynnik uczenia (ang. *adaptive learning rate*), który dostosowuje się dynamicznie w trakcie uczenia.
 

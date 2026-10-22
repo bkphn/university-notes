@@ -103,11 +103,11 @@ Analogicznie możemy postąpić dla warstwy drugiej.
 
 Niech $\mathcal{L}(\mathbf{v})=\mathrm{MSE}(\mathbf{v})$. Pojedynczą wagę $v_{i}$ będziemy aktualizować za pomocą wzoru:
 
-$$v_{i}\leftarrow v_{i}-\eta \frac{\partial \mathcal{L}\mathbf({\mathbf{v}})}{\partial v_{i}}$$
+$$v_{i}\leftarrow v_{i}-\eta \frac{\partial \mathcal{L}}{\partial v_{i}}$$
 
 Co możemy rozpisać jako: 
 
-$$v_{i}-\eta \frac{\partial \mathcal{L}(\mathbf{v})}{\partial v_{i}}=v_{i}-\eta\cdot\color{red}{\frac{\partial \mathcal{L}(\mathbf{v})}{\partial\hat{y}}}\color{black}{\cdot}\color{blue}{\frac{\partial \hat{y}}{\partial v_{i}}}\color{black}=v_{i}-\eta\cdot\color{red}\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)\color{black}\cdot  \color{blue}\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot z_{i}$$
+$$v_{i}-\eta \frac{\partial \mathcal{L}}{\partial v_{i}}=v_{i}-\eta\cdot\color{red}{\frac{\partial \mathcal{L}}{\partial\hat{y}}}\color{black}{\cdot}\color{blue}{\frac{\partial \hat{y}}{\partial v_{i}}}\color{black}=v_{i}-\eta\cdot\color{red}\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)\color{black}\cdot  \color{blue}\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot z_{i}$$
 
 W zapisie macierzowym wyrazimy to jako:
 
@@ -117,3 +117,23 @@ $$\mathbf{v}\leftarrow \mathbf{v}-\eta\nabla_{\mathbf{v}} \mathcal{L}=\mathbf{v}
  \frac{\partial \hat{y}}{\partial v_{1}} \\ \frac{\partial \hat{y}}{\partial v_{2}} \\ \vdots \\ \frac{\partial \hat{y}}{\partial v_{M}} \\ \frac{\partial \hat{y}}{\partial c}
 \end{bmatrix}$$
 
+Dla kolejnej warstwy postępujemy analogicznie, pojedynczą wagę aktualizujemy jako:
+
+$$w_{i,j}\leftarrow w_{i,j}-\eta\frac{\partial \mathcal{L}}{\partial w_{i,j}}$$
+
+Co dla ogólnego przypadku rozpisujemy jako:
+
+$$\mathbf{w}\leftarrow \mathbf{w}-\eta $$
+
+
+??? uzupełnić
+
+$$\frac{\partial \mathcal{L}}{\partial \hat{y}}=\frac{2}{S} \sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)$$
+
+$$\frac{\partial\hat{y}}{\partial z_{i}}=\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)+v_{i}$$
+
+$$\frac{\partial z_{1}}{\partial w_{1,1}}=\Phi'\left( \begin{bmatrix}
+ w_{1,1} & \dots w_{1,N}
+\end{bmatrix}  \begin{bmatrix}
+x_{1} \\ \vdots \\ x_{n}
+ \end{bmatrix}+b \right)x_{i}$$
