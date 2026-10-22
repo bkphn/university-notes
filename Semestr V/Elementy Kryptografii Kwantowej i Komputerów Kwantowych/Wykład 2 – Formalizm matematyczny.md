@@ -1,4 +1,4 @@
-	## Sprzężenie zespolone
+## Sprzężenie zespolone
 Dla dowolnej liczby zespolonej $z=a+bi$ sprzężeniem nazywamy liczbę $a-bi$, którą oznaczamy jako $\overline{z}$ bądź $z^\ast$. Możemy zauważyć, że:
 
 $$z\cdot z^\ast=|z|^2=a^2+b^2$$
