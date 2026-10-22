@@ -3,6 +3,10 @@
 | Prowadzący | dr inż. Mert Nakıp |
 | Sala       | CEK Aula C         |
 
+| Tytuł                              | Autor          |
+| ---------------------------------- | -------------- |
+| *Introduction to Machine Learning* | Ethem Alpaydın |
+
 | Nazwa programu | Link                       |
 | -------------- | -------------------------- |
 | mertnakip.com  | https://www.mertnakip.com/ |
