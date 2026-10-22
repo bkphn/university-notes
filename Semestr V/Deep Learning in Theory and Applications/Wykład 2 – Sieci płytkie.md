@@ -103,11 +103,11 @@ Analogicznie możemy postąpić dla warstwy drugiej.
 
 Niech $\mathcal{L}(\mathbf{v})=\mathrm{MSE}(\mathbf{v})$. Pojedynczą wagę $v_{i}$ będziemy aktualizować za pomocą wzoru:
 
-$$v_{i}\leftarrow v_{i}-\eta \frac{\partial \mathcal{L}(v_{i})}{\partial v_{i}}$$
+$$v_{i}\leftarrow v_{i}-\eta \frac{\partial \mathcal{L}\mathbf({\mathbf{v}})}{\partial v_{i}}$$
 
 Co możemy rozpisać jako: 
 
-$$v_{i}-\eta \frac{\partial \mathcal{L}(v_{i})}{\partial v_{i}}=v_{i}-\eta\cdot\color{red}{\frac{\partial \mathcal{L}(v_{i})}{\partial\hat{y}}}\color{black}{\cdot}\color{blue}{\frac{\partial \hat{y}}{\partial v_{i}}}\color{black}=v_{i}-\eta\cdot\color{red}\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)\color{black}\cdot  \color{blue}\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot z_{i}$$
+$$v_{i}-\eta \frac{\partial \mathcal{L}(\mathbf{v})}{\partial v_{i}}=v_{i}-\eta\cdot\color{red}{\frac{\partial \mathcal{L}(\mathbf{v})}{\partial\hat{y}}}\color{black}{\cdot}\color{blue}{\frac{\partial \hat{y}}{\partial v_{i}}}\color{black}=v_{i}-\eta\cdot\color{red}\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)\color{black}\cdot  \color{blue}\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot z_{i}$$
 
 W zapisie macierzowym wyrazimy to jako:
 
