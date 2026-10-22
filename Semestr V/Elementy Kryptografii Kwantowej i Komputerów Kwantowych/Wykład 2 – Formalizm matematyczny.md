@@ -1,4 +1,4 @@
-## Sprzężenie zespolone
+	## Sprzężenie zespolone
 Dla dowolnej liczby zespolonej $z=a+bi$ sprzężeniem nazywamy liczbę $a-bi$, którą oznaczamy jako $\overline{z}$ bądź $z^\ast$. Możemy zauważyć, że:
 
 $$z\cdot z^\ast=|z|^2=a^2+b^2$$
@@ -152,6 +152,12 @@ Wśród najważniejszych operatorów kwantowych możemy wyróżnić:
 
 $$\hat{P}_{0}\ket{\psi} =\ket{0} \bra{0}\ket{\psi} =\begin{bmatrix}
 1 & 0 \\ 0 & 0
+\end{bmatrix}\ket{\psi}  $$
+
+- **Operator projekcji na stan $\ket{1}$**:
+
+$$\hat{P}_{1}\ket{\psi} =\ket{1} \bra{1}\ket{\psi} =\begin{bmatrix}
+0 & 0 \\ 0 & 1
 \end{bmatrix}\ket{\psi}  $$
 
 - **Operator hermitowski**: Operator hermitowski $\hat{A}$ polega na mnożeniu przez macierz $\mathbf{A}$, która musi spełniać warunek:
