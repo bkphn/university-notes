@@ -7,9 +7,10 @@
 | ---------------------------------- | -------------- |
 | *Introduction to Machine Learning* | Ethem Alpaydın |
 
-| Nazwa programu | Link                       |
-| -------------- | -------------------------- |
-| mertnakip.com  | https://www.mertnakip.com/ |
+| Nazwa programu                | Link                               |
+| ----------------------------- | ---------------------------------- |
+| mertnakip.com                 | https://www.mertnakip.com/         |
+| *Understanding Deep Learning* | https://udlbook.github.io/udlbook/ |
 
 ## Egzamin
 - Egzamin odbędzie się w okolicach **10 tygodnia**. Obejmować będzie wszystkie tematy, które do tego momentu pojawią się na wykładach.
