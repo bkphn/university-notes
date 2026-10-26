@@ -38,22 +38,27 @@ Czas obliczeń maszyny $M_T$ na konkretnym słowie wejściowym $\sigma$ oznaczam
 
 Pamięć potrzebną do obliczeń maszyny $M_T$ na słowie wejściowym $\sigma$ oznaczamy jako $S(M_T, \sigma)$ i definiujemy jako liczbę komórek taśmy, które zostały odwiedzone przez głowicę zanim maszyna się zatrzymała.
 
-## Pracowity Bóbr (Busy Beaver)
-**Pracowitym Bobrem** nazywamy maszynę Turinga o zadanej z góry liczbie stanów $N$, która zaczynając od pustej taśmy wykonuje **jak największą** liczbę kroków, po czym samoczynnie się zatrzymuje.
+## Pracowity Bóbr
+**Pracowity Bóbr** (ang. *Busy Beaver*) to maszyna Turinga o zadanej liczbie stanów $N$, która rozpoczyna działanie na pustej taśmie i maksymalizuje określoną wielkość, a następnie się zatrzymuje.
 
-Funkcja pracowitego bobra $\Sigma(N)$ (lub $\text{BB}(N)$) przyjmuje jako argument liczbę stanów $N$ i zwraca maksymalną liczbę kroków do wykonania przed zatrzymaniem. 
+W klasycznym modelu rozważamy deterministyczne maszyny Turinga z $N$ stanami roboczymi, dwoma symbolami $\{0,1\}$ oraz osobnym stanem zatrzymania.
+
+Wyróżniamy dwie funkcje pracowitego bobra:
+- **Funkcja Σ**: Odpowiada maksymalnej wartości jedynek pozostawionych na taśmie przez zatrzymującą się maszynę Turinga.
+- **Funkcja $\mathrm{BB}$**: Odpowiada maksymalnej liczbie kroków, jaką może wykonać maszyna Turinga o $N$ stanach na pustej taśmie, czasem oznacza się ją jako $S(N)$.
 
 **Znane wartości i szacowania dolne:**
-*   $\Sigma(2) = 4$
-*   $\Sigma(3) = 6$
-*   $\Sigma(4) = 13$
-*   $\Sigma(5) = 4098$
-*   $\Sigma(6) > 2^{111^5}$
-*   $\Sigma(7) > 2^{111^{2^{111^3}}}$
+* $\Sigma(1)=1, \qquad \mathrm{BB}(1)=1$
+* $\Sigma(2) = 4,\qquad \mathrm{BB}(2)=6$
+* $\Sigma(3) = 6,\qquad \mathrm{BB}(3)=21$
+* $\Sigma(4) = 13, \qquad \mathrm{BB}(4)=107$
+* $\Sigma(5) = 4098, \qquad \mathrm{BB}(5)=47176870$
+* $\Sigma(6) > 2\uparrow\uparrow\uparrow 5,\qquad \mathrm{BB}(6)> 2\uparrow\uparrow\uparrow 5$
+* $\Sigma(7)>2\uparrow^{11}2\uparrow^{11}3,\qquad \mathrm{BB}(7)>2\uparrow^{11}2\uparrow^{11}3$
 
-Tibor Rado udowodnił, że funkcja $\Sigma$ jest **nieobliczalna** – nie istnieje jakakolwiek funkcja obliczalna, która mogłaby ograniczyć $\Sigma$ od góry:
+Tibor Radó udowodnił, że funkcje pracowitego bobra są **nieobliczalne** – nie istnieje algorytm, który dla dowolnego $N$ obliczałby dokładną wartość $\Sigma(N)$ lub $\mathrm{BB}(N)$. Co więcej, obie funkcje rosną szybciej niż dowolna funkcja całkowita obliczalna, w tym sensie, że każdą taką funkcję ostatecznie przewyższają.
 
-$$\forall_f \exists_n : f(n) < \Sigma(n)$$
+$$\forall_f \exists_n : f(n) < \Sigma(n),\qquad \forall_{f}\exists_{n}:f(n)<\mathrm{BB}(n)$$
 
 ## Procedury i Obliczalność
 **Algorytmem** nazywamy procedurę spełniającą trzy ścisłe założenia:
