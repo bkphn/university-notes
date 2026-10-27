@@ -209,7 +209,7 @@ $$\frac{\partial\mathcal{L}}{\partial w_{i,j}}=\color{red}\frac{\partial\mathcal
 
 Następnie obliczamy trzy pochodne:
 
-$$\color{red}\frac{\partial \mathcal{L}}{\partial \hat{y}}=\frac{2}{1} (y-\hat{y})(-1)$$
+$$\color{red}\frac{\partial \mathcal{L}}{\partial \hat{y}}=\frac{2}{1z} (y-\hat{y})(-1)$$
 
 $$\color{blue}\frac{\partial\hat{y}}{\partial z_{i}}=\Psi'\left( \mathbf{vz}+c \right)\cdot v_{i}$$
 
