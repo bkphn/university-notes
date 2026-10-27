@@ -163,42 +163,57 @@ Analogicznie możemy postąpić dla warstwy drugiej.
 **Backpropagation** (propagacja wsteczna) BP to algorytm służący do efektywnego obliczania gradientu funkcji straty względem wag sieci, oparty na regule łańcuchowej różniczkowania. Umożliwia on aktualizację wag w procesie uczenia.
 ![[Pasted image 20261008182959.png|443]]
 
-Niech $\mathcal{L}(\mathbf{v})=\mathrm{MSE}(\mathbf{v})$. Pojedynczą wagę $v_{i}$ będziemy aktualizować za pomocą wzoru:
+Niech $\mathcal{L}=\mathrm{MSE}$. Pojedynczą wagę $v_{i}$ będziemy aktualizować za pomocą wzoru:
 
 $$v_{i}\leftarrow v_{i}-\eta \frac{\partial \mathcal{L}}{\partial v_{i}}$$
 
-Co możemy rozpisać jako: 
+Stosując regułę łańcuchową $\frac{\partial\mathcal{L}}{\partial v_{i}}=\frac{\partial\mathcal{L}}{\partial\hat{y}}\cdot \frac{\partial\hat{y}}{\partial v_{i}}$ możemy to rozpisać jako: 
 
-$$v_{i}-\eta \frac{\partial \mathcal{L}}{\partial v_{i}}=v_{i}-\eta\cdot\color{red}{\frac{\partial \mathcal{L}}{\partial\hat{y}}}\color{black}{\cdot}\color{blue}{\frac{\partial \hat{y}}{\partial v_{i}}}\color{black}=v_{i}-\eta\cdot\color{red}\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)\color{black}\cdot  \color{blue}\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot z_{i}$$
+$$v_{i}-\eta\cdot\color{red}{\frac{\partial \mathcal{L}}{\partial\hat{y}}}\color{black}{\cdot}\color{blue}{\frac{\partial \hat{y}}{\partial v_{i}}}\color{black}=v_{i}-\eta\cdot\color{red}\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)\color{black}\cdot  \color{blue}\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot z_{i}$$
 
-W zapisie macierzowym wyrazimy to jako:
+W analogiczny sposób możemy policzyć BP dla warstwy wyjściowej:
 
-$$\mathbf{v}\leftarrow \mathbf{v}-\eta\nabla_{\mathbf{v}} \mathcal{L}=\mathbf{v}-\eta \begin{bmatrix}
- \frac{\partial \mathcal{L}}{\partial v_{1}} \\ \frac{\partial \mathcal{L}}{\partial v_{2}} \\ \vdots \\\frac{\partial \mathcal{L}}{\partial v_{M}} \\ \frac{\partial \mathcal{L}}{\partial c}
-\end{bmatrix}=\mathbf{v}-\eta \frac{\partial \mathcal{L}}{\partial \hat{y}} \begin{bmatrix}
- \frac{\partial \hat{y}}{\partial v_{1}} \\ \frac{\partial \hat{y}}{\partial v_{2}} \\ \vdots \\ \frac{\partial \hat{y}}{\partial v_{M}} \\ \frac{\partial \hat{y}}{\partial c}
+$$\hat{y}=\Psi(\mathbf{vz}+c)$$
+
+W zapisie macierzowym mamy:
+
+$$\mathbf{v}=\begin{bmatrix}
+v_{1} & v_{2} & \dots & v_{M}
 \end{bmatrix}$$
 
-Dla kolejnej warstwy postępujemy analogicznie, pojedynczą wagę aktualizujemy jako:
+Więc pochodną możemy przedstawić jako gradient $\nabla_{\mathbf{v}}$:
+
+$$\mathbf{v}\leftarrow \mathbf{v}-\eta\nabla_{\mathbf{v}} \mathcal{L}=\mathbf{v}-\eta \begin{bmatrix}
+ \frac{\partial \mathcal{L}}{\partial v_{1}} \\ \frac{\partial \mathcal{L}}{\partial v_{2}} \\ \vdots \\\frac{\partial \mathcal{L}}{\partial v_{M}} \\
+\end{bmatrix}=\mathbf{v}-\eta  \begin{bmatrix}
+ \frac{\partial \mathcal{L}}{\partial \hat{y}}\cdot\frac{\partial \hat{y}}{\partial v_{1}} \\ \frac{\partial \mathcal{L}}{\partial \hat{y}}\cdot\frac{\partial \hat{y}}{\partial v_{2}} \\ \vdots \\ \frac{\partial \mathcal{L}}{\partial \hat{y}}\cdot\frac{\partial \hat{y}}{\partial v_{M}} \\
+\end{bmatrix}=\mathbf{v}-\eta \frac{\partial \mathcal{L}}{\partial \hat{y}} \begin{bmatrix}
+ \frac{\partial \hat{y}}{\partial v_{1}} \\ \frac{\partial \hat{y}}{\partial v_{2}} \\ \vdots \\ \frac{\partial \hat{y}}{\partial v_{M}}
+\end{bmatrix}$$
+
+Należy pamiętać o współczynniku $c$:
+
+$$c\leftarrow c-\eta\frac{\partial\mathcal{L}}{\partial c}=c-\eta\frac{\partial\mathcal{L}}{\partial \hat{y}}\cdot \frac{\partial \hat{y}}{\partial c}=c-\eta\frac{2}{S}\sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)\cdot\Psi'(\mathbf{vz}+c)$$
+
+Dla warstwy ukrytej:
+
+$$\mathbf{z}=\Phi(\mathbf{Wx}+\mathbf{b})$$
+
+postępujemy analogicznie. Wartość pojedynczej wagi obliczamy jako:
 
 $$w_{i,j}\leftarrow w_{i,j}-\eta\frac{\partial \mathcal{L}}{\partial w_{i,j}}$$
 
-Co dla ogólnego przypadku rozpisujemy jako:
+Korzystając z reguły łańcuchowej, dla jednej próbki $y$ możemy rozpisać pochodną do postaci:
 
-$$\mathbf{w}\leftarrow \mathbf{w}-\eta $$
+$$\frac{\partial\mathcal{L}}{\partial w_{i,j}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \frac{\partial\hat{y}}{\partial w_{i,j}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot\color{blue} \frac{\partial \hat{y}}{\partial z_{i}}\color{black}\cdot \color{green}\frac{\partial z_{i}}{\partial w_{i,j}}$$
 
+Następnie obliczamy trzy pochodne:
 
-??? uzupełnić
+$$\color{red}\frac{\partial \mathcal{L}}{\partial \hat{y}}=\frac{2}{1} (y-\hat{y})(-1)$$
 
-$$\frac{\partial \mathcal{L}}{\partial \hat{y}}=\frac{2}{S} \sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)$$
+$$\color{blue}\frac{\partial\hat{y}}{\partial z_{i}}=\Psi'\left( \mathbf{vz}+c \right)\cdot v_{i}$$
 
-$$\frac{\partial\hat{y}}{\partial z_{i}}=\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot v_{i}$$
-
-$$\frac{\partial z_{1}}{\partial w_{1,1}}=\Phi'\left( \begin{bmatrix}
- w_{1,1} & \dots w_{1,N}
-\end{bmatrix}  \begin{bmatrix}
-x_{1} \\ \vdots \\ x_{n}
- \end{bmatrix}+b \right)x_{i}$$
+$$\color{green}\frac{\partial z_{i}}{\partial w_{i,j}}=\Phi'\left( w_{i,1}x_{1}+\dots+w_{i,N}x_{N}+b_{i} \right)\cdot x_{j}$$
 
 
 
