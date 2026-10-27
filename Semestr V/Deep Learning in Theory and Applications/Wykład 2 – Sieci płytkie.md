@@ -97,6 +97,68 @@ $$\mathbf{z}=\Phi(\mathbf{Wx}+\mathbf{b})=\Phi(\mathbf{W_{b}}\mathbf{x_{b}})$$
 
 Analogicznie możemy postąpić dla warstwy drugiej.
 
+>[!example] Przykład FF
+>**Dane**
+>- Wejścia $x_{1}=2,x_{2}=3$
+>- Funkcje aktywacji $\Phi=\mathrm{ReLU}, \Psi=\mathrm{id}$
+>- Wagi warstwy ukrytej $w_{1,1}=1,w_{1,2}=-2,w_{2,1}=3,w_{2,2}=1$
+>- Wagi warstwy wyjściowej $v_{1}=2, v_{2}=-1$
+>- Bias $b_{1}=1, b_{2}=-2,c=1$
+>- Liczba neuronów $z_{i}$: $2$, liczba wyjść $\hat{y}$: $1$.
+>0. **Definiujemy macierze:**
+>
+>$$\mathbf{x}=\begin{bmatrix}
+>2 \\ 3
+>\end{bmatrix},\quad \mathbf{W}=\begin{bmatrix}
+> 1 & -2 \\ 3 & 1
+>\end{bmatrix},\quad \mathbf{b}=\begin{bmatrix}
+> 1 \\ -2
+>\end{bmatrix},\quad \mathbf{v}=\begin{bmatrix}
+> 2 & -1
+>\end{bmatrix}, \quad \mathbf{z}=\begin{bmatrix}
+>z_{1} \\ z_{2}
+>\end{bmatrix}$$
+>
+> 1. **Obliczamy wektor** $\mathbf{Wx+b}$**.**
+> 
+> $$\mathbf{Wx+b}=\begin{bmatrix}
+>  1 & -2 \\ 3 & 1
+> \end{bmatrix}\begin{bmatrix}
+>  2 \\ 3
+> \end{bmatrix}+\begin{bmatrix}
+> 1 \\ -2
+> \end{bmatrix}=\begin{bmatrix}
+> -4 \\ 9
+> \end{bmatrix}+\begin{bmatrix}
+> 1 \\ -2
+> \end{bmatrix}=\begin{bmatrix}
+> -3 \\ 7
+> \end{bmatrix}$$
+> 
+> 2. **Stosujemy funkcję aktywacji** $\Phi$**, wyznaczając neurony** $z_{i}$**.**
+> 
+> $$\Phi(\mathbf{Wx+b})=\Phi\left(\begin{bmatrix}
+> -3 \\ 7
+> \end{bmatrix}\right)=\mathrm{ReLU}\left(\begin{bmatrix}
+> -3 \\ 7
+> \end{bmatrix}\right)=\begin{bmatrix}
+> \max(0, -3) \\ \max(0, 7)
+> \end{bmatrix}=\begin{bmatrix}
+> 0 \\ 7
+> \end{bmatrix}=\mathbf{z}$$
+> 
+> 3. **Obliczamy wartość** $\mathbf{vz}+c$**.**
+>    
+> $$\mathbf{vz}+c=\begin{bmatrix}
+> 2 & -1
+> \end{bmatrix} \begin{bmatrix}
+> 0 \\ 7
+> \end{bmatrix}+1=-7+1=-6$$
+>
+> 4. **Stosujemy funkcję aktywacji** $\Psi$**, wyznaczając wynik** $\hat{y}$**.**
+>    
+>    $$\Psi(\mathbf{vz}+c)=\Psi(-6)=\mathrm{id}(-6)=-6=\hat{y}$$
+ 
 ## Backpropagation
 **Backpropagation** (propagacja wsteczna) BP to algorytm służący do efektywnego obliczania gradientu funkcji straty względem wag sieci, oparty na regule łańcuchowej różniczkowania. Umożliwia on aktualizację wag w procesie uczenia.
 ![[Pasted image 20261008182959.png|443]]
@@ -137,3 +199,70 @@ $$\frac{\partial z_{1}}{\partial w_{1,1}}=\Phi'\left( \begin{bmatrix}
 \end{bmatrix}  \begin{bmatrix}
 x_{1} \\ \vdots \\ x_{n}
  \end{bmatrix}+b \right)x_{i}$$
+
+
+
+
+
+
+
+
+
+
+
+
+--- 
+
+>[!example] Przykład BP
+>**Dane**
+>
+>- Wartość przewidywana $\hat{y}=-6$
+>- Wartość faktyczna $y=2$
+>- Wagi wartwy ukrytej $w_{1,1}=1,w_{1,2}=-2,w_{2,1}=3,w_{2,2}=1$
+>- Wagi warstwy wyjściowej $v_{1}=2,v_{2}=-1$
+>- Bias $b_{1}=1,b_{2}=-2,c=1$
+>- Funkcja starty $\mathcal{L}=\mathrm{MSE}$
+>
+>0. **Obliczamy funkcję straty:**
+>
+>$$\mathcal{L}=\mathrm{MSE}=\frac{1}{S}\sum_{s=1}^S(y^{(s)}-\hat{y}^{(s)})^2=\frac{1}{1}(y-\hat{y})^2=(2-(-6))^2=64$$
+>
+> 1. **Obliczamy wektor** $\mathbf{Wx+b}$**.**
+> 
+> $$\mathbf{Wx+b}=\begin{bmatrix}
+>  1 & -2 \\ 3 & 1
+> \end{bmatrix}\begin{bmatrix}
+>  2 \\ 3
+> \end{bmatrix}+\begin{bmatrix}
+> 1 \\ -2
+> \end{bmatrix}=\begin{bmatrix}
+> -4 \\ 9
+> \end{bmatrix}+\begin{bmatrix}
+> 1 \\ -2
+> \end{bmatrix}=\begin{bmatrix}
+> -3 \\ 7
+> \end{bmatrix}$$
+> 
+> 2. **Stosujemy funkcję aktywacji** $\Phi$**, wyznaczając neurony** $z_{i}$**.**
+> 
+> $$\Phi(\mathbf{Wx+b})=\Phi\left(\begin{bmatrix}
+> -3 \\ 7
+> \end{bmatrix}\right)=\mathrm{ReLU}\left(\begin{bmatrix}
+> -3 \\ 7
+> \end{bmatrix}\right)=\begin{bmatrix}
+> \max(0, -3) \\ \max(0, 7)
+> \end{bmatrix}=\begin{bmatrix}
+> 0 \\ 7
+> \end{bmatrix}=\mathbf{z}$$
+> 
+> 3. **Obliczamy wartość** $\mathbf{vz}+c$**.**
+>    
+> $$\mathbf{vz}+c=\begin{bmatrix}
+> 2 & -1
+> \end{bmatrix} \begin{bmatrix}
+> 0 \\ 7
+> \end{bmatrix}+1=-7+1=-6$$
+>
+> 4. **Stosujemy funkcję aktywacji** $\Psi$**, wyznaczając wynik** $\hat{y}$**.**
+>    
+>    $$\Psi(\mathbf{vz}+c)=\Psi(-6)=\mathrm{id}(-6)=-6=\hat{y}$$
