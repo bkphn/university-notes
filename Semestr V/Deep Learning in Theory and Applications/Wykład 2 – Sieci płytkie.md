@@ -130,7 +130,7 @@ $$\mathbf{w}\leftarrow \mathbf{w}-\eta $$
 
 $$\frac{\partial \mathcal{L}}{\partial \hat{y}}=\frac{2}{S} \sum_{s=1}^S (y^{(s)}-\hat{y}^{(s)})(-1)$$
 
-$$\frac{\partial\hat{y}}{\partial z_{i}}=\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)+v_{i}$$
+$$\frac{\partial\hat{y}}{\partial z_{i}}=\Psi'\left( \sum_{m=1}^M v_{m}z_{m}+c \right)\cdot v_{i}$$
 
 $$\frac{\partial z_{1}}{\partial w_{1,1}}=\Phi'\left( \begin{bmatrix}
  w_{1,1} & \dots w_{1,N}
