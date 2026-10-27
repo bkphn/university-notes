@@ -219,59 +219,78 @@ i otrzymujemy:
 
 $$\frac{\partial\mathcal{L}}{\partial w_{i,j}}=2(y-\hat{y})(-1)\cdot\Psi'(\mathbf{vz}+c)v_{i}\cdot\Phi'\left(w_{i,1}x_{1}+\dots+w_{i,N}x_{N}+b_{i}\right)\cdot x_{j}$$
 
+W zapisie macierzowym:
 
---- 
+$$\mathbf{W}\leftarrow \mathbf{W}-\eta\nabla_{\mathbf{W}}\mathcal{L}=\mathbf{W}-\eta\begin{bmatrix}
+\frac{\partial\mathcal L}{\partial w_{1,1}}
+&\cdots&
+\frac{\partial\mathcal L}{\partial w_{1,N}}\\
+\vdots&\ddots&\vdots\\
+\frac{\partial\mathcal L}{\partial w_{M,1}}
+&\cdots&
+\frac{\partial\mathcal L}{\partial w_{M,N}}
+\end{bmatrix}$$
+
+$$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
+\frac{\partial\mathcal{L}}{\partial b_{1}} \\ \vdots \\ \frac{\partial\mathcal{L}}{\partial b_{m}}
+\end{bmatrix}$$
 
 >[!example] Przykład BP
 >**Dane**
+>Liczba wejść $N=2$
+>Liczba neuronów ukrytych $M=2$ 
+>Liczba wyjść $S=1$
+>Funkcje aktywacji $\Phi=\mathrm{ReLU}, \Psi=\mathrm{id}$
+>Funkcja straty $\mathcal{L}=\mathrm{MSE}$
+>Współczynnik uczenia $\eta$
+>Wartość wyjściowa $\hat{y}=-6$
+>Wartość oczekiwana $y=2$
+>Neurony $\mathbf{z}=\begin{bmatrix}0 & 7\end{bmatrix}^T$
 >
->- Wartość przewidywana $\hat{y}=-6$
->- Wartość faktyczna $y=2$
->- Wagi wartwy ukrytej $w_{1,1}=1,w_{1,2}=-2,w_{2,1}=3,w_{2,2}=1$
->- Wagi warstwy wyjściowej $v_{1}=2,v_{2}=-1$
->- Bias $b_{1}=1,b_{2}=-2,c=1$
->- Funkcja starty $\mathcal{L}=\mathrm{MSE}$
+>1. **Wyznaczenie funkcji starty**
+>   
+>$$\mathcal{L}=\frac{1}{S}\sum_{s=1}^S(y^{(s)}-\hat{y}^{(s)})^2\bigg\vert_{S=1}=(y-\hat{y})^2$$
 >
->0. **Obliczamy funkcję straty:**
->
->$$\mathcal{L}=\mathrm{MSE}=\frac{1}{S}\sum_{s=1}^S(y^{(s)}-\hat{y}^{(s)})^2=\frac{1}{1}(y-\hat{y})^2=(2-(-6))^2=64$$
->
-> 1. **Obliczamy wektor** $\mathbf{Wx+b}$**.**
-> 
-> $$\mathbf{Wx+b}=\begin{bmatrix}
->  1 & -2 \\ 3 & 1
-> \end{bmatrix}\begin{bmatrix}
->  2 \\ 3
-> \end{bmatrix}+\begin{bmatrix}
-> 1 \\ -2
-> \end{bmatrix}=\begin{bmatrix}
-> -4 \\ 9
-> \end{bmatrix}+\begin{bmatrix}
-> 1 \\ -2
-> \end{bmatrix}=\begin{bmatrix}
-> -3 \\ 7
-> \end{bmatrix}$$
-> 
-> 2. **Stosujemy funkcję aktywacji** $\Phi$**, wyznaczając neurony** $z_{i}$**.**
-> 
-> $$\Phi(\mathbf{Wx+b})=\Phi\left(\begin{bmatrix}
-> -3 \\ 7
-> \end{bmatrix}\right)=\mathrm{ReLU}\left(\begin{bmatrix}
-> -3 \\ 7
-> \end{bmatrix}\right)=\begin{bmatrix}
-> \max(0, -3) \\ \max(0, 7)
-> \end{bmatrix}=\begin{bmatrix}
-> 0 \\ 7
-> \end{bmatrix}=\mathbf{z}$$
-> 
-> 3. **Obliczamy wartość** $\mathbf{vz}+c$**.**
+>2. **Obliczenie wartości funkcji straty**
+>   
+>   $$\mathcal{L}=(2-(-6))^2=64$$
+>   
+> 3. **Pochodna pierwszej wagi** $v_{1}$
 >    
-> $$\mathbf{vz}+c=\begin{bmatrix}
-> 2 & -1
-> \end{bmatrix} \begin{bmatrix}
-> 0 \\ 7
-> \end{bmatrix}+1=-7+1=-6$$
->
-> 4. **Stosujemy funkcję aktywacji** $\Psi$**, wyznaczając wynik** $\hat{y}$**.**
+>    $$\frac{\partial\mathcal{L}}{\partial v_{1}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial v_{1}}$$
 >    
->    $$\Psi(\mathbf{vz}+c)=\Psi(-6)=\mathrm{id}(-6)=-6=\hat{y}$$
+>    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=2(y-\hat{y})(-1)\bigg\vert_{y=2 \\ \hat{y}=-6}=2(2-(-6))(-1)=-16$$
+>    
+>    $$\color{blue}\frac{\partial \hat{y}}{\partial v_{1}}=\Psi'(\mathbf{vz}+c)z_{1}=\mathrm{id}'(\mathbf{vz}+c)\cdot z_{1}=1\cdot z_{1}\bigg\vert_{z_{1}=0}=1\cdot{0}=0$$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial v_{1}}=\color{red}-16\color{black}\cdot \color{blue}0\color{black}=0$$
+>    
+>   4. **Pochodna drugiej wagi** $v_{2}$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial v_{2}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial v_{2}}$$
+>    
+>    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=-16$$
+>    
+>    $$\color{blue}\frac{\partial \hat{y}}{\partial v_{2}}=\Psi'(\mathbf{vz}+c)z_{2}=\mathrm{id}'(\mathbf{vz}+c)\cdot z_{2}=1\cdot z_{2}\bigg\vert_{z_{2}=7}=1\cdot{7}=7$$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial v_{2}}=\color{red}-16\color{black}\cdot \color{blue}7\color{black}=-112$$
+>    
+>    
+>    
+>   5. **Pochodna biasu** $c$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial c}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial c}$$
+>    
+>    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=-16$$
+>    
+>    $$\color{blue}\frac{\partial \hat{y}}{\partial c}=\Psi'(\mathbf{vz}+c)\cdot{1}=\mathrm{id}'(\mathbf{vz}+c)=1$$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial c}=\color{red}-16\color{black}\cdot \color{blue}1\color{black}=-16$$
+>    
+>    6. **Pochodna wagi** $w_{1,1}$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial z_{1}}\color{black}\cdot \color{green}\frac{\partial z_{1}}{\partial w_{1,1}}$$
+>    
+>    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=-16$$
+>    
+>    $$\color{blue}$$
