@@ -241,13 +241,14 @@ $$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
 >**Dane**
 >Liczba wejść $N=2$
 >Liczba neuronów ukrytych $M=2$ 
->Liczba wyjść $S=1$
+>Liczba wyjść $1$
 >Funkcje aktywacji $\Phi=\mathrm{ReLU}, \Psi=\mathrm{id}$
 >Funkcja straty $\mathcal{L}=\mathrm{MSE}$
->Współczynnik uczenia $\eta$
+>Współczynnik uczenia $\eta=0.01$
 >Wartość wyjściowa $\hat{y}=-6$
 >Wartość oczekiwana $y=2$
 >Neurony $\mathbf{z}=\begin{bmatrix}0 & 7\end{bmatrix}^T$
+>Wagi i biasy z poprzedniego przykładu
 >
 >1. **Wyznaczenie funkcji starty**
 >   
@@ -297,9 +298,9 @@ $$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
 >    
 >    $$\color{blue} \frac{\partial \hat{y}}{\partial z_{1}}=\Psi'(\mathbf{vz}+c)v_{1}=\mathrm{id}'(\mathbf{vz}+c)v_{1}=1\cdot v_{1}\bigg\vert_{v_{1}=2}=1\cdot{2}=2$$
 >    
->    $$\color{green} \frac{\partial z_{1}}{w_{1,1}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})x_{1}\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)\cdot {2}=\mathrm{ReLU}'(-3)\cdot{2}=0\cdot 2=0$$
+>    $$\color{green} \frac{\partial z_{1}}{\partial w_{1,1}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})x_{1}\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)\cdot {2}=\mathrm{ReLU}'(-3)\cdot{2}=0\cdot 2=0$$
 >    
->    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
+>    $$\frac{\partial\mathcal{L}}{\partial \partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
 >    
 >    7. **Pochodna wagi** $w_{1,2}$
 >    
@@ -311,7 +312,7 @@ $$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
 >    
 >    $$\color{green} \frac{\partial z_{1}}{w_{1,2}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})x_{2}\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)\cdot {3}=\mathrm{ReLU}'(-3)\cdot{3}=0\cdot 3=0$$
 >    
->    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
+>    $$\frac{\partial\mathcal{L}}{\partial w_{1,2}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
 >    
 >    8. **Pochodna biasu** $b_{1}$
 >    
@@ -323,11 +324,9 @@ $$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
 >    
 >    $$\color{green} \frac{\partial z_{1}}{w_{1,2}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)=\mathrm{ReLU}'(-3)=0$$
 >    
->    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
+>    $$\frac{\partial\mathcal{L}}{\partial b_{1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
 >    
->    
->    
->    6. **Pochodna wagi** $w_{2,1}$
+>    9. **Pochodna wagi** $w_{2,1}$
 >    
 >    $$\frac{\partial\mathcal{L}}{\partial w_{2,1}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial z_{2}}\color{black}\cdot \color{green}\frac{\partial z_{2}}{\partial w_{2,1}}$$
 >    
@@ -335,6 +334,70 @@ $$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
 >    
 >    $$\color{blue} \frac{\partial \hat{y}}{\partial z_{2}}=\Psi'(\mathbf{vz}+c)v_{2}=\mathrm{id}'(\mathbf{vz}+c)v_{2}=1\cdot v_{2}\bigg\vert_{v_{2}=-1}=1\cdot{-1}=-1$$
 >    
->    $$\color{green} \frac{\partial z_{2}}{w_{2,1}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)=\mathrm{ReLU}'(-3)=0\cdot 3=0$$
+>    $$\color{green} \frac{\partial z_{2}}{\partial w_{2,1}}=\Phi'(w_{2,1}x_{1}+w_{2,2}x_{2}+b_{2})x_{1}\Bigg\vert_{w_{2,1}=3 \\ w_{2,2}=1 \\ x_{1}=2 \\ x_{2}=3 \\ b_{2}=-2}=\mathrm{ReLU}'(6+3-2)\cdot2=\mathrm{ReLU}'(7)\cdot{2} =1\cdot 2=2$$
 >    
->    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
+>    $$\frac{\partial\mathcal{L}}{\partial w_{2,1}}=\color{red}-16\color{black}\cdot \color{blue}-1\color{black}\cdot \color{green}2\color{black}=32$$
+>    
+>    10. **Pochodna wagi** $w_{2,2}$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial w_{2,2}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial z_{2}}\color{black}\cdot \color{green}\frac{\partial z_{2}}{\partial w_{2,2}}$$
+>    
+>    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=-16$$
+>    
+>    $$\color{blue} \frac{\partial \hat{y}}{\partial z_{2}}=-1$$
+>    
+>    $$\color{green} \frac{\partial z_{2}}{\partial w_{2,2}}=\Phi'(w_{2,1}x_{1}+w_{2,2}x_{2}+b_{2})x_{2}\Bigg\vert_{w_{2,1}=3 \\ w_{2,2}=1 \\ x_{1}=2 \\ x_{2}=3 \\ b_{2}=-2}=\mathrm{ReLU}'(6+3-2)\cdot 3 =\mathrm{ReLU}'(7)\cdot{3} =1\cdot 3=3$$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial w_{2,2}}=\color{red}-16\color{black}\cdot \color{blue}-1\color{black}\cdot \color{green}3\color{black}=48$$
+>    
+>    11. **Pochodna biasu** $b_{2}$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial b_{2}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial z_{2}}\color{black}\cdot \color{green}\frac{\partial z_{2}}{\partial b_{2}}$$
+>    
+>    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=-16$$
+>    
+>    $$\color{blue} \frac{\partial \hat{y}}{\partial z_{2}}=-1$$
+>    
+>    $$\color{green} \frac{\partial z_{2}}{\partial b_{2}}=\Phi'(w_{2,1}x_{1}+w_{2,2}x_{2}+b_{2})\Bigg\vert_{w_{2,1}=3 \\ w_{2,2}=1 \\ x_{1}=2 \\ x_{2}=3 \\ b_{2}=-2}=\mathrm{ReLU}'(6+3-2) =\mathrm{ReLU}'(7)=1$$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial b_{2}}=\color{red}-16\color{black}\cdot \color{blue}-1\color{black}\cdot \color{green}1\color{black}=16$$
+>    
+>    6. **Wyznaczamy gradienty** $\nabla_\mathbf{W}\mathcal{L}, \nabla_{\mathbf{b}}\mathcal{L}, \nabla_{\mathbf{v}}\mathcal{L}, \frac{\partial\mathcal{L}}{\partial c}$
+>    
+>    $$\nabla_{\mathbf{W}}\mathcal{L}=\begin{bmatrix}
+> 0 & 0 \\ 32 & 48
+> \end{bmatrix}, \quad \nabla_{\mathbf{b}}\mathcal{L}=\begin{bmatrix}
+> 0 \\ 16
+> \end{bmatrix}, \quad \nabla_{\mathbf{v}}\mathcal{L}=\begin{bmatrix}
+> 0 & -112
+> \end{bmatrix}, \quad \frac{\partial\mathcal{L}}{\partial c}=-16$$
+>   
+>   13. **Aktualizujemy wagi i biasy**
+>
+> $$\mathbf{v}\leftarrow \begin{bmatrix}
+> 2 & -1
+> \end{bmatrix} - 0.01\begin{bmatrix}
+> 0 & -112
+> \end{bmatrix}= \begin{bmatrix}
+> -1 & 0.12
+> \end{bmatrix} $$
+>
+> $$c\leftarrow 1 - 0.01\cdot(-16)=1.16$$
+>
+> $$\mathbf{W}\leftarrow \begin{bmatrix}
+> 1 & -2 \\ 3 & 1
+> \end{bmatrix} - 0.01\begin{bmatrix}
+> 0 & 0 \\ 32 & 48
+> \end{bmatrix}=\begin{bmatrix}
+> 1 & -2 \\ 2.68 & 0.52
+> \end{bmatrix}$$
+>
+> $$\mathbf{b}\leftarrow \begin{bmatrix}
+>  1 \\ -2
+> \end{bmatrix}-0.01\begin{bmatrix}
+> 0 \\ 16
+> \end{bmatrix}=\begin{bmatrix}
+> 1 \\ -2.16
+> \end{bmatrix}$$
+
+ 
