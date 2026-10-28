@@ -86,6 +86,7 @@ $$
   $$ \psi'(z)=0= \mathbb{1}'(z)  $$
   
   Pochodna $\mathbb{1}'(z)$ nie istnieje dla $z=0$.
+
 ## Neurony nieliniowe
 Zbudowanie nieliniowego neuronu polega na przepuszczeniu zsumowanego, wielowymiarowego wyniku  $w_1x_1 + w_2x_2 +\dots+ b$ przez funkcję aktywacji $\psi$. Zmodyfikowane równanie przyjmuje dla $M$ wymiarów postać:
 

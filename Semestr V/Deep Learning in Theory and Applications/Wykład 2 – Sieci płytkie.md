@@ -219,6 +219,8 @@ i otrzymujemy:
 
 $$\frac{\partial\mathcal{L}}{\partial w_{i,j}}=2(y-\hat{y})(-1)\cdot\Psi'(\mathbf{vz}+c)v_{i}\cdot\Phi'\left(w_{i,1}x_{1}+\dots+w_{i,N}x_{N}+b_{i}\right)\cdot x_{j}$$
 
+$$\frac{∂\mathcal{L}}{\partial b_{i}}=2(y-\hat{y})(-1)\cdot \Psi'(\mathbf{vz}+c)v_{i}\cdot\Phi'(w_{i,1}x_{1}+\dots+w_{i,N}x_{N}+b_{i})$$
+
 W zapisie macierzowym:
 
 $$\mathbf{W}\leftarrow \mathbf{W}-\eta\nabla_{\mathbf{W}}\mathcal{L}=\mathbf{W}-\eta\begin{bmatrix}
@@ -296,5 +298,43 @@ $$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
 >    $$\color{blue} \frac{\partial \hat{y}}{\partial z_{1}}=\Psi'(\mathbf{vz}+c)v_{1}=\mathrm{id}'(\mathbf{vz}+c)v_{1}=1\cdot v_{1}\bigg\vert_{v_{1}=2}=1\cdot{2}=2$$
 >    
 >    $$\color{green} \frac{\partial z_{1}}{w_{1,1}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})x_{1}\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)\cdot {2}=\mathrm{ReLU}'(-3)\cdot{2}=0\cdot 2=0$$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
+>    
+>    7. **Pochodna wagi** $w_{1,2}$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial w_{1,2}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial z_{1}}\color{black}\cdot \color{green}\frac{\partial z_{1}}{\partial w_{1,2}}$$
+>    
+>    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=-16$$
+>    
+>    $$\color{blue} \frac{\partial \hat{y}}{\partial z_{1}}=2$$
+>    
+>    $$\color{green} \frac{\partial z_{1}}{w_{1,2}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})x_{2}\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)\cdot {3}=\mathrm{ReLU}'(-3)\cdot{3}=0\cdot 3=0$$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
+>    
+>    8. **Pochodna biasu** $b_{1}$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial b_{1}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial z_{1}}\color{black}\cdot \color{green}\frac{\partial z_{1}}{\partial b_{1}}$$
+>    
+>    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=-16$$
+>    
+>    $$\color{blue} \frac{\partial \hat{y}}{\partial z_{1}}=2$$
+>    
+>    $$\color{green} \frac{\partial z_{1}}{w_{1,2}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)=\mathrm{ReLU}'(-3)=0$$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
+>    
+>    
+>    
+>    6. **Pochodna wagi** $w_{2,1}$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial w_{2,1}}=\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}\color{black}\cdot \color{blue}\frac{\partial \hat{y}}{\partial z_{2}}\color{black}\cdot \color{green}\frac{\partial z_{2}}{\partial w_{2,1}}$$
+>    
+>    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=-16$$
+>    
+>    $$\color{blue} \frac{\partial \hat{y}}{\partial z_{1}}=$$
+>    
+>    $$\color{green} \frac{\partial z_{1}}{w_{1,2}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)=\mathrm{ReLU}'(-3)=0\cdot 3=0$$
 >    
 >    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
