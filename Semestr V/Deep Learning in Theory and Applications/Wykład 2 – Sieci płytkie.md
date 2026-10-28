@@ -293,4 +293,8 @@ $$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
 >    
 >    $$\color{red}\frac{\partial\mathcal{L}}{\partial \hat{y}}=-16$$
 >    
->    $$\color{blue}$$
+>    $$\color{blue} \frac{\partial \hat{y}}{\partial z_{1}}=\Psi'(\mathbf{vz}+c)v_{1}=\mathrm{id}'(\mathbf{vz}+c)v_{1}=1\cdot v_{1}\bigg\vert_{v_{1}=2}=1\cdot{2}=2$$
+>    
+>    $$\color{green} \frac{\partial z_{1}}{w_{1,1}}=\Phi'(w_{11}x_{1}+w_{1,2}x_{2}+b_{1})x_{1}\Bigg\vert_{w_{1,1}=1 \\ w_{1,2}=-2 \\ x_{1}=2 \\ x_{2}=3 \\ b_{1}=1}=\mathrm{ReLU}'(2-6+1)\cdot {2}=\mathrm{ReLU}'(-3)\cdot{2}=0\cdot 2=0$$
+>    
+>    $$\frac{\partial\mathcal{L}}{\partial w_{1,1}}=\color{red}-16\color{black}\cdot \color{blue}2\color{black}\cdot \color{green}0\color{black}=0$$
