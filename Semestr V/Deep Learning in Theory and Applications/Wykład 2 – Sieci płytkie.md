@@ -142,7 +142,7 @@ Analogicznie możemy postąpić dla warstwy drugiej.
 > \end{bmatrix}\right)=\mathrm{ReLU}\left(\begin{bmatrix}
 > -3 \\ 7
 > \end{bmatrix}\right)=\begin{bmatrix}
-> \max(0, -3) \\ \max(0, 7)
+> \max\{0, -3\} \\ \max\{0, 7\}
 > \end{bmatrix}=\begin{bmatrix}
 > 0 \\ 7
 > \end{bmatrix}=\mathbf{z}$$
