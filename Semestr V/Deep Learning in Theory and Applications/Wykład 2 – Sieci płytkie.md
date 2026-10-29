@@ -248,7 +248,7 @@ $$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
 >Wartość wyjściowa $\hat{y}=-6$
 >Wartość oczekiwana $y=2$
 >Neurony $\mathbf{z}=\begin{bmatrix}0 & 7\end{bmatrix}^T$
->Wagi i biasy z poprzedniego przykładu
+>Wagi, biasy, wejścia z poprzedniego przykładu
 >
 >1. **Wyznaczenie funkcji starty**
 >   
