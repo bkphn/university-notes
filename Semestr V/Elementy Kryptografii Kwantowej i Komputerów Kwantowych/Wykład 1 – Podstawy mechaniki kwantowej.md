@@ -105,6 +105,12 @@ $$P(0)=P(1)=\frac{1}{2}$$
 
 Stany $\ket{+}$ i $\ket{-}$ mają taki sam rozkład wyników w bazie obliczeniowej $\{\ket{0},\ket{1}\}$, ale różnią się **fazą względną** i można je bezbłędnie rozróżnić przy pomiarze w bazie $\{\ket{+},\ket{-}\}$.
 
+Innym często spotykanym stanem równomiernych superpozycji są:
+
+$$\ket{i}=\frac{1}{\sqrt{ 2 }}\ket{0}+\frac{i}{\sqrt{ 2 }}\ket{1}  $$
+
+$$\ket{-i}=\frac{1}{\sqrt{ 2 }}\ket{0}-\frac{i}{\sqrt{ 2 }}\ket{1}  $$
+
 ## Bazy
 **Baza pomiarowa** określa, jakie rozłączne wyniki można uzyskać w danym pomiarze projekcyjnym i którym stanom one odpowiadają. Bazę pomiarową kubitu w przypadku pomiaru projekcyjnego stanowi para ortonormalnych stanów kwantowych, wśród najważniejszych baz wyróżniamy:
 - **Baza obliczeniowa** $Z$:  
@@ -114,7 +120,11 @@ $$ \mathcal{B}_{Z}=\{\ket{0}, \ket{1}  \} $$
 - **Baza diagonalna** $X$:
   
 $$\mathcal{B}_{X}=\{\ket{+}, \ket{-}  \}$$
-  
+
+- **Baza kołowa** $Y$:
+
+$$\mathcal{B}_{Y}=\{\ket{i}, \ket{-i}  \}$$
+
 Ten sam stan może dawać różne prawdopodobieństwa zależnie od wybranej bazy. Na przykład pomiar stanu $\ket{+}$ w bazie $Z$ daje $0$ lub $1$ z prawdopodobieństwem $0.5$, a w bazie $X$ daje wynik $+$ z prawdopodobieństwem $1$
 
 W przypadku polaryzacji fotonu możemy utożsamić:
