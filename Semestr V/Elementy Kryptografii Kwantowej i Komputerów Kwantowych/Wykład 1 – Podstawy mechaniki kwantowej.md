@@ -107,7 +107,7 @@ Stany $\ket{+}$ i $\ket{-}$ mają taki sam rozkład wyników w bazie obliczeniow
 
 Innym często spotykanym stanem równomiernych superpozycji są:
 
-$$\ket{i}=\frac{1}{\sqrt{ 2 }}\ket{0}+\frac{i}{\sqrt{ 2 }}\ket{1}  $$
+$$\ket{+i}=\frac{1}{\sqrt{ 2 }}\ket{0}+\frac{i}{\sqrt{ 2 }}\ket{1}  $$
 
 $$\ket{-i}=\frac{1}{\sqrt{ 2 }}\ket{0}-\frac{i}{\sqrt{ 2 }}\ket{1}  $$
 
@@ -123,7 +123,7 @@ $$\mathcal{B}_{X}=\{\ket{+}, \ket{-}  \}$$
 
 - **Baza kołowa** $Y$:
 
-$$\mathcal{B}_{Y}=\{\ket{i}, \ket{-i}  \}$$
+$$\mathcal{B}_{Y}=\{\ket{+i}, \ket{-i}  \}$$
 
 Ten sam stan może dawać różne prawdopodobieństwa zależnie od wybranej bazy. Na przykład pomiar stanu $\ket{+}$ w bazie $Z$ daje $0$ lub $1$ z prawdopodobieństwem $0.5$, a w bazie $X$ daje wynik $+$ z prawdopodobieństwem $1$
 

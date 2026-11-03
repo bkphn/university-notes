@@ -48,7 +48,7 @@ Wtedy dla pomiaru w bazie $Z$ zachodzi:
 $$P(0)=\frac{1+z}{2},\qquad P(1)=\frac{1-z}{2}$$
 w bazie $Y$:
 
-$$P(i)=\frac{1+y}{2},\qquad P(-i)=\frac{1-y}{2}$$
+$$P(+i)=\frac{1+y}{2},\qquad P(-i)=\frac{1-y}{2}$$
 
 i w bazie $X$:
 
@@ -68,7 +68,7 @@ Na sferze Blocha leży sześć stanów charakterystycznych. Pamiętając, że $\
 | $\ket{1}$  | $\pi$           | dowolny          | $(0,0,-1)$ |
 | $\ket{+}$  | $\frac{\pi}{2}$ | $0$              | $(1,0,0)$  |
 | $\ket{-}$  | $\frac{\pi}{2}$ | $\pi$            | $(-1,0,0)$ |
-| $\ket{i}$  | $\frac{\pi}{2}$ | $\frac{\pi}{2}$  | $(0,1,0)$  |
+| $\ket{+i}$  | $\frac{\pi}{2}$ | $\frac{\pi}{2}$  | $(0,1,0)$  |
 | $\ket{-i}$ | $\frac{\pi}{2}$ | $\frac{3\pi}{2}$ | $(0,-1,0)$ |
 
 ## Stany antypodyczne
