@@ -131,17 +131,17 @@ $$P(1)=|\braket{1\vert\psi} |^2=|\beta|^2$$
 ## Operatory kwantowe
 **Operatorem kwantowym** nazywamy pewny liniowy operator $K$, który w fizyce kwantowej często oznaczamy daszkiem $\hat{K}$:
 
-$$\hat{K}:\mathcal{H}\rightarrow \mathcal{H}$$
+$${K}:\mathcal{H}\rightarrow \mathcal{H}$$
 
 Liniowość oznacza, że dla dowolnych wektorów $\ket{\psi},\ket{\phi}\in \mathcal{H}$ oraz skalarów $\alpha,\beta\in\mathbb{C}$ zachodzi:
 
-$$\hat{K}(\alpha \ket{\psi}+\beta \ket{\phi} )=\alpha \hat{K}\ket{\psi}+\beta \hat{K}\ket{\phi}   $$
+$${K}(\alpha \ket{\psi}+\beta \ket{\phi} )=\alpha {K}\ket{\psi}+\beta {K}\ket{\phi}   $$
 
-Każdy operator liniowy $\hat{K}$ w skończenie wymiarowej przestrzeni Hilberta można reprezentować za pomocą odpowiadającej mu macierzy $\mathbf{K}$. Jego działanie na wektor obliczamy przez mnożenie macierzy przez wektor współrzędnych.
+Każdy operator liniowy ${K}$ w skończenie wymiarowej przestrzeni Hilberta można reprezentować za pomocą odpowiadającej mu macierzy $\mathbf{K}$. Jego działanie na wektor obliczamy przez mnożenie macierzy przez wektor współrzędnych.
 
-Jeżeli na stan $\ket\psi$ najpierw działa operator $\hat{K}$, a następnie operator $\hat{L}$, otrzymujemy:
+Jeżeli na stan $\ket\psi$ najpierw działa operator ${K}$, a następnie operator ${L}$, otrzymujemy:
 
-$$\hat{L}(\hat{K}\ket\psi)=(\hat{L}\hat{K})\ket\psi$$
+$${L}({K}\ket\psi)=({L}{K})\ket\psi$$
 
 Operator zapisany najbliżej ketu działa jako pierwszy. Na ogół mnożenie macierzy nie jest przemienne:
  
@@ -150,21 +150,33 @@ Operator zapisany najbliżej ketu działa jako pierwszy. Na ogół mnożenie mac
 Wśród najważniejszych operatorów kwantowych możemy wyróżnić:
 - **Operator projekcji na stan $\ket{0}$**:
 
-$$\hat{P}_{0}\ket{\psi} =\ket{0} \bra{0}\ket{\psi} =\begin{bmatrix}
+$${P}_{0}=\ket{0}\bra{0} =\begin{bmatrix}
 1 & 0 \\ 0 & 0
-\end{bmatrix}\ket{\psi}  $$
+\end{bmatrix}  $$
+
+$$P_{0}\begin{bmatrix}
+\alpha\\\beta
+\end{bmatrix}=\begin{bmatrix}
+\alpha\\0
+\end{bmatrix}$$
 
 - **Operator projekcji na stan $\ket{1}$**:
 
-$$\hat{P}_{1}\ket{\psi} =\ket{1} \bra{1}\ket{\psi} =\begin{bmatrix}
+$${P}_{1} =\ket{1} \bra{1} =\begin{bmatrix}
 0 & 0 \\ 0 & 1
-\end{bmatrix}\ket{\psi}  $$
+\end{bmatrix}  $$
 
-- **Operator hermitowski**: Operator hermitowski $\hat{A}$ polega na mnożeniu przez macierz $\mathbf{A}$, która musi spełniać warunek:
+$$P_{1}\begin{bmatrix}
+\alpha\\\beta
+\end{bmatrix}=\begin{bmatrix}
+0\\\beta
+\end{bmatrix}$$
+
+- **Operator hermitowski**: Operator hermitowski ${A}$ polega na mnożeniu przez macierz $\mathbf{A}$, która musi spełniać warunek:
 
 $$\mathbf{A}^{\dagger}=\mathbf{A}$$
 
-- **Operator unitarny**: Operator unitarny $\hat{U}$ polega na mnożeniu przez macierz $\mathbf{U}$, która musi spełniać:
+- **Operator unitarny**: Operator unitarny ${U}$ polega na mnożeniu przez macierz $\mathbf{U}$, która musi spełniać:
 
 $$\mathbf{U}^{\dagger}\mathbf{U}=\mathbf{U}\mathbf{U}^{\dagger}=\mathbf{I}$$
 

@@ -14,6 +14,21 @@ Zatem $U^{\dagger}=U^{-1}$. Unitarność zachowuje normę stanu:
 $$\|U|\psi\rangle\|^2=\bra{\psi}U^{\dagger}U \ket{\psi}=\braket{\psi|\psi}=1  $$
 
 ## Obwody kwantowe
+**Obwód kwantowy** (ang. *quantum circuit*) to model obliczeń kwantowych, w którym operacje na kubitach przedstawiamy jako sekwencję bramek kwantowych i pomiarów.
+
+Można go traktować jako kwantowy odpowiednik obwodu logicznego znanego z klasycznej informatyki. Zamiast operować na bitach przyjmujących wartości $0$ lub $1$, obwód kwantowy przekształca stany kwantowe kubitów.
+
+Obwód kwantowy możemy przedstawiać matematycznie:
+
+$$\ket{\psi_{\text{out}}}=ZH\ket{0} $$
+
+lub graficznie:
+
+Symbol umieszczony na końcu obowodu oznacza **pomiar**. W obu przypadkach podany obwód interpretujemy następująco:
+1. Na wejściu przyjmujemy stan $\ket{0}$.
+2. Przepuszczamy go przez bramkę $H$ otrzymując $H\ket{0}$.
+3. Stan $H\ket{0}$ przepuszczamy przez bramkę $Z$ otrzymując $Z\ket{0}$.
+4. Dokonujemy pomiaru odczytując stan $\ket{\psi_{\text{out}}}$.
 
 ## Najważniejsze bramki kwantowe
 Wśród najważniejszych bramek kwantowych możemy wyróżnić:
@@ -153,7 +168,8 @@ $$\mathrm{SWAP}=\begin{bmatrix}
 0&0&0&1
 \end{bmatrix}$$
 
-- **Bramka Toffolego**
+- **Bramka Toffoliego** $\mathrm{CCNOT}$:
 
+$$\mathrm{CCNOT}=\begin{bmatrix}1&0&0&0&0&0&0&0\\0&1&0&0&0&0&0&0\\0&0&1&0&0&0&0&0\\0&0&0&1&0&0&0&0\\0&0&0&0&1&0&0&0\\0&0&0&0&0&1&0&0\\0&0&0&0&0&0&0&1\\0&0&0&0&0&0&1&0\\\end{bmatrix}$$
 
 HTH|0⟩
