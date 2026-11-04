@@ -24,8 +24,7 @@ $$\ket{\psi_{\text{out}}}=ZH\ket{0}$$
 
 lub graficznie:
 
-[tutaj będzie rysunek jak go skończę]
-
+![[Pasted image 20261104202051.png|396]]
 Symbol umieszczony na końcu obwodu oznacza **pomiar**. W obu przypadkach podany obwód interpretujemy następująco:
 1. Na wejściu przyjmujemy stan $\ket{0}$.
 2. Przepuszczamy go przez bramkę $H$ otrzymując $H\ket{0}$.

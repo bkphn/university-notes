@@ -105,7 +105,7 @@ $$P(0)=P(1)=\frac{1}{2}$$
 
 Stany $\ket{+}$ i $\ket{-}$ mają taki sam rozkład wyników w bazie obliczeniowej $\{\ket{0},\ket{1}\}$, ale różnią się **fazą względną** i można je bezbłędnie rozróżnić przy pomiarze w bazie $\{\ket{+},\ket{-}\}$.
 
-Innym często spotykanym stanem równomiernych superpozycji są:
+Inną parą często spotykanych stanów równomiernych superpozycji są:
 
 $$\ket{+i}=\frac{1}{\sqrt{ 2 }}\ket{0}+\frac{i}{\sqrt{ 2 }}\ket{1}  $$
 
