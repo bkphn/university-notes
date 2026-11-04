@@ -155,3 +155,5 @@ $$\mathrm{SWAP}=\begin{bmatrix}
 
 - **Bramka Toffolego**
 
+
+HTH|0⟩
