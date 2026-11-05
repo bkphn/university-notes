@@ -155,21 +155,32 @@ $$\boldsymbol{\mathcal{C}}=\boldsymbol{\mathcal{X}}\ast\boldsymbol{\mathcal{W}}$
 Wraz ze wzrostem liczby wymiarów, wzdłuż których wykonywana jest konwolucja, brak paddingu może prowadzić do coraz większej względnej redukcji liczby elementów tensora wyjściowego.
 
 ## Sieć neuronowa z konwolucją
-
+Mechanizm konwolucji możemy zaimplementować w sieci neuronowej, tak jak w poniższym przykładzie:
 ![[Pasted image 20261105213933.png|448]]
+załóżmy, że powyższa konwolucja zawiera max pooling, a jego funkcja aktywacji to $\mathrm{id}$ – możemy więc ją pominąć.
 
+Aby wykonać feedforward na powyższej sieci zaczniemy od neuronu $l$:
 
-v ukryta warstwa, u warstwa wyjściowa, w warstwa wejścowa, nie ma bias, konwolucja jest 3szeroka i ma 1opoznienia (stride) i linear activation
+$$l=\Psi(x_{1}v_{1})$$
 
-$\mathbf{x}=(x_{1},x_{2},x_{3},x_{4},x_{5})$
-$\mathbf{f}=(f_{1},f_{2},f_{3})$
-$\mathbf{c}=(w_{1}x_{1}+w_{2}x_{2}+w_{3}x_{3},\quad w_{1}x_{2}+w_{2}x_{3}+w_{3}x_{4},\quad w_{1}x_{3}+w_{2}x_{4}+w_{3}x_{5})$
+Następnie obliczamy wartość neuronu $h$:
 
-$w=\Psi(x_{1})$
-$v=\Psi\left( w_{1}l_{1}+x_{1} \right)$
+$$h=\Psi(x_{1}v_{2}+l)$$
 
-$u_{1}=\Phi(v_{1}h_{1}+\mathbf{z}\mathbf{c})$
+Możemy teraz przejść do konwolucji:
 
+$$\mathbf{z}=\begin{bmatrix}
+x_{1}&x_{2}&x_{3}&x_{4}&x_{5}
+\end{bmatrix}\ast \begin{bmatrix}
+w_{1}&w_{2}&w_{3}
+\end{bmatrix}= \begin{bmatrix}
+x_{1}w_{1}+x_{2}w_{2}+x_{3}w_{3}\\
+x_{2}w_{1}+x_{3}w_{2}+x_{4}w_{3} \\
+x_{3}w_{1}+x_{4}w_{2}+x_{5}w_{3}
+\end{bmatrix}$$
 
+Na koniec obliczamy neuron wyjściowy:
 
-$\hat{y}=\Phi \Bigg(\Psi\bigg(\Psi\Big(  x^t\Big)l^t+x^t\bigg)h^t+\mathbf{z}^t(w_{1}x^{t}+w_{2}x^{t-1}+w_{3}x^{t-2},w_{1}x^{t-1}+w_{2}x^{t-2}+w_{3}x^{t-3}, w_{1}x^{t-2}+w_{2}x^{t-3}+w_{3}x^{t-4}\Bigg)$
+$$\hat{y}_{1}=\Phi\left(\mathbf{z}\begin{bmatrix}
+u_{1}\\u_{2}\\u_{_{3}}
+\end{bmatrix} + hu_{4}\right)=\Phi(z_{1}u_{1}+z_{2}u_{2}+z_{3}u_{3}+hu_{4})$$
