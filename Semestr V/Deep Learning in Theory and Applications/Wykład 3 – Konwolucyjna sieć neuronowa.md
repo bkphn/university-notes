@@ -58,9 +58,9 @@ Jak możemy zauważyć, w każdej konwolucji, otrzymany wektor wyjściowy jest m
 Przy konwolucji możemy także zaimplementować zmienną *stride* $S$. Odpowiada ona za to, co ile współrzędnych przesuwa się filtr przy każdym ruchu. W standardowej konwolucji $S=1$.
 
 ## Konwolucja dwuwymiarowa
-Pojęcie konwolucji możemy uogólnić na macierze. Mamy wtedy do czynienia z macierzą danych wejściowych $\mathbf{X}=[x_{ij}]_{M\times N}$ oraz macierzą filtra $\mathbf{W}=[w_{ij}]_{K\times L}$. Macierz filtra przesuwamy bo obu współrzędnych, pokrywając całą powierzchnię macierzy $\mathbf{X}$.
+Pojęcie konwolucji możemy uogólnić na macierze. Mamy wtedy do czynienia z macierzą danych wejściowych $\mathbf{X}=[x_{ij}]_{M\times N}$ oraz macierzą filtra $\mathbf{W}=[w_{ij}]_{K\times L}$. Macierz filtra przesuwamy po obu współrzędnych, pokrywając całą powierzchnię macierzy $\mathbf{X}$.
 
-Przykładowo dla macierzy $X$ $3\times{3}$ i filtra $\color{magenta}\mathbf{W}$ $2\times{2}$ otrzymujemy następujące ułożenia filtra: 
+Przykładowo dla macierzy $\mathbf{X}$ $3\times{3}$ i filtra $\color{magenta}\mathbf{W}$ $2\times{2}$ otrzymujemy następujące ułożenia filtra: 
 $$\begin{bmatrix}
 x_{1,1}^{\color{magenta}\cdot w_{1,1}} &x_{1,2}^{\color{magenta}\cdot w_{1,2}}&x_{1,3}\\
 x_{2,1}^{\color{magenta}{\cdot w_{2,1}}}&x_{2,2}^{\color{magenta}\cdot w_{2,2}}&x_{2,3}\\
@@ -139,3 +139,32 @@ Innym popularnym rodzajem poolingu jest $\mathrm{MedPooling}_{m\times n}$, w kt�
 >  3. **Na złączonym wektorze aplikujemy funkcję aktywacji**
 >    
 >   $$\mathrm{ReLU}\left( \begin{bmatrix} 3 & 8  \end{bmatrix} \right)=\begin{bmatrix} \mathrm{ReLU(3)} & \mathrm{ReLU}(8)  \end{bmatrix}=\begin{bmatrix} 3 & 8 \end{bmatrix}$$ 
+
+## Konwolucje wyższych wymiarów
+Konwolucję możemy uogólnić na dowolną liczbę wymiarów. Zazwyczaj przy trzech wymiarach dane wejściowe traktujemy dwuwymiarowo – dzielimy wtedy tensor wejściowy $\boldsymbol{\mathcal{X}}\in\mathbb{R}^{M\times N\times O}$ na $O$ macierzy o wymiarach $M\times N$
+
+$$\boldsymbol{\mathcal{X}}=(\mathbf{X}_{1},\dots,\mathbf{X}_{O})$$
+
+Każdą taką macierz $\mathbf{X}_{i}$ traktujemy indywidualnie i przepuszczamy przez filtr $\mathbf{W}$. Takie postępowanie występuje m.in. w przetwarzaniu kolorowych obrazów, gdzie mamy do czynienia z osobnymi macierzami dla każdego koloru: $\boldsymbol{\mathcal{X}}=(\mathbf{R},\mathbf{G},\mathbf{B})$. Macierze $\mathbf{R},\mathbf{G},\mathbf{B}$ mają takie same wymiary jak obraz wejściowy $\boldsymbol{\mathcal{X}}$.
+
+Innym, chociaż rzadszym podejściem, jest traktowanie całego tensora jako jednego obiektu, wtedy mamy do czynienia z tensorem danych wejściowych $\boldsymbol{\mathcal{X}}$ oraz tensorem filtra $\boldsymbol{\mathcal{W}}$ – to podejście działa dla tensorów dowolnego rzędu. Wykonujemy wtedy operację konwolucji:
+
+$$\boldsymbol{\mathcal{C}}=\boldsymbol{\mathcal{X}}\ast\boldsymbol{\mathcal{W}}$$
+
+Warto zauważyć, że dla tensorów coraz wyższych rzędów znacząco rośnie liczba utraconych informacji spowodowanych brakiem stosowania *paddingu*.
+
+## Sieć neuronowa z konwolucją
+v ukryta warstwa, u warstwa wyjściowa, w warstwa wejścowa, nie ma bias, konwolucja jest 3szeroka i ma 1opoznienia (stride) i linear activation
+
+$\mathbf{x}=(x_{1},x_{2},x_{3},x_{4},x_{5})$
+$\mathbf{f}=(f_{1},f_{2},f_{3})$
+$\mathbf{c}=(w_{1}x_{1}+w_{2}x_{2}+w_{3}x_{3},\quad w_{1}x_{2}+w_{2}x_{3}+w_{3}x_{4},\quad w_{1}x_{3}+w_{2}x_{4}+w_{3}x_{5})$
+
+$w=\Psi(x_{1})$
+$v=\Psi\left( w_{1}l_{1}+x_{1} \right)$
+
+$u_{1}=\Phi(v_{1}h_{1}+\mathbf{z}\mathbf{c})$
+
+
+
+$\hat{y}=\Phi \Bigg(\Psi\bigg(\Psi\Big(  x^t\Big)l^t+x^t\bigg)h^t+\mathbf{z}^t(w_{1}x^{t}+w_{2}x^{t-1}+w_{3}x^{t-2},w_{1}x^{t-1}+w_{2}x^{t-2}+w_{3}x^{t-3}, w_{1}x^{t-2}+w_{2}x^{t-3}+w_{3}x^{t-4}\Bigg)$
