@@ -1,5 +1,5 @@
 ## Konwolucyjna sieć neuronowa
-**Konwolucyjna sieć neuronowa** (ang. *convolutional neural network*) CCN to rodzaj sieci neuronowej, która wykorzystuje operację konwolucji do automatycznego wykrywania i przetwarzania charakterystycznych cech danych.
+**Konwolucyjna sieć neuronowa** (ang. *convolutional neural network*) CNN to rodzaj sieci neuronowej, która wykorzystuje operację konwolucji do automatycznego wykrywania i przetwarzania charakterystycznych cech danych.
 
 Sieci CNN są szczególnie skuteczne w analizie danych mających strukturę czasową lub przestrzenną, takich jak obrazy, filmy, sygnały dźwiękowe czy tekst. Sieci CNN potrafią uczyć się lokalnych wzorców, z których następnie tworzą bardziej złożone struktury.
 
@@ -11,12 +11,12 @@ $$\begin{matrix}
 \cdot &\cdot&\cdot\\
 \color{magenta}(-1,&\color{magenta}1,&\color{magenta}-1)\\
  ||&||&||\\
- 0&0&-1
+ \color{red}0&\color{red}0&\color{red}-1
 \end{matrix}$$
 
 Przepuszczamy pierwszą trójkę danych wejściowych przez filtr, mnożąc je przez odpowiadające im współczynniki. Pozyskane w ten sposób iloczyny sumujemy, a ich sumę wstawiamy na pierwszym miejscu w wektorze konwolucji $\mathbf{c}$.
 
-$$c_{1}=0+0-1=-1$$
+$$\color{red}c_{1}=0+0-1=-1$$
 
 Następnie przesuwamy filtr o jedną pozycję i powtarzamy całą operację:
 
@@ -25,27 +25,27 @@ $$\begin{matrix}
 &\cdot &\cdot&\cdot\\
 \rightarrow&\color{magenta}(-1,&\color{magenta}1,&\color{magenta}-1)\\
  &||&||&||\\
-& 0&1&-1
+& \color{blue}0&\color{blue}1&\color{blue}-1
 \end{matrix}$$
 
-$$c_{2}=0+1-1=0$$
+$$\color{blue}c_{2}=0+1-1=0$$
 
 Po zakończeniu wszystkich iteracji otrzymujemy pełny wektor konwolucji:
 
-$$\mathbf{c}=(c_{1},c_{2},\dots,c_{8})=(-1,0,-1,0,-2,1,-1,0)$$
+$$\mathbf{c}=(\color{red}c_{1}\color{black},\color{blue}c_{2}\color{black},c_{3},\dots,c_{8})=(\color{red}-1\color{black},\color{blue}0\color{black},-1,0,-2,1,-1,0)$$
 
-Na koniec wektor konwolucji przepuszczamy przez funkcję aktywującą $\psi$. Jeżeli $\psi=\mathrm{ReLU}$, to:
+Na koniec wektor konwolucji przepuszczamy przez funkcję aktywacji $\Psi$. Jeżeli $\Psi=\mathrm{ReLU}$, to:
 
 $$\mathbf{y}=\mathrm{ReLU}(-1,0,-1,0,-2,1,-1,0)=(0,0,0,0,0,1,0,0)$$
 
 ## Konwolucja
 W ujęciu matematycznym konwolucję dokonujemy na dowolnym wektorze $\mathbf{x}=(x_{1},\dots,x_{N})$ oraz filtrze $\mathbf{w}=(w_{1},w_{2},\dots,w_{K})$. Każdą współrzędną wektora $\mathbf{c}$ możemy zapisać jako:
 
-$$c_{i}= \sum _{k=1}^K w_{k}x_{i+k-\left\lceil  \frac{k}{2} \right\rceil} $$
+$$c_{i}= \sum _{k=1}^K w_{k}x_{i+k-\left\lceil  \frac{K}{2} \right\rceil} $$
 
 A po zastosowaniu funkcji aktywacji $\Psi$ otrzymujemy:
 
-$$y_{i}=\Psi\left( \sum_{k=1}^K w_{k}x_{i+k-\left\lceil  \frac{k}{2} \right\rceil} \right)$$
+$$y_{i}=\Psi\left( \sum_{k=1}^K w_{k}x_{i+k-\left\lceil  \frac{K}{2} \right\rceil} \right)$$
 
 Konwolucję wektora $\mathbf{x}$ przez filtr $\mathbf{w}$ oznaczamy jako:
 
@@ -53,44 +53,89 @@ $$\mathbf{y}=\mathbf{x}\ast\mathbf{w}$$
 
 Konwolucję możemy traktować jak sieć złożoną z pojedynczego neuronu zamkniętego w pętli `for`.
 
+Jak możemy zauważyć, w każdej konwolucji, otrzymany wektor wyjściowy jest mniejszy względem wektora wejściowego. Aby zapobiec temu problemowi możemy zastosować tzw. *padding*, który polega na dodaniu na początku i na końcu wektora wejściowego wartość $0$.
 
----
+Przy konwolucji możemy także zaimplementować zmienną *stride* $S$. Odpowiada ona za to, co ile współrzędnych przesuwa się filtr przy każdym ruchu. W standardowej konwolucji $S=1$.
 
-$y_{i}=\Psi\left( \sum_{k=1}^K w_{k}x_{i+k-\lceil\frac{k}{2}\rceil} \right)$
----
-padding dodajemy zera na krańcach, jeżeli nie chcemy my nam malały wektory konwolucji
+## Konwolucja dwuwymiarowa
+Pojęcie konwolucji możemy uogólnić na macierze. Mamy wtedy do czynienia z macierzą danych wejściowych $\mathbf{X}=[x_{ij}]_{M\times N}$ oraz macierzą filtra $\mathbf{W}=[w_{ij}]_{K\times L}$. Macierz filtra przesuwamy bo obu współrzędnych, pokrywając całą powierzchnię macierzy $\mathbf{X}$.
 
----
-uogólnienie konwolucji na macierze, wtedy filtr też jest kwadratem
+Przykładowo dla macierzy $X$ $3\times{3}$ i filtra $\color{magenta}\mathbf{W}$ $2\times{2}$ otrzymujemy następujące ułożenia filtra: 
+$$\begin{bmatrix}
+x_{1,1}^{\color{magenta}\cdot w_{1,1}} &x_{1,2}^{\color{magenta}\cdot w_{1,2}}&x_{1,3}\\
+x_{2,1}^{\color{magenta}{\cdot w_{2,1}}}&x_{2,2}^{\color{magenta}\cdot w_{2,2}}&x_{2,3}\\
+x_{3,1}&x_{3,2}&x_{3,3}
+\end{bmatrix}\quad
 
-pooling operation (np, maxpooling, avgpooling, med.pooling) wyciągamy macierz Conv po przefiltrowaniu obrazu. Funkcja pooling jest nieuczalna, wybieramy pooling size (1,2)np. i wybieramy wektory 1×2 po kolei, i np. dla maxpooling bierzemy max z wspolrzednych wybranych wektorów i tworzymy nowy wektor/macierz pomiajajac te niepasujace dane, są po prostu stracone.
+ \begin{bmatrix}
+x_{1,1} &x_{1,2}^{\color{magenta}\cdot w_{1,1}}&x_{1,3}^{\color{magenta}\cdot w_{1,2}}\\
+x_{2,1}&x_{2,2}^{\color{magenta}\cdot w_{2,1}}&x_{2,3}^{\color{magenta}\cdot{w_{2,2}}}\\
+x_{3,1}&x_{3,2}&x_{3,3}
+\end{bmatrix}\quad
 
-jezeli pooling nei pasuje do macierzy conv to 
+\begin{bmatrix}
+x_{1,1} &x_{1,2}&x_{1,3}\\
+x_{2,1}^{\color{magenta}\cdot w_{1,1}}&x_{2,2}^{\color{magenta}\cdot w_{1,2}}&x_{2,3}\\
+x_{3,1}^{\color{magenta}{⋅w_{2,1}}}&x_{3,2}^{\color{magenta} \cdot w_{2,2}}&x_{3,3}
+\end{bmatrix}
 
----
+\quad
+\begin{bmatrix}
+x_{1,1} &x_{1,2}&x_{1,3}\\
+x_{2,1}&x_{2,2}^{\color{magenta}\cdot w_{1,1}}&x_{2,3}^{\color{magenta}\cdot w_{1,2}}\\
+x_{3,1}&x_{3,2}^{\color{magenta} \cdot w_{2,1}}&x_{3,3}^{\color{magenta}\cdot w_{2,2}}
+\end{bmatrix}$$
 
-konwolucja na tensorach też działa. Zazwyczaj traktujemy je dwuwymiarowo i przechodzimy po kolei, ale można tworzyć filtry, które są tensorami. W takim wypadku z każdym kolejnym wymiarem tracimy coraz więcej informacji przez zmniejszanie się współrzędnych.
+W ten sposób otrzymujemy macierz konwolucji:
 
----
+$$\mathbf{C}=\begin{bmatrix}
+x_{1,1}w_{1,1}+x_{1,2}w_{1,2}+x_{2,1}w_{2,1}+x_{2,2}w_{2,2} & x_{1,2}w_{1,1}+x_{1,3}w_{1,2}+x_{2,2}w_{2,1}+x_{2,3}w_{2,2} \\ x_{2,1}w_{1,1}+x_{2,2}w_{1,2}+x_{3,1}w_{2,1}+x_{3,2}w_{2,2} &
+x_{2,2}w_{1,1}+x_{2,3}w_{1,2}+x_{3,2}w_{2,1}+x_{3,3}w_{2,2}
+\end{bmatrix}$$
 
-v ukryta warstwa, u warstwa wyjściowa, w warstwa wejścowa, nie ma bias, konwolucja jest 3szeroka i ma 1opoznienia (stride) i linear activation
+W konwolucji dwuwymiarowej stosujemy tzw. operację **poolingu**. Pooling polega na zmniejszaniu wymiarów macierzy konwolucji (*downsampling*). Przy poolingu musimy określić jego wymiary. Przykładowo dla poolingu $1\times{2}$ będziemy łączyć ze sobą po dwie współrzędne z jednego wiersza. Możemy wyróżnić wiele różnych operatorów, m.in.:
+- **Max pooling**
 
----
-*residual connection*
-*jeżeli mamy dwa wyjścia lub więcej, to przy BP musimy sumować błędy dla każdego z wyjść (sumować, jeżeli w funkcji straty jest suma, w p.p. wykonujemy poprawną operację)*
+$$\mathrm{MaxPooling}_{1\times{2}}\left( \begin{bmatrix}
+\color{blue}c_{1,1}&\color{blue}c_{1,2}\\
+\color{red}c_{2,1}&\color{red}c_{2,2}
+\end{bmatrix}\right)=\begin{bmatrix}
+\color{blue}\max\{c_{1,1},c_{1,2}\}\\
+\color{red}\max\{c_{2,1},c_{2,2}\}
+\end{bmatrix}$$
 
----
+- **Average pooling**
 
-$\mathbf{x}=(x_{1},x_{2},x_{3},x_{4},x_{5})$
-$\mathbf{f}=(f_{1},f_{2},f_{3})$
-$\mathbf{c}=(w_{1}x_{1}+w_{2}x_{2}+w_{3}x_{3},\quad w_{1}x_{2}+w_{2}x_{3}+w_{3}x_{4},\quad w_{1}x_{3}+w_{2}x_{4}+w_{3}x_{5})$
+$$\mathrm{AvgPooling}_{1\times{2}}\left( \begin{bmatrix}
+\color{blue}c_{1,1}&\color{blue}c_{1,2}\\
+\color{red}c_{2,1}&\color{red}c_{2,2}
+\end{bmatrix}\right)=\begin{bmatrix}
+\color{blue}\frac{{c_{1,1}+c_{1,2}}}{2}\\
+\color{red}\frac{{c_{2,1}+c_{2,2}}}{2}
+\end{bmatrix}$$
 
-$w=\Psi(x_{1})$
-$v=\Psi\left( w_{1}l_{1}+x_{1} \right)$
+Innym popularnym rodzajem poolingu jest $\mathrm{MedPooling}_{m\times n}$, w którym wynikiem mediana wszystkich $m\times n$ wartości.
 
-$u_{1}=\Phi(v_{1}h_{1}+\mathbf{z}\mathbf{c})$
-
-
-
-$\hat{y}=\Phi \Bigg(\Psi\bigg(\Psi\Big(  x^t\Big)l^t+x^t\bigg)h^t+\mathbf{z}^t(w_{1}x^{t}+w_{2}x^{t-1}+w_{3}x^{t-2},w_{1}x^{t-1}+w_{2}x^{t-2}+w_{3}x^{t-3}, w_{1}x^{t-2}+w_{2}x^{t-3}+w_{3}x^{t-4}\Bigg)$
-	
+>[!example] Konwolucja dwuwymiarowa
+>0. **Dane**
+>Macierz wartości $\mathbf{X}=\begin{bmatrix}1&2&-1\\2&1&3\\-2 &0&0\end{bmatrix}$
+>Macierz filtra $\mathbf{W}=\begin{bmatrix}1&-1\\-1&2\end{bmatrix}$
+>Max pooling $2\times{1}$
+>Funkcja aktywacji $\Psi=\mathrm{ReLU}$
+>
+>
+>1. **Wyznaczamy konwolucję macierzy**
+>   
+>  $$\mathbf{X}\ast\color{magenta}\mathbf{W}\color{black}=\begin{bmatrix} 1&2&-1\\2&1&3\\-2 &0&0 \end{bmatrix}\ast\color{magenta}\begin{bmatrix} 1&-1\\-1&2 \end{bmatrix}\color{black}=$$
+>  
+>  $$=\begin{bmatrix} 1\cdot \color{magenta}{1}\color{black}+2\cdot \color{magenta}(-1)\color{black}+ 2 \cdot \color{magenta}-1 \color{black}+ 1 \cdot \color{magenta}2 \color{black} & 2\cdot \color{magenta}1\color{black}+(-1)\cdot \color{magenta}(-1)\color{black}+1\cdot \color{magenta}(-1)\color{black}+3\cdot \color{magenta}2\color{black} \\ 2\cdot \color{magenta}1\color{black}+1\cdot \color{magenta}(-1)\color{black}+(-2)\cdot \color{magenta}(-1)\color{black}+0\cdot \color{magenta}2\color{black} & 1\cdot \color{magenta}1\color{black}+3\cdot \color{magenta}(-1)\color{black}+0\cdot \color{magenta}(-1)\color{black}+0\cdot \color{magenta}2\color{black}\end{bmatrix}=$$
+>  
+>  $$=\begin{bmatrix}  1-2-2+2 & 2+1-1+6 \\ 2-1+2 & 1-3 \end{bmatrix}=\begin{bmatrix} -1 & 8 \\ 3 & -2 \end{bmatrix}$$
+>  
+>  2. **Dokonujemy max poolingu**
+>    
+>  $$\mathrm{MaxPooling}_{2\times{1}}\left( \begin{bmatrix} \color{blue}-1 & \color{red}8 \\ \color{blue}3 & \color{red}-2  \end{bmatrix} \right)=\begin{bmatrix} \max\{\color{blue}-1, 3 \color{ black}\} & \max\{\color{red} 8,-2 \color{black}\} \end{bmatrix}=\begin{bmatrix} \color{blue}3 & \color{red}8  \end{bmatrix}$$
+>  
+>  3. **Na złączonym wektorze aplikujemy funkcję aktywacji**
+>    
+>   $$\mathrm{ReLU}\left( \begin{bmatrix} 3 & 8  \end{bmatrix} \right)=\begin{bmatrix} \mathrm{ReLU(3)} & \mathrm{ReLU}(8)  \end{bmatrix}=\begin{bmatrix} 3 & 8 \end{bmatrix}$$ 
