@@ -2,7 +2,6 @@
 **Konwolucyjna sieć neuronowa** (ang. *convolutional neural network*) CNN to rodzaj sieci neuronowej, która wykorzystuje operację konwolucji do automatycznego wykrywania i przetwarzania charakterystycznych cech danych.
 
 Sieci CNN są szczególnie skuteczne w analizie danych mających strukturę czasową lub przestrzenną, takich jak obrazy, filmy, sygnały dźwiękowe czy tekst. Sieci CNN potrafią uczyć się lokalnych wzorców, z których następnie tworzą bardziej złożone struktury.
-
 ## Proces filtrowania
 **Konwolucja** jest operacją, w której przepuszczamy ciąg danych wejściowych $\mathbf{x}$ przez pewien filtr $\mathbf{w}$. Przykładowo przyjmijmy dane wejściowe $\mathbf{x}=(0,0,1,1,1,0,1,0,0,0)$ oraz filtr $\color{magenta}\mathbf{w}=(-1,1,-1)$.
 
@@ -49,7 +48,7 @@ $$y_{i}=\Psi\left( \sum_{k=1}^K w_{k}x_{i+k-\left\lceil  \frac{K}{2} \right\rcei
 
 Konwolucję wektora $\mathbf{x}$ przez filtr $\mathbf{w}$ oznaczamy jako:
 
-$$\mathbf{y}=\mathbf{x}\ast\mathbf{w}$$
+$$\mathbf{c}=\mathbf{x}\ast\mathbf{w}$$
 
 Konwolucję możemy traktować jak sieć złożoną z pojedynczego neuronu zamkniętego w pętli `for`.
 
@@ -145,15 +144,21 @@ Konwolucję możemy uogólnić na dowolną liczbę wymiarów. Zazwyczaj przy trz
 
 $$\boldsymbol{\mathcal{X}}=(\mathbf{X}_{1},\dots,\mathbf{X}_{O})$$
 
-Każdą taką macierz $\mathbf{X}_{i}$ traktujemy indywidualnie i przepuszczamy przez filtr $\mathbf{W}$. Takie postępowanie występuje m.in. w przetwarzaniu kolorowych obrazów, gdzie mamy do czynienia z osobnymi macierzami dla każdego koloru: $\boldsymbol{\mathcal{X}}=(\mathbf{R},\mathbf{G},\mathbf{B})$. Macierze $\mathbf{R},\mathbf{G},\mathbf{B}$ mają takie same wymiary jak obraz wejściowy $\boldsymbol{\mathcal{X}}$.
+Każdą taką macierz $\mathbf{X}_{i}$ traktujemy indywidualnie i przepuszczamy przez filtry $\mathbf{W}_{i}$. Takie postępowanie występuje m.in. w przetwarzaniu kolorowych obrazów, gdzie mamy do czynienia z osobnymi macierzami dla każdego koloru: $\boldsymbol{\mathcal{X}}=(\mathbf{R},\mathbf{G},\mathbf{B})$. Macierze $\mathbf{R},\mathbf{G},\mathbf{B}$ mają takie same wymiary jak obraz wejściowy $\boldsymbol{\mathcal{X}}$.
+
+$$\mathbf{C}=\mathbf{R}\ast\mathbf{W}_{R}+\mathbf{G}\ast\mathbf{W}_{G}+\mathbf{B}\ast\mathbf{W}_{B}$$
 
 Innym, chociaż rzadszym podejściem, jest traktowanie całego tensora jako jednego obiektu, wtedy mamy do czynienia z tensorem danych wejściowych $\boldsymbol{\mathcal{X}}$ oraz tensorem filtra $\boldsymbol{\mathcal{W}}$ – to podejście działa dla tensorów dowolnego rzędu. Wykonujemy wtedy operację konwolucji:
 
 $$\boldsymbol{\mathcal{C}}=\boldsymbol{\mathcal{X}}\ast\boldsymbol{\mathcal{W}}$$
 
-Warto zauważyć, że dla tensorów coraz wyższych rzędów znacząco rośnie liczba utraconych informacji spowodowanych brakiem stosowania *paddingu*.
+Wraz ze wzrostem liczby wymiarów, wzdłuż których wykonywana jest konwolucja, brak paddingu może prowadzić do coraz większej względnej redukcji liczby elementów tensora wyjściowego.
 
 ## Sieć neuronowa z konwolucją
+
+![[Pasted image 20261105213933.png|448]]
+
+
 v ukryta warstwa, u warstwa wyjściowa, w warstwa wejścowa, nie ma bias, konwolucja jest 3szeroka i ma 1opoznienia (stride) i linear activation
 
 $\mathbf{x}=(x_{1},x_{2},x_{3},x_{4},x_{5})$
