@@ -10,6 +10,7 @@
 | Venice AI      | https://venice.ai/                                     |
 | Deep Infra     | https://deepinfra.com/                                 |
 | Model Armor    | https://cloud.google.com/security/products/model-armor |
+| Ideatrum AI    | https://app.ideatrum.ai                                |
 
 ## Zaliczenie
 W około 10 tygodniu zajęć odbędzie się Quiz *Midterm Exam* skupiony na *Recurrent Neural Network*. Na zaliczenie przedmiotu mamy do wykonania projekt, możemy wybrać jedną z dwóch gałęzi:
