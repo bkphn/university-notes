@@ -157,8 +157,6 @@ Wraz ze wzrostem liczby wymiarów, wzdłuż których wykonywana jest konwolucja,
 ## Sieć neuronowa z konwolucją
 Mechanizm konwolucji możemy zaimplementować w sieci neuronowej, tak jak w poniższym przykładzie:
 ![[Pasted image 20261105213933.png|448]]
-załóżmy, że powyższa konwolucja zawiera max pooling, a jego funkcja aktywacji to $\mathrm{id}$ – możemy więc ją pominąć.
-
 Aby wykonać feedforward na powyższej sieci zaczniemy od neuronu $l$:
 
 $$l=\Psi(x_{1}v_{1})$$

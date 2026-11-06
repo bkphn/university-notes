@@ -23,8 +23,7 @@ Obwód kwantowy możemy przedstawiać matematycznie:
 $$\ket{\psi_{\text{out}}}=ZH\ket{0}$$
 
 lub graficznie:
-
-![[Pasted image 20261104202051.png|396]]
+![[Pasted image 20261104202051.png|309]]
 Symbol umieszczony na końcu obwodu oznacza **pomiar**. W obu przypadkach podany obwód interpretujemy następująco:
 1. Na wejściu przyjmujemy stan $\ket{0}$.
 2. Przepuszczamy go przez bramkę $H$ otrzymując $H\ket{0}$.
@@ -232,7 +231,7 @@ Przepuśliśmy więc niesplątany stan przez bramkę CNOT, a na wyjściu otrzymu
 
 Dlaczego wynik jest splątany? Załóżmy, że 
 
-$$\frac{1}{\sqrt{ 2 }}\ket{00}+\frac{1}{\sqrt{ 2 }}\ket{11}=(\alpha_{\psi} \ket{0}+\beta_{\psi} \ket{1}  )\otimes (\alpha_{\phi} \ket{0} +\beta_{\phi} \ket{1} )$$
+$$\frac{1}{\sqrt{ 2 }}\ket{00}+\frac{1}{\sqrt{ 2 }}\ket{11}=\big(\alpha_{\psi} \ket{0}+\beta_{\psi} \ket{1}  \big)\otimes \big(\alpha_{\phi} \ket{0} +\beta_{\phi} \ket{1} \big)$$
 
 Prawa strona daje:
 
