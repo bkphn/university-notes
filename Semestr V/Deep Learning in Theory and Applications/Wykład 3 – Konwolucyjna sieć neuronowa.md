@@ -140,7 +140,7 @@ Innym popularnym rodzajem poolingu jest $\mathrm{MedPooling}_{m\times n}$, w kt�
 >   $$\mathrm{ReLU}\left( \begin{bmatrix} 3 & 8  \end{bmatrix} \right)=\begin{bmatrix} \mathrm{ReLU(3)} & \mathrm{ReLU}(8)  \end{bmatrix}=\begin{bmatrix} 3 & 8 \end{bmatrix}$$ 
 
 ## Konwolucje wyższych wymiarów
-Konwolucję możemy uogólnić na dowolną liczbę wymiarów. Zazwyczaj przy trzech wymiarach dane wejściowe traktujemy dwuwymiarowo – dzielimy wtedy tensor wejściowy $\boldsymbol{\mathcal{X}}\in\mathbb{R}^{M\times N\times O}$ na $O$ macierzy o wymiarach $M\times N$
+Konwolucję możemy uogólnić na dowolną liczbę wymiarów. Zazwyczaj przy trzech wymiarach dane wejściowe traktujemy dwuwymiarowo – dzielimy wtedy tensor wejściowy $\boldsymbol{\mathcal{X}}\in\mathbb{R}^{M\times N\times O}$ na $O$ macierzy o wymiarach $M\times N$.
 
 $$\boldsymbol{\mathcal{X}}=(\mathbf{X}_{1},\dots,\mathbf{X}_{O})$$
 
@@ -168,9 +168,9 @@ $$h=\Psi(x_{1}v_{2}+l)$$
 Możemy teraz przejść do konwolucji:
 
 $$\mathbf{z}=\begin{bmatrix}
-x_{1}&x_{2}&x_{3}&x_{4}&x_{5}
+x_{1}\\x_{2}\\x_{3}\\x_{4}\\x_{5}
 \end{bmatrix}\ast \begin{bmatrix}
-w_{1}&w_{2}&w_{3}
+w_{1}\\w_{2}\\w_{3}
 \end{bmatrix}= \begin{bmatrix}
 x_{1}w_{1}+x_{2}w_{2}+x_{3}w_{3}\\
 x_{2}w_{1}+x_{3}w_{2}+x_{4}w_{3} \\
@@ -179,6 +179,6 @@ x_{3}w_{1}+x_{4}w_{2}+x_{5}w_{3}
 
 Na koniec obliczamy neuron wyjściowy:
 
-$$\hat{y}_{1}=\Phi\left(\mathbf{z}\begin{bmatrix}
+$$\hat{y}_{1}=\Phi\left(\mathbf{z}^T\begin{bmatrix}
 u_{1}\\u_{2}\\u_{_{3}}
 \end{bmatrix} + hu_{4}\right)=\Phi(z_{1}u_{1}+z_{2}u_{2}+z_{3}u_{3}+hu_{4})$$
