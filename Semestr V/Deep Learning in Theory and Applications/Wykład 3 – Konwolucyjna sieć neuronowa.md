@@ -2,6 +2,7 @@
 **Konwolucyjna sieć neuronowa** (ang. *convolutional neural network*) CNN to rodzaj sieci neuronowej, która wykorzystuje operację konwolucji do automatycznego wykrywania i przetwarzania charakterystycznych cech danych.
 
 Sieci CNN są szczególnie skuteczne w analizie danych mających strukturę czasową lub przestrzenną, takich jak obrazy, filmy, sygnały dźwiękowe czy tekst. Sieci CNN potrafią uczyć się lokalnych wzorców, z których następnie tworzą bardziej złożone struktury.
+
 ## Proces filtrowania
 **Konwolucja** jest operacją, w której przepuszczamy ciąg danych wejściowych $\mathbf{x}$ przez pewien filtr $\mathbf{w}$. Przykładowo przyjmijmy dane wejściowe $\mathbf{x}=(0,0,1,1,1,0,1,0,0,0)$ oraz filtr $\color{magenta}\mathbf{w}=(-1,1,-1)$.
 
