@@ -1,7 +1,7 @@
 ## Rodzaje kodowania
-> * **Kodowanie nadmiarowe (korygujące błędy):** Polega na dodawaniu do informacji nadmiarowych bitów, służących kontroli błędów (np. kod parzystości).
-> * **Kodowanie ekonomiczne (kompresja):** Polega na przekształceniu ciągu symboli / liter w krótszy ciąg, przy zachowaniu możliwości odtworzenia oryginału. Wyróżnia się kompresję bezstratną oraz stratną (np. MP3).
-> * **Kodowanie w celu ukrycia treści (kryptografia):** Polega na przekształceniu (szyfrowaniu) informacji w taki sposób, że staje się ona nieczytelna bez odpowiedniego klucza.
+* **Kodowanie nadmiarowe (korygujące błędy):** Polega na dodawaniu do informacji nadmiarowych bitów, służących kontroli błędów (np. kod parzystości).
+* **Kodowanie ekonomiczne (kompresja):** Polega na przekształceniu ciągu symboli / liter w krótszy ciąg, przy zachowaniu możliwości odtworzenia oryginału. Wyróżnia się kompresję bezstratną oraz stratną (np. MP3).
+* **Kodowanie w celu ukrycia treści (kryptografia):** Polega na przekształceniu (szyfrowaniu) informacji w taki sposób, że staje się ona nieczytelna bez odpowiedniego klucza.
 
 **Tekstem jawnym** (otwarty) nazywamy tekst dostępny dla wszystkich. **Komunikat** (wiadomość, meldunek, jednostka informacji) jest podstawową jednostką informacji jawnej.
 
