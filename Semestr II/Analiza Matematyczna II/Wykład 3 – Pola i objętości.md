@@ -1,7 +1,7 @@
 ## Obliczanie pól figur opisanych funkcjami
 Za pomocą całki jesteśmy w stanie policzyć pola figur opisanych funkcjami. Wzór wygląda następująco:
 
-$$\int_{a}^{b} [f(x) - g(x)] \, dx$$
+$$\int_{a}^{b} (f(x) - g(x) \, dx$$
 
 gdzie:
 * $f(x)$ – funkcja „górna”,
@@ -28,12 +28,12 @@ gdzie:
 ## Długość krzywej
 Aby obliczyć długość krzywej opisanej równaniem $f(x)$ w przedziale $(a, b)$, korzystamy ze wzoru:
 
-$$l = \int_{a}^{b} \sqrt{1 + [f'(x)]^2} \, dx$$
+$$l = \int_{a}^{b} \sqrt{1 + (f'(x))^2} \, dx$$
 
 ## Objętość bryły i pole powierzchni obrotowej
 Aby obliczyć objętość bryły powstałej w wyniku obrotu krzywej $y = f(x)$ wokół osi $Ox$, korzystamy ze wzoru:
 
-$$V = \pi \cdot \int_{a}^{b} [f(x)]^2 \, dx$$
+$$V = \pi \cdot \int_{a}^{b} (f(x))^2 \, dx$$
 
 > [!example] Przykład: Objętość i pole powierzchni kuli
 > Obracając funkcję $f(x) = \sqrt{1-x^2}$ dookoła osi $Ox$, otrzymujemy kulę.

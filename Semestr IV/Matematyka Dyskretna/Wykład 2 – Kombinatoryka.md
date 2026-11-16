@@ -27,8 +27,8 @@ Każdy element zbioru $S_1\times S_2\times \dots\times S_n$ ma postać $(s_1,s_2
 1. $s_1$ możemy wybrać na $|S_1|$ sposobów
 2. Dla każdego $s_1$ możemy wybrać $s_2$ na $|S_2|$ sposobów, co daje $|S_1 |\cdot |S_2 |$ sposobów na wybór pary $(s_1,s_2)$
 3. Dla każdej pary $(s_1,s_2)$  możemy wybrać $s_3$  na $|S_3|$  sposobów, co daje $|S_1 |\cdot |S_2 |\cdot |S_3 |$  sposobów na wybór trójki $(s_1,s_2,s_3 )$
-	⋮
-  $n$. $s_n$ można wybrać na $|S_n|$  sposobów co daje $|S_1 |\cdot |S_2 |\cdot  ... \cdot |S_n |$  sposobów na wybór elementu $(s_1,s_2,\dots,s_n )$
+4. $\quad \vdots$
+5. $s_n$ można wybrać na $|S_n|$  sposobów co daje $|S_1 |\cdot |S_2 |\cdot  ... \cdot |S_n |$  sposobów na wybór elementu $(s_1,s_2,\dots,s_n )$
 
 Szybki wzrost złożoności problemu wraz z niewielkimi zmianami w liczbie danych wejściowych powodują, że metoda brute force jest nieskuteczna przy długich ciągach danych.
 
@@ -64,8 +64,8 @@ Zauważmy, że $k$-permutacja zbioru $n$-elementowego to uporządkowany ciąg $(
 1. $a_1$ możemy wybrać na n sposobów
 2. $a_2$ możemy wybrać na $(n−1)$ sposobów.
 3. $a_3$ możemy wybrać na $(n−2)$ sposobów.
-	 ⋮
-  $n$. $a_k$ możemy wybrać na $n−(k−1)$ sposobów.
+4. $\quad\vdots$
+5. $a_k$ możemy wybrać na $n−(k−1)$ sposobów.
 
 Korzystając z prawa iloczynu otrzymujemy, że liczba różnych $k$-permutacji wynosi:
 

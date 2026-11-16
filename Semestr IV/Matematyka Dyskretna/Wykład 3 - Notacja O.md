@@ -53,7 +53,7 @@ Warto zauważyć, że zgodnie z definicją dużego $\mathcal{O}$ nasz ciąg $f_n
 - $a_n=\mathcal{O}(n^n )$
 - $a_n=\mathcal{O}(n^6 )$
 - $a_n=\mathcal{O}(2n^5 )$
-	$\vdots$
+- $\quad\vdots$
 
 Dobrym zwyczajem jest jednak wybieranie jak najmniejszego możliwego tempa wzrostu.
 
@@ -94,28 +94,23 @@ $$a_n=\mathcal{O}(c_n)$$
 Notacja dużego $\mathcal{O}$ jest tą najczęściej stosowaną, jednak nie jest jedyną notacją asymptotyczną. Donald Knuth zaproponował spójną notację, gdzie oprócz dużego $\mathcal{O}$ możemy jeszcze wyróżnić notację dużej $\Omega$ oraz dużej $\Theta$. Istnieją także notacje małego $\omicron$ oraz małej $\omega$ zaproponowane przez Edmunda Landau.
 
 Najpopularniejsze notacje asymptotyczne wraz z warunkami, które muszą zostać spełnione dla od n:
-- **Notacja dużego $\mathcal{O}$**
-	Mówi o górnym ograniczeniu tempa wzrostu danej funkcji. Wiemy, że funkcja $f_n$ będzie rosła nie szybciej niż $g_n$.
+- **Notacja dużego $\mathcal{O}$**: Mówi o górnym ograniczeniu tempa wzrostu danej funkcji. Wiemy, że funkcja $f_n$ będzie rosła nie szybciej niż $g_n$.
 
-	$$f_n=\mathcal{O}(g_n )\iff \exists_{C\in\mathbb{R}}:|f_n |\leq C⋅|g_n |$$
+$$f_n=\mathcal{O}(g_n )\iff \exists_{C\in\mathbb{R}}:|f_n |\leq C⋅|g_n |$$
 
-- **Notacja dużej $\Omega$**
-	Mówi o dolnym ograniczeniu tempa wzrostu danej funkcji. Wiemy, że funkcja $f_n$ będzie rosła nie wolniej niż $g_n$.
+- **Notacja dużej $\Omega$**: Mówi o dolnym ograniczeniu tempa wzrostu danej funkcji. Wiemy, że funkcja $f_n$ będzie rosła nie wolniej niż $g_n$.
 
-	$$f_n=\Omega(g_n )\iff\exists_{D\in\mathbb{R}}   :D\cdot|g_n |\leq|f_n|$$
+$$f_n=\Omega(g_n )\iff\exists_{D\in\mathbb{R}}   :D\cdot|g_n |\leq|f_n|$$
 
-- **Notacja dużej $\Theta$**
-	Mówi o dokładnym tempie wzrostu danej funkcji. Wiemy, że funkcja $f_n$ będzie rosła tak samo szybko $g_n$.
+- **Notacja dużej $\Theta$**: Mówi o dokładnym tempie wzrostu danej funkcji. Wiemy, że funkcja $f_n$ będzie rosła tak samo szybko $g_n$.
 
-	$$f_n=\Theta(g_n )\iff\exists_{C,D\in\mathbb{R}} : D\cdot|g_n |\leq|f_n|\leq C\cdot|g_n|$$
+$$f_n=\Theta(g_n )\iff\exists_{C,D\in\mathbb{R}} : D\cdot|g_n |\leq|f_n|\leq C\cdot|g_n|$$
 
-- **Notacja małego $\omicron$**
-	W odróżnieniu do notacji wielkiego $\mathcal{O}$ notacja małego $\omicron$ wyklucza możliwość, że funkcja rośnie w tym samym tempie. Wiemy, że funkcja $f_n$ będzie rosła wolniej niż $g_n$.
+- **Notacja małego $\omicron$**: W odróżnieniu do notacji wielkiego $\mathcal{O}$ notacja małego $\omicron$ wyklucza możliwość, że funkcja rośnie w tym samym tempie. Wiemy, że funkcja $f_n$ będzie rosła wolniej niż $g_n$.
 
-	$$f_n=\omicron(g_n )\iff\forall_{C\in\mathbb{R}} :|f_n|<C\cdot|g_n|$$
+$$f_n=\omicron(g_n )\iff\forall_{C\in\mathbb{R}} :|f_n|<C\cdot|g_n|$$
 
-- **Notacja małej $\omega$**
-	Tak samo jak notacja małego $\omicron$, notacja małej $\omega$ wyklucza możliwość tego samego tempa wzrostu funkcji.
-
-	$$f_n=\omega(g_n )\iff \forall_{D\in\mathbb{R}} :D\cdot|g_n |<|f_n |$$
+- **Notacja małej $\omega$**: Tak samo jak notacja małego $\omicron$, notacja małej $\omega$ wyklucza możliwość tego samego tempa wzrostu funkcji.
+  
+$$f_n=\omega(g_n )\iff \forall_{D\in\mathbb{R}} :D\cdot|g_n |<|f_n |$$
 

@@ -10,7 +10,6 @@ Dowolna krawędź $\{x,y\}$ odpowiada parze łuków $(x,y),(y,x)$.
 
 **Stopniem wejściowym** wierzchołka $v$ w digrafie $D$ nazywamy liczbę krawędzi, których końcem jest $v$. Stopień wejściowy wierzchołka $v$ oznaczamy jako $\mathrm{ideg}  v$.
 
-Podstawowe twierdzenie teorii digrafów mówi:
 >[!danger] Podstawowe twierdzenie teorii digrafów
 > Dla każdego digrafu $D=(V,E)$ zachodzi:
 >
@@ -86,11 +85,11 @@ Jeżeli digraf $D$ nie jest eulerowski i istnieje ścieżka $d$ przechodząca pr
 
 Digraf $D$ jest eulerowski wtedy i tylko wtedy, gdy jest spójny oraz dla każdego wierzchołka $w\in V(D)$ zachodzi:
 
-$$\mathrm{odeg}  w=\mathrm{ideg}  w$$
+$$\operatorname{odeg}  w=\operatorname{ideg}  w$$
 
 Digraf $D$ jest półeulerowski wtedy i tylko wtedy, gdy jest spójny i zawiera dwa wierzchołki $u,v\in V(D)$ takie, że:
 
-$$\mathrm{odeg}  u=\mathrm{ideg}  u+1, \quad  \mathrm{ideg}  v=\mathrm{odeg}  v+1, \quad  \mathrm{odeg}  w=\mathrm{ideg}  w,   \qquad \forall_{w\in V(D)}  :w\neq u,v$$
+$$\operatorname{odeg}  u=\operatorname{ideg}  u+1, \quad  \operatorname{ideg}  v=\operatorname{odeg}  v+1, \quad  \operatorname{odeg}  w=\operatorname{ideg}  w,   \qquad \forall_{w\in V(D)}  :w\neq u,v$$
 
 ## Digrafy hamiltonowskie
 Jeżeli w digrafie $D$ istnieje cykl $h$ przechodzący przez przez każdy wierzchołek digrafu $D$ dokładnie jeden raz, to $h$ nazywamy **cyklem Hamiltona**, a $D$ **digrafem hamiltonowskim**.
@@ -102,7 +101,7 @@ Jeżeli digraf $D$ nie jest digrafem hamiltonowskim i istnieje ścieżka $h$ prz
 
 Przy czym w większości przypadków turnieje są półhamiltonowskie. Z powyższego twierdzenia możemy zauważyć, że każdy turniej przechodni zawiera dokładnie jedną ścieżkę Hamiltona. 
 
-Niech $D=(V,E)$ będzie digrafem, jeżeli dla każdej pary wierzchołków $u,v\in V$ takich, że $(u,v)\in E$ zachodzi $\mathrm{odeg}  u+\mathrm{ideg}  v\geq n$, to $D$ jest digrafem hamiltonowskim.
+Niech $D=(V,E)$ będzie digrafem, jeżeli dla każdej pary wierzchołków $u,v\in V$ takich, że $(u,v)\in E$ zachodzi $\operatorname{odeg}  u+\operatorname{ideg}  v\geq n$, to $D$ jest digrafem hamiltonowskim.
 
-Jeżeli dla każdego wierzchołka $v\in V(D)$ zachodzi $\mathrm{odeg}  v\geq \frac{n}{2}$ oraz $\mathrm{ideg}  v\geq \frac{n}{2}$ to $D$ również jest digrafem hamiltonowskim.
+Jeżeli dla każdego wierzchołka $v\in V(D)$ zachodzi $\operatorname{odeg}  v\geq \frac{n}{2}$ oraz $\mathrm{ideg}  v\geq \frac{n}{2}$ to $D$ również jest digrafem hamiltonowskim.
 
