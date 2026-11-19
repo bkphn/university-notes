@@ -9,7 +9,7 @@ Jeżeli c
 
 ## Dropout layer
 
-raczej ponizej p<=25% w praktyce
+raczej ponizej $p<=25\%$ w praktyce
 .
 
 ## Early stopping
