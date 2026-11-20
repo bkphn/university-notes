@@ -3,7 +3,8 @@
 
 Innymi słowy, model zamiast nauczyć się ogólnych zależności występujących w danych, zaczyna uczyć się danych na pamięć.
 
-## Cross-validation
+## Walidacja krzyżowa
+**Cross-validation**
 Należy pamiętać o resetowanie parametrów modelu przy cross-validation, bo sie o tym zapomina.
 
 *leave one scenario out*
