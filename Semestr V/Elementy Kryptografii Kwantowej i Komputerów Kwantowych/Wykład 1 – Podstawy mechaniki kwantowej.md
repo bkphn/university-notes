@@ -111,6 +111,10 @@ $$\ket{+i}=\frac{1}{\sqrt{ 2 }}\ket{0}+\frac{i}{\sqrt{ 2 }}\ket{1}  $$
 
 $$\ket{-i}=\frac{1}{\sqrt{ 2 }}\ket{0}-\frac{i}{\sqrt{ 2 }}\ket{1}  $$
 
+Stany $\ket{+}, \ket{-}$ możemy skrótowo zapisywać jako:
+
+$$\ket{\pm}=\frac{1}{\sqrt{ 2 }}\ket{0}\pm \frac{1}{\sqrt{ 2 }} \ket{1}$$
+
 ## Bazy
 **Baza pomiarowa** określa, jakie rozłączne wyniki można uzyskać w danym pomiarze projekcyjnym i którym stanom one odpowiadają. Bazę pomiarową kubitu w przypadku pomiaru projekcyjnego stanowi para ortonormalnych stanów kwantowych, wśród najważniejszych baz wyróżniamy:
 - **Baza obliczeniowa** $Z$:  
