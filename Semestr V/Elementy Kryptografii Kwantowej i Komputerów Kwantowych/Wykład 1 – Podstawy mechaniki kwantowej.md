@@ -168,34 +168,6 @@ gdzie $a,b,c,d\in\mathbb C$ oraz $|a|^2+|b|^2+|c|^2+|d|^2=1$.
 
 Nie każdy wspólny czysty stan można przedstawić jako kombinację dwóch niezależnie określonych czystych stanów kubitów. Stan, który **można** zapisać jako $\ket\psi_A\otimes\ket\phi_B$, nazywamy **separowalnym**. Jeśli takiego rozkładu nie ma, stan jest **splątany**. Symbol $\otimes$ oznacza iloczyn tensorowy.
 
-## Stan splątany Bella
-**Splątanie kwantowe** (ang. *quantum entanglement*) jest właściwością stanu złożonego układu, który – w przypadku stanów czystych – nie daje się zapisać jako iloczyn tensorowy stanów jego podukładów.
-
-Przykładem jest jeden ze **stanów Bella**:
-
-$$\ket{\Phi^+}=\frac{\ket{00}+\ket{11}}{\sqrt2}.$$
-
-W przypadku pomiaru obu kubitów w bazie obliczeniowej $Z$:
-
-$$P(00)=P(11)=\frac12,\qquad P(01)=P(10)=0.$$
-
-Oznacza to, że wynik pomiaru każdego kubitu osobno jest losowy, ale wyniki obu kubitów są doskonale skorelowane: zawsze są równe.
-
-Sama zgodność wyników w jednej bazie nie dowodzi splątania, ponieważ podobne korelacje mogą powstawać również w klasycznych mieszaninach. Kwantowy charakter tego stanu jest związany z jego nierozkładalnością na stany pojedynczych kubitów i korelacjami dostępnymi w różnych bazach.
-
-Jeśli Alicja i Bob otrzymają po jednym kubicie takiej pary, nie mogą za jej pomocą przesłać użytecznej informacji szybciej od światła: każde z nich otrzymuje lokalnie losowe wyniki.
-
-Stany Bella to cztery wzajemnie ortogonalne, maksymalnie splątane czyste stany układu dwóch kubitów:
-
-$$
-\begin{aligned}
-\ket{\Phi^+}&=\frac{\ket{00}+\ket{11}}{\sqrt2}\\[6pt]
-\ket{\Phi^-}&=\frac{\ket{00}-\ket{11}}{\sqrt2}\\[6pt]
-\ket{\Psi^+}&=\frac{\ket{01}+\ket{10}}{\sqrt2}\\[6pt]
-\ket{\Psi^-}&=\frac{\ket{01}-\ket{10}}{\sqrt2}
-\end{aligned}
-$$
-
 ## Paradoks EPR
 **Paradoks EPR** (ang. _Einstein–Podolsky–Rosen paradox_) to eksperyment myślowy zaproponowany w 1935 roku przez Alberta Einsteina, Borisa Podolskiego i Nathana Rosena, którego celem było zakwestionowanie kompletności mechaniki kwantowej.
 
