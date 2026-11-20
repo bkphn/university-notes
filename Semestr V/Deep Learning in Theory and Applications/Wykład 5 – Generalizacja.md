@@ -4,12 +4,24 @@
 Innymi słowy, model zamiast nauczyć się ogólnych zależności występujących w danych, zaczyna uczyć się danych na pamięć.
 
 ## Walidacja krzyżowa
-**Cross-validation**
+**Walidacja krzyżowa** (ang. *cross-validation*) CV to metoda oceny modeli uczenia maszynowego, która polega na wielokrotnym trenowaniu i ocenianiu modelu na różnych podzbiorach dostępnych danych. Jej głównym celem jest oszacowanie, jak dobrze model będzie generalizował na nowych, wcześniej niewidzianych danych.
+
+W klasycznym podejściu dzielimy zbiór danych $\mathcal{D}$ na $\mathcal{D}_{\text{train}}$ oraz $\mathcal{D}_{\text{test}}$. W walidacji dodajemy jeszcze jeden zbiór walidacyjny $\mathcal{D}_{\text{val}}$, który służy do testowania parametrów. W walidacyji krzyżowej $K$*-Fold Cross-Validation* dzielimy zbiór $\mathcal{D}$ na $K$ elementów:
+
+$$\mathcal{D}=D_{1}\cup D_{2} \cup \dots \cup D_{K}$$
+
+Następnie przeprowadzamy $K$ iteracji, w których trenujemy model na pozostałych $K-1$ podzbiorach, w iteracji $k\in\{1,\dots,K\}$ definiujemy:
+
+$$\mathcal{D}_{\text{train}}^{(k)}=\mathcal{D}\setminus D_{k}, \qquad \mathcal{D}_{\text{val}}^{(k)}=D_{k}$$
+
+Następnie trenujemy model $f$ optymalizując parametr $\theta$ dla każdej iteracji:
+
+$$\theta_{k}= \arg\min_{\theta} \frac{1}{\mathcal{D}^{(k)}_{\text{train}}}\sum_{(x,y)\in \mathcal{D}_{\text{train}}^{(k)}} \mathcal{L}(f_{\theta}(x),y)$$
+
+
 Należy pamiętać o resetowanie parametrów modelu przy cross-validation, bo sie o tym zapomina.
 
 *leave one scenario out*
-
-Jeżeli c
 
 ## Dropout layer
 
