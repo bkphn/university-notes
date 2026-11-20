@@ -18,17 +18,33 @@ Następnie trenujemy model $f$ optymalizując parametr $\theta$ dla każdej iter
 
 $$\theta_{k}= \arg\min_{\theta} \frac{1}{\mathcal{D}^{(k)}_{\text{train}}}\sum_{(x,y)\in \mathcal{D}_{\text{train}}^{(k)}} \mathcal{L}(f_{\theta}(x),y)$$
 
+i obliczamy błąd na zbiorze walidacyjnym:
 
-Należy pamiętać o resetowanie parametrów modelu przy cross-validation, bo sie o tym zapomina.
+$$E_{k}=\frac{1}{\mathcal{D}_{\text{val}}^{(k)}} \sum_{(x,y)\in{\mathcal{D}_{\text{val}}^{(k)}}} \mathcal{L}(f_{\theta_{k}}(x),y)$$
 
-*leave one scenario out*
+Ostatecznie estymator błędu cross-validation przyjmuje postać:
 
-## Dropout layer
+$$E_{\mathrm{CV}}=\frac{1}{K}\sum_{k=1}^K E_{k}$$
 
-raczej ponizej $p<=25\%$ w praktyce
-.
+Jeżeli foldy mają różną liczebność, to zamiast tego stosujemy średnią ważoną.
 
-## Early stopping
+Jednym z najczęstszych błędów przy implementacji walidacji krzyżowej jest zapominanie o resetowaniu parametrów modelu przy każdej kolejnej iteracji, dochodzi wtedy do wycieku danych.
+
+**Leave-One-Scenario-Out** (LOSO) to metoda walidacji krzyżowej, w której model jest trenowany na danych pochodzących z kilku scenariuszy, a następnie oceniany na danych z jednego, całkowicie wykluczonego z treningu scenariusza. Głównym celem jest sprawdzenie, czy model potrafi generalizować na scenariusze, których nigdy wcześniej nie widział.
+
+## Wartwa dropout
+**Warstwa dropout** (ang. *dropout layer*) to technika regularyzacji stosowana w sieciach neuronowych, której głównej celem jest ograniczenie przeuczenia modelu. 
+
+Polega na losowym wyłączaniu części neuronów podczas treningu, dzięki czemu model nie może nadmiernie polegać na pojedynczych neuronach i musi uczyć się bardziej odpornych reprezentacji danych.
+
+Technika została szczegółowo opisana przez Nitishę Srivastavę i współautorów w pracy *Dropout: A Simple Way to Prevent Neural Networks from Overfitting*.
+
+Dropout opiera się na parametrze $p$, który odpowiada za prawdopodobieństwo wyzerowania każdego z neuronów. Na końcu sieci podpinamy warstwę dropout, w której każdy neuron, z prawdopodobieństwem $p$ zostanie nadpisany liczbą $0$, następnie przy aktualizowaniu wag, niektóre wagi nie są po prostu aktualizowane, ponieważ ich gradient też wynosi zero.
+
+W praktycznej implementacji przyjmujemy zazwyczaj $p\leq 25\%$.
+
+## Wczesne zatrzymywanie
+**Wczesne zatrzymywanie** (ang. *early stopping*) to technika regularyzacji stosowana podczas trenowania modeli. Polega na automatycznym zatrzymaniu treningu, gdy wyniki modelu na zbiorze walidacyjnym przestają się poprawiać.
 
 patience parameter
 
