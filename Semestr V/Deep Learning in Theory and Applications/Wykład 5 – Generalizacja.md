@@ -1,4 +1,7 @@
-## Overfitting
+## Przeuczenie
+**Przeuczeniem** (ang. *overfitting*) to zjawisko w uczeniu maszynowym, w którym model zbyt mocno dopasowuje się do danych treningowych, przez co osiąga bardzo dobre wyniki na zbiorze treningowym, ale znacznie gorsze na nowych, wcześniej niewidzianych danych.
+
+Innymi słowy, model zamiast nauczyć się ogólnych zależności występujących w danych, zaczyna uczyć się danych na pamięć.
 
 ## Cross-validation
 Należy pamiętać o resetowanie parametrów modelu przy cross-validation, bo sie o tym zapomina.
