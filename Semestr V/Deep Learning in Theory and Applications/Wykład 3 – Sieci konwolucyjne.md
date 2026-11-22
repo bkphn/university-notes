@@ -183,3 +183,5 @@ Na koniec obliczamy neuron wyjściowy:
 $$\hat{y}_{1}=\Phi\left(\mathbf{z}^T\begin{bmatrix}
 u_{1}\\u_{2}\\u_{_{3}}
 \end{bmatrix} + hu_{4}\right)=\Phi(z_{1}u_{1}+z_{2}u_{2}+z_{3}u_{3}+hu_{4})$$
+
+## Backpropagation w konwolucyjnych

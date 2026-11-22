@@ -46,50 +46,116 @@ W praktycznej implementacji przyjmujemy zazwyczaj $p\leq 25\%$.
 ## Wczesne zatrzymywanie
 **Wczesne zatrzymywanie** (ang. *early stopping*) to technika regularyzacji stosowana podczas trenowania modeli. Polega na automatycznym zatrzymaniu treningu, gdy wyniki modelu na zbiorze walidacyjnym przestają się poprawiać.
 
-patience parameter
+![[Pasted image 20261122191713.png|365]]
+Na powyższym przykładzie możemy zauważyć dwie krzywe. **Krzywą uczenia** i **krzywą walidacji**. Jak widać, *training loss* stale maleje, ale *validation loss* zaczyna rosnąć od epoki 17 – w związku z tym model zaczyna wykazywać oznaki przeuczenia (jest coraz lepszy na widzianych danych, lecz coraz gorzej mu idzie z tymi niewidzianymi).
 
-ancelot, rom albo ram. przekazywana z rom do ram w podobny sposob jak dzila streaming. 
+Oczywiście pojedynczy wzrost *validation loss* nie oznacza od razu przeuczenia, stosujemy tutaj parametr cierpliwości `patience`. Wartość tego parametru mówi, ile epok bez poprawy *validation loss* wymagamy, aby zakończyć trening.
 
-nie używać w gradient vanishing i gradient exploding, a w generelizacji
+## Axolotl
+**Axolotl** to framework służący do trenowania i dostrajania dużych modeli językowych (LLM). Jedną z jego funkcjonalności jest _Streaming Datasets_, czyli strumieniowe wczytywanie danych treningowych. Zamiast ładować cały zbiór danych do pamięci RAM, system pobiera kolejne fragmenty danych w miarę potrzeb.
 
+## LASSO
+**Regularyzacja L1** (ang. *L1 regularization*) to technika ograniczania złożoności modelu poprzez dodanie do funkcji straty kary zależnej od sumy wartości bezwzględnych jego parametrów. Funkcja straty kary L1 prezentuje się następująco:
 
-L1 + linear = lasso
+$$L_{1}=\frac{\lambda}{m} \sum_{j=1}^n |\theta_{j}|$$
 
-$$\mathcal{L}=\text{loss function}+ \frac{\lambda}{m}\sum_{j=1}^n |\theta_{j}|$$
-*penalize*
-L2 + linear = ridge:
-$$\mathcal{L}(\mathbf{W})=\text{zwykły loss function np. MSE}+\frac{\lambda}{2m}\sum_{j=1}^n \theta_{j}^2$$
+gdzie $\lambda$ jest współczynnikiem reguralyzacji, który określa siłę kary nakładanej na duże parametry.
 
-zwykle loss optymalizuje testy, a θj2 optymalizuje parametry i pilnuje, by nie byly zbyt duze. 
+Niech $\mathcal{L}_{0}$ będzie dowolną funkcją straty (np. MSE). Funkcję kosztu, będącą sumą funkcji straty i L1 nazywamy **LASSO** i definiujemy jako:
 
-jeżeli θj^n jest wektorem to uzywamy normy ‖‖
+$$\mathcal{\mathcal{L}}=\mathcal{L}_{0}+L_{1}$$
 
+## Ridge
+**Reguralyzacja L2** (ang. *L2 regularization*) to technika ograniczania złożoności modelu poprzez dodanie do funkcji straty kary zależnej od sumy kwadratów jego parametrów. Funkcja straty kary L2 prezentuje się następująco:
 
-Elastic net = L1 + L2
+$$L_{2}=\frac{\lambda}{2m}\sum_{j=1}^n \theta_{j}^2$$
 
-$$\mathcal{L}= \frac{1}{2m} \sum_{i=1}^m (h_{\theta}(x^{(i)})-y^{(i)})^2+  \lambda_{1}\sum_{j=1}^n |\theta_{j}| + \lambda_{2} \sum_{j=1}^n \theta_{j}^2 $$
+gdzie $\lambda$ jest współczynnikiem reguralyzacji, który określa siłę kary nakładanej na duże parametry.
+
+Niech $\mathcal{L}_{0}$ będzie dowolną funkcją straty (np. MSE). Funkcję kosztu, będącą sumą funkcji straty i L2 nazywamy **ridge regression** i definiujemy jako:
+
+$$\mathcal{L}=\mathcal{L}_{0}+L_{2}$$
+
+Funkcja $\mathcal{L}_{0}$ zajmuje się optymalizacją testów, a współczynnik $L_{2}$ pilnuje, by parametry nie były zbyt duże.
+
+## Elastic net
+**Elastic net** to funkcja kosztu łącząca zarówno L1, jak i L2. W ogólnym przypadku, dla funkcji straty $\mathcal{L}_{0}$ elastic net możemy wyrazić jako:
+
+$$\boxed{\mathcal{L}=\mathcal{L}_{0}+L_{1}+L_{2}=\mathcal{L}_{0}+\frac{\lambda}{m}\sum_{j=1}^n |\theta_{j}|+\frac{\lambda}{2m}\sum_{j=1}^n\theta_{j}^2}$$
 
 ## Clipping
-jak ursona wagi za bardzo to zamiast l1 czy l2 mozna po prostu uzyc clippingu, czyli jezeli sa zbyt duze to je sztucznie zmniejszamy pod pewien thresholdx.
+Nieco prostszą metodą ograniczania wielkości parametrów $\theta$ jest **clipping**. Polega on na tym, że jeżeli parametr $\theta$ osiągnie wartość wyższą niż ustalony próg (ang. *threshold*) to sztucznie zmniejszamy jego wartość nieco poniżej progu.
 
 ## Iteracja a epoka
-epoka jak wszystko zrobie, a iteracja jak przeleci model do konca
+W uczeniu maszynowym, szczególnie podczas trenowania sieci neuronowych, **epoka** (ang. *epoch*) i **iteracja** (ang. *iteration*) opisują dwa różne poziomy procesu treningowego:
+- **Epoch**: jedno pełne przejście przez cały zbiór danych treningowych.
+- **Iteration**: jeden krok optymalizacji, podczas którego model przetwarza porcję danych (_batch_) i aktualizuje swoje parametry.
 
-## A single sample / iterative
-bardzo noisy i bardzo czasochlonne, ale nei obciaza tak pamieciowo
+W wielu modelach epoka i iteracja jest tożsama, ponieważ model w trakcie każdego kroku optymalizacji przetwarza cały zbiór treningowy.
+
+## Stochastic Gradient Descent  
+Załóżmy, że dysponujemy zbiorem treningowym $\mathcal{D}_{\text{train}}=\{(x_{1},y_{1}),\dots,(x_{N},y_{N})\}$. W podejściu *single-sample* podczas jednego kroku optymalizacji wykorzystujemy jedną obserwację. Oznacza to więc, że rozmiar batcha wynosi $B=1$.
+
+Gradient obliczamy po funkcji straty pojedynczej obserwacji $\ell$, a następnie aktualizujemy parametry.
+
+$$\theta ^{(t+1)}=\theta^{(t)}-\eta \nabla_{\theta}\ell(\hat{y},y)$$
 
 ## Batch Learning (Gradient Descent)
+**Batch Gradient Descent** to metoda optymalizacji, w której gradient funkcji straty obliczamy na podstawie wszystkich obserwacji ze zbioru treningowego, a następnie wykonujemy jedną aktualizację parametrów modelu.
 
+Funkcję straty definiujemy jako:
+
+$$\mathcal{L}(\theta)=\frac{1}{S} \sum_{s=1}^S \ell(\hat{y}_{i}^{(s)}-y_{i}^{(s)})$$
+
+gdzie $\ell$ jest funkcją straty pojedynczej obserwacji. Następnie aktualizujemy parametry:
+
+$$\theta ^{(t+1)}=\theta ^{(t)}-\eta \nabla_{\theta}\mathcal{L}$$
+
+Gradient jest dokładnym gradientem empirycznej funkcji straty, a nie jej przybliżeniem uzyskanym z podzbioru obserwacji.
 
 ## Mini-Batch
-Jedna epoka to wszystkie itracje czyli jeden batch to jedna iteracja, a a wszystkie batche to to epoch (epik?).s
+**Mini-Batch Gradient Descent** to metoda optymalizacji, w której zbiór treningowy dzielimy na mniejsze partie danych (*mini-batches*). Rozmiar batcha (ang. *batch size*) określać będziemy przez $B$, a liczbę próbek przez $N$:
+- **Stochastic Gradient Descent** (**SGD**): 
 
-$B$ wybieramy jako potęgę liczby dwa, bo GPU sobie radzi najlepiej z takimi,
+$$B=1$$
+
+- **Batch Gradient Descent**
+
+$$B=N$$
+
+- **Mini-Batch Gradient Descent**
+
+$$B<N$$
+
+Niech:
+
+$$
+\mathcal B_t\subseteq\{1,\ldots,N\}
+$$
+
+oznacza zbiór indeksów obserwacji należących do mini-batcha w iteracji $t$
+
+Gradient obliczamy jako:
+
+$$\nabla_{\theta ^{(t)}}\mathcal{L}=
+\frac{1}{|\mathcal B_t|}
+\sum_{i\in\mathcal B_t}
+\nabla_\theta\ell(f_{\theta ^{(t)}}(x_i),y_i)$$
+
+Parametry aktualizujemy według reguły:
+
+$$
+\theta ^{(t+1)}=\theta ^{(t)}-\eta \nabla_{\theta ^{(t)}}\mathcal{L}
+$$
+
+W praktycznych implementacjach wartość $B$ często wybieramy jako potęgę liczby $2$ z czysto praktycznego względu – GPU (ang. *Graphics Processing Unit*) najoptymalniej radzi sobie z przetwarzaniem danych pogrupowanych w $2^n$ elementów.
 
 ## Long-short term memory
-LSTM, przed LLMami can i help you dzialalo na bazie LSTM kiedys. LSTM minimalizuje problemy z gradient descent.
+**Long-short term memory** (LSTM) to rodzaj rekurencyjnej sieci neuronowej, zaprojektowany do przetwarzania danych sekwencyjnych oraz uczenia się zależności występujących pomiędzy odległymi elementami sekwencji. LSTM są poniekąd poprzednikami LLM-ów, pierwsze czaty (między innymi popularne okienka *Can i help you?* opierały się właśnei na LSTM-ach).
 
-LSTM units w każdej warstwie jest ich dużo, to jest taki neuron zbiór neuronów.
+LSTM jest siecią rekurencyjną, rekurencji poddajemy jednak całe **komórki LSTM** (ang. *LSTM cell*), a nie pojedyncze neurony. Budowa takiej sieci wygląda następująco:
+
+[]
 
 $C_{t-1}\rightarrow \times →_{\alpha_{t-1}} →C_{t}$
 zapomianym część wspomnień, a rezta przechodzi dalej. Tworzymy nowe wspomnienie w neuronach 1,2. Odpowiadaja one za short time memory. Main output tworzy neuron 3. (0, 1, 2, 3 to biasy)
