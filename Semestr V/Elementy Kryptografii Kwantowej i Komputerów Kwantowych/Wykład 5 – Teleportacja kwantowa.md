@@ -128,3 +128,4 @@ Po wykonaniu pomiaru na kubitach $Q,A$ i przesłaniu wyniku drugiej osobie, stos
 
 $$\ket{\chi}_{Q} \xrightarrow{\text{teleportacja}}
 \ket{\chi}_{B}$$
+
