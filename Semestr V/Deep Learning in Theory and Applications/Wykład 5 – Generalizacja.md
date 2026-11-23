@@ -16,11 +16,11 @@ $$\mathcal{D}_{\text{train}}^{(k)}=\mathcal{D}\setminus D_{k}, \qquad \mathcal{D
 
 Następnie trenujemy model $f$ optymalizując parametr $\theta$ dla każdej iteracji:
 
-$$\theta_{k}= \arg\min_{\theta} \frac{1}{\mathcal{D}^{(k)}_{\text{train}}}\sum_{(x,y)\in \mathcal{D}_{\text{train}}^{(k)}} \mathcal{L}(f_{\theta}(x),y)$$
+$$\theta_{k}= \arg\min_{\theta} \frac{1}{|\mathcal{D}^{(k)}_{\text{train}}|}\sum_{(x,y)\in \mathcal{D}_{\text{train}}^{(k)}} \mathcal{L}(f_{\theta}(x),y)$$
 
 i obliczamy błąd na zbiorze walidacyjnym:
 
-$$E_{k}=\frac{1}{\mathcal{D}_{\text{val}}^{(k)}} \sum_{(x,y)\in{\mathcal{D}_{\text{val}}^{(k)}}} \mathcal{L}(f_{\theta_{k}}(x),y)$$
+$$E_{k}=\frac{1}{|\mathcal{D}_{\text{val}}^{(k)}|} \sum_{(x,y)\in{\mathcal{D}_{\text{val}}^{(k)}}} \mathcal{L}(f_{\theta_{k}}(x),y)$$
 
 Ostatecznie estymator błędu cross-validation przyjmuje postać:
 
@@ -39,7 +39,7 @@ Polega na losowym wyłączaniu części neuronów podczas treningu, dzięki czem
 
 Technika została szczegółowo opisana przez Nitishę Srivastavę i współautorów w pracy *Dropout: A Simple Way to Prevent Neural Networks from Overfitting*.
 
-Dropout opiera się na parametrze $p$, który odpowiada za prawdopodobieństwo wyzerowania każdego z neuronów. Na końcu sieci podpinamy warstwę dropout, w której każdy neuron, z prawdopodobieństwem $p$ zostanie nadpisany liczbą $0$, następnie przy aktualizowaniu wag, niektóre wagi nie są po prostu aktualizowane, ponieważ ich gradient też wynosi zero.
+Dropout opiera się na parametrze $p$, który odpowiada za prawdopodobieństwo wyzerowania każdego z neuronów. We wnętrzu sieci podpinamy warstwę dropout, w której każdy neuron, z prawdopodobieństwem $p$ zostanie nadpisany liczbą $0$, następnie przy aktualizowaniu wag, niektóre wagi nie są po prostu aktualizowane, ponieważ ich gradient też wynosi zero.
 
 W praktycznej implementacji przyjmujemy zazwyczaj $p\leq 25\%$.
 
@@ -61,7 +61,7 @@ $$L_{1}=\frac{\lambda}{m} \sum_{j=1}^n |\theta_{j}|$$
 
 gdzie $\lambda$ jest współczynnikiem reguralyzacji, który określa siłę kary nakładanej na duże parametry.
 
-Niech $\mathcal{L}_{0}$ będzie dowolną funkcją straty (np. MSE). Funkcję kosztu, będącą sumą funkcji straty i L1 nazywamy **LASSO** i definiujemy jako:
+Niech $\mathcal{L}_{0}$ będzie dowolną liniową funkcją straty (np. MSE). Funkcję kosztu, będącą sumą funkcji straty i L1 nazywamy **LASSO** i definiujemy jako:
 
 $$\mathcal{\mathcal{L}}=\mathcal{L}_{0}+L_{1}$$
 
@@ -72,19 +72,19 @@ $$L_{2}=\frac{\lambda}{2m}\sum_{j=1}^n \theta_{j}^2$$
 
 gdzie $\lambda$ jest współczynnikiem reguralyzacji, który określa siłę kary nakładanej na duże parametry.
 
-Niech $\mathcal{L}_{0}$ będzie dowolną funkcją straty (np. MSE). Funkcję kosztu, będącą sumą funkcji straty i L2 nazywamy **ridge regression** i definiujemy jako:
+Niech $\mathcal{L}_{0}$ będzie dowolną liniową funkcją straty (np. MSE). Funkcję kosztu, będącą sumą funkcji straty i L2 nazywamy **ridge regression** i definiujemy jako:
 
 $$\mathcal{L}=\mathcal{L}_{0}+L_{2}$$
 
-Funkcja $\mathcal{L}_{0}$ zajmuje się optymalizacją testów, a współczynnik $L_{2}$ pilnuje, by parametry nie były zbyt duże.
+Funkcja $\mathcal L_0$ mierzy błąd predykcji modelu na danych treningowych, natomiast kara L2 ogranicza wartości jego parametrów.
 
 ## Elastic net
 **Elastic net** to funkcja kosztu łącząca zarówno L1, jak i L2. W ogólnym przypadku, dla funkcji straty $\mathcal{L}_{0}$ elastic net możemy wyrazić jako:
 
-$$\boxed{\mathcal{L}=\mathcal{L}_{0}+L_{1}+L_{2}=\mathcal{L}_{0}+\frac{\lambda}{m}\sum_{j=1}^n |\theta_{j}|+\frac{\lambda}{2m}\sum_{j=1}^n\theta_{j}^2}$$
+$$\boxed{\mathcal{L}=\mathcal{L}_{0}+L_{1}+L_{2}=\mathcal{L}_{0}+\frac{\lambda_{1}}{m}\sum_{j=1}^n |\theta_{j}|+\frac{\lambda_{2}}{2m}\sum_{j=1}^n\theta_{j}^2}$$
 
-## Clipping
-Nieco prostszą metodą ograniczania wielkości parametrów $\theta$ jest **clipping**. Polega on na tym, że jeżeli parametr $\theta$ osiągnie wartość wyższą niż ustalony próg (ang. *threshold*) to sztucznie zmniejszamy jego wartość nieco poniżej progu.
+## Parameter clipping
+Nieco prostszą metodą ograniczania wielkości parametrów $\theta$ jest **parameter clipping**. Polega on na tym, że jeżeli parametr $\theta$ osiągnie wartość wyższą niż ustalony próg (ang. *threshold*) to sztucznie zmniejszamy jego wartość nieco poniżej progu.
 
 ## Iteracja a epoka
 W uczeniu maszynowym, szczególnie podczas trenowania sieci neuronowych, **epoka** (ang. *epoch*) i **iteracja** (ang. *iteration*) opisują dwa różne poziomy procesu treningowego:
@@ -155,8 +155,18 @@ W praktycznych implementacjach wartość $B$ często wybieramy jako potęgę lic
 
 LSTM jest siecią rekurencyjną, rekurencji poddajemy jednak całe **komórki LSTM** (ang. *LSTM cell*), a nie pojedyncze neurony. Budowa takiej sieci wygląda następująco:
 
-[]
+![[Pasted image 20261122214650.png|506]]
+Gdzie:
+- $\mathbf{X}^{(t)}$ to dane wejściowe
+- $C^{(t-1)}$ to pamięć z poprzedniej komórki
+- $h^{(t-1)}$ to wynik z poprzedniej komórki
+- $C^{(t)}$ to wynik pamięć komórki
+- $h^{(t)}$ to wynik komórki
+- $\sigma$ to funkcja sigmoid
+- $\tanh$ to tangens hiperboliczny
+- $\sum$ to suma element po elemencie
+- $\bigodot$ to iloczyn element po elemencie
+- $b_{i}$ to bias neuronu $i$
+- $\mathbf{u}_{i}, \mathbf{w}_{i}$ to wagi neuronu $i$
 
-$C_{t-1}\rightarrow \times →_{\alpha_{t-1}} →C_{t}$
-zapomianym część wspomnień, a rezta przechodzi dalej. Tworzymy nowe wspomnienie w neuronach 1,2. Odpowiadaja one za short time memory. Main output tworzy neuron 3. (0, 1, 2, 3 to biasy)
-
+Neuron $0$ służy do zapominania dawnych wspomnień, natomiast neurony $1, 2$ zapamiętują nowe wspomnienia.

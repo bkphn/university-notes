@@ -400,5 +400,11 @@ $$\mathbf{b}\leftarrow \mathbf{b}-\eta \begin{bmatrix}
 > 1 \\ -2.16
 > \end{bmatrix}$$
 
- *residual connection*
-*jeżeli mamy dwa wyjścia lub więcej, to przy BP musimy sumować błędy dla każdego z wyjść (sumować, jeżeli w funkcji straty jest suma, w p.p. wykonujemy poprawną operację)*
+## Połączenia rezydualne
+**Połączeniem rezydualnym** (ang. *residual connection*) nazywamy sytuację, w której dany argument wejściowy jest podłączony bezpośrednio do wyniku przekształcenia wykonanego przez kilka warstw.
+
+Głównymi zaletami połączeń rezydualnych są:
+- Ułatwienie trenowania bardzo głębokich sieci neuronowych.
+- Poprawa przepływu gradientów podczas backpropagation.
+- Ograniczenie problemu degradacji jakości uczenia wraz ze wzrostem głębokości sieci.
+- Ułatwienie zachowywania informacji z wcześniejszych warstw.

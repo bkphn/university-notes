@@ -54,7 +54,8 @@ Znając wynik pomiaru osoby $A$ możemy z pewnością określić wynik jeszcze n
 ## Tworzenie pary Bella
 Parę Bella możemy stworzyć samodzielnie, korzystając z określonych bramek logicznych. Przykładowo ze stanu $\ket{00}$ możemy stworzyć stan $\ket{\Phi^+}$ przepuszczając parę kubitów przez obwód:
 
-[]
+![[Pasted image 20261122224112.png|347]]
+gdzie $H$ to bramka Hadamarda, a $\oplus$ to bramka $\mathrm{CNOT}$. Matematycznie opiszemy to jako:
 
 $$\ket{00} \overset{H\otimes I}{\rightarrow} \frac{1}{\sqrt{ 2 }}\ket{00}+\frac{1}{\sqrt{ 2 }}\ket{10}\overset{\mathrm{CNOT}}{\rightarrow} \frac{1}{\sqrt{ 2 }}\ket{00}=\frac{1}{\sqrt{ 2 }}\ket{11}=\ket{\Phi^+}  $$
 
@@ -75,9 +76,7 @@ Teleportacja kwantowa operuje na trzech kubitach:
 - **Kubit** $B$ – kubit osoby drugiej, splątany z kubitem osoby pierwszej.
 
 Schemat teleportacji kwantowej prezentuje się następująco:
-
-[]
-
+![[Pasted image 20261122225240.png|411]]
 Górna linia odpowiada kubitowi $Q$, a dwie poniżej to kolejno kubit $A$ i splątany z nim kubit $B$:
 
 $$\ket{\chi}_{Q}=\alpha \ket{0}+\beta \ket{1},\qquad \ket{\Phi^+}_{AB}=\frac{1}{\sqrt{ 2 }}\ket{00}+\frac{1}{\sqrt{ 2 }}\ket{11}    $$
