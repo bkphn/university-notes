@@ -91,7 +91,7 @@ Dwa wektory $\ket{\phi},\ket{\psi}$ są ortogonalne, gdy:
 
 $$\braket{\phi\vert\psi}=0$$
 
-Jeżeli dwa wektory $\ket{\psi}, \ket{\phi}$ są **ortogonalne** i **znormalizowane** to tworzą **bazę ortonormalną** $\mathcal{B}$ dwuwymiarowej przestrzeni wektorowej.
+Jeżeli dwa wektory $\ket{\psi}, \ket{\phi}$ są **ortogonalne** i **znormalizowane** to tworzą **bazę ortonormalną** dwuwymiarowej przestrzeni wektorowej.
 
 >[!example] Sprawdź czy wektory $\ket{0},\ket{1}$ tworzą bazę ortonormalną.
 >

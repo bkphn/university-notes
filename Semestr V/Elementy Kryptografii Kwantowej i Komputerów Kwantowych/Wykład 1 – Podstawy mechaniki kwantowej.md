@@ -117,19 +117,19 @@ $$\ket{\pm}=\frac{1}{\sqrt{ 2 }}\ket{0}\pm \frac{1}{\sqrt{ 2 }} \ket{1}$$
 
 ## Bazy
 **Baza pomiarowa** określa, jakie rozłączne wyniki można uzyskać w danym pomiarze projekcyjnym i którym stanom one odpowiadają. Bazę pomiarową kubitu w przypadku pomiaru projekcyjnego stanowi para ortonormalnych stanów kwantowych, wśród najważniejszych baz wyróżniamy:
-- **Baza obliczeniowa** $Z$:  
+- **Baza obliczeniowa** $\mathcal{Z}$:  
 
-$$ \mathcal{B}_{Z}=\{\ket{0}, \ket{1}  \} $$
+$$ \mathcal{Z}=\{\ket{0}, \ket{1}  \} $$
 
-- **Baza diagonalna** $X$:
+- **Baza diagonalna** $\mathcal{X}$:
   
-$$\mathcal{B}_{X}=\{\ket{+}, \ket{-}  \}$$
+$$\mathcal{X}=\{\ket{+}, \ket{-}  \}$$
 
-- **Baza kołowa** $Y$:
+- **Baza kołowa** $\mathcal{Y}$:
 
-$$\mathcal{B}_{Y}=\{\ket{+i}, \ket{-i}  \}$$
+$$\mathcal{Y}=\{\ket{+i}, \ket{-i}  \}$$
 
-Ten sam stan może dawać różne prawdopodobieństwa zależnie od wybranej bazy. Na przykład pomiar stanu $\ket{+}$ w bazie $Z$ daje $0$ lub $1$ z prawdopodobieństwem $0.5$, a w bazie $X$ daje wynik $+$ z prawdopodobieństwem $1$
+Ten sam stan może dawać różne prawdopodobieństwa zależnie od wybranej bazy. Na przykład pomiar stanu $\ket{+}$ w bazie $\mathcal{Z}$ daje $0$ lub $1$ z prawdopodobieństwem $0.5$, a w bazie $\mathcal{X}$ daje wybnik $+$ z prawdopodobieństwem $1$
 
 W przypadku polaryzacji fotonu możemy utożsamić:
 
@@ -189,7 +189,7 @@ Następnie rozdzielmy je między dwie osoby:
 
 Załóżmy, że Alicja i Bob znajdują się bardzo daleko od siebie.
 
-Jeżeli oboje wykonają pomiar w bazie obliczeniowej: $\mathcal B_Z=\{\ket0,\ket1\}$ otrzymają doskonale skorelowane wyniki:
+Jeżeli oboje wykonają pomiar w bazie obliczeniowej: $\mathcal{Z}=\{\ket0,\ket1\}$ otrzymają doskonale skorelowane wyniki:
 
 $$
 P(00)=P(11)=\frac12

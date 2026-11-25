@@ -5,7 +5,7 @@ Przykładem jest jeden ze **stanów Bella**:
 
 $$\ket{\Phi^+}=\frac{\ket{00}+\ket{11}}{\sqrt2}.$$
 
-W przypadku pomiaru obu kubitów w bazie obliczeniowej $Z$:
+W przypadku pomiaru obu kubitów w bazie obliczeniowej $\mathcal{Z}$:
 
 $$P(00)=P(11)=\frac12,\qquad P(01)=P(10)=0.$$
 
@@ -87,7 +87,7 @@ $$\ket{\chi}_{Q} \otimes \ket{\Phi^+}_{AB}=\frac{1}{\sqrt{ 2 }}(\alpha \ket{000}
 
 Osoba pierwsza przepuszcza kubit $Q$ i kubit $A$ przez bramkę $\mathrm{CNOT}$, a następnie wykonuje na kubicie $Q$ operację $H$. Z tego powodu każdy składnik rozdziela się na dwa. Po zebraniu wyrazów według pierwszych dwóch bitów otrzymujemy cztery gałęzie wyniku. 
 
-Osoba pierwsza mierzy $QA$ w bazie $Z$, każdy wynik ma prawdopodobieństwo $\frac{1}{4}$. Na podstawie wyniku otrzymanego z tego pomiaru, osoba druga musi zastosować adekwatną bramkę, doprowadzi wtedy swój kubit $B$ do stanu $\ket{\chi}_{Q}$ – tym samym doszło do przeteleportowania przez przestrzeń informacji o kubicie $Q$. 
+Osoba pierwsza mierzy $QA$ w bazie $\mathcal{Z}$, każdy wynik ma prawdopodobieństwo $\frac{1}{4}$. Na podstawie wyniku otrzymanego z tego pomiaru, osoba druga musi zastosować adekwatną bramkę, doprowadzi wtedy swój kubit $B$ do stanu $\ket{\chi}_{Q}$ – tym samym doszło do przeteleportowania przez przestrzeń informacji o kubicie $Q$. 
 
 Pierwotny stan kwantowy osoby $A$ został zniszczony w wyniku pomiaru.
 

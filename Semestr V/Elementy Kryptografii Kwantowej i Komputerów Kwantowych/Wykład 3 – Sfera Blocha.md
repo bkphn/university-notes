@@ -43,14 +43,14 @@ Wektor Blocha odpowiadający stanowi kwantowemu $\ket\psi$ oznaczamy jako $\math
 
 Dzięki sferze Blocha prawdopodobieństwo możemy interpretować geometrycznie – na przykład dla $\theta=90\degree$ odległość $\mathbf{r}$ od $\ket{0}$ i $\ket{1}$ jest identyczna, oznacza to, że pomiar w bazie obliczeniowej ma identyczne prawdopodobieństwo pokazania obu stanów. Wraz ze zmianą kąta $\theta$ zmienia się odległość od biegunów, a tym samym ich prawdopodobieństwo. 
 
-Wtedy dla pomiaru w bazie $Z$ zachodzi:
+Wtedy dla pomiaru w bazie $\mathcal{Z}$ zachodzi:
 
 $$P(0)=\frac{1+z}{2},\qquad P(1)=\frac{1-z}{2}$$
-w bazie $Y$:
+w bazie $\mathcal{Y}$:
 
 $$P(+i)=\frac{1+y}{2},\qquad P(-i)=\frac{1-y}{2}$$
 
-i w bazie $X$:
+i w bazie $\mathcal{X}$:
 
 $$P(+)=\frac{1+x}{2},\qquad P(-)=\frac{1-x}{2}$$
 

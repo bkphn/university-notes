@@ -80,7 +80,7 @@ $$Z\begin{bmatrix}
 \alpha\\-\beta
 \end{bmatrix}$$
 
-- **Bramka Hadamarda** $H$: Łączy bazę obliczeniową $Z$ z bazą $X$. Dla bramki Hadamarda zachodzi $H\ket{0}=\ket{+},H\ket{1}=\ket{-}$ oraz $H\ket{+}=\ket{0},H\ket{-}=\ket{1}$.
+- **Bramka Hadamarda** $H$: Łączy bazę obliczeniową $\mathcal{Z}$ z bazą $\mathcal{X}$. Dla bramki Hadamarda zachodzi $H\ket{0}=\ket{+},H\ket{1}=\ket{-}$ oraz $H\ket{+}=\ket{0},H\ket{-}=\ket{1}$.
 
 $$H=\begin{bmatrix}
 \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{ 2 }} \\
