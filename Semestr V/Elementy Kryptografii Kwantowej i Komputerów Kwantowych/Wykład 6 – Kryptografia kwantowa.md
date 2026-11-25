@@ -10,3 +10,5 @@ QBER *Quantum Bit Error Rate*
 
 ## B92
 ![[Pasted image 20261125105634.png|392]]
+## SARG 04
+![[Pasted image 20261125112915.png|310]]
