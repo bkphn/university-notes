@@ -23,3 +23,4 @@ $$\mathbf{h}^{(t-2)}=\Psi(\mathbf{z}^{(t-2)}\mathbf{v}_{1}+\mathbf{h}^{(t-3)}\ma
 Output Layer
 
 $$\hat{y}^{(t)}=\Phi(\mathbf{h}^{(t)}\mathbf{u}_{1}+\mathbf{z}^{(t)}\mathbf{u}_{2}+b)$$
+ qws
